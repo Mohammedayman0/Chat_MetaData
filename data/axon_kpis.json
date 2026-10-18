@@ -1,0 +1,856 @@
+{
+  "totalCount": 20,
+  "items": [
+    {
+      "id": "KPI-001",
+      "type": "KPI",
+      "name": "Total Deposits",
+      "description": "Total customer deposit funding of the bank.",
+      "formula": "SUM(Account Balance) for Savings, Current and Term accounts",
+      "unit": "EGP",
+      "target": "+12% YoY",
+      "frequency": "Daily",
+      "owner": {
+        "name": "Khaled Mansour",
+        "email": "khaled.mansour@bank.example",
+        "dept": "Risk Management"
+      },
+      "status": "Published",
+      "linked_glossary_terms": [
+        {
+          "id": "GT-0004",
+          "name": "Account Balance"
+        }
+      ],
+      "linked_mart_columns": [
+        "MART_CUSTOMER_360.TOTAL_BALANCE",
+        "MART_BRANCH_PERFORMANCE.DEPOSITS"
+      ],
+      "linked_reports": [
+        {
+          "id": "RPT-001",
+          "name": "Executive Banking Dashboard"
+        },
+        {
+          "id": "RPT-008",
+          "name": "Branch Performance Scorecard"
+        },
+        {
+          "id": "RPT-010",
+          "name": "Deposits by Segment Report"
+        },
+        {
+          "id": "RPT-013",
+          "name": "Regulatory Liquidity Return (CBE)"
+        },
+        {
+          "id": "RPT-018",
+          "name": "Regional Management Pack"
+        }
+      ],
+      "source_systems": [
+        "Temenos T24 Core Banking"
+      ],
+      "avg_dq_score": 98.0
+    },
+    {
+      "id": "KPI-002",
+      "type": "KPI",
+      "name": "Net Interest Margin",
+      "description": "Core profitability of lending and deposit activities.",
+      "formula": "(Interest income - Interest expense) / Average earning assets",
+      "unit": "%",
+      "target": "3.8%",
+      "frequency": "Monthly",
+      "owner": {
+        "name": "Omar Fathy",
+        "email": "omar.fathy@bank.example",
+        "dept": "Finance"
+      },
+      "status": "Published",
+      "linked_glossary_terms": [
+        {
+          "id": "GT-0055",
+          "name": "Interest Rate"
+        },
+        {
+          "id": "GT-0034",
+          "name": "Credit Amount"
+        },
+        {
+          "id": "GT-0045",
+          "name": "Debit Amount"
+        }
+      ],
+      "linked_mart_columns": [
+        "MART_BRANCH_PERFORMANCE.NET_INCOME"
+      ],
+      "linked_reports": [
+        {
+          "id": "RPT-016",
+          "name": "Branch Net Income Report"
+        }
+      ],
+      "source_systems": [
+        "Oracle EBS General Ledger"
+      ],
+      "avg_dq_score": 98.67
+    },
+    {
+      "id": "KPI-003",
+      "type": "KPI",
+      "name": "NPL Ratio",
+      "description": "Share of non-performing loans in the portfolio.",
+      "formula": "Outstanding of loans with DPD > 90 / Total loan outstanding",
+      "unit": "%",
+      "target": "< 4%",
+      "frequency": "Monthly",
+      "owner": {
+        "name": "Khaled Mansour",
+        "email": "khaled.mansour@bank.example",
+        "dept": "Risk Management"
+      },
+      "status": "Published",
+      "linked_glossary_terms": [
+        {
+          "id": "GT-0065",
+          "name": "NPL Flag"
+        },
+        {
+          "id": "GT-0069",
+          "name": "Outstanding Balance"
+        },
+        {
+          "id": "GT-0044",
+          "name": "Days Past Due"
+        }
+      ],
+      "linked_mart_columns": [
+        "MART_CREDIT_RISK.NPL_FLAG",
+        "MART_CREDIT_RISK.OUTSTANDING_AMT",
+        "MART_CREDIT_RISK.DPD"
+      ],
+      "linked_reports": [
+        {
+          "id": "RPT-001",
+          "name": "Executive Banking Dashboard"
+        },
+        {
+          "id": "RPT-003",
+          "name": "NPL & Credit Quality Report"
+        },
+        {
+          "id": "RPT-017",
+          "name": "Early Warning Credit Report"
+        }
+      ],
+      "source_systems": [
+        "Oracle FLEXCUBE Loans"
+      ],
+      "avg_dq_score": 88.02
+    },
+    {
+      "id": "KPI-004",
+      "type": "KPI",
+      "name": "ECL Coverage Ratio",
+      "description": "IFRS 9 provisioning coverage.",
+      "formula": "Total ECL / Total gross loans",
+      "unit": "%",
+      "target": "> 100% of NPL",
+      "frequency": "Monthly",
+      "owner": {
+        "name": "Khaled Mansour",
+        "email": "khaled.mansour@bank.example",
+        "dept": "Risk Management"
+      },
+      "status": "Published",
+      "linked_glossary_terms": [
+        {
+          "id": "GT-0048",
+          "name": "Expected Credit Loss"
+        },
+        {
+          "id": "GT-0069",
+          "name": "Outstanding Balance"
+        }
+      ],
+      "linked_mart_columns": [
+        "MART_CREDIT_RISK.ECL_AMOUNT",
+        "MART_CREDIT_RISK.OUTSTANDING_AMT"
+      ],
+      "linked_reports": [
+        {
+          "id": "RPT-003",
+          "name": "NPL & Credit Quality Report"
+        },
+        {
+          "id": "RPT-004",
+          "name": "IFRS9 ECL Report"
+        }
+      ],
+      "source_systems": [
+        "Oracle FLEXCUBE Loans"
+      ],
+      "avg_dq_score": 83.22
+    },
+    {
+      "id": "KPI-005",
+      "type": "KPI",
+      "name": "Active Customers",
+      "description": "Number of customers actively transacting.",
+      "formula": "COUNT(DISTINCT Customer Identifier) with transaction in last 90 days",
+      "unit": "count",
+      "target": "+8% YoY",
+      "frequency": "Monthly",
+      "owner": {
+        "name": "Ahmed Hassan",
+        "email": "ahmed.hassan@bank.example",
+        "dept": "Retail Banking"
+      },
+      "status": "Published",
+      "linked_glossary_terms": [
+        {
+          "id": "GT-0038",
+          "name": "Customer Identifier"
+        },
+        {
+          "id": "GT-0060",
+          "name": "Last Transaction Date"
+        }
+      ],
+      "linked_mart_columns": [
+        "MART_CUSTOMER_360.CUST_ID"
+      ],
+      "linked_reports": [
+        {
+          "id": "RPT-002",
+          "name": "Customer 360 Report"
+        },
+        {
+          "id": "RPT-018",
+          "name": "Regional Management Pack"
+        }
+      ],
+      "source_systems": [
+        "Temenos T24 Core Banking"
+      ],
+      "avg_dq_score": 97.09
+    },
+    {
+      "id": "KPI-006",
+      "type": "KPI",
+      "name": "New Customers Onboarded",
+      "description": "Customer acquisition volume.",
+      "formula": "COUNT(Customers) where Onboarding Date within the period",
+      "unit": "count",
+      "target": "20K / month",
+      "frequency": "Monthly",
+      "owner": {
+        "name": "Ahmed Hassan",
+        "email": "ahmed.hassan@bank.example",
+        "dept": "Retail Banking"
+      },
+      "status": "Published",
+      "linked_glossary_terms": [
+        {
+          "id": "GT-0040",
+          "name": "Customer Onboarding Date"
+        },
+        {
+          "id": "GT-0038",
+          "name": "Customer Identifier"
+        }
+      ],
+      "linked_mart_columns": [
+        "MART_CUSTOMER_360.CUST_ID"
+      ],
+      "linked_reports": [
+        {
+          "id": "RPT-015",
+          "name": "Customer Onboarding Report"
+        }
+      ],
+      "source_systems": [
+        "Temenos T24 Core Banking"
+      ],
+      "avg_dq_score": 97.09
+    },
+    {
+      "id": "KPI-007",
+      "type": "KPI",
+      "name": "Average Balance per Customer",
+      "description": "Depth of customer relationship.",
+      "formula": "Total Deposits / Active Customers",
+      "unit": "EGP",
+      "target": "EGP 85K",
+      "frequency": "Monthly",
+      "owner": {
+        "name": "Ahmed Hassan",
+        "email": "ahmed.hassan@bank.example",
+        "dept": "Retail Banking"
+      },
+      "status": "Published",
+      "linked_glossary_terms": [
+        {
+          "id": "GT-0079",
+          "name": "Total Customer Balance"
+        }
+      ],
+      "linked_mart_columns": [
+        "MART_CUSTOMER_360.TOTAL_BALANCE"
+      ],
+      "linked_reports": [
+        {
+          "id": "RPT-002",
+          "name": "Customer 360 Report"
+        },
+        {
+          "id": "RPT-010",
+          "name": "Deposits by Segment Report"
+        }
+      ],
+      "source_systems": [
+        "Temenos T24 Core Banking"
+      ],
+      "avg_dq_score": 96.63
+    },
+    {
+      "id": "KPI-008",
+      "type": "KPI",
+      "name": "Loan-to-Deposit Ratio",
+      "description": "Liquidity and funding indicator.",
+      "formula": "Total loans / Total deposits",
+      "unit": "%",
+      "target": "65% - 75%",
+      "frequency": "Monthly",
+      "owner": {
+        "name": "Khaled Mansour",
+        "email": "khaled.mansour@bank.example",
+        "dept": "Risk Management"
+      },
+      "status": "Published",
+      "linked_glossary_terms": [
+        {
+          "id": "GT-0080",
+          "name": "Total Loan Outstanding"
+        },
+        {
+          "id": "GT-0079",
+          "name": "Total Customer Balance"
+        }
+      ],
+      "linked_mart_columns": [
+        "MART_CUSTOMER_360.TOTAL_LOAN_OUTSTANDING",
+        "MART_CUSTOMER_360.TOTAL_BALANCE"
+      ],
+      "linked_reports": [
+        {
+          "id": "RPT-001",
+          "name": "Executive Banking Dashboard"
+        },
+        {
+          "id": "RPT-011",
+          "name": "Loan to Deposit Ratio Report"
+        },
+        {
+          "id": "RPT-013",
+          "name": "Regulatory Liquidity Return (CBE)"
+        }
+      ],
+      "source_systems": [
+        "Oracle FLEXCUBE Loans",
+        "Temenos T24 Core Banking"
+      ],
+      "avg_dq_score": 93.63
+    },
+    {
+      "id": "KPI-009",
+      "type": "KPI",
+      "name": "Card Utilization Rate",
+      "description": "How much of card credit lines is used.",
+      "formula": "Card spend / Credit Limit",
+      "unit": "%",
+      "target": "45%",
+      "frequency": "Monthly",
+      "owner": {
+        "name": "Heba Mostafa",
+        "email": "heba.mostafa@bank.example",
+        "dept": "Cards & Payments"
+      },
+      "status": "Published",
+      "linked_glossary_terms": [
+        {
+          "id": "GT-0035",
+          "name": "Credit Limit"
+        },
+        {
+          "id": "GT-0022",
+          "name": "Card Count"
+        }
+      ],
+      "linked_mart_columns": [
+        "MART_CUSTOMER_360.CARD_COUNT"
+      ],
+      "linked_reports": [
+        {
+          "id": "RPT-012",
+          "name": "Card Portfolio Report"
+        }
+      ],
+      "source_systems": [
+        "OpenWay Way4 Cards"
+      ],
+      "avg_dq_score": 97.01
+    },
+    {
+      "id": "KPI-010",
+      "type": "KPI",
+      "name": "Digital Channel Adoption",
+      "description": "Share of transactions via Mobile and Internet.",
+      "formula": "Digital transactions / Total transactions",
+      "unit": "%",
+      "target": "70%",
+      "frequency": "Monthly",
+      "owner": {
+        "name": "Yasser Gamal",
+        "email": "yasser.gamal@bank.example",
+        "dept": "Operations"
+      },
+      "status": "Published",
+      "linked_glossary_terms": [
+        {
+          "id": "GT-0028",
+          "name": "Channel"
+        },
+        {
+          "id": "GT-0082",
+          "name": "Transaction Count"
+        }
+      ],
+      "linked_mart_columns": [
+        "MART_TXN_SUMMARY.CHANNEL",
+        "MART_TXN_SUMMARY.TXN_COUNT"
+      ],
+      "linked_reports": [
+        {
+          "id": "RPT-009",
+          "name": "Channel Usage Report"
+        }
+      ],
+      "source_systems": [
+        "Temenos T24 Core Banking"
+      ],
+      "avg_dq_score": 97.94
+    },
+    {
+      "id": "KPI-011",
+      "type": "KPI",
+      "name": "AML Alert Closure Rate",
+      "description": "Operational efficiency of AML investigations.",
+      "formula": "Closed alerts within SLA / Total alerts",
+      "unit": "%",
+      "target": "95%",
+      "frequency": "Weekly",
+      "owner": {
+        "name": "Sara Ibrahim",
+        "email": "sara.ibrahim@bank.example",
+        "dept": "Compliance & AML"
+      },
+      "status": "Published",
+      "linked_glossary_terms": [
+        {
+          "id": "GT-0014",
+          "name": "Alert Status"
+        },
+        {
+          "id": "GT-0010",
+          "name": "Alert Age Days"
+        }
+      ],
+      "linked_mart_columns": [
+        "MART_AML_MONITORING.ALERT_STATUS",
+        "MART_AML_MONITORING.ALERT_AGE_DAYS"
+      ],
+      "linked_reports": [
+        {
+          "id": "RPT-005",
+          "name": "AML Alerts Aging Report"
+        }
+      ],
+      "source_systems": [
+        "NICE Actimize AML/KYC"
+      ],
+      "avg_dq_score": 97.27
+    },
+    {
+      "id": "KPI-012",
+      "type": "KPI",
+      "name": "Average Alert Aging",
+      "description": "How long alerts stay open.",
+      "formula": "AVG(Alert Age Days) for open alerts",
+      "unit": "days",
+      "target": "< 10 days",
+      "frequency": "Weekly",
+      "owner": {
+        "name": "Sara Ibrahim",
+        "email": "sara.ibrahim@bank.example",
+        "dept": "Compliance & AML"
+      },
+      "status": "Published",
+      "linked_glossary_terms": [
+        {
+          "id": "GT-0010",
+          "name": "Alert Age Days"
+        }
+      ],
+      "linked_mart_columns": [
+        "MART_AML_MONITORING.ALERT_AGE_DAYS"
+      ],
+      "linked_reports": [
+        {
+          "id": "RPT-005",
+          "name": "AML Alerts Aging Report"
+        }
+      ],
+      "source_systems": [
+        "NICE Actimize AML/KYC"
+      ],
+      "avg_dq_score": 98.68
+    },
+    {
+      "id": "KPI-013",
+      "type": "KPI",
+      "name": "KYC Review Compliance",
+      "description": "Regulatory compliance with periodic KYC review.",
+      "formula": "Customers reviewed on time / Customers due for review",
+      "unit": "%",
+      "target": "100%",
+      "frequency": "Monthly",
+      "owner": {
+        "name": "Sara Ibrahim",
+        "email": "sara.ibrahim@bank.example",
+        "dept": "Compliance & AML"
+      },
+      "status": "Published",
+      "linked_glossary_terms": [
+        {
+          "id": "GT-0057",
+          "name": "KYC Next Review Date"
+        },
+        {
+          "id": "GT-0059",
+          "name": "KYC Status"
+        }
+      ],
+      "linked_mart_columns": [
+        "MART_AML_MONITORING.NEXT_REVIEW_DATE",
+        "MART_CUSTOMER_360.KYC_STATUS"
+      ],
+      "linked_reports": [
+        {
+          "id": "RPT-006",
+          "name": "KYC Review Due Report"
+        }
+      ],
+      "source_systems": [
+        "NICE Actimize AML/KYC",
+        "Temenos T24 Core Banking"
+      ],
+      "avg_dq_score": 100.0
+    },
+    {
+      "id": "KPI-014",
+      "type": "KPI",
+      "name": "High-Risk Customer Ratio",
+      "description": "Portfolio exposure to AML risk.",
+      "formula": "High-risk customers / Total customers",
+      "unit": "%",
+      "target": "< 3%",
+      "frequency": "Monthly",
+      "owner": {
+        "name": "Sara Ibrahim",
+        "email": "sara.ibrahim@bank.example",
+        "dept": "Compliance & AML"
+      },
+      "status": "Published",
+      "linked_glossary_terms": [
+        {
+          "id": "GT-0041",
+          "name": "Customer Risk Rating"
+        },
+        {
+          "id": "GT-0002",
+          "name": "AML Risk Score"
+        }
+      ],
+      "linked_mart_columns": [
+        "MART_CUSTOMER_360.RISK_RATING",
+        "MART_AML_MONITORING.RISK_SCORE"
+      ],
+      "linked_reports": [
+        {
+          "id": "RPT-007",
+          "name": "High Risk & PEP Customers Report"
+        }
+      ],
+      "source_systems": [
+        "NICE Actimize AML/KYC",
+        "Temenos T24 Core Banking"
+      ],
+      "avg_dq_score": 98.72
+    },
+    {
+      "id": "KPI-015",
+      "type": "KPI",
+      "name": "Transaction Volume by Channel",
+      "description": "Value of transactions per channel.",
+      "formula": "SUM(Transaction Amount) by Channel",
+      "unit": "EGP",
+      "target": "n/a",
+      "frequency": "Daily",
+      "owner": {
+        "name": "Yasser Gamal",
+        "email": "yasser.gamal@bank.example",
+        "dept": "Operations"
+      },
+      "status": "Published",
+      "linked_glossary_terms": [
+        {
+          "id": "GT-0087",
+          "name": "Transaction Volume"
+        },
+        {
+          "id": "GT-0028",
+          "name": "Channel"
+        }
+      ],
+      "linked_mart_columns": [
+        "MART_TXN_SUMMARY.TXN_VOLUME",
+        "MART_TXN_SUMMARY.CHANNEL"
+      ],
+      "linked_reports": [
+        {
+          "id": "RPT-009",
+          "name": "Channel Usage Report"
+        },
+        {
+          "id": "RPT-014",
+          "name": "Daily Transactions Monitoring"
+        }
+      ],
+      "source_systems": [
+        "Temenos T24 Core Banking"
+      ],
+      "avg_dq_score": 86.87
+    },
+    {
+      "id": "KPI-016",
+      "type": "KPI",
+      "name": "Branch Profitability",
+      "description": "Profitability of each branch.",
+      "formula": "Branch Net Income / Branch operating cost",
+      "unit": "ratio",
+      "target": "> 1.2",
+      "frequency": "Monthly",
+      "owner": {
+        "name": "Omar Fathy",
+        "email": "omar.fathy@bank.example",
+        "dept": "Finance"
+      },
+      "status": "Published",
+      "linked_glossary_terms": [
+        {
+          "id": "GT-0021",
+          "name": "Branch Net Income"
+        },
+        {
+          "id": "GT-0018",
+          "name": "Branch Deposits"
+        }
+      ],
+      "linked_mart_columns": [
+        "MART_BRANCH_PERFORMANCE.NET_INCOME",
+        "MART_BRANCH_PERFORMANCE.DEPOSITS"
+      ],
+      "linked_reports": [
+        {
+          "id": "RPT-008",
+          "name": "Branch Performance Scorecard"
+        },
+        {
+          "id": "RPT-016",
+          "name": "Branch Net Income Report"
+        },
+        {
+          "id": "RPT-018",
+          "name": "Regional Management Pack"
+        }
+      ],
+      "source_systems": [
+        "Oracle EBS General Ledger",
+        "Temenos T24 Core Banking"
+      ],
+      "avg_dq_score": 99.03
+    },
+    {
+      "id": "KPI-017",
+      "type": "KPI",
+      "name": "Cost-to-Income Ratio",
+      "description": "Bank efficiency ratio.",
+      "formula": "Operating expenses / Operating income",
+      "unit": "%",
+      "target": "< 40%",
+      "frequency": "Quarterly",
+      "owner": {
+        "name": "Omar Fathy",
+        "email": "omar.fathy@bank.example",
+        "dept": "Finance"
+      },
+      "status": "Published",
+      "linked_glossary_terms": [
+        {
+          "id": "GT-0045",
+          "name": "Debit Amount"
+        },
+        {
+          "id": "GT-0034",
+          "name": "Credit Amount"
+        }
+      ],
+      "linked_mart_columns": [
+        "MART_BRANCH_PERFORMANCE.NET_INCOME"
+      ],
+      "linked_reports": [
+        {
+          "id": "RPT-001",
+          "name": "Executive Banking Dashboard"
+        },
+        {
+          "id": "RPT-016",
+          "name": "Branch Net Income Report"
+        }
+      ],
+      "source_systems": [
+        "Oracle EBS General Ledger"
+      ],
+      "avg_dq_score": 98.67
+    },
+    {
+      "id": "KPI-018",
+      "type": "KPI",
+      "name": "Collateral Coverage Ratio",
+      "description": "Security cover of the loan book.",
+      "formula": "Collateral value / Outstanding balance",
+      "unit": "%",
+      "target": "> 120%",
+      "frequency": "Monthly",
+      "owner": {
+        "name": "Khaled Mansour",
+        "email": "khaled.mansour@bank.example",
+        "dept": "Risk Management"
+      },
+      "status": "Published",
+      "linked_glossary_terms": [
+        {
+          "id": "GT-0030",
+          "name": "Collateral Coverage Ratio"
+        },
+        {
+          "id": "GT-0031",
+          "name": "Collateral Value"
+        }
+      ],
+      "linked_mart_columns": [
+        "MART_CREDIT_RISK.COLLATERAL_COVERAGE"
+      ],
+      "linked_reports": [
+        {
+          "id": "RPT-003",
+          "name": "NPL & Credit Quality Report"
+        }
+      ],
+      "source_systems": [
+        "Oracle FLEXCUBE Loans"
+      ],
+      "avg_dq_score": 100.0
+    },
+    {
+      "id": "KPI-019",
+      "type": "KPI",
+      "name": "PEP Customers Count",
+      "description": "Number of politically exposed customers under enhanced due diligence.",
+      "formula": "COUNT(customers) where PEP Flag = 'Y'",
+      "unit": "count",
+      "target": "n/a",
+      "frequency": "Monthly",
+      "owner": {
+        "name": "Sara Ibrahim",
+        "email": "sara.ibrahim@bank.example",
+        "dept": "Compliance & AML"
+      },
+      "status": "Published",
+      "linked_glossary_terms": [
+        {
+          "id": "GT-0070",
+          "name": "PEP Flag"
+        }
+      ],
+      "linked_mart_columns": [
+        "MART_AML_MONITORING.PEP_FLAG"
+      ],
+      "linked_reports": [
+        {
+          "id": "RPT-007",
+          "name": "High Risk & PEP Customers Report"
+        }
+      ],
+      "source_systems": [
+        "NICE Actimize AML/KYC"
+      ],
+      "avg_dq_score": 87.78
+    },
+    {
+      "id": "KPI-020",
+      "type": "KPI",
+      "name": "Branch Transaction Throughput",
+      "description": "Operational load per branch.",
+      "formula": "Transaction Count per branch per day",
+      "unit": "count",
+      "target": "n/a",
+      "frequency": "Daily",
+      "owner": {
+        "name": "Yasser Gamal",
+        "email": "yasser.gamal@bank.example",
+        "dept": "Operations"
+      },
+      "status": "Published",
+      "linked_glossary_terms": [
+        {
+          "id": "GT-0082",
+          "name": "Transaction Count"
+        },
+        {
+          "id": "GT-0017",
+          "name": "Branch Code"
+        }
+      ],
+      "linked_mart_columns": [
+        "MART_BRANCH_PERFORMANCE.TXN_COUNT"
+      ],
+      "linked_reports": [
+        {
+          "id": "RPT-008",
+          "name": "Branch Performance Scorecard"
+        },
+        {
+          "id": "RPT-014",
+          "name": "Daily Transactions Monitoring"
+        }
+      ],
+      "source_systems": [
+        "Temenos T24 Core Banking"
+      ],
+      "avg_dq_score": 90.49
+    }
+  ]
+}

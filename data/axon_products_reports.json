@@ -1,0 +1,1317 @@
+{
+  "totalCount": 18,
+  "items": [
+    {
+      "id": "RPT-001",
+      "type": "Product/Report",
+      "name": "Executive Banking Dashboard",
+      "report_type": "SAP BO Webi",
+      "description": "Executive Banking Dashboard used by Executive Management (Daily refresh).",
+      "report_owner": {
+        "name": "Nour El-Din Adel",
+        "email": "nour.eldin.adel@bank.example",
+        "dept": "Executive Management"
+      },
+      "refresh_frequency": "Daily",
+      "classification": "Confidential",
+      "tags": [
+        "Financial"
+      ],
+      "criticality": "Critical",
+      "monthly_users": 169,
+      "last_refresh": "2026-09-07",
+      "linked_kpis": [
+        {
+          "id": "KPI-001",
+          "name": "Total Deposits"
+        },
+        {
+          "id": "KPI-003",
+          "name": "NPL Ratio"
+        },
+        {
+          "id": "KPI-008",
+          "name": "Loan-to-Deposit Ratio"
+        },
+        {
+          "id": "KPI-017",
+          "name": "Cost-to-Income Ratio"
+        }
+      ],
+      "linked_glossary_terms": [
+        {
+          "id": "GT-0065",
+          "name": "NPL Flag"
+        },
+        {
+          "id": "GT-0069",
+          "name": "Outstanding Balance"
+        },
+        {
+          "id": "GT-0079",
+          "name": "Total Customer Balance"
+        },
+        {
+          "id": "GT-0080",
+          "name": "Total Loan Outstanding"
+        }
+      ],
+      "linked_attributes": [
+        {
+          "mart_column": "MART_CUSTOMER_360.TOTAL_BALANCE",
+          "glossary_term": "Total Customer Balance",
+          "report_field": "SAP_BO/UNIVERSE/Executive_Banking_Dashboard/TOTAL_BALANCE"
+        },
+        {
+          "mart_column": "MART_CUSTOMER_360.TOTAL_LOAN_OUTSTANDING",
+          "glossary_term": "Total Loan Outstanding",
+          "report_field": "SAP_BO/UNIVERSE/Executive_Banking_Dashboard/TOTAL_LOAN_OUTSTANDING"
+        },
+        {
+          "mart_column": "MART_CREDIT_RISK.NPL_FLAG",
+          "glossary_term": "NPL Flag",
+          "report_field": "SAP_BO/UNIVERSE/Executive_Banking_Dashboard/NPL_FLAG"
+        },
+        {
+          "mart_column": "MART_CREDIT_RISK.OUTSTANDING_AMT",
+          "glossary_term": "Outstanding Balance",
+          "report_field": "SAP_BO/UNIVERSE/Executive_Banking_Dashboard/OUTSTANDING_AMT"
+        }
+      ],
+      "source_systems": [
+        "Oracle FLEXCUBE Loans",
+        "Temenos T24 Core Banking"
+      ],
+      "avg_dq_score": 89.09
+    },
+    {
+      "id": "RPT-002",
+      "type": "Product/Report",
+      "name": "Customer 360 Report",
+      "report_type": "SAP BO Webi",
+      "description": "Customer 360 Report used by Retail Banking (Daily refresh).",
+      "report_owner": {
+        "name": "Ahmed Hassan",
+        "email": "ahmed.hassan@bank.example",
+        "dept": "Retail Banking"
+      },
+      "refresh_frequency": "Daily",
+      "classification": "Confidential",
+      "tags": [
+        "Financial",
+        "PII"
+      ],
+      "criticality": "Important",
+      "monthly_users": 161,
+      "last_refresh": "2026-05-09",
+      "linked_kpis": [
+        {
+          "id": "KPI-005",
+          "name": "Active Customers"
+        },
+        {
+          "id": "KPI-007",
+          "name": "Average Balance per Customer"
+        }
+      ],
+      "linked_glossary_terms": [
+        {
+          "id": "GT-0005",
+          "name": "Account Count"
+        },
+        {
+          "id": "GT-0037",
+          "name": "Customer Age"
+        },
+        {
+          "id": "GT-0038",
+          "name": "Customer Identifier"
+        },
+        {
+          "id": "GT-0039",
+          "name": "Customer Name"
+        },
+        {
+          "id": "GT-0042",
+          "name": "Customer Segment"
+        },
+        {
+          "id": "GT-0079",
+          "name": "Total Customer Balance"
+        }
+      ],
+      "linked_attributes": [
+        {
+          "mart_column": "MART_CUSTOMER_360.CUST_ID",
+          "glossary_term": "Customer Identifier",
+          "report_field": "SAP_BO/UNIVERSE/Customer_360_Report/CUST_ID"
+        },
+        {
+          "mart_column": "MART_CUSTOMER_360.CUST_NAME",
+          "glossary_term": "Customer Name",
+          "report_field": "SAP_BO/UNIVERSE/Customer_360_Report/CUST_NAME"
+        },
+        {
+          "mart_column": "MART_CUSTOMER_360.SEGMENT_CODE",
+          "glossary_term": "Customer Segment",
+          "report_field": "SAP_BO/UNIVERSE/Customer_360_Report/SEGMENT_CODE"
+        },
+        {
+          "mart_column": "MART_CUSTOMER_360.TOTAL_BALANCE",
+          "glossary_term": "Total Customer Balance",
+          "report_field": "SAP_BO/UNIVERSE/Customer_360_Report/TOTAL_BALANCE"
+        },
+        {
+          "mart_column": "MART_CUSTOMER_360.ACCOUNT_COUNT",
+          "glossary_term": "Account Count",
+          "report_field": "SAP_BO/UNIVERSE/Customer_360_Report/ACCOUNT_COUNT"
+        },
+        {
+          "mart_column": "MART_CUSTOMER_360.AGE",
+          "glossary_term": "Customer Age",
+          "report_field": "SAP_BO/UNIVERSE/Customer_360_Report/AGE"
+        }
+      ],
+      "source_systems": [
+        "Temenos T24 Core Banking"
+      ],
+      "avg_dq_score": 96.97
+    },
+    {
+      "id": "RPT-003",
+      "type": "Product/Report",
+      "name": "NPL & Credit Quality Report",
+      "report_type": "SAP BO Webi",
+      "description": "NPL & Credit Quality Report used by Risk Management (Monthly refresh).",
+      "report_owner": {
+        "name": "Khaled Mansour",
+        "email": "khaled.mansour@bank.example",
+        "dept": "Risk Management"
+      },
+      "refresh_frequency": "Monthly",
+      "classification": "Confidential",
+      "tags": [
+        "Financial"
+      ],
+      "criticality": "Critical",
+      "monthly_users": 295,
+      "last_refresh": "2026-01-25",
+      "linked_kpis": [
+        {
+          "id": "KPI-003",
+          "name": "NPL Ratio"
+        },
+        {
+          "id": "KPI-004",
+          "name": "ECL Coverage Ratio"
+        },
+        {
+          "id": "KPI-018",
+          "name": "Collateral Coverage Ratio"
+        }
+      ],
+      "linked_glossary_terms": [
+        {
+          "id": "GT-0030",
+          "name": "Collateral Coverage Ratio"
+        },
+        {
+          "id": "GT-0044",
+          "name": "Days Past Due"
+        },
+        {
+          "id": "GT-0061",
+          "name": "Loan Identifier"
+        },
+        {
+          "id": "GT-0065",
+          "name": "NPL Flag"
+        },
+        {
+          "id": "GT-0069",
+          "name": "Outstanding Balance"
+        }
+      ],
+      "linked_attributes": [
+        {
+          "mart_column": "MART_CREDIT_RISK.LOAN_ID",
+          "glossary_term": "Loan Identifier",
+          "report_field": "SAP_BO/UNIVERSE/NPL_and_Credit_Quality_Report/LOAN_ID"
+        },
+        {
+          "mart_column": "MART_CREDIT_RISK.DPD",
+          "glossary_term": "Days Past Due",
+          "report_field": "SAP_BO/UNIVERSE/NPL_and_Credit_Quality_Report/DPD"
+        },
+        {
+          "mart_column": "MART_CREDIT_RISK.NPL_FLAG",
+          "glossary_term": "NPL Flag",
+          "report_field": "SAP_BO/UNIVERSE/NPL_and_Credit_Quality_Report/NPL_FLAG"
+        },
+        {
+          "mart_column": "MART_CREDIT_RISK.COLLATERAL_COVERAGE",
+          "glossary_term": "Collateral Coverage Ratio",
+          "report_field": "SAP_BO/UNIVERSE/NPL_and_Credit_Quality_Report/COLLATERAL_COVERAGE"
+        },
+        {
+          "mart_column": "MART_CREDIT_RISK.OUTSTANDING_AMT",
+          "glossary_term": "Outstanding Balance",
+          "report_field": "SAP_BO/UNIVERSE/NPL_and_Credit_Quality_Report/OUTSTANDING_AMT"
+        }
+      ],
+      "source_systems": [
+        "Oracle FLEXCUBE Loans"
+      ],
+      "avg_dq_score": 92.61
+    },
+    {
+      "id": "RPT-004",
+      "type": "Product/Report",
+      "name": "IFRS9 ECL Report",
+      "report_type": "SAP BO Webi",
+      "description": "IFRS9 ECL Report used by Risk Management (Monthly refresh).",
+      "report_owner": {
+        "name": "Khaled Mansour",
+        "email": "khaled.mansour@bank.example",
+        "dept": "Risk Management"
+      },
+      "refresh_frequency": "Monthly",
+      "classification": "Restricted",
+      "tags": [
+        "Financial",
+        "Risk-Model"
+      ],
+      "criticality": "Important",
+      "monthly_users": 211,
+      "last_refresh": "2026-02-20",
+      "linked_kpis": [
+        {
+          "id": "KPI-004",
+          "name": "ECL Coverage Ratio"
+        }
+      ],
+      "linked_glossary_terms": [
+        {
+          "id": "GT-0038",
+          "name": "Customer Identifier"
+        },
+        {
+          "id": "GT-0048",
+          "name": "Expected Credit Loss"
+        },
+        {
+          "id": "GT-0054",
+          "name": "IFRS9 Stage"
+        },
+        {
+          "id": "GT-0069",
+          "name": "Outstanding Balance"
+        }
+      ],
+      "linked_attributes": [
+        {
+          "mart_column": "MART_CREDIT_RISK.IFRS9_STAGE",
+          "glossary_term": "IFRS9 Stage",
+          "report_field": "SAP_BO/UNIVERSE/IFRS9_ECL_Report/IFRS9_STAGE"
+        },
+        {
+          "mart_column": "MART_CREDIT_RISK.ECL_AMOUNT",
+          "glossary_term": "Expected Credit Loss",
+          "report_field": "SAP_BO/UNIVERSE/IFRS9_ECL_Report/ECL_AMOUNT"
+        },
+        {
+          "mart_column": "MART_CREDIT_RISK.OUTSTANDING_AMT",
+          "glossary_term": "Outstanding Balance",
+          "report_field": "SAP_BO/UNIVERSE/IFRS9_ECL_Report/OUTSTANDING_AMT"
+        },
+        {
+          "mart_column": "MART_CREDIT_RISK.CUST_ID",
+          "glossary_term": "Customer Identifier",
+          "report_field": "SAP_BO/UNIVERSE/IFRS9_ECL_Report/CUST_ID"
+        }
+      ],
+      "source_systems": [
+        "Oracle FLEXCUBE Loans"
+      ],
+      "avg_dq_score": 83.78
+    },
+    {
+      "id": "RPT-005",
+      "type": "Product/Report",
+      "name": "AML Alerts Aging Report",
+      "report_type": "SAP BO Webi",
+      "description": "AML Alerts Aging Report used by Compliance & AML (Weekly refresh).",
+      "report_owner": {
+        "name": "Sara Ibrahim",
+        "email": "sara.ibrahim@bank.example",
+        "dept": "Compliance & AML"
+      },
+      "refresh_frequency": "Weekly",
+      "classification": "Restricted",
+      "tags": [
+        "AML-Sensitive"
+      ],
+      "criticality": "Important",
+      "monthly_users": 361,
+      "last_refresh": "2026-03-25",
+      "linked_kpis": [
+        {
+          "id": "KPI-011",
+          "name": "AML Alert Closure Rate"
+        },
+        {
+          "id": "KPI-012",
+          "name": "Average Alert Aging"
+        }
+      ],
+      "linked_glossary_terms": [
+        {
+          "id": "GT-0001",
+          "name": "AML Alert Identifier"
+        },
+        {
+          "id": "GT-0003",
+          "name": "AML Scenario"
+        },
+        {
+          "id": "GT-0010",
+          "name": "Alert Age Days"
+        },
+        {
+          "id": "GT-0013",
+          "name": "Alert Severity"
+        },
+        {
+          "id": "GT-0014",
+          "name": "Alert Status"
+        }
+      ],
+      "linked_attributes": [
+        {
+          "mart_column": "MART_AML_MONITORING.ALERT_ID",
+          "glossary_term": "AML Alert Identifier",
+          "report_field": "SAP_BO/UNIVERSE/AML_Alerts_Aging_Report/ALERT_ID"
+        },
+        {
+          "mart_column": "MART_AML_MONITORING.SCENARIO",
+          "glossary_term": "AML Scenario",
+          "report_field": "SAP_BO/UNIVERSE/AML_Alerts_Aging_Report/SCENARIO"
+        },
+        {
+          "mart_column": "MART_AML_MONITORING.SEVERITY",
+          "glossary_term": "Alert Severity",
+          "report_field": "SAP_BO/UNIVERSE/AML_Alerts_Aging_Report/SEVERITY"
+        },
+        {
+          "mart_column": "MART_AML_MONITORING.ALERT_AGE_DAYS",
+          "glossary_term": "Alert Age Days",
+          "report_field": "SAP_BO/UNIVERSE/AML_Alerts_Aging_Report/ALERT_AGE_DAYS"
+        },
+        {
+          "mart_column": "MART_AML_MONITORING.ALERT_STATUS",
+          "glossary_term": "Alert Status",
+          "report_field": "SAP_BO/UNIVERSE/AML_Alerts_Aging_Report/ALERT_STATUS"
+        }
+      ],
+      "source_systems": [
+        "NICE Actimize AML/KYC"
+      ],
+      "avg_dq_score": 94.21
+    },
+    {
+      "id": "RPT-006",
+      "type": "Product/Report",
+      "name": "KYC Review Due Report",
+      "report_type": "SAP BO Webi",
+      "description": "KYC Review Due Report used by Compliance & AML (Weekly refresh).",
+      "report_owner": {
+        "name": "Sara Ibrahim",
+        "email": "sara.ibrahim@bank.example",
+        "dept": "Compliance & AML"
+      },
+      "refresh_frequency": "Weekly",
+      "classification": "Restricted",
+      "tags": [
+        "AML-Sensitive",
+        "PII"
+      ],
+      "criticality": "Important",
+      "monthly_users": 38,
+      "last_refresh": "2026-04-21",
+      "linked_kpis": [
+        {
+          "id": "KPI-013",
+          "name": "KYC Review Compliance"
+        }
+      ],
+      "linked_glossary_terms": [
+        {
+          "id": "GT-0039",
+          "name": "Customer Name"
+        },
+        {
+          "id": "GT-0041",
+          "name": "Customer Risk Rating"
+        },
+        {
+          "id": "GT-0057",
+          "name": "KYC Next Review Date"
+        },
+        {
+          "id": "GT-0059",
+          "name": "KYC Status"
+        }
+      ],
+      "linked_attributes": [
+        {
+          "mart_column": "MART_AML_MONITORING.NEXT_REVIEW_DATE",
+          "glossary_term": "KYC Next Review Date",
+          "report_field": "SAP_BO/UNIVERSE/KYC_Review_Due_Report/NEXT_REVIEW_DATE"
+        },
+        {
+          "mart_column": "MART_CUSTOMER_360.KYC_STATUS",
+          "glossary_term": "KYC Status",
+          "report_field": "SAP_BO/UNIVERSE/KYC_Review_Due_Report/KYC_STATUS"
+        },
+        {
+          "mart_column": "MART_CUSTOMER_360.CUST_NAME",
+          "glossary_term": "Customer Name",
+          "report_field": "SAP_BO/UNIVERSE/KYC_Review_Due_Report/CUST_NAME"
+        },
+        {
+          "mart_column": "MART_CUSTOMER_360.RISK_RATING",
+          "glossary_term": "Customer Risk Rating",
+          "report_field": "SAP_BO/UNIVERSE/KYC_Review_Due_Report/RISK_RATING"
+        }
+      ],
+      "source_systems": [
+        "NICE Actimize AML/KYC",
+        "Temenos T24 Core Banking"
+      ],
+      "avg_dq_score": 97.95
+    },
+    {
+      "id": "RPT-007",
+      "type": "Product/Report",
+      "name": "High Risk & PEP Customers Report",
+      "report_type": "SAP BO Webi",
+      "description": "High Risk & PEP Customers Report used by Compliance & AML (Monthly refresh).",
+      "report_owner": {
+        "name": "Sara Ibrahim",
+        "email": "sara.ibrahim@bank.example",
+        "dept": "Compliance & AML"
+      },
+      "refresh_frequency": "Monthly",
+      "classification": "Restricted",
+      "tags": [
+        "AML-Sensitive",
+        "PII"
+      ],
+      "criticality": "Important",
+      "monthly_users": 138,
+      "last_refresh": "2026-09-01",
+      "linked_kpis": [
+        {
+          "id": "KPI-014",
+          "name": "High-Risk Customer Ratio"
+        },
+        {
+          "id": "KPI-019",
+          "name": "PEP Customers Count"
+        }
+      ],
+      "linked_glossary_terms": [
+        {
+          "id": "GT-0002",
+          "name": "AML Risk Score"
+        },
+        {
+          "id": "GT-0039",
+          "name": "Customer Name"
+        },
+        {
+          "id": "GT-0041",
+          "name": "Customer Risk Rating"
+        },
+        {
+          "id": "GT-0070",
+          "name": "PEP Flag"
+        }
+      ],
+      "linked_attributes": [
+        {
+          "mart_column": "MART_AML_MONITORING.PEP_FLAG",
+          "glossary_term": "PEP Flag",
+          "report_field": "SAP_BO/UNIVERSE/High_Risk_and_PEP_Customers_Report/PEP_FLAG"
+        },
+        {
+          "mart_column": "MART_AML_MONITORING.RISK_SCORE",
+          "glossary_term": "AML Risk Score",
+          "report_field": "SAP_BO/UNIVERSE/High_Risk_and_PEP_Customers_Report/RISK_SCORE"
+        },
+        {
+          "mart_column": "MART_CUSTOMER_360.RISK_RATING",
+          "glossary_term": "Customer Risk Rating",
+          "report_field": "SAP_BO/UNIVERSE/High_Risk_and_PEP_Customers_Report/RISK_RATING"
+        },
+        {
+          "mart_column": "MART_CUSTOMER_360.CUST_NAME",
+          "glossary_term": "Customer Name",
+          "report_field": "SAP_BO/UNIVERSE/High_Risk_and_PEP_Customers_Report/CUST_NAME"
+        }
+      ],
+      "source_systems": [
+        "NICE Actimize AML/KYC",
+        "Temenos T24 Core Banking"
+      ],
+      "avg_dq_score": 94.25
+    },
+    {
+      "id": "RPT-008",
+      "type": "Product/Report",
+      "name": "Branch Performance Scorecard",
+      "report_type": "SAP BO Webi",
+      "description": "Branch Performance Scorecard used by Retail Banking (Monthly refresh).",
+      "report_owner": {
+        "name": "Ahmed Hassan",
+        "email": "ahmed.hassan@bank.example",
+        "dept": "Retail Banking"
+      },
+      "refresh_frequency": "Monthly",
+      "classification": "Confidential",
+      "tags": [
+        "Financial"
+      ],
+      "criticality": "Critical",
+      "monthly_users": 330,
+      "last_refresh": "2026-02-19",
+      "linked_kpis": [
+        {
+          "id": "KPI-016",
+          "name": "Branch Profitability"
+        },
+        {
+          "id": "KPI-020",
+          "name": "Branch Transaction Throughput"
+        },
+        {
+          "id": "KPI-001",
+          "name": "Total Deposits"
+        }
+      ],
+      "linked_glossary_terms": [
+        {
+          "id": "GT-0018",
+          "name": "Branch Deposits"
+        },
+        {
+          "id": "GT-0020",
+          "name": "Branch Name"
+        },
+        {
+          "id": "GT-0021",
+          "name": "Branch Net Income"
+        },
+        {
+          "id": "GT-0075",
+          "name": "Region"
+        },
+        {
+          "id": "GT-0082",
+          "name": "Transaction Count"
+        }
+      ],
+      "linked_attributes": [
+        {
+          "mart_column": "MART_BRANCH_PERFORMANCE.BRANCH_NAME",
+          "glossary_term": "Branch Name",
+          "report_field": "SAP_BO/UNIVERSE/Branch_Performance_Scorecard/BRANCH_NAME"
+        },
+        {
+          "mart_column": "MART_BRANCH_PERFORMANCE.REGION",
+          "glossary_term": "Region",
+          "report_field": "SAP_BO/UNIVERSE/Branch_Performance_Scorecard/REGION"
+        },
+        {
+          "mart_column": "MART_BRANCH_PERFORMANCE.DEPOSITS",
+          "glossary_term": "Branch Deposits",
+          "report_field": "SAP_BO/UNIVERSE/Branch_Performance_Scorecard/DEPOSITS"
+        },
+        {
+          "mart_column": "MART_BRANCH_PERFORMANCE.TXN_COUNT",
+          "glossary_term": "Transaction Count",
+          "report_field": "SAP_BO/UNIVERSE/Branch_Performance_Scorecard/TXN_COUNT"
+        },
+        {
+          "mart_column": "MART_BRANCH_PERFORMANCE.NET_INCOME",
+          "glossary_term": "Branch Net Income",
+          "report_field": "SAP_BO/UNIVERSE/Branch_Performance_Scorecard/NET_INCOME"
+        }
+      ],
+      "source_systems": [
+        "Oracle EBS General Ledger",
+        "Temenos T24 Core Banking"
+      ],
+      "avg_dq_score": 94.94
+    },
+    {
+      "id": "RPT-009",
+      "type": "Product/Report",
+      "name": "Channel Usage Report",
+      "report_type": "Power BI",
+      "description": "Channel Usage Report used by Digital Banking (Daily refresh).",
+      "report_owner": {
+        "name": "Nour El-Din Adel",
+        "email": "nour.eldin.adel@bank.example",
+        "dept": "Digital Banking"
+      },
+      "refresh_frequency": "Daily",
+      "classification": "Confidential",
+      "tags": [
+        "Financial"
+      ],
+      "criticality": "Important",
+      "monthly_users": 238,
+      "last_refresh": "2026-06-21",
+      "linked_kpis": [
+        {
+          "id": "KPI-010",
+          "name": "Digital Channel Adoption"
+        },
+        {
+          "id": "KPI-015",
+          "name": "Transaction Volume by Channel"
+        }
+      ],
+      "linked_glossary_terms": [
+        {
+          "id": "GT-0028",
+          "name": "Channel"
+        },
+        {
+          "id": "GT-0082",
+          "name": "Transaction Count"
+        },
+        {
+          "id": "GT-0083",
+          "name": "Transaction Date"
+        },
+        {
+          "id": "GT-0087",
+          "name": "Transaction Volume"
+        }
+      ],
+      "linked_attributes": [
+        {
+          "mart_column": "MART_TXN_SUMMARY.CHANNEL",
+          "glossary_term": "Channel",
+          "report_field": "SAP_BO/UNIVERSE/Channel_Usage_Report/CHANNEL"
+        },
+        {
+          "mart_column": "MART_TXN_SUMMARY.TXN_COUNT",
+          "glossary_term": "Transaction Count",
+          "report_field": "SAP_BO/UNIVERSE/Channel_Usage_Report/TXN_COUNT"
+        },
+        {
+          "mart_column": "MART_TXN_SUMMARY.TXN_VOLUME",
+          "glossary_term": "Transaction Volume",
+          "report_field": "SAP_BO/UNIVERSE/Channel_Usage_Report/TXN_VOLUME"
+        },
+        {
+          "mart_column": "MART_TXN_SUMMARY.TXN_DATE",
+          "glossary_term": "Transaction Date",
+          "report_field": "SAP_BO/UNIVERSE/Channel_Usage_Report/TXN_DATE"
+        }
+      ],
+      "source_systems": [
+        "Temenos T24 Core Banking"
+      ],
+      "avg_dq_score": 92.5
+    },
+    {
+      "id": "RPT-010",
+      "type": "Product/Report",
+      "name": "Deposits by Segment Report",
+      "report_type": "SAP BO Webi",
+      "description": "Deposits by Segment Report used by Retail Banking (Monthly refresh).",
+      "report_owner": {
+        "name": "Ahmed Hassan",
+        "email": "ahmed.hassan@bank.example",
+        "dept": "Retail Banking"
+      },
+      "refresh_frequency": "Monthly",
+      "classification": "Confidential",
+      "tags": [
+        "Financial"
+      ],
+      "criticality": "Important",
+      "monthly_users": 141,
+      "last_refresh": "2026-07-04",
+      "linked_kpis": [
+        {
+          "id": "KPI-001",
+          "name": "Total Deposits"
+        },
+        {
+          "id": "KPI-007",
+          "name": "Average Balance per Customer"
+        }
+      ],
+      "linked_glossary_terms": [
+        {
+          "id": "GT-0038",
+          "name": "Customer Identifier"
+        },
+        {
+          "id": "GT-0042",
+          "name": "Customer Segment"
+        },
+        {
+          "id": "GT-0079",
+          "name": "Total Customer Balance"
+        }
+      ],
+      "linked_attributes": [
+        {
+          "mart_column": "MART_CUSTOMER_360.SEGMENT_CODE",
+          "glossary_term": "Customer Segment",
+          "report_field": "SAP_BO/UNIVERSE/Deposits_by_Segment_Report/SEGMENT_CODE"
+        },
+        {
+          "mart_column": "MART_CUSTOMER_360.TOTAL_BALANCE",
+          "glossary_term": "Total Customer Balance",
+          "report_field": "SAP_BO/UNIVERSE/Deposits_by_Segment_Report/TOTAL_BALANCE"
+        },
+        {
+          "mart_column": "MART_CUSTOMER_360.CUST_ID",
+          "glossary_term": "Customer Identifier",
+          "report_field": "SAP_BO/UNIVERSE/Deposits_by_Segment_Report/CUST_ID"
+        }
+      ],
+      "source_systems": [
+        "Temenos T24 Core Banking"
+      ],
+      "avg_dq_score": 97.16
+    },
+    {
+      "id": "RPT-011",
+      "type": "Product/Report",
+      "name": "Loan to Deposit Ratio Report",
+      "report_type": "SAP BO Webi",
+      "description": "Loan to Deposit Ratio Report used by Finance (Monthly refresh).",
+      "report_owner": {
+        "name": "Omar Fathy",
+        "email": "omar.fathy@bank.example",
+        "dept": "Finance"
+      },
+      "refresh_frequency": "Monthly",
+      "classification": "Confidential",
+      "tags": [
+        "Financial"
+      ],
+      "criticality": "Important",
+      "monthly_users": 192,
+      "last_refresh": "2026-05-12",
+      "linked_kpis": [
+        {
+          "id": "KPI-008",
+          "name": "Loan-to-Deposit Ratio"
+        }
+      ],
+      "linked_glossary_terms": [
+        {
+          "id": "GT-0018",
+          "name": "Branch Deposits"
+        },
+        {
+          "id": "GT-0079",
+          "name": "Total Customer Balance"
+        },
+        {
+          "id": "GT-0080",
+          "name": "Total Loan Outstanding"
+        }
+      ],
+      "linked_attributes": [
+        {
+          "mart_column": "MART_CUSTOMER_360.TOTAL_LOAN_OUTSTANDING",
+          "glossary_term": "Total Loan Outstanding",
+          "report_field": "SAP_BO/UNIVERSE/Loan_to_Deposit_Ratio_Report/TOTAL_LOAN_OUTSTANDING"
+        },
+        {
+          "mart_column": "MART_CUSTOMER_360.TOTAL_BALANCE",
+          "glossary_term": "Total Customer Balance",
+          "report_field": "SAP_BO/UNIVERSE/Loan_to_Deposit_Ratio_Report/TOTAL_BALANCE"
+        },
+        {
+          "mart_column": "MART_BRANCH_PERFORMANCE.DEPOSITS",
+          "glossary_term": "Branch Deposits",
+          "report_field": "SAP_BO/UNIVERSE/Loan_to_Deposit_Ratio_Report/DEPOSITS"
+        }
+      ],
+      "source_systems": [
+        "Oracle FLEXCUBE Loans",
+        "Temenos T24 Core Banking"
+      ],
+      "avg_dq_score": 95.55
+    },
+    {
+      "id": "RPT-012",
+      "type": "Product/Report",
+      "name": "Card Portfolio Report",
+      "report_type": "SAP BO Webi",
+      "description": "Card Portfolio Report used by Cards & Payments (Monthly refresh).",
+      "report_owner": {
+        "name": "Heba Mostafa",
+        "email": "heba.mostafa@bank.example",
+        "dept": "Cards & Payments"
+      },
+      "refresh_frequency": "Monthly",
+      "classification": "Internal",
+      "tags": [],
+      "criticality": "Important",
+      "monthly_users": 184,
+      "last_refresh": "2026-01-11",
+      "linked_kpis": [
+        {
+          "id": "KPI-009",
+          "name": "Card Utilization Rate"
+        }
+      ],
+      "linked_glossary_terms": [
+        {
+          "id": "GT-0022",
+          "name": "Card Count"
+        },
+        {
+          "id": "GT-0038",
+          "name": "Customer Identifier"
+        },
+        {
+          "id": "GT-0042",
+          "name": "Customer Segment"
+        }
+      ],
+      "linked_attributes": [
+        {
+          "mart_column": "MART_CUSTOMER_360.CARD_COUNT",
+          "glossary_term": "Card Count",
+          "report_field": "SAP_BO/UNIVERSE/Card_Portfolio_Report/CARD_COUNT"
+        },
+        {
+          "mart_column": "MART_CUSTOMER_360.CUST_ID",
+          "glossary_term": "Customer Identifier",
+          "report_field": "SAP_BO/UNIVERSE/Card_Portfolio_Report/CUST_ID"
+        },
+        {
+          "mart_column": "MART_CUSTOMER_360.SEGMENT_CODE",
+          "glossary_term": "Customer Segment",
+          "report_field": "SAP_BO/UNIVERSE/Card_Portfolio_Report/SEGMENT_CODE"
+        }
+      ],
+      "source_systems": [
+        "OpenWay Way4 Cards",
+        "Temenos T24 Core Banking"
+      ],
+      "avg_dq_score": 97.29
+    },
+    {
+      "id": "RPT-013",
+      "type": "Product/Report",
+      "name": "Regulatory Liquidity Return (CBE)",
+      "report_type": "SSRS",
+      "description": "Regulatory Liquidity Return (CBE) used by Finance (Monthly refresh).",
+      "report_owner": {
+        "name": "Omar Fathy",
+        "email": "omar.fathy@bank.example",
+        "dept": "Finance"
+      },
+      "refresh_frequency": "Monthly",
+      "classification": "Confidential",
+      "tags": [
+        "Financial"
+      ],
+      "criticality": "Important",
+      "monthly_users": 218,
+      "last_refresh": "2026-03-04",
+      "linked_kpis": [
+        {
+          "id": "KPI-008",
+          "name": "Loan-to-Deposit Ratio"
+        },
+        {
+          "id": "KPI-001",
+          "name": "Total Deposits"
+        }
+      ],
+      "linked_glossary_terms": [
+        {
+          "id": "GT-0018",
+          "name": "Branch Deposits"
+        },
+        {
+          "id": "GT-0080",
+          "name": "Total Loan Outstanding"
+        }
+      ],
+      "linked_attributes": [
+        {
+          "mart_column": "MART_BRANCH_PERFORMANCE.DEPOSITS",
+          "glossary_term": "Branch Deposits",
+          "report_field": "SAP_BO/UNIVERSE/Regulatory_Liquidity_Return_(CBE)/DEPOSITS"
+        },
+        {
+          "mart_column": "MART_CUSTOMER_360.TOTAL_LOAN_OUTSTANDING",
+          "glossary_term": "Total Loan Outstanding",
+          "report_field": "SAP_BO/UNIVERSE/Regulatory_Liquidity_Return_(CBE)/TOTAL_LOAN_OUTSTANDING"
+        }
+      ],
+      "source_systems": [
+        "Oracle FLEXCUBE Loans",
+        "Temenos T24 Core Banking"
+      ],
+      "avg_dq_score": 95.0
+    },
+    {
+      "id": "RPT-014",
+      "type": "Product/Report",
+      "name": "Daily Transactions Monitoring",
+      "report_type": "SAP BO Webi",
+      "description": "Daily Transactions Monitoring used by Operations (Daily refresh).",
+      "report_owner": {
+        "name": "Yasser Gamal",
+        "email": "yasser.gamal@bank.example",
+        "dept": "Operations"
+      },
+      "refresh_frequency": "Daily",
+      "classification": "Internal",
+      "tags": [],
+      "criticality": "Important",
+      "monthly_users": 187,
+      "last_refresh": "2026-04-12",
+      "linked_kpis": [
+        {
+          "id": "KPI-015",
+          "name": "Transaction Volume by Channel"
+        },
+        {
+          "id": "KPI-020",
+          "name": "Branch Transaction Throughput"
+        }
+      ],
+      "linked_glossary_terms": [
+        {
+          "id": "GT-0082",
+          "name": "Transaction Count"
+        },
+        {
+          "id": "GT-0083",
+          "name": "Transaction Date"
+        }
+      ],
+      "linked_attributes": [
+        {
+          "mart_column": "MART_TXN_SUMMARY.TXN_DATE",
+          "glossary_term": "Transaction Date",
+          "report_field": "SAP_BO/UNIVERSE/Daily_Transactions_Monitoring/TXN_DATE"
+        },
+        {
+          "mart_column": "MART_TXN_SUMMARY.TXN_COUNT",
+          "glossary_term": "Transaction Count",
+          "report_field": "SAP_BO/UNIVERSE/Daily_Transactions_Monitoring/TXN_COUNT"
+        },
+        {
+          "mart_column": "MART_BRANCH_PERFORMANCE.TXN_COUNT",
+          "glossary_term": "Transaction Count",
+          "report_field": "SAP_BO/UNIVERSE/Daily_Transactions_Monitoring/TXN_COUNT_BRA"
+        }
+      ],
+      "source_systems": [
+        "Temenos T24 Core Banking"
+      ],
+      "avg_dq_score": 95.58
+    },
+    {
+      "id": "RPT-015",
+      "type": "Product/Report",
+      "name": "Customer Onboarding Report",
+      "report_type": "SAP BO Webi",
+      "description": "Customer Onboarding Report used by Retail Banking (Weekly refresh).",
+      "report_owner": {
+        "name": "Ahmed Hassan",
+        "email": "ahmed.hassan@bank.example",
+        "dept": "Retail Banking"
+      },
+      "refresh_frequency": "Weekly",
+      "classification": "Confidential",
+      "tags": [
+        "AML-Sensitive"
+      ],
+      "criticality": "Important",
+      "monthly_users": 303,
+      "last_refresh": "2026-03-31",
+      "linked_kpis": [
+        {
+          "id": "KPI-006",
+          "name": "New Customers Onboarded"
+        }
+      ],
+      "linked_glossary_terms": [
+        {
+          "id": "GT-0020",
+          "name": "Branch Name"
+        },
+        {
+          "id": "GT-0038",
+          "name": "Customer Identifier"
+        },
+        {
+          "id": "GT-0042",
+          "name": "Customer Segment"
+        },
+        {
+          "id": "GT-0059",
+          "name": "KYC Status"
+        }
+      ],
+      "linked_attributes": [
+        {
+          "mart_column": "MART_CUSTOMER_360.CUST_ID",
+          "glossary_term": "Customer Identifier",
+          "report_field": "SAP_BO/UNIVERSE/Customer_Onboarding_Report/CUST_ID"
+        },
+        {
+          "mart_column": "MART_CUSTOMER_360.SEGMENT_CODE",
+          "glossary_term": "Customer Segment",
+          "report_field": "SAP_BO/UNIVERSE/Customer_Onboarding_Report/SEGMENT_CODE"
+        },
+        {
+          "mart_column": "MART_CUSTOMER_360.BRANCH_NAME",
+          "glossary_term": "Branch Name",
+          "report_field": "SAP_BO/UNIVERSE/Customer_Onboarding_Report/BRANCH_NAME"
+        },
+        {
+          "mart_column": "MART_CUSTOMER_360.KYC_STATUS",
+          "glossary_term": "KYC Status",
+          "report_field": "SAP_BO/UNIVERSE/Customer_Onboarding_Report/KYC_STATUS"
+        }
+      ],
+      "source_systems": [
+        "Temenos T24 Core Banking"
+      ],
+      "avg_dq_score": 96.14
+    },
+    {
+      "id": "RPT-016",
+      "type": "Product/Report",
+      "name": "Branch Net Income Report",
+      "report_type": "SAP BO Webi",
+      "description": "Branch Net Income Report used by Finance (Monthly refresh).",
+      "report_owner": {
+        "name": "Omar Fathy",
+        "email": "omar.fathy@bank.example",
+        "dept": "Finance"
+      },
+      "refresh_frequency": "Monthly",
+      "classification": "Confidential",
+      "tags": [
+        "Financial"
+      ],
+      "criticality": "Critical",
+      "monthly_users": 153,
+      "last_refresh": "2026-07-01",
+      "linked_kpis": [
+        {
+          "id": "KPI-017",
+          "name": "Cost-to-Income Ratio"
+        },
+        {
+          "id": "KPI-016",
+          "name": "Branch Profitability"
+        },
+        {
+          "id": "KPI-002",
+          "name": "Net Interest Margin"
+        }
+      ],
+      "linked_glossary_terms": [
+        {
+          "id": "GT-0017",
+          "name": "Branch Code"
+        },
+        {
+          "id": "GT-0021",
+          "name": "Branch Net Income"
+        }
+      ],
+      "linked_attributes": [
+        {
+          "mart_column": "MART_BRANCH_PERFORMANCE.NET_INCOME",
+          "glossary_term": "Branch Net Income",
+          "report_field": "SAP_BO/UNIVERSE/Branch_Net_Income_Report/NET_INCOME"
+        },
+        {
+          "mart_column": "MART_BRANCH_PERFORMANCE.BRANCH_CODE",
+          "glossary_term": "Branch Code",
+          "report_field": "SAP_BO/UNIVERSE/Branch_Net_Income_Report/BRANCH_CODE"
+        }
+      ],
+      "source_systems": [
+        "Oracle EBS General Ledger",
+        "Temenos T24 Core Banking"
+      ],
+      "avg_dq_score": 94.49
+    },
+    {
+      "id": "RPT-017",
+      "type": "Product/Report",
+      "name": "Early Warning Credit Report",
+      "report_type": "Power BI",
+      "description": "Early Warning Credit Report used by Risk Management (Weekly refresh).",
+      "report_owner": {
+        "name": "Khaled Mansour",
+        "email": "khaled.mansour@bank.example",
+        "dept": "Risk Management"
+      },
+      "refresh_frequency": "Weekly",
+      "classification": "Restricted",
+      "tags": [
+        "AML-Sensitive",
+        "Financial"
+      ],
+      "criticality": "Important",
+      "monthly_users": 174,
+      "last_refresh": "2026-09-19",
+      "linked_kpis": [
+        {
+          "id": "KPI-003",
+          "name": "NPL Ratio"
+        }
+      ],
+      "linked_glossary_terms": [
+        {
+          "id": "GT-0038",
+          "name": "Customer Identifier"
+        },
+        {
+          "id": "GT-0041",
+          "name": "Customer Risk Rating"
+        },
+        {
+          "id": "GT-0044",
+          "name": "Days Past Due"
+        },
+        {
+          "id": "GT-0054",
+          "name": "IFRS9 Stage"
+        }
+      ],
+      "linked_attributes": [
+        {
+          "mart_column": "MART_CREDIT_RISK.DPD",
+          "glossary_term": "Days Past Due",
+          "report_field": "SAP_BO/UNIVERSE/Early_Warning_Credit_Report/DPD"
+        },
+        {
+          "mart_column": "MART_CREDIT_RISK.IFRS9_STAGE",
+          "glossary_term": "IFRS9 Stage",
+          "report_field": "SAP_BO/UNIVERSE/Early_Warning_Credit_Report/IFRS9_STAGE"
+        },
+        {
+          "mart_column": "MART_CREDIT_RISK.CUST_ID",
+          "glossary_term": "Customer Identifier",
+          "report_field": "SAP_BO/UNIVERSE/Early_Warning_Credit_Report/CUST_ID"
+        },
+        {
+          "mart_column": "MART_CUSTOMER_360.RISK_RATING",
+          "glossary_term": "Customer Risk Rating",
+          "report_field": "SAP_BO/UNIVERSE/Early_Warning_Credit_Report/RISK_RATING"
+        }
+      ],
+      "source_systems": [
+        "Oracle FLEXCUBE Loans",
+        "Temenos T24 Core Banking"
+      ],
+      "avg_dq_score": 90.9
+    },
+    {
+      "id": "RPT-018",
+      "type": "Product/Report",
+      "name": "Regional Management Pack",
+      "report_type": "Power BI",
+      "description": "Regional Management Pack used by Executive Management (Monthly refresh).",
+      "report_owner": {
+        "name": "Nour El-Din Adel",
+        "email": "nour.eldin.adel@bank.example",
+        "dept": "Executive Management"
+      },
+      "refresh_frequency": "Monthly",
+      "classification": "Confidential",
+      "tags": [
+        "Financial"
+      ],
+      "criticality": "Critical",
+      "monthly_users": 257,
+      "last_refresh": "2026-08-17",
+      "linked_kpis": [
+        {
+          "id": "KPI-001",
+          "name": "Total Deposits"
+        },
+        {
+          "id": "KPI-016",
+          "name": "Branch Profitability"
+        },
+        {
+          "id": "KPI-005",
+          "name": "Active Customers"
+        }
+      ],
+      "linked_glossary_terms": [
+        {
+          "id": "GT-0018",
+          "name": "Branch Deposits"
+        },
+        {
+          "id": "GT-0021",
+          "name": "Branch Net Income"
+        },
+        {
+          "id": "GT-0038",
+          "name": "Customer Identifier"
+        },
+        {
+          "id": "GT-0075",
+          "name": "Region"
+        }
+      ],
+      "linked_attributes": [
+        {
+          "mart_column": "MART_BRANCH_PERFORMANCE.REGION",
+          "glossary_term": "Region",
+          "report_field": "SAP_BO/UNIVERSE/Regional_Management_Pack/REGION"
+        },
+        {
+          "mart_column": "MART_BRANCH_PERFORMANCE.DEPOSITS",
+          "glossary_term": "Branch Deposits",
+          "report_field": "SAP_BO/UNIVERSE/Regional_Management_Pack/DEPOSITS"
+        },
+        {
+          "mart_column": "MART_BRANCH_PERFORMANCE.NET_INCOME",
+          "glossary_term": "Branch Net Income",
+          "report_field": "SAP_BO/UNIVERSE/Regional_Management_Pack/NET_INCOME"
+        },
+        {
+          "mart_column": "MART_CUSTOMER_360.CUST_ID",
+          "glossary_term": "Customer Identifier",
+          "report_field": "SAP_BO/UNIVERSE/Regional_Management_Pack/CUST_ID"
+        }
+      ],
+      "source_systems": [
+        "Oracle EBS General Ledger",
+        "Temenos T24 Core Banking"
+      ],
+      "avg_dq_score": 98.18
+    }
+  ]
+}

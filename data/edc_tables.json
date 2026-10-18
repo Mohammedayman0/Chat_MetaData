@@ -1,0 +1,1280 @@
+{
+  "metadata": {
+    "totalCount": 32
+  },
+  "items": [
+    {
+      "id": "T24_ORACLE/T24_CORE/CUSTOMER",
+      "type": "com.infa.ldm.relational.Table",
+      "name": "CUSTOMER",
+      "schema": "T24_CORE",
+      "resource": "T24_ORACLE",
+      "layer": "SOURCE",
+      "system": "Temenos T24 Core Banking",
+      "system_owner": "tarek.samir@bank.example",
+      "row_count": 27168762,
+      "column_count": 14,
+      "classification": "Restricted",
+      "tags": [
+        "AML-Sensitive",
+        "PII"
+      ],
+      "dq_score": 90.95,
+      "last_scan": "2026-09-25",
+      "glossary_terms": [
+        "Branch Code",
+        "Customer Identifier",
+        "Customer Name",
+        "Customer Onboarding Date",
+        "Customer Risk Rating",
+        "Customer Segment",
+        "Date of Birth",
+        "Email Address",
+        "Gender",
+        "KYC Status",
+        "Mobile Number",
+        "National ID Number",
+        "Nationality",
+        "Occupation"
+      ],
+      "columns": [
+        "CUST_ID",
+        "CUST_NAME",
+        "NATIONAL_ID",
+        "DOB",
+        "GENDER",
+        "MOBILE_NO",
+        "EMAIL",
+        "SEGMENT_CODE",
+        "KYC_STATUS",
+        "RISK_RATING",
+        "OPEN_DATE",
+        "BRANCH_CODE",
+        "NATIONALITY",
+        "OCCUPATION"
+      ]
+    },
+    {
+      "id": "HIVE_LAKE/stg/STG_CUSTOMER",
+      "type": "com.infa.ldm.relational.Table",
+      "name": "STG_CUSTOMER",
+      "schema": "stg",
+      "resource": "HIVE_LAKE",
+      "layer": "STAGING",
+      "system": "Cloudera Data Lake (Staging)",
+      "system_owner": "nour.eldin.adel@bank.example",
+      "row_count": 67703989,
+      "column_count": 14,
+      "classification": "Restricted",
+      "tags": [
+        "AML-Sensitive",
+        "PII"
+      ],
+      "dq_score": 94.84,
+      "last_scan": "2026-08-03",
+      "glossary_terms": [
+        "Branch Code",
+        "Customer Identifier",
+        "Customer Name",
+        "Customer Onboarding Date",
+        "Customer Risk Rating",
+        "Customer Segment",
+        "Date of Birth",
+        "KYC Status",
+        "National ID Number",
+        "Nationality",
+        "Occupation"
+      ],
+      "columns": [
+        "CUST_ID",
+        "CUST_NAME",
+        "NATIONAL_ID",
+        "DOB",
+        "GENDER",
+        "MOBILE_NO",
+        "EMAIL",
+        "SEGMENT_CODE",
+        "KYC_STATUS",
+        "RISK_RATING",
+        "OPEN_DATE",
+        "BRANCH_CODE",
+        "NATIONALITY",
+        "OCCUPATION"
+      ]
+    },
+    {
+      "id": "ORA_DWH/DWH/DIM_CUSTOMER",
+      "type": "com.infa.ldm.relational.Table",
+      "name": "DIM_CUSTOMER",
+      "schema": "DWH",
+      "resource": "ORA_DWH",
+      "layer": "DWH",
+      "system": "Enterprise Data Warehouse",
+      "system_owner": "nour.eldin.adel@bank.example",
+      "row_count": 20083763,
+      "column_count": 14,
+      "classification": "Restricted",
+      "tags": [
+        "AML-Sensitive",
+        "PII"
+      ],
+      "dq_score": 93.09,
+      "last_scan": "2026-02-19",
+      "glossary_terms": [
+        "Branch Code",
+        "Customer Identifier",
+        "Customer Name",
+        "Customer Onboarding Date",
+        "Customer Risk Rating",
+        "Customer Segment",
+        "Date of Birth",
+        "Email Address",
+        "Gender",
+        "KYC Status",
+        "Mobile Number",
+        "National ID Number",
+        "Nationality",
+        "Occupation"
+      ],
+      "columns": [
+        "CUST_ID",
+        "CUST_NAME",
+        "NATIONAL_ID",
+        "DOB",
+        "GENDER",
+        "MOBILE_NO",
+        "EMAIL",
+        "SEGMENT_CODE",
+        "KYC_STATUS",
+        "RISK_RATING",
+        "OPEN_DATE",
+        "BRANCH_CODE",
+        "NATIONALITY",
+        "OCCUPATION"
+      ]
+    },
+    {
+      "id": "T24_ORACLE/T24_CORE/ACCOUNT",
+      "type": "com.infa.ldm.relational.Table",
+      "name": "ACCOUNT",
+      "schema": "T24_CORE",
+      "resource": "T24_ORACLE",
+      "layer": "SOURCE",
+      "system": "Temenos T24 Core Banking",
+      "system_owner": "tarek.samir@bank.example",
+      "row_count": 23823202,
+      "column_count": 12,
+      "classification": "Confidential",
+      "tags": [
+        "Financial"
+      ],
+      "dq_score": 90.11,
+      "last_scan": "2026-09-01",
+      "glossary_terms": [
+        "Account Balance",
+        "Account Number",
+        "Account Opening Date",
+        "Account Status",
+        "Account Type",
+        "Available Balance",
+        "Branch Code",
+        "Currency Code",
+        "Customer Identifier",
+        "IBAN",
+        "Interest Rate",
+        "Last Transaction Date"
+      ],
+      "columns": [
+        "ACCT_NO",
+        "CUST_ID",
+        "ACCT_TYPE",
+        "CURRENCY",
+        "BALANCE",
+        "AVAILABLE_BAL",
+        "OPEN_DATE",
+        "STATUS",
+        "BRANCH_CODE",
+        "IBAN",
+        "INTEREST_RATE",
+        "LAST_TXN_DATE"
+      ]
+    },
+    {
+      "id": "HIVE_LAKE/stg/STG_ACCOUNT",
+      "type": "com.infa.ldm.relational.Table",
+      "name": "STG_ACCOUNT",
+      "schema": "stg",
+      "resource": "HIVE_LAKE",
+      "layer": "STAGING",
+      "system": "Cloudera Data Lake (Staging)",
+      "system_owner": "nour.eldin.adel@bank.example",
+      "row_count": 5249398,
+      "column_count": 12,
+      "classification": "Confidential",
+      "tags": [
+        "Financial"
+      ],
+      "dq_score": 94.4,
+      "last_scan": "2026-09-30",
+      "glossary_terms": [
+        "Account Number",
+        "Account Type",
+        "Available Balance",
+        "Branch Code",
+        "Currency Code",
+        "Customer Identifier",
+        "IBAN",
+        "Last Transaction Date"
+      ],
+      "columns": [
+        "ACCT_NO",
+        "CUST_ID",
+        "ACCT_TYPE",
+        "CURRENCY",
+        "BALANCE",
+        "AVAILABLE_BAL",
+        "OPEN_DATE",
+        "STATUS",
+        "BRANCH_CODE",
+        "IBAN",
+        "INTEREST_RATE",
+        "LAST_TXN_DATE"
+      ]
+    },
+    {
+      "id": "ORA_DWH/DWH/DIM_ACCOUNT",
+      "type": "com.infa.ldm.relational.Table",
+      "name": "DIM_ACCOUNT",
+      "schema": "DWH",
+      "resource": "ORA_DWH",
+      "layer": "DWH",
+      "system": "Enterprise Data Warehouse",
+      "system_owner": "nour.eldin.adel@bank.example",
+      "row_count": 67565702,
+      "column_count": 12,
+      "classification": "Confidential",
+      "tags": [
+        "Financial"
+      ],
+      "dq_score": 96.12,
+      "last_scan": "2026-03-02",
+      "glossary_terms": [
+        "Account Balance",
+        "Account Number",
+        "Account Opening Date",
+        "Account Status",
+        "Account Type",
+        "Available Balance",
+        "Branch Code",
+        "Currency Code",
+        "Customer Identifier",
+        "IBAN",
+        "Interest Rate",
+        "Last Transaction Date"
+      ],
+      "columns": [
+        "ACCT_NO",
+        "CUST_ID",
+        "ACCT_TYPE",
+        "CURRENCY",
+        "BALANCE",
+        "AVAILABLE_BAL",
+        "OPEN_DATE",
+        "STATUS",
+        "BRANCH_CODE",
+        "IBAN",
+        "INTEREST_RATE",
+        "LAST_TXN_DATE"
+      ]
+    },
+    {
+      "id": "T24_ORACLE/T24_CORE/TRANSACTION",
+      "type": "com.infa.ldm.relational.Table",
+      "name": "TRANSACTION",
+      "schema": "T24_CORE",
+      "resource": "T24_ORACLE",
+      "layer": "SOURCE",
+      "system": "Temenos T24 Core Banking",
+      "system_owner": "tarek.samir@bank.example",
+      "row_count": 12517745,
+      "column_count": 10,
+      "classification": "Confidential",
+      "tags": [
+        "Financial"
+      ],
+      "dq_score": 95.87,
+      "last_scan": "2026-09-04",
+      "glossary_terms": [
+        "Account Number",
+        "Balance After Transaction",
+        "Channel",
+        "Counterparty Account",
+        "Currency Code",
+        "Transaction Amount",
+        "Transaction Date",
+        "Transaction Identifier",
+        "Transaction Narration",
+        "Transaction Type"
+      ],
+      "columns": [
+        "TXN_ID",
+        "ACCT_NO",
+        "TXN_DATE",
+        "TXN_AMT",
+        "TXN_TYPE",
+        "CHANNEL",
+        "CURRENCY",
+        "COUNTERPARTY_ACCT",
+        "NARRATION",
+        "BALANCE_AFTER"
+      ]
+    },
+    {
+      "id": "HIVE_LAKE/stg/STG_TRANSACTION",
+      "type": "com.infa.ldm.relational.Table",
+      "name": "STG_TRANSACTION",
+      "schema": "stg",
+      "resource": "HIVE_LAKE",
+      "layer": "STAGING",
+      "system": "Cloudera Data Lake (Staging)",
+      "system_owner": "nour.eldin.adel@bank.example",
+      "row_count": 17502440,
+      "column_count": 10,
+      "classification": "Confidential",
+      "tags": [
+        "Financial"
+      ],
+      "dq_score": 95.33,
+      "last_scan": "2026-01-01",
+      "glossary_terms": [
+        "Account Number",
+        "Balance After Transaction",
+        "Currency Code",
+        "Transaction Amount",
+        "Transaction Identifier",
+        "Transaction Narration"
+      ],
+      "columns": [
+        "TXN_ID",
+        "ACCT_NO",
+        "TXN_DATE",
+        "TXN_AMT",
+        "TXN_TYPE",
+        "CHANNEL",
+        "CURRENCY",
+        "COUNTERPARTY_ACCT",
+        "NARRATION",
+        "BALANCE_AFTER"
+      ]
+    },
+    {
+      "id": "ORA_DWH/DWH/FCT_TRANSACTION",
+      "type": "com.infa.ldm.relational.Table",
+      "name": "FCT_TRANSACTION",
+      "schema": "DWH",
+      "resource": "ORA_DWH",
+      "layer": "DWH",
+      "system": "Enterprise Data Warehouse",
+      "system_owner": "nour.eldin.adel@bank.example",
+      "row_count": 57924523,
+      "column_count": 10,
+      "classification": "Confidential",
+      "tags": [
+        "Financial"
+      ],
+      "dq_score": 93.32,
+      "last_scan": "2026-09-25",
+      "glossary_terms": [
+        "Account Number",
+        "Balance After Transaction",
+        "Channel",
+        "Counterparty Account",
+        "Currency Code",
+        "Transaction Amount",
+        "Transaction Date",
+        "Transaction Identifier",
+        "Transaction Narration",
+        "Transaction Type"
+      ],
+      "columns": [
+        "TXN_ID",
+        "ACCT_NO",
+        "TXN_DATE",
+        "TXN_AMT",
+        "TXN_TYPE",
+        "CHANNEL",
+        "CURRENCY",
+        "COUNTERPARTY_ACCT",
+        "NARRATION",
+        "BALANCE_AFTER"
+      ]
+    },
+    {
+      "id": "T24_ORACLE/T24_CORE/BRANCH",
+      "type": "com.infa.ldm.relational.Table",
+      "name": "BRANCH",
+      "schema": "T24_CORE",
+      "resource": "T24_ORACLE",
+      "layer": "SOURCE",
+      "system": "Temenos T24 Core Banking",
+      "system_owner": "tarek.samir@bank.example",
+      "row_count": 56473253,
+      "column_count": 5,
+      "classification": "Internal",
+      "tags": [],
+      "dq_score": 96.76,
+      "last_scan": "2026-07-09",
+      "glossary_terms": [
+        "Branch Code",
+        "Branch Manager ID",
+        "Branch Name",
+        "City",
+        "Region"
+      ],
+      "columns": [
+        "BRANCH_CODE",
+        "BRANCH_NAME",
+        "REGION",
+        "CITY",
+        "MANAGER_ID"
+      ]
+    },
+    {
+      "id": "HIVE_LAKE/stg/STG_BRANCH",
+      "type": "com.infa.ldm.relational.Table",
+      "name": "STG_BRANCH",
+      "schema": "stg",
+      "resource": "HIVE_LAKE",
+      "layer": "STAGING",
+      "system": "Cloudera Data Lake (Staging)",
+      "system_owner": "nour.eldin.adel@bank.example",
+      "row_count": 5840187,
+      "column_count": 5,
+      "classification": "Internal",
+      "tags": [],
+      "dq_score": 89.0,
+      "last_scan": "2026-09-29",
+      "glossary_terms": [
+        "Branch Name",
+        "City"
+      ],
+      "columns": [
+        "BRANCH_CODE",
+        "BRANCH_NAME",
+        "REGION",
+        "CITY",
+        "MANAGER_ID"
+      ]
+    },
+    {
+      "id": "ORA_DWH/DWH/DIM_BRANCH",
+      "type": "com.infa.ldm.relational.Table",
+      "name": "DIM_BRANCH",
+      "schema": "DWH",
+      "resource": "ORA_DWH",
+      "layer": "DWH",
+      "system": "Enterprise Data Warehouse",
+      "system_owner": "nour.eldin.adel@bank.example",
+      "row_count": 57583535,
+      "column_count": 5,
+      "classification": "Internal",
+      "tags": [],
+      "dq_score": 93.92,
+      "last_scan": "2026-04-28",
+      "glossary_terms": [
+        "Branch Code",
+        "Branch Manager ID",
+        "Branch Name",
+        "City",
+        "Region"
+      ],
+      "columns": [
+        "BRANCH_CODE",
+        "BRANCH_NAME",
+        "REGION",
+        "CITY",
+        "MANAGER_ID"
+      ]
+    },
+    {
+      "id": "FLEX_ORACLE/FCUBS/LOAN",
+      "type": "com.infa.ldm.relational.Table",
+      "name": "LOAN",
+      "schema": "FCUBS",
+      "resource": "FLEX_ORACLE",
+      "layer": "SOURCE",
+      "system": "Oracle FLEXCUBE Loans",
+      "system_owner": "khaled.mansour@bank.example",
+      "row_count": 64719513,
+      "column_count": 14,
+      "classification": "Restricted",
+      "tags": [
+        "Financial",
+        "Risk-Model"
+      ],
+      "dq_score": 95.84,
+      "last_scan": "2026-07-15",
+      "glossary_terms": [
+        "Collateral Value",
+        "Customer Identifier",
+        "Days Past Due",
+        "Disbursement Date",
+        "Exposure at Default",
+        "IFRS9 Stage",
+        "Interest Rate",
+        "Loan Identifier",
+        "Loan Tenor",
+        "Loss Given Default",
+        "Outstanding Balance",
+        "Principal Amount",
+        "Probability of Default",
+        "Product Code"
+      ],
+      "columns": [
+        "LOAN_ID",
+        "CUST_ID",
+        "PRODUCT_CODE",
+        "PRINCIPAL_AMT",
+        "OUTSTANDING_AMT",
+        "INTEREST_RATE",
+        "TENOR_MONTHS",
+        "DISBURSE_DATE",
+        "DPD",
+        "IFRS9_STAGE",
+        "PD",
+        "LGD",
+        "EAD",
+        "COLLATERAL_VALUE"
+      ]
+    },
+    {
+      "id": "HIVE_LAKE/stg/STG_LOAN",
+      "type": "com.infa.ldm.relational.Table",
+      "name": "STG_LOAN",
+      "schema": "stg",
+      "resource": "HIVE_LAKE",
+      "layer": "STAGING",
+      "system": "Cloudera Data Lake (Staging)",
+      "system_owner": "nour.eldin.adel@bank.example",
+      "row_count": 47055704,
+      "column_count": 14,
+      "classification": "Restricted",
+      "tags": [
+        "Financial",
+        "Risk-Model"
+      ],
+      "dq_score": 92.39,
+      "last_scan": "2026-02-20",
+      "glossary_terms": [
+        "Collateral Value",
+        "Customer Identifier",
+        "Days Past Due",
+        "Disbursement Date",
+        "IFRS9 Stage",
+        "Interest Rate",
+        "Loan Identifier",
+        "Loan Tenor",
+        "Loss Given Default",
+        "Outstanding Balance",
+        "Principal Amount",
+        "Probability of Default",
+        "Product Code"
+      ],
+      "columns": [
+        "LOAN_ID",
+        "CUST_ID",
+        "PRODUCT_CODE",
+        "PRINCIPAL_AMT",
+        "OUTSTANDING_AMT",
+        "INTEREST_RATE",
+        "TENOR_MONTHS",
+        "DISBURSE_DATE",
+        "DPD",
+        "IFRS9_STAGE",
+        "PD",
+        "LGD",
+        "EAD",
+        "COLLATERAL_VALUE"
+      ]
+    },
+    {
+      "id": "ORA_DWH/DWH/FCT_LOAN",
+      "type": "com.infa.ldm.relational.Table",
+      "name": "FCT_LOAN",
+      "schema": "DWH",
+      "resource": "ORA_DWH",
+      "layer": "DWH",
+      "system": "Enterprise Data Warehouse",
+      "system_owner": "nour.eldin.adel@bank.example",
+      "row_count": 57118220,
+      "column_count": 14,
+      "classification": "Restricted",
+      "tags": [
+        "Financial",
+        "Risk-Model"
+      ],
+      "dq_score": 93.9,
+      "last_scan": "2026-03-10",
+      "glossary_terms": [
+        "Collateral Value",
+        "Customer Identifier",
+        "Days Past Due",
+        "Disbursement Date",
+        "Exposure at Default",
+        "IFRS9 Stage",
+        "Interest Rate",
+        "Loan Identifier",
+        "Loan Tenor",
+        "Loss Given Default",
+        "Outstanding Balance",
+        "Principal Amount",
+        "Probability of Default",
+        "Product Code"
+      ],
+      "columns": [
+        "LOAN_ID",
+        "CUST_ID",
+        "PRODUCT_CODE",
+        "PRINCIPAL_AMT",
+        "OUTSTANDING_AMT",
+        "INTEREST_RATE",
+        "TENOR_MONTHS",
+        "DISBURSE_DATE",
+        "DPD",
+        "IFRS9_STAGE",
+        "PD",
+        "LGD",
+        "EAD",
+        "COLLATERAL_VALUE"
+      ]
+    },
+    {
+      "id": "WAY4_ORACLE/WAY4/CARD",
+      "type": "com.infa.ldm.relational.Table",
+      "name": "CARD",
+      "schema": "WAY4",
+      "resource": "WAY4_ORACLE",
+      "layer": "SOURCE",
+      "system": "OpenWay Way4 Cards",
+      "system_owner": "heba.mostafa@bank.example",
+      "row_count": 34170831,
+      "column_count": 8,
+      "classification": "Restricted",
+      "tags": [
+        "Financial",
+        "PCI"
+      ],
+      "dq_score": 95.31,
+      "last_scan": "2026-09-02",
+      "glossary_terms": [
+        "Card Expiry Date",
+        "Card Identifier",
+        "Card Issue Date",
+        "Card Status",
+        "Card Type",
+        "Credit Limit",
+        "Customer Identifier",
+        "Primary Account Number"
+      ],
+      "columns": [
+        "CARD_ID",
+        "CUST_ID",
+        "PAN",
+        "CARD_TYPE",
+        "CREDIT_LIMIT",
+        "EXPIRY_DATE",
+        "STATUS",
+        "ISSUE_DATE"
+      ]
+    },
+    {
+      "id": "HIVE_LAKE/stg/STG_CARD",
+      "type": "com.infa.ldm.relational.Table",
+      "name": "STG_CARD",
+      "schema": "stg",
+      "resource": "HIVE_LAKE",
+      "layer": "STAGING",
+      "system": "Cloudera Data Lake (Staging)",
+      "system_owner": "nour.eldin.adel@bank.example",
+      "row_count": 31217351,
+      "column_count": 8,
+      "classification": "Restricted",
+      "tags": [
+        "Financial",
+        "PCI"
+      ],
+      "dq_score": 93.13,
+      "last_scan": "2026-02-12",
+      "glossary_terms": [
+        "Card Identifier",
+        "Card Issue Date",
+        "Card Status",
+        "Card Type",
+        "Credit Limit",
+        "Customer Identifier"
+      ],
+      "columns": [
+        "CARD_ID",
+        "CUST_ID",
+        "PAN",
+        "CARD_TYPE",
+        "CREDIT_LIMIT",
+        "EXPIRY_DATE",
+        "STATUS",
+        "ISSUE_DATE"
+      ]
+    },
+    {
+      "id": "ORA_DWH/DWH/DIM_CARD",
+      "type": "com.infa.ldm.relational.Table",
+      "name": "DIM_CARD",
+      "schema": "DWH",
+      "resource": "ORA_DWH",
+      "layer": "DWH",
+      "system": "Enterprise Data Warehouse",
+      "system_owner": "nour.eldin.adel@bank.example",
+      "row_count": 38029408,
+      "column_count": 8,
+      "classification": "Restricted",
+      "tags": [
+        "Financial",
+        "PCI"
+      ],
+      "dq_score": 92.29,
+      "last_scan": "2026-07-29",
+      "glossary_terms": [
+        "Card Expiry Date",
+        "Card Identifier",
+        "Card Issue Date",
+        "Card Status",
+        "Card Type",
+        "Credit Limit",
+        "Customer Identifier",
+        "Primary Account Number"
+      ],
+      "columns": [
+        "CARD_ID",
+        "CUST_ID",
+        "PAN",
+        "CARD_TYPE",
+        "CREDIT_LIMIT",
+        "EXPIRY_DATE",
+        "STATUS",
+        "ISSUE_DATE"
+      ]
+    },
+    {
+      "id": "ACTIMIZE_MSSQL/AML/KYC_PROFILE",
+      "type": "com.infa.ldm.relational.Table",
+      "name": "KYC_PROFILE",
+      "schema": "AML",
+      "resource": "ACTIMIZE_MSSQL",
+      "layer": "SOURCE",
+      "system": "NICE Actimize AML/KYC",
+      "system_owner": "sara.ibrahim@bank.example",
+      "row_count": 34611998,
+      "column_count": 8,
+      "classification": "Restricted",
+      "tags": [
+        "AML-Sensitive"
+      ],
+      "dq_score": 95.04,
+      "last_scan": "2026-04-07",
+      "glossary_terms": [
+        "AML Risk Score",
+        "Customer Identifier",
+        "KYC Last Review Date",
+        "KYC Next Review Date",
+        "KYC Profile Identifier",
+        "PEP Flag",
+        "Sanction Screening Result",
+        "Source of Funds"
+      ],
+      "columns": [
+        "KYC_ID",
+        "CUST_ID",
+        "PEP_FLAG",
+        "SANCTION_HIT",
+        "RISK_SCORE",
+        "LAST_REVIEW_DATE",
+        "NEXT_REVIEW_DATE",
+        "SOURCE_OF_FUNDS"
+      ]
+    },
+    {
+      "id": "HIVE_LAKE/stg/STG_KYC_PROFILE",
+      "type": "com.infa.ldm.relational.Table",
+      "name": "STG_KYC_PROFILE",
+      "schema": "stg",
+      "resource": "HIVE_LAKE",
+      "layer": "STAGING",
+      "system": "Cloudera Data Lake (Staging)",
+      "system_owner": "nour.eldin.adel@bank.example",
+      "row_count": 744097,
+      "column_count": 8,
+      "classification": "Restricted",
+      "tags": [
+        "AML-Sensitive"
+      ],
+      "dq_score": 93.02,
+      "last_scan": "2026-01-04",
+      "glossary_terms": [
+        "AML Risk Score",
+        "KYC Last Review Date",
+        "KYC Next Review Date",
+        "Sanction Screening Result",
+        "Source of Funds"
+      ],
+      "columns": [
+        "KYC_ID",
+        "CUST_ID",
+        "PEP_FLAG",
+        "SANCTION_HIT",
+        "RISK_SCORE",
+        "LAST_REVIEW_DATE",
+        "NEXT_REVIEW_DATE",
+        "SOURCE_OF_FUNDS"
+      ]
+    },
+    {
+      "id": "ORA_DWH/DWH/DIM_KYC",
+      "type": "com.infa.ldm.relational.Table",
+      "name": "DIM_KYC",
+      "schema": "DWH",
+      "resource": "ORA_DWH",
+      "layer": "DWH",
+      "system": "Enterprise Data Warehouse",
+      "system_owner": "nour.eldin.adel@bank.example",
+      "row_count": 77586121,
+      "column_count": 8,
+      "classification": "Restricted",
+      "tags": [
+        "AML-Sensitive"
+      ],
+      "dq_score": 95.08,
+      "last_scan": "2026-09-25",
+      "glossary_terms": [
+        "AML Risk Score",
+        "Customer Identifier",
+        "KYC Last Review Date",
+        "KYC Next Review Date",
+        "KYC Profile Identifier",
+        "PEP Flag",
+        "Sanction Screening Result",
+        "Source of Funds"
+      ],
+      "columns": [
+        "KYC_ID",
+        "CUST_ID",
+        "PEP_FLAG",
+        "SANCTION_HIT",
+        "RISK_SCORE",
+        "LAST_REVIEW_DATE",
+        "NEXT_REVIEW_DATE",
+        "SOURCE_OF_FUNDS"
+      ]
+    },
+    {
+      "id": "ACTIMIZE_MSSQL/AML/AML_ALERT",
+      "type": "com.infa.ldm.relational.Table",
+      "name": "AML_ALERT",
+      "schema": "AML",
+      "resource": "ACTIMIZE_MSSQL",
+      "layer": "SOURCE",
+      "system": "NICE Actimize AML/KYC",
+      "system_owner": "sara.ibrahim@bank.example",
+      "row_count": 15824687,
+      "column_count": 8,
+      "classification": "Restricted",
+      "tags": [
+        "AML-Sensitive"
+      ],
+      "dq_score": 92.46,
+      "last_scan": "2026-09-24",
+      "glossary_terms": [
+        "AML Alert Identifier",
+        "AML Scenario",
+        "Alert Closed Date",
+        "Alert Created Date",
+        "Alert Severity",
+        "Alert Status",
+        "Customer Identifier",
+        "Transaction Identifier"
+      ],
+      "columns": [
+        "ALERT_ID",
+        "CUST_ID",
+        "TXN_ID",
+        "SCENARIO",
+        "SEVERITY",
+        "STATUS",
+        "CREATED_DATE",
+        "CLOSED_DATE"
+      ]
+    },
+    {
+      "id": "HIVE_LAKE/stg/STG_AML_ALERT",
+      "type": "com.infa.ldm.relational.Table",
+      "name": "STG_AML_ALERT",
+      "schema": "stg",
+      "resource": "HIVE_LAKE",
+      "layer": "STAGING",
+      "system": "Cloudera Data Lake (Staging)",
+      "system_owner": "nour.eldin.adel@bank.example",
+      "row_count": 975569,
+      "column_count": 8,
+      "classification": "Restricted",
+      "tags": [
+        "AML-Sensitive"
+      ],
+      "dq_score": 94.18,
+      "last_scan": "2026-07-12",
+      "glossary_terms": [
+        "Alert Closed Date",
+        "Alert Created Date",
+        "Alert Severity",
+        "Transaction Identifier"
+      ],
+      "columns": [
+        "ALERT_ID",
+        "CUST_ID",
+        "TXN_ID",
+        "SCENARIO",
+        "SEVERITY",
+        "STATUS",
+        "CREATED_DATE",
+        "CLOSED_DATE"
+      ]
+    },
+    {
+      "id": "ORA_DWH/DWH/FCT_AML_ALERT",
+      "type": "com.infa.ldm.relational.Table",
+      "name": "FCT_AML_ALERT",
+      "schema": "DWH",
+      "resource": "ORA_DWH",
+      "layer": "DWH",
+      "system": "Enterprise Data Warehouse",
+      "system_owner": "nour.eldin.adel@bank.example",
+      "row_count": 27580830,
+      "column_count": 8,
+      "classification": "Restricted",
+      "tags": [
+        "AML-Sensitive"
+      ],
+      "dq_score": 91.64,
+      "last_scan": "2026-06-11",
+      "glossary_terms": [
+        "AML Alert Identifier",
+        "AML Scenario",
+        "Alert Closed Date",
+        "Alert Created Date",
+        "Alert Severity",
+        "Alert Status",
+        "Customer Identifier",
+        "Transaction Identifier"
+      ],
+      "columns": [
+        "ALERT_ID",
+        "CUST_ID",
+        "TXN_ID",
+        "SCENARIO",
+        "SEVERITY",
+        "STATUS",
+        "CREATED_DATE",
+        "CLOSED_DATE"
+      ]
+    },
+    {
+      "id": "EBS_ORACLE/GL/GL_BALANCE",
+      "type": "com.infa.ldm.relational.Table",
+      "name": "GL_BALANCE",
+      "schema": "GL",
+      "resource": "EBS_ORACLE",
+      "layer": "SOURCE",
+      "system": "Oracle EBS General Ledger",
+      "system_owner": "omar.fathy@bank.example",
+      "row_count": 54884257,
+      "column_count": 6,
+      "classification": "Confidential",
+      "tags": [
+        "Financial"
+      ],
+      "dq_score": 92.3,
+      "last_scan": "2026-07-05",
+      "glossary_terms": [
+        "Cost Center",
+        "Credit Amount",
+        "Debit Amount",
+        "GL Account Code",
+        "GL Closing Balance",
+        "Reporting Period"
+      ],
+      "columns": [
+        "GL_ACCOUNT",
+        "COST_CENTER",
+        "PERIOD",
+        "DEBIT",
+        "CREDIT",
+        "CLOSING_BAL"
+      ]
+    },
+    {
+      "id": "HIVE_LAKE/stg/STG_GL_BALANCE",
+      "type": "com.infa.ldm.relational.Table",
+      "name": "STG_GL_BALANCE",
+      "schema": "stg",
+      "resource": "HIVE_LAKE",
+      "layer": "STAGING",
+      "system": "Cloudera Data Lake (Staging)",
+      "system_owner": "nour.eldin.adel@bank.example",
+      "row_count": 14315357,
+      "column_count": 6,
+      "classification": "Confidential",
+      "tags": [
+        "Financial"
+      ],
+      "dq_score": 96.7,
+      "last_scan": "2026-03-21",
+      "glossary_terms": [
+        "Cost Center",
+        "Debit Amount",
+        "GL Account Code",
+        "GL Closing Balance",
+        "Reporting Period"
+      ],
+      "columns": [
+        "GL_ACCOUNT",
+        "COST_CENTER",
+        "PERIOD",
+        "DEBIT",
+        "CREDIT",
+        "CLOSING_BAL"
+      ]
+    },
+    {
+      "id": "ORA_DWH/DWH/FCT_GL_BALANCE",
+      "type": "com.infa.ldm.relational.Table",
+      "name": "FCT_GL_BALANCE",
+      "schema": "DWH",
+      "resource": "ORA_DWH",
+      "layer": "DWH",
+      "system": "Enterprise Data Warehouse",
+      "system_owner": "nour.eldin.adel@bank.example",
+      "row_count": 57196360,
+      "column_count": 6,
+      "classification": "Confidential",
+      "tags": [
+        "Financial"
+      ],
+      "dq_score": 94.82,
+      "last_scan": "2026-05-10",
+      "glossary_terms": [
+        "Cost Center",
+        "Credit Amount",
+        "Debit Amount",
+        "GL Account Code",
+        "GL Closing Balance",
+        "Reporting Period"
+      ],
+      "columns": [
+        "GL_ACCOUNT",
+        "COST_CENTER",
+        "PERIOD",
+        "DEBIT",
+        "CREDIT",
+        "CLOSING_BAL"
+      ]
+    },
+    {
+      "id": "ORA_DWH/MART/MART_CUSTOMER_360",
+      "type": "com.infa.ldm.relational.Table",
+      "name": "MART_CUSTOMER_360",
+      "schema": "MART",
+      "resource": "ORA_DWH",
+      "layer": "MART",
+      "system": "Enterprise Data Warehouse",
+      "system_owner": "nour.eldin.adel@bank.example",
+      "row_count": 35081480,
+      "column_count": 11,
+      "classification": "Restricted",
+      "tags": [
+        "AML-Sensitive",
+        "Financial",
+        "PII"
+      ],
+      "dq_score": 96.29,
+      "last_scan": "2026-08-05",
+      "glossary_terms": [
+        "Account Count",
+        "Branch Name",
+        "Card Count",
+        "Customer Age",
+        "Customer Identifier",
+        "Customer Name",
+        "Customer Risk Rating",
+        "Customer Segment",
+        "KYC Status",
+        "Total Customer Balance",
+        "Total Loan Outstanding"
+      ],
+      "columns": [
+        "CUST_ID",
+        "CUST_NAME",
+        "SEGMENT_CODE",
+        "KYC_STATUS",
+        "RISK_RATING",
+        "AGE",
+        "TOTAL_BALANCE",
+        "ACCOUNT_COUNT",
+        "TOTAL_LOAN_OUTSTANDING",
+        "CARD_COUNT",
+        "BRANCH_NAME"
+      ]
+    },
+    {
+      "id": "ORA_DWH/MART/MART_CREDIT_RISK",
+      "type": "com.infa.ldm.relational.Table",
+      "name": "MART_CREDIT_RISK",
+      "schema": "MART",
+      "resource": "ORA_DWH",
+      "layer": "MART",
+      "system": "Enterprise Data Warehouse",
+      "system_owner": "nour.eldin.adel@bank.example",
+      "row_count": 75798756,
+      "column_count": 8,
+      "classification": "Restricted",
+      "tags": [
+        "Financial",
+        "Risk-Model"
+      ],
+      "dq_score": 90.41,
+      "last_scan": "2026-07-07",
+      "glossary_terms": [
+        "Collateral Coverage Ratio",
+        "Customer Identifier",
+        "Days Past Due",
+        "Expected Credit Loss",
+        "IFRS9 Stage",
+        "Loan Identifier",
+        "NPL Flag",
+        "Outstanding Balance"
+      ],
+      "columns": [
+        "LOAN_ID",
+        "CUST_ID",
+        "OUTSTANDING_AMT",
+        "DPD",
+        "IFRS9_STAGE",
+        "ECL_AMOUNT",
+        "NPL_FLAG",
+        "COLLATERAL_COVERAGE"
+      ]
+    },
+    {
+      "id": "ORA_DWH/MART/MART_AML_MONITORING",
+      "type": "com.infa.ldm.relational.Table",
+      "name": "MART_AML_MONITORING",
+      "schema": "MART",
+      "resource": "ORA_DWH",
+      "layer": "MART",
+      "system": "Enterprise Data Warehouse",
+      "system_owner": "nour.eldin.adel@bank.example",
+      "row_count": 36995109,
+      "column_count": 9,
+      "classification": "Restricted",
+      "tags": [
+        "AML-Sensitive"
+      ],
+      "dq_score": 94.76,
+      "last_scan": "2026-07-23",
+      "glossary_terms": [
+        "AML Alert Identifier",
+        "AML Risk Score",
+        "AML Scenario",
+        "Alert Age Days",
+        "Alert Severity",
+        "Alert Status",
+        "Customer Identifier",
+        "KYC Next Review Date",
+        "PEP Flag"
+      ],
+      "columns": [
+        "ALERT_ID",
+        "CUST_ID",
+        "SCENARIO",
+        "SEVERITY",
+        "ALERT_STATUS",
+        "ALERT_AGE_DAYS",
+        "PEP_FLAG",
+        "RISK_SCORE",
+        "NEXT_REVIEW_DATE"
+      ]
+    },
+    {
+      "id": "ORA_DWH/MART/MART_BRANCH_PERFORMANCE",
+      "type": "com.infa.ldm.relational.Table",
+      "name": "MART_BRANCH_PERFORMANCE",
+      "schema": "MART",
+      "resource": "ORA_DWH",
+      "layer": "MART",
+      "system": "Enterprise Data Warehouse",
+      "system_owner": "nour.eldin.adel@bank.example",
+      "row_count": 27349300,
+      "column_count": 6,
+      "classification": "Confidential",
+      "tags": [
+        "Financial"
+      ],
+      "dq_score": 94.17,
+      "last_scan": "2026-07-31",
+      "glossary_terms": [
+        "Branch Code",
+        "Branch Deposits",
+        "Branch Name",
+        "Branch Net Income",
+        "Region",
+        "Transaction Count"
+      ],
+      "columns": [
+        "BRANCH_CODE",
+        "BRANCH_NAME",
+        "REGION",
+        "DEPOSITS",
+        "TXN_COUNT",
+        "NET_INCOME"
+      ]
+    },
+    {
+      "id": "ORA_DWH/MART/MART_TXN_SUMMARY",
+      "type": "com.infa.ldm.relational.Table",
+      "name": "MART_TXN_SUMMARY",
+      "schema": "MART",
+      "resource": "ORA_DWH",
+      "layer": "MART",
+      "system": "Enterprise Data Warehouse",
+      "system_owner": "nour.eldin.adel@bank.example",
+      "row_count": 74112271,
+      "column_count": 5,
+      "classification": "Confidential",
+      "tags": [
+        "Financial"
+      ],
+      "dq_score": 92.89,
+      "last_scan": "2026-09-05",
+      "glossary_terms": [
+        "Channel",
+        "Currency Code",
+        "Transaction Count",
+        "Transaction Date",
+        "Transaction Volume"
+      ],
+      "columns": [
+        "TXN_DATE",
+        "CHANNEL",
+        "CURRENCY",
+        "TXN_COUNT",
+        "TXN_VOLUME"
+      ]
+    }
+  ]
+}

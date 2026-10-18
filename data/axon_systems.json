@@ -1,0 +1,269 @@
+{
+  "totalCount": 11,
+  "items": [
+    {
+      "id": "SYS-T24",
+      "type": "System",
+      "name": "Temenos T24 Core Banking",
+      "description": "Core banking system: customers, accounts, transactions, branches",
+      "technology": "Oracle",
+      "resource_name": "T24_ORACLE",
+      "criticality": "Tier-1",
+      "environment": "Production",
+      "system_owner": {
+        "name": "Tarek Samir",
+        "email": "tarek.samir@bank.example",
+        "dept": "IT - Core Banking"
+      },
+      "technical_owner": {
+        "name": "Nour El-Din Adel",
+        "email": "nour.eldin.adel@bank.example",
+        "dept": "IT - Data & BI"
+      },
+      "scanned_in_edc": true,
+      "table_count": 4,
+      "last_scan": "2026-08-21",
+      "onboarding_policy_status": "Onboarded"
+    },
+    {
+      "id": "SYS-FLEX",
+      "type": "System",
+      "name": "Oracle FLEXCUBE Loans",
+      "description": "Retail and corporate lending origination and servicing",
+      "technology": "Oracle",
+      "resource_name": "FLEX_ORACLE",
+      "criticality": "Tier-1",
+      "environment": "Production",
+      "system_owner": {
+        "name": "Khaled Mansour",
+        "email": "khaled.mansour@bank.example",
+        "dept": "Risk Management"
+      },
+      "technical_owner": {
+        "name": "Nour El-Din Adel",
+        "email": "nour.eldin.adel@bank.example",
+        "dept": "IT - Data & BI"
+      },
+      "scanned_in_edc": true,
+      "table_count": 1,
+      "last_scan": "2026-02-05",
+      "onboarding_policy_status": "Onboarded"
+    },
+    {
+      "id": "SYS-WAY4",
+      "type": "System",
+      "name": "OpenWay Way4 Cards",
+      "description": "Card management and payments processing",
+      "technology": "Oracle",
+      "resource_name": "WAY4_ORACLE",
+      "criticality": "Tier-1",
+      "environment": "Production",
+      "system_owner": {
+        "name": "Heba Mostafa",
+        "email": "heba.mostafa@bank.example",
+        "dept": "Cards & Payments"
+      },
+      "technical_owner": {
+        "name": "Nour El-Din Adel",
+        "email": "nour.eldin.adel@bank.example",
+        "dept": "IT - Data & BI"
+      },
+      "scanned_in_edc": true,
+      "table_count": 1,
+      "last_scan": "2026-04-28",
+      "onboarding_policy_status": "Onboarded"
+    },
+    {
+      "id": "SYS-ACT",
+      "type": "System",
+      "name": "NICE Actimize AML/KYC",
+      "description": "AML transaction monitoring, KYC profiles and sanctions screening",
+      "technology": "SQL Server",
+      "resource_name": "ACTIMIZE_MSSQL",
+      "criticality": "Tier-1",
+      "environment": "Production",
+      "system_owner": {
+        "name": "Sara Ibrahim",
+        "email": "sara.ibrahim@bank.example",
+        "dept": "Compliance & AML"
+      },
+      "technical_owner": {
+        "name": "Nour El-Din Adel",
+        "email": "nour.eldin.adel@bank.example",
+        "dept": "IT - Data & BI"
+      },
+      "scanned_in_edc": true,
+      "table_count": 2,
+      "last_scan": "2026-07-13",
+      "onboarding_policy_status": "Onboarded"
+    },
+    {
+      "id": "SYS-EBS",
+      "type": "System",
+      "name": "Oracle EBS General Ledger",
+      "description": "General ledger and financial reporting",
+      "technology": "Oracle",
+      "resource_name": "EBS_ORACLE",
+      "criticality": "Tier-1",
+      "environment": "Production",
+      "system_owner": {
+        "name": "Omar Fathy",
+        "email": "omar.fathy@bank.example",
+        "dept": "Finance"
+      },
+      "technical_owner": {
+        "name": "Nour El-Din Adel",
+        "email": "nour.eldin.adel@bank.example",
+        "dept": "IT - Data & BI"
+      },
+      "scanned_in_edc": true,
+      "table_count": 1,
+      "last_scan": "2026-07-17",
+      "onboarding_policy_status": "Onboarded"
+    },
+    {
+      "id": "SYS-LAKE",
+      "type": "System",
+      "name": "Cloudera Data Lake (Staging)",
+      "description": "Landing/staging layer (Hive on Cloudera)",
+      "technology": "Hive",
+      "resource_name": "HIVE_LAKE",
+      "criticality": "Tier-2",
+      "environment": "Production",
+      "system_owner": {
+        "name": "Nour El-Din Adel",
+        "email": "nour.eldin.adel@bank.example",
+        "dept": "IT - Data & BI"
+      },
+      "technical_owner": {
+        "name": "Nour El-Din Adel",
+        "email": "nour.eldin.adel@bank.example",
+        "dept": "IT - Data & BI"
+      },
+      "scanned_in_edc": true,
+      "table_count": 9,
+      "last_scan": "2026-03-09",
+      "onboarding_policy_status": "Onboarded"
+    },
+    {
+      "id": "SYS-DWH",
+      "type": "System",
+      "name": "Enterprise Data Warehouse",
+      "description": "Enterprise DWH core and mart layers",
+      "technology": "Oracle",
+      "resource_name": "ORA_DWH",
+      "criticality": "Tier-1",
+      "environment": "Production",
+      "system_owner": {
+        "name": "Nour El-Din Adel",
+        "email": "nour.eldin.adel@bank.example",
+        "dept": "IT - Data & BI"
+      },
+      "technical_owner": {
+        "name": "Nour El-Din Adel",
+        "email": "nour.eldin.adel@bank.example",
+        "dept": "IT - Data & BI"
+      },
+      "scanned_in_edc": true,
+      "table_count": 14,
+      "last_scan": "2026-02-25",
+      "onboarding_policy_status": "Onboarded"
+    },
+    {
+      "id": "SYS-BO",
+      "type": "System",
+      "name": "SAP BO Universe Layer",
+      "description": "Business objects universes and Webi reports",
+      "technology": "SAP BO",
+      "resource_name": "SAP_BO",
+      "criticality": "Tier-1",
+      "environment": "Production",
+      "system_owner": {
+        "name": "Nour El-Din Adel",
+        "email": "nour.eldin.adel@bank.example",
+        "dept": "IT - Data & BI"
+      },
+      "technical_owner": {
+        "name": "Nour El-Din Adel",
+        "email": "nour.eldin.adel@bank.example",
+        "dept": "IT - Data & BI"
+      },
+      "scanned_in_edc": true,
+      "table_count": 18,
+      "last_scan": "2026-01-09",
+      "onboarding_policy_status": "Onboarded"
+    },
+    {
+      "id": "SYS-CRM",
+      "type": "System",
+      "name": "Salesforce CRM",
+      "description": "Customer relationship management (not scanned yet)",
+      "technology": "SaaS",
+      "resource_name": "SFDC",
+      "criticality": "Tier-2",
+      "environment": "Production",
+      "system_owner": {
+        "name": "Ahmed Hassan",
+        "email": "ahmed.hassan@bank.example",
+        "dept": "Retail Banking"
+      },
+      "technical_owner": {
+        "name": "Nour El-Din Adel",
+        "email": "nour.eldin.adel@bank.example",
+        "dept": "IT - Data & BI"
+      },
+      "scanned_in_edc": false,
+      "table_count": 0,
+      "last_scan": null,
+      "onboarding_policy_status": "Pending"
+    },
+    {
+      "id": "SYS-MOB",
+      "type": "System",
+      "name": "Mobile Banking Platform",
+      "description": "Mobile and internet banking channels (not scanned yet)",
+      "technology": "PostgreSQL",
+      "resource_name": "MOB_PG",
+      "criticality": "Tier-2",
+      "environment": "Production",
+      "system_owner": {
+        "name": "Yasser Gamal",
+        "email": "yasser.gamal@bank.example",
+        "dept": "Operations"
+      },
+      "technical_owner": {
+        "name": "Nour El-Din Adel",
+        "email": "nour.eldin.adel@bank.example",
+        "dept": "IT - Data & BI"
+      },
+      "scanned_in_edc": false,
+      "table_count": 0,
+      "last_scan": null,
+      "onboarding_policy_status": "Pending"
+    },
+    {
+      "id": "SYS-TF",
+      "type": "System",
+      "name": "Trade Finance System",
+      "description": "Letters of credit and guarantees (not scanned yet)",
+      "technology": "Oracle",
+      "resource_name": "TF_ORACLE",
+      "criticality": "Tier-2",
+      "environment": "Production",
+      "system_owner": {
+        "name": "Dina Farouk",
+        "email": "dina.farouk@bank.example",
+        "dept": "Corporate Banking"
+      },
+      "technical_owner": {
+        "name": "Nour El-Din Adel",
+        "email": "nour.eldin.adel@bank.example",
+        "dept": "IT - Data & BI"
+      },
+      "scanned_in_edc": false,
+      "table_count": 0,
+      "last_scan": null,
+      "onboarding_policy_status": "Pending"
+    }
+  ]
+}

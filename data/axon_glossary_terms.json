@@ -1,0 +1,4382 @@
+{
+  "totalCount": 87,
+  "items": [
+    {
+      "id": "GT-0001",
+      "type": "GlossaryTerm",
+      "name": "AML Alert Identifier",
+      "definition": "Unique identifier of an AML monitoring alert.",
+      "domain": "Compliance & AML",
+      "status": "Under Review",
+      "version": "1.2",
+      "steward": {
+        "name": "Mona Abdelrahman",
+        "dept": "Data Governance"
+      },
+      "owner": {
+        "name": "Sara Ibrahim",
+        "dept": "Compliance & AML"
+      },
+      "critical_data_element": true,
+      "classification": "Restricted",
+      "tags": [
+        "AML-Sensitive"
+      ],
+      "linked_kpis": [],
+      "linked_physical_columns": [
+        {
+          "id": "ACTIMIZE_MSSQL/AML/AML_ALERT/ALERT_ID",
+          "layer": "SOURCE",
+          "name": "AML.AML_ALERT.ALERT_ID"
+        },
+        {
+          "id": "ORA_DWH/DWH/FCT_AML_ALERT/ALERT_ID",
+          "layer": "DWH",
+          "name": "DWH.FCT_AML_ALERT.ALERT_ID"
+        },
+        {
+          "id": "ORA_DWH/MART/MART_AML_MONITORING/ALERT_ID",
+          "layer": "MART",
+          "name": "MART.MART_AML_MONITORING.ALERT_ID"
+        }
+      ],
+      "linked_systems": [
+        "Enterprise Data Warehouse",
+        "NICE Actimize AML/KYC"
+      ],
+      "avg_dq_score": 89.75,
+      "policy": "Data Classification Policy v2.1",
+      "created": "2023-07-16",
+      "last_updated": "2025-04-15"
+    },
+    {
+      "id": "GT-0002",
+      "type": "GlossaryTerm",
+      "name": "AML Risk Score",
+      "definition": "Numeric AML risk score (0-100) computed by the AML engine.",
+      "domain": "Compliance & AML",
+      "status": "Published",
+      "version": "3.4",
+      "steward": {
+        "name": "Mahmoud Nabil",
+        "dept": "Treasury"
+      },
+      "owner": {
+        "name": "Yasser Gamal",
+        "dept": "Operations"
+      },
+      "critical_data_element": true,
+      "classification": "Restricted",
+      "tags": [
+        "AML-Sensitive"
+      ],
+      "linked_kpis": [
+        {
+          "id": "KPI-014",
+          "name": "High-Risk Customer Ratio"
+        }
+      ],
+      "linked_physical_columns": [
+        {
+          "id": "ACTIMIZE_MSSQL/AML/KYC_PROFILE/RISK_SCORE",
+          "layer": "SOURCE",
+          "name": "AML.KYC_PROFILE.RISK_SCORE"
+        },
+        {
+          "id": "HIVE_LAKE/stg/STG_KYC_PROFILE/RISK_SCORE",
+          "layer": "STAGING",
+          "name": "stg.STG_KYC_PROFILE.RISK_SCORE"
+        },
+        {
+          "id": "ORA_DWH/DWH/DIM_KYC/RISK_SCORE",
+          "layer": "DWH",
+          "name": "DWH.DIM_KYC.RISK_SCORE"
+        },
+        {
+          "id": "ORA_DWH/MART/MART_AML_MONITORING/RISK_SCORE",
+          "layer": "MART",
+          "name": "MART.MART_AML_MONITORING.RISK_SCORE"
+        }
+      ],
+      "linked_systems": [
+        "Cloudera Data Lake (Staging)",
+        "Enterprise Data Warehouse",
+        "NICE Actimize AML/KYC"
+      ],
+      "avg_dq_score": 96.56,
+      "policy": "Data Classification Policy v2.1",
+      "created": "2022-04-05",
+      "last_updated": "2026-07-29"
+    },
+    {
+      "id": "GT-0003",
+      "type": "GlossaryTerm",
+      "name": "AML Scenario",
+      "definition": "Detection scenario that triggered the alert (structuring, rapid movement, high-risk country...).",
+      "domain": "Compliance & AML",
+      "status": "Published",
+      "version": "3.2",
+      "steward": {
+        "name": "Khaled Mansour",
+        "dept": "Risk Management"
+      },
+      "owner": {
+        "name": "Tarek Samir",
+        "dept": "IT - Core Banking"
+      },
+      "critical_data_element": true,
+      "classification": "Restricted",
+      "tags": [
+        "AML-Sensitive"
+      ],
+      "linked_kpis": [],
+      "linked_physical_columns": [
+        {
+          "id": "ACTIMIZE_MSSQL/AML/AML_ALERT/SCENARIO",
+          "layer": "SOURCE",
+          "name": "AML.AML_ALERT.SCENARIO"
+        },
+        {
+          "id": "ORA_DWH/DWH/FCT_AML_ALERT/SCENARIO",
+          "layer": "DWH",
+          "name": "DWH.FCT_AML_ALERT.SCENARIO"
+        },
+        {
+          "id": "ORA_DWH/MART/MART_AML_MONITORING/SCENARIO",
+          "layer": "MART",
+          "name": "MART.MART_AML_MONITORING.SCENARIO"
+        }
+      ],
+      "linked_systems": [
+        "Enterprise Data Warehouse",
+        "NICE Actimize AML/KYC"
+      ],
+      "avg_dq_score": 90.13,
+      "policy": "Data Classification Policy v2.1",
+      "created": "2024-09-22",
+      "last_updated": "2025-02-18"
+    },
+    {
+      "id": "GT-0004",
+      "type": "GlossaryTerm",
+      "name": "Account Balance",
+      "definition": "Ledger balance of an account at end of day, in account currency.",
+      "domain": "Account",
+      "status": "Draft",
+      "version": "2.3",
+      "steward": {
+        "name": "Mahmoud Nabil",
+        "dept": "Treasury"
+      },
+      "owner": {
+        "name": "Yasser Gamal",
+        "dept": "Operations"
+      },
+      "critical_data_element": true,
+      "classification": "Confidential",
+      "tags": [
+        "Financial"
+      ],
+      "linked_kpis": [
+        {
+          "id": "KPI-001",
+          "name": "Total Deposits"
+        }
+      ],
+      "linked_physical_columns": [
+        {
+          "id": "T24_ORACLE/T24_CORE/ACCOUNT/BALANCE",
+          "layer": "SOURCE",
+          "name": "T24_CORE.ACCOUNT.BALANCE"
+        },
+        {
+          "id": "ORA_DWH/DWH/DIM_ACCOUNT/BALANCE",
+          "layer": "DWH",
+          "name": "DWH.DIM_ACCOUNT.BALANCE"
+        }
+      ],
+      "linked_systems": [
+        "Enterprise Data Warehouse",
+        "Temenos T24 Core Banking"
+      ],
+      "avg_dq_score": 88.25,
+      "policy": "Data Classification Policy v2.1",
+      "created": "2022-10-03",
+      "last_updated": "2026-07-20"
+    },
+    {
+      "id": "GT-0005",
+      "type": "GlossaryTerm",
+      "name": "Account Count",
+      "definition": "Number of accounts held by the customer.",
+      "domain": "Customer",
+      "status": "Published",
+      "version": "3.2",
+      "steward": {
+        "name": "Rania Saleh",
+        "dept": "Data Governance"
+      },
+      "owner": {
+        "name": "Tarek Samir",
+        "dept": "IT - Core Banking"
+      },
+      "critical_data_element": false,
+      "classification": "Confidential",
+      "tags": [
+        "Financial"
+      ],
+      "linked_kpis": [],
+      "linked_physical_columns": [
+        {
+          "id": "ORA_DWH/MART/MART_CUSTOMER_360/ACCOUNT_COUNT",
+          "layer": "MART",
+          "name": "MART.MART_CUSTOMER_360.ACCOUNT_COUNT"
+        }
+      ],
+      "linked_systems": [
+        "Enterprise Data Warehouse"
+      ],
+      "avg_dq_score": 100.0,
+      "policy": "Data Classification Policy v2.1",
+      "created": "2022-02-20",
+      "last_updated": "2026-09-28"
+    },
+    {
+      "id": "GT-0006",
+      "type": "GlossaryTerm",
+      "name": "Account Number",
+      "definition": "Unique number identifying a customer account in the core banking system.",
+      "domain": "Account",
+      "status": "Under Review",
+      "version": "2.1",
+      "steward": {
+        "name": "Rania Saleh",
+        "dept": "Data Governance"
+      },
+      "owner": {
+        "name": "Tarek Samir",
+        "dept": "IT - Core Banking"
+      },
+      "critical_data_element": true,
+      "classification": "Confidential",
+      "tags": [
+        "Financial"
+      ],
+      "linked_kpis": [],
+      "linked_physical_columns": [
+        {
+          "id": "T24_ORACLE/T24_CORE/ACCOUNT/ACCT_NO",
+          "layer": "SOURCE",
+          "name": "T24_CORE.ACCOUNT.ACCT_NO"
+        },
+        {
+          "id": "HIVE_LAKE/stg/STG_ACCOUNT/ACCT_NO",
+          "layer": "STAGING",
+          "name": "stg.STG_ACCOUNT.ACCT_NO"
+        },
+        {
+          "id": "ORA_DWH/DWH/DIM_ACCOUNT/ACCT_NO",
+          "layer": "DWH",
+          "name": "DWH.DIM_ACCOUNT.ACCT_NO"
+        },
+        {
+          "id": "T24_ORACLE/T24_CORE/TRANSACTION/ACCT_NO",
+          "layer": "SOURCE",
+          "name": "T24_CORE.TRANSACTION.ACCT_NO"
+        },
+        {
+          "id": "HIVE_LAKE/stg/STG_TRANSACTION/ACCT_NO",
+          "layer": "STAGING",
+          "name": "stg.STG_TRANSACTION.ACCT_NO"
+        },
+        {
+          "id": "ORA_DWH/DWH/FCT_TRANSACTION/ACCT_NO",
+          "layer": "DWH",
+          "name": "DWH.FCT_TRANSACTION.ACCT_NO"
+        }
+      ],
+      "linked_systems": [
+        "Cloudera Data Lake (Staging)",
+        "Enterprise Data Warehouse",
+        "Temenos T24 Core Banking"
+      ],
+      "avg_dq_score": 93.79,
+      "policy": "Data Classification Policy v2.1",
+      "created": "2024-07-21",
+      "last_updated": "2026-01-12"
+    },
+    {
+      "id": "GT-0007",
+      "type": "GlossaryTerm",
+      "name": "Account Opening Date",
+      "definition": "Date the account was opened.",
+      "domain": "Account",
+      "status": "Under Review",
+      "version": "3.4",
+      "steward": {
+        "name": "Mahmoud Nabil",
+        "dept": "Treasury"
+      },
+      "owner": {
+        "name": "Yasser Gamal",
+        "dept": "Operations"
+      },
+      "critical_data_element": false,
+      "classification": "Internal",
+      "tags": [],
+      "linked_kpis": [],
+      "linked_physical_columns": [
+        {
+          "id": "T24_ORACLE/T24_CORE/ACCOUNT/OPEN_DATE",
+          "layer": "SOURCE",
+          "name": "T24_CORE.ACCOUNT.OPEN_DATE"
+        },
+        {
+          "id": "ORA_DWH/DWH/DIM_ACCOUNT/OPEN_DATE",
+          "layer": "DWH",
+          "name": "DWH.DIM_ACCOUNT.OPEN_DATE"
+        }
+      ],
+      "linked_systems": [
+        "Enterprise Data Warehouse",
+        "Temenos T24 Core Banking"
+      ],
+      "avg_dq_score": 95.09,
+      "policy": "Data Management Policy v1.4",
+      "created": "2022-02-07",
+      "last_updated": "2025-07-18"
+    },
+    {
+      "id": "GT-0008",
+      "type": "GlossaryTerm",
+      "name": "Account Status",
+      "definition": "Lifecycle status of the account: Active, Dormant, Closed, Blocked.",
+      "domain": "Account",
+      "status": "Published",
+      "version": "1.0",
+      "steward": {
+        "name": "Mona Abdelrahman",
+        "dept": "Data Governance"
+      },
+      "owner": {
+        "name": "Sara Ibrahim",
+        "dept": "Compliance & AML"
+      },
+      "critical_data_element": false,
+      "classification": "Internal",
+      "tags": [],
+      "linked_kpis": [],
+      "linked_physical_columns": [
+        {
+          "id": "T24_ORACLE/T24_CORE/ACCOUNT/STATUS",
+          "layer": "SOURCE",
+          "name": "T24_CORE.ACCOUNT.STATUS"
+        },
+        {
+          "id": "ORA_DWH/DWH/DIM_ACCOUNT/STATUS",
+          "layer": "DWH",
+          "name": "DWH.DIM_ACCOUNT.STATUS"
+        }
+      ],
+      "linked_systems": [
+        "Enterprise Data Warehouse",
+        "Temenos T24 Core Banking"
+      ],
+      "avg_dq_score": 94.65,
+      "policy": "Data Management Policy v1.4",
+      "created": "2022-01-18",
+      "last_updated": "2025-06-27"
+    },
+    {
+      "id": "GT-0009",
+      "type": "GlossaryTerm",
+      "name": "Account Type",
+      "definition": "Product category of the account: Savings, Current, Term Deposit.",
+      "domain": "Account",
+      "status": "Published",
+      "version": "1.3",
+      "steward": {
+        "name": "Sara Ibrahim",
+        "dept": "Compliance & AML"
+      },
+      "owner": {
+        "name": "Yasser Gamal",
+        "dept": "Operations"
+      },
+      "critical_data_element": false,
+      "classification": "Internal",
+      "tags": [],
+      "linked_kpis": [],
+      "linked_physical_columns": [
+        {
+          "id": "T24_ORACLE/T24_CORE/ACCOUNT/ACCT_TYPE",
+          "layer": "SOURCE",
+          "name": "T24_CORE.ACCOUNT.ACCT_TYPE"
+        },
+        {
+          "id": "HIVE_LAKE/stg/STG_ACCOUNT/ACCT_TYPE",
+          "layer": "STAGING",
+          "name": "stg.STG_ACCOUNT.ACCT_TYPE"
+        },
+        {
+          "id": "ORA_DWH/DWH/DIM_ACCOUNT/ACCT_TYPE",
+          "layer": "DWH",
+          "name": "DWH.DIM_ACCOUNT.ACCT_TYPE"
+        }
+      ],
+      "linked_systems": [
+        "Cloudera Data Lake (Staging)",
+        "Enterprise Data Warehouse",
+        "Temenos T24 Core Banking"
+      ],
+      "avg_dq_score": 89.73,
+      "policy": "Data Management Policy v1.4",
+      "created": "2021-03-25",
+      "last_updated": "2026-03-15"
+    },
+    {
+      "id": "GT-0010",
+      "type": "GlossaryTerm",
+      "name": "Alert Age Days",
+      "definition": "Number of days between alert creation and closure (or today if still open).",
+      "domain": "Compliance & AML",
+      "status": "Published",
+      "version": "2.1",
+      "steward": {
+        "name": "Khaled Mansour",
+        "dept": "Risk Management"
+      },
+      "owner": {
+        "name": "Tarek Samir",
+        "dept": "IT - Core Banking"
+      },
+      "critical_data_element": true,
+      "classification": "Restricted",
+      "tags": [
+        "AML-Sensitive"
+      ],
+      "linked_kpis": [
+        {
+          "id": "KPI-011",
+          "name": "AML Alert Closure Rate"
+        },
+        {
+          "id": "KPI-012",
+          "name": "Average Alert Aging"
+        }
+      ],
+      "linked_physical_columns": [
+        {
+          "id": "ORA_DWH/MART/MART_AML_MONITORING/ALERT_AGE_DAYS",
+          "layer": "MART",
+          "name": "MART.MART_AML_MONITORING.ALERT_AGE_DAYS"
+        }
+      ],
+      "linked_systems": [
+        "Enterprise Data Warehouse"
+      ],
+      "avg_dq_score": 98.68,
+      "policy": "Data Classification Policy v2.1",
+      "created": "2021-11-26",
+      "last_updated": "2026-08-22"
+    },
+    {
+      "id": "GT-0011",
+      "type": "GlossaryTerm",
+      "name": "Alert Closed Date",
+      "definition": "Date the alert investigation was closed.",
+      "domain": "Compliance & AML",
+      "status": "Under Review",
+      "version": "1.2",
+      "steward": {
+        "name": "Omar Fathy",
+        "dept": "Finance"
+      },
+      "owner": {
+        "name": "Ahmed Hassan",
+        "dept": "Retail Banking"
+      },
+      "critical_data_element": true,
+      "classification": "Restricted",
+      "tags": [
+        "AML-Sensitive"
+      ],
+      "linked_kpis": [],
+      "linked_physical_columns": [
+        {
+          "id": "ACTIMIZE_MSSQL/AML/AML_ALERT/CLOSED_DATE",
+          "layer": "SOURCE",
+          "name": "AML.AML_ALERT.CLOSED_DATE"
+        },
+        {
+          "id": "HIVE_LAKE/stg/STG_AML_ALERT/CLOSED_DATE",
+          "layer": "STAGING",
+          "name": "stg.STG_AML_ALERT.CLOSED_DATE"
+        },
+        {
+          "id": "ORA_DWH/DWH/FCT_AML_ALERT/CLOSED_DATE",
+          "layer": "DWH",
+          "name": "DWH.FCT_AML_ALERT.CLOSED_DATE"
+        }
+      ],
+      "linked_systems": [
+        "Cloudera Data Lake (Staging)",
+        "Enterprise Data Warehouse",
+        "NICE Actimize AML/KYC"
+      ],
+      "avg_dq_score": 94.57,
+      "policy": "Data Classification Policy v2.1",
+      "created": "2023-08-14",
+      "last_updated": "2025-06-08"
+    },
+    {
+      "id": "GT-0012",
+      "type": "GlossaryTerm",
+      "name": "Alert Created Date",
+      "definition": "Date the alert was generated.",
+      "domain": "Compliance & AML",
+      "status": "Published",
+      "version": "2.4",
+      "steward": {
+        "name": "Khaled Mansour",
+        "dept": "Risk Management"
+      },
+      "owner": {
+        "name": "Tarek Samir",
+        "dept": "IT - Core Banking"
+      },
+      "critical_data_element": true,
+      "classification": "Restricted",
+      "tags": [
+        "AML-Sensitive"
+      ],
+      "linked_kpis": [],
+      "linked_physical_columns": [
+        {
+          "id": "ACTIMIZE_MSSQL/AML/AML_ALERT/CREATED_DATE",
+          "layer": "SOURCE",
+          "name": "AML.AML_ALERT.CREATED_DATE"
+        },
+        {
+          "id": "HIVE_LAKE/stg/STG_AML_ALERT/CREATED_DATE",
+          "layer": "STAGING",
+          "name": "stg.STG_AML_ALERT.CREATED_DATE"
+        },
+        {
+          "id": "ORA_DWH/DWH/FCT_AML_ALERT/CREATED_DATE",
+          "layer": "DWH",
+          "name": "DWH.FCT_AML_ALERT.CREATED_DATE"
+        }
+      ],
+      "linked_systems": [
+        "Cloudera Data Lake (Staging)",
+        "Enterprise Data Warehouse",
+        "NICE Actimize AML/KYC"
+      ],
+      "avg_dq_score": 93.88,
+      "policy": "Data Classification Policy v2.1",
+      "created": "2021-04-15",
+      "last_updated": "2026-09-23"
+    },
+    {
+      "id": "GT-0013",
+      "type": "GlossaryTerm",
+      "name": "Alert Severity",
+      "definition": "Priority of the alert: Low, Medium, High, Critical.",
+      "domain": "Compliance & AML",
+      "status": "Under Review",
+      "version": "2.3",
+      "steward": {
+        "name": "Sara Ibrahim",
+        "dept": "Compliance & AML"
+      },
+      "owner": {
+        "name": "Yasser Gamal",
+        "dept": "Operations"
+      },
+      "critical_data_element": true,
+      "classification": "Restricted",
+      "tags": [
+        "AML-Sensitive"
+      ],
+      "linked_kpis": [],
+      "linked_physical_columns": [
+        {
+          "id": "ACTIMIZE_MSSQL/AML/AML_ALERT/SEVERITY",
+          "layer": "SOURCE",
+          "name": "AML.AML_ALERT.SEVERITY"
+        },
+        {
+          "id": "HIVE_LAKE/stg/STG_AML_ALERT/SEVERITY",
+          "layer": "STAGING",
+          "name": "stg.STG_AML_ALERT.SEVERITY"
+        },
+        {
+          "id": "ORA_DWH/DWH/FCT_AML_ALERT/SEVERITY",
+          "layer": "DWH",
+          "name": "DWH.FCT_AML_ALERT.SEVERITY"
+        },
+        {
+          "id": "ORA_DWH/MART/MART_AML_MONITORING/SEVERITY",
+          "layer": "MART",
+          "name": "MART.MART_AML_MONITORING.SEVERITY"
+        }
+      ],
+      "linked_systems": [
+        "Cloudera Data Lake (Staging)",
+        "Enterprise Data Warehouse",
+        "NICE Actimize AML/KYC"
+      ],
+      "avg_dq_score": 89.92,
+      "policy": "Data Classification Policy v2.1",
+      "created": "2024-03-18",
+      "last_updated": "2026-07-18"
+    },
+    {
+      "id": "GT-0014",
+      "type": "GlossaryTerm",
+      "name": "Alert Status",
+      "definition": "Workflow status of the alert: Open, In Investigation, Closed-FP, Closed-STR.",
+      "domain": "Compliance & AML",
+      "status": "Published",
+      "version": "3.2",
+      "steward": {
+        "name": "Omar Fathy",
+        "dept": "Finance"
+      },
+      "owner": {
+        "name": "Ahmed Hassan",
+        "dept": "Retail Banking"
+      },
+      "critical_data_element": true,
+      "classification": "Restricted",
+      "tags": [
+        "AML-Sensitive"
+      ],
+      "linked_kpis": [
+        {
+          "id": "KPI-011",
+          "name": "AML Alert Closure Rate"
+        }
+      ],
+      "linked_physical_columns": [
+        {
+          "id": "ACTIMIZE_MSSQL/AML/AML_ALERT/STATUS",
+          "layer": "SOURCE",
+          "name": "AML.AML_ALERT.STATUS"
+        },
+        {
+          "id": "ORA_DWH/DWH/FCT_AML_ALERT/STATUS",
+          "layer": "DWH",
+          "name": "DWH.FCT_AML_ALERT.STATUS"
+        },
+        {
+          "id": "ORA_DWH/MART/MART_AML_MONITORING/ALERT_STATUS",
+          "layer": "MART",
+          "name": "MART.MART_AML_MONITORING.ALERT_STATUS"
+        }
+      ],
+      "linked_systems": [
+        "Enterprise Data Warehouse",
+        "NICE Actimize AML/KYC"
+      ],
+      "avg_dq_score": 97.35,
+      "policy": "Data Classification Policy v2.1",
+      "created": "2023-12-13",
+      "last_updated": "2025-08-14"
+    },
+    {
+      "id": "GT-0015",
+      "type": "GlossaryTerm",
+      "name": "Available Balance",
+      "definition": "Ledger balance minus holds and blocked amounts that the customer can use.",
+      "domain": "Account",
+      "status": "Draft",
+      "version": "3.0",
+      "steward": {
+        "name": "Mahmoud Nabil",
+        "dept": "Treasury"
+      },
+      "owner": {
+        "name": "Yasser Gamal",
+        "dept": "Operations"
+      },
+      "critical_data_element": false,
+      "classification": "Confidential",
+      "tags": [
+        "Financial"
+      ],
+      "linked_kpis": [],
+      "linked_physical_columns": [
+        {
+          "id": "T24_ORACLE/T24_CORE/ACCOUNT/AVAILABLE_BAL",
+          "layer": "SOURCE",
+          "name": "T24_CORE.ACCOUNT.AVAILABLE_BAL"
+        },
+        {
+          "id": "HIVE_LAKE/stg/STG_ACCOUNT/AVAILABLE_BAL",
+          "layer": "STAGING",
+          "name": "stg.STG_ACCOUNT.AVAILABLE_BAL"
+        },
+        {
+          "id": "ORA_DWH/DWH/DIM_ACCOUNT/AVAILABLE_BAL",
+          "layer": "DWH",
+          "name": "DWH.DIM_ACCOUNT.AVAILABLE_BAL"
+        }
+      ],
+      "linked_systems": [
+        "Cloudera Data Lake (Staging)",
+        "Enterprise Data Warehouse",
+        "Temenos T24 Core Banking"
+      ],
+      "avg_dq_score": 94.39,
+      "policy": "Data Classification Policy v2.1",
+      "created": "2023-11-01",
+      "last_updated": "2025-06-13"
+    },
+    {
+      "id": "GT-0016",
+      "type": "GlossaryTerm",
+      "name": "Balance After Transaction",
+      "definition": "Account balance immediately after the transaction was posted.",
+      "domain": "Transaction",
+      "status": "Published",
+      "version": "3.3",
+      "steward": {
+        "name": "Rania Saleh",
+        "dept": "Data Governance"
+      },
+      "owner": {
+        "name": "Tarek Samir",
+        "dept": "IT - Core Banking"
+      },
+      "critical_data_element": false,
+      "classification": "Confidential",
+      "tags": [
+        "Financial"
+      ],
+      "linked_kpis": [],
+      "linked_physical_columns": [
+        {
+          "id": "T24_ORACLE/T24_CORE/TRANSACTION/BALANCE_AFTER",
+          "layer": "SOURCE",
+          "name": "T24_CORE.TRANSACTION.BALANCE_AFTER"
+        },
+        {
+          "id": "HIVE_LAKE/stg/STG_TRANSACTION/BALANCE_AFTER",
+          "layer": "STAGING",
+          "name": "stg.STG_TRANSACTION.BALANCE_AFTER"
+        },
+        {
+          "id": "ORA_DWH/DWH/FCT_TRANSACTION/BALANCE_AFTER",
+          "layer": "DWH",
+          "name": "DWH.FCT_TRANSACTION.BALANCE_AFTER"
+        }
+      ],
+      "linked_systems": [
+        "Cloudera Data Lake (Staging)",
+        "Enterprise Data Warehouse",
+        "Temenos T24 Core Banking"
+      ],
+      "avg_dq_score": 90.33,
+      "policy": "Data Classification Policy v2.1",
+      "created": "2021-07-08",
+      "last_updated": "2025-12-24"
+    },
+    {
+      "id": "GT-0017",
+      "type": "GlossaryTerm",
+      "name": "Branch Code",
+      "definition": "Unique code of the bank branch that owns the customer or account.",
+      "domain": "Organization",
+      "status": "Published",
+      "version": "1.2",
+      "steward": {
+        "name": "Heba Mostafa",
+        "dept": "Cards & Payments"
+      },
+      "owner": {
+        "name": "Sara Ibrahim",
+        "dept": "Compliance & AML"
+      },
+      "critical_data_element": false,
+      "classification": "Internal",
+      "tags": [],
+      "linked_kpis": [
+        {
+          "id": "KPI-020",
+          "name": "Branch Transaction Throughput"
+        }
+      ],
+      "linked_physical_columns": [
+        {
+          "id": "T24_ORACLE/T24_CORE/CUSTOMER/BRANCH_CODE",
+          "layer": "SOURCE",
+          "name": "T24_CORE.CUSTOMER.BRANCH_CODE"
+        },
+        {
+          "id": "HIVE_LAKE/stg/STG_CUSTOMER/BRANCH_CODE",
+          "layer": "STAGING",
+          "name": "stg.STG_CUSTOMER.BRANCH_CODE"
+        },
+        {
+          "id": "ORA_DWH/DWH/DIM_CUSTOMER/BRANCH_CODE",
+          "layer": "DWH",
+          "name": "DWH.DIM_CUSTOMER.BRANCH_CODE"
+        },
+        {
+          "id": "T24_ORACLE/T24_CORE/ACCOUNT/BRANCH_CODE",
+          "layer": "SOURCE",
+          "name": "T24_CORE.ACCOUNT.BRANCH_CODE"
+        },
+        {
+          "id": "HIVE_LAKE/stg/STG_ACCOUNT/BRANCH_CODE",
+          "layer": "STAGING",
+          "name": "stg.STG_ACCOUNT.BRANCH_CODE"
+        },
+        {
+          "id": "ORA_DWH/DWH/DIM_ACCOUNT/BRANCH_CODE",
+          "layer": "DWH",
+          "name": "DWH.DIM_ACCOUNT.BRANCH_CODE"
+        },
+        {
+          "id": "T24_ORACLE/T24_CORE/BRANCH/BRANCH_CODE",
+          "layer": "SOURCE",
+          "name": "T24_CORE.BRANCH.BRANCH_CODE"
+        },
+        {
+          "id": "ORA_DWH/DWH/DIM_BRANCH/BRANCH_CODE",
+          "layer": "DWH",
+          "name": "DWH.DIM_BRANCH.BRANCH_CODE"
+        },
+        {
+          "id": "ORA_DWH/MART/MART_BRANCH_PERFORMANCE/BRANCH_CODE",
+          "layer": "MART",
+          "name": "MART.MART_BRANCH_PERFORMANCE.BRANCH_CODE"
+        }
+      ],
+      "linked_systems": [
+        "Cloudera Data Lake (Staging)",
+        "Enterprise Data Warehouse",
+        "Temenos T24 Core Banking"
+      ],
+      "avg_dq_score": 91.1,
+      "policy": "Data Management Policy v1.4",
+      "created": "2022-11-10",
+      "last_updated": "2026-01-05"
+    },
+    {
+      "id": "GT-0018",
+      "type": "GlossaryTerm",
+      "name": "Branch Deposits",
+      "definition": "Total deposit balances held at the branch.",
+      "domain": "Organization",
+      "status": "Published",
+      "version": "3.4",
+      "steward": {
+        "name": "Mona Abdelrahman",
+        "dept": "Data Governance"
+      },
+      "owner": {
+        "name": "Sara Ibrahim",
+        "dept": "Compliance & AML"
+      },
+      "critical_data_element": false,
+      "classification": "Confidential",
+      "tags": [
+        "Financial"
+      ],
+      "linked_kpis": [
+        {
+          "id": "KPI-016",
+          "name": "Branch Profitability"
+        }
+      ],
+      "linked_physical_columns": [
+        {
+          "id": "ORA_DWH/MART/MART_BRANCH_PERFORMANCE/DEPOSITS",
+          "layer": "MART",
+          "name": "MART.MART_BRANCH_PERFORMANCE.DEPOSITS"
+        }
+      ],
+      "linked_systems": [
+        "Enterprise Data Warehouse"
+      ],
+      "avg_dq_score": 99.38,
+      "policy": "Data Classification Policy v2.1",
+      "created": "2023-08-31",
+      "last_updated": "2026-07-29"
+    },
+    {
+      "id": "GT-0019",
+      "type": "GlossaryTerm",
+      "name": "Branch Manager ID",
+      "definition": "Employee identifier of the branch manager.",
+      "domain": "Organization",
+      "status": "Under Review",
+      "version": "3.0",
+      "steward": {
+        "name": "Tarek Samir",
+        "dept": "IT - Core Banking"
+      },
+      "owner": {
+        "name": "Tarek Samir",
+        "dept": "IT - Core Banking"
+      },
+      "critical_data_element": false,
+      "classification": "Internal",
+      "tags": [],
+      "linked_kpis": [],
+      "linked_physical_columns": [
+        {
+          "id": "T24_ORACLE/T24_CORE/BRANCH/MANAGER_ID",
+          "layer": "SOURCE",
+          "name": "T24_CORE.BRANCH.MANAGER_ID"
+        },
+        {
+          "id": "ORA_DWH/DWH/DIM_BRANCH/MANAGER_ID",
+          "layer": "DWH",
+          "name": "DWH.DIM_BRANCH.MANAGER_ID"
+        }
+      ],
+      "linked_systems": [
+        "Enterprise Data Warehouse",
+        "Temenos T24 Core Banking"
+      ],
+      "avg_dq_score": 92.88,
+      "policy": "Data Management Policy v1.4",
+      "created": "2021-08-23",
+      "last_updated": "2025-12-21"
+    },
+    {
+      "id": "GT-0020",
+      "type": "GlossaryTerm",
+      "name": "Branch Name",
+      "definition": "Official name of the bank branch.",
+      "domain": "Organization",
+      "status": "Published",
+      "version": "3.4",
+      "steward": {
+        "name": "Mahmoud Nabil",
+        "dept": "Treasury"
+      },
+      "owner": {
+        "name": "Yasser Gamal",
+        "dept": "Operations"
+      },
+      "critical_data_element": false,
+      "classification": "Internal",
+      "tags": [],
+      "linked_kpis": [],
+      "linked_physical_columns": [
+        {
+          "id": "T24_ORACLE/T24_CORE/BRANCH/BRANCH_NAME",
+          "layer": "SOURCE",
+          "name": "T24_CORE.BRANCH.BRANCH_NAME"
+        },
+        {
+          "id": "HIVE_LAKE/stg/STG_BRANCH/BRANCH_NAME",
+          "layer": "STAGING",
+          "name": "stg.STG_BRANCH.BRANCH_NAME"
+        },
+        {
+          "id": "ORA_DWH/DWH/DIM_BRANCH/BRANCH_NAME",
+          "layer": "DWH",
+          "name": "DWH.DIM_BRANCH.BRANCH_NAME"
+        },
+        {
+          "id": "ORA_DWH/MART/MART_CUSTOMER_360/BRANCH_NAME",
+          "layer": "MART",
+          "name": "MART.MART_CUSTOMER_360.BRANCH_NAME"
+        },
+        {
+          "id": "ORA_DWH/MART/MART_BRANCH_PERFORMANCE/BRANCH_NAME",
+          "layer": "MART",
+          "name": "MART.MART_BRANCH_PERFORMANCE.BRANCH_NAME"
+        }
+      ],
+      "linked_systems": [
+        "Cloudera Data Lake (Staging)",
+        "Enterprise Data Warehouse",
+        "Temenos T24 Core Banking"
+      ],
+      "avg_dq_score": 93.58,
+      "policy": "Data Management Policy v1.4",
+      "created": "2024-06-26",
+      "last_updated": "2025-09-07"
+    },
+    {
+      "id": "GT-0021",
+      "type": "GlossaryTerm",
+      "name": "Branch Net Income",
+      "definition": "Credits minus debits attributed to the branch in the period.",
+      "domain": "Finance",
+      "status": "Draft",
+      "version": "3.2",
+      "steward": {
+        "name": "Omar Fathy",
+        "dept": "Finance"
+      },
+      "owner": {
+        "name": "Ahmed Hassan",
+        "dept": "Retail Banking"
+      },
+      "critical_data_element": false,
+      "classification": "Confidential",
+      "tags": [
+        "Financial"
+      ],
+      "linked_kpis": [
+        {
+          "id": "KPI-016",
+          "name": "Branch Profitability"
+        }
+      ],
+      "linked_physical_columns": [
+        {
+          "id": "ORA_DWH/MART/MART_BRANCH_PERFORMANCE/NET_INCOME",
+          "layer": "MART",
+          "name": "MART.MART_BRANCH_PERFORMANCE.NET_INCOME"
+        }
+      ],
+      "linked_systems": [
+        "Enterprise Data Warehouse"
+      ],
+      "avg_dq_score": 98.67,
+      "policy": "Data Classification Policy v2.1",
+      "created": "2023-02-21",
+      "last_updated": "2025-04-27"
+    },
+    {
+      "id": "GT-0022",
+      "type": "GlossaryTerm",
+      "name": "Card Count",
+      "definition": "Number of active cards held by the customer.",
+      "domain": "Cards",
+      "status": "Published",
+      "version": "3.2",
+      "steward": {
+        "name": "Nour El-Din Adel",
+        "dept": "IT - Data & BI"
+      },
+      "owner": {
+        "name": "Yasser Gamal",
+        "dept": "Operations"
+      },
+      "critical_data_element": false,
+      "classification": "Internal",
+      "tags": [],
+      "linked_kpis": [
+        {
+          "id": "KPI-009",
+          "name": "Card Utilization Rate"
+        }
+      ],
+      "linked_physical_columns": [
+        {
+          "id": "ORA_DWH/MART/MART_CUSTOMER_360/CARD_COUNT",
+          "layer": "MART",
+          "name": "MART.MART_CUSTOMER_360.CARD_COUNT"
+        }
+      ],
+      "linked_systems": [
+        "Enterprise Data Warehouse"
+      ],
+      "avg_dq_score": 97.01,
+      "policy": "Data Management Policy v1.4",
+      "created": "2021-02-20",
+      "last_updated": "2026-06-14"
+    },
+    {
+      "id": "GT-0023",
+      "type": "GlossaryTerm",
+      "name": "Card Expiry Date",
+      "definition": "Month and year after which the card is no longer valid.",
+      "domain": "Cards",
+      "status": "Under Review",
+      "version": "2.4",
+      "steward": {
+        "name": "Mona Abdelrahman",
+        "dept": "Data Governance"
+      },
+      "owner": {
+        "name": "Sara Ibrahim",
+        "dept": "Compliance & AML"
+      },
+      "critical_data_element": true,
+      "classification": "Restricted",
+      "tags": [
+        "PCI"
+      ],
+      "linked_kpis": [],
+      "linked_physical_columns": [
+        {
+          "id": "WAY4_ORACLE/WAY4/CARD/EXPIRY_DATE",
+          "layer": "SOURCE",
+          "name": "WAY4.CARD.EXPIRY_DATE"
+        },
+        {
+          "id": "ORA_DWH/DWH/DIM_CARD/EXPIRY_DATE",
+          "layer": "DWH",
+          "name": "DWH.DIM_CARD.EXPIRY_DATE"
+        }
+      ],
+      "linked_systems": [
+        "Enterprise Data Warehouse",
+        "OpenWay Way4 Cards"
+      ],
+      "avg_dq_score": 97.84,
+      "policy": "Data Classification Policy v2.1",
+      "created": "2023-11-08",
+      "last_updated": "2026-04-02"
+    },
+    {
+      "id": "GT-0024",
+      "type": "GlossaryTerm",
+      "name": "Card Identifier",
+      "definition": "Internal unique identifier of a payment card.",
+      "domain": "Cards",
+      "status": "Published",
+      "version": "2.1",
+      "steward": {
+        "name": "Yasser Gamal",
+        "dept": "Operations"
+      },
+      "owner": {
+        "name": "Sara Ibrahim",
+        "dept": "Compliance & AML"
+      },
+      "critical_data_element": false,
+      "classification": "Internal",
+      "tags": [],
+      "linked_kpis": [],
+      "linked_physical_columns": [
+        {
+          "id": "WAY4_ORACLE/WAY4/CARD/CARD_ID",
+          "layer": "SOURCE",
+          "name": "WAY4.CARD.CARD_ID"
+        },
+        {
+          "id": "HIVE_LAKE/stg/STG_CARD/CARD_ID",
+          "layer": "STAGING",
+          "name": "stg.STG_CARD.CARD_ID"
+        },
+        {
+          "id": "ORA_DWH/DWH/DIM_CARD/CARD_ID",
+          "layer": "DWH",
+          "name": "DWH.DIM_CARD.CARD_ID"
+        }
+      ],
+      "linked_systems": [
+        "Cloudera Data Lake (Staging)",
+        "Enterprise Data Warehouse",
+        "OpenWay Way4 Cards"
+      ],
+      "avg_dq_score": 90.38,
+      "policy": "Data Management Policy v1.4",
+      "created": "2022-10-19",
+      "last_updated": "2026-06-11"
+    },
+    {
+      "id": "GT-0025",
+      "type": "GlossaryTerm",
+      "name": "Card Issue Date",
+      "definition": "Date the card was issued to the customer.",
+      "domain": "Cards",
+      "status": "Published",
+      "version": "1.1",
+      "steward": {
+        "name": "Mona Abdelrahman",
+        "dept": "Data Governance"
+      },
+      "owner": {
+        "name": "Sara Ibrahim",
+        "dept": "Compliance & AML"
+      },
+      "critical_data_element": false,
+      "classification": "Internal",
+      "tags": [],
+      "linked_kpis": [],
+      "linked_physical_columns": [
+        {
+          "id": "WAY4_ORACLE/WAY4/CARD/ISSUE_DATE",
+          "layer": "SOURCE",
+          "name": "WAY4.CARD.ISSUE_DATE"
+        },
+        {
+          "id": "HIVE_LAKE/stg/STG_CARD/ISSUE_DATE",
+          "layer": "STAGING",
+          "name": "stg.STG_CARD.ISSUE_DATE"
+        },
+        {
+          "id": "ORA_DWH/DWH/DIM_CARD/ISSUE_DATE",
+          "layer": "DWH",
+          "name": "DWH.DIM_CARD.ISSUE_DATE"
+        }
+      ],
+      "linked_systems": [
+        "Cloudera Data Lake (Staging)",
+        "Enterprise Data Warehouse",
+        "OpenWay Way4 Cards"
+      ],
+      "avg_dq_score": 88.66,
+      "policy": "Data Management Policy v1.4",
+      "created": "2024-01-07",
+      "last_updated": "2026-07-01"
+    },
+    {
+      "id": "GT-0026",
+      "type": "GlossaryTerm",
+      "name": "Card Status",
+      "definition": "Status of the card: Active, Blocked, Expired, Cancelled.",
+      "domain": "Cards",
+      "status": "Published",
+      "version": "1.1",
+      "steward": {
+        "name": "Rania Saleh",
+        "dept": "Data Governance"
+      },
+      "owner": {
+        "name": "Tarek Samir",
+        "dept": "IT - Core Banking"
+      },
+      "critical_data_element": false,
+      "classification": "Internal",
+      "tags": [],
+      "linked_kpis": [],
+      "linked_physical_columns": [
+        {
+          "id": "WAY4_ORACLE/WAY4/CARD/STATUS",
+          "layer": "SOURCE",
+          "name": "WAY4.CARD.STATUS"
+        },
+        {
+          "id": "HIVE_LAKE/stg/STG_CARD/STATUS",
+          "layer": "STAGING",
+          "name": "stg.STG_CARD.STATUS"
+        },
+        {
+          "id": "ORA_DWH/DWH/DIM_CARD/STATUS",
+          "layer": "DWH",
+          "name": "DWH.DIM_CARD.STATUS"
+        }
+      ],
+      "linked_systems": [
+        "Cloudera Data Lake (Staging)",
+        "Enterprise Data Warehouse",
+        "OpenWay Way4 Cards"
+      ],
+      "avg_dq_score": 94.56,
+      "policy": "Data Management Policy v1.4",
+      "created": "2024-07-13",
+      "last_updated": "2025-08-07"
+    },
+    {
+      "id": "GT-0027",
+      "type": "GlossaryTerm",
+      "name": "Card Type",
+      "definition": "Card product type: Debit, Credit, Prepaid.",
+      "domain": "Cards",
+      "status": "Under Review",
+      "version": "2.0",
+      "steward": {
+        "name": "Ahmed Hassan",
+        "dept": "Retail Banking"
+      },
+      "owner": {
+        "name": "Ahmed Hassan",
+        "dept": "Retail Banking"
+      },
+      "critical_data_element": false,
+      "classification": "Internal",
+      "tags": [],
+      "linked_kpis": [],
+      "linked_physical_columns": [
+        {
+          "id": "WAY4_ORACLE/WAY4/CARD/CARD_TYPE",
+          "layer": "SOURCE",
+          "name": "WAY4.CARD.CARD_TYPE"
+        },
+        {
+          "id": "HIVE_LAKE/stg/STG_CARD/CARD_TYPE",
+          "layer": "STAGING",
+          "name": "stg.STG_CARD.CARD_TYPE"
+        },
+        {
+          "id": "ORA_DWH/DWH/DIM_CARD/CARD_TYPE",
+          "layer": "DWH",
+          "name": "DWH.DIM_CARD.CARD_TYPE"
+        }
+      ],
+      "linked_systems": [
+        "Cloudera Data Lake (Staging)",
+        "Enterprise Data Warehouse",
+        "OpenWay Way4 Cards"
+      ],
+      "avg_dq_score": 91.77,
+      "policy": "Data Management Policy v1.4",
+      "created": "2022-02-26",
+      "last_updated": "2026-07-05"
+    },
+    {
+      "id": "GT-0028",
+      "type": "GlossaryTerm",
+      "name": "Channel",
+      "definition": "Channel through which the transaction was initiated: Branch, ATM, Mobile, Internet, POS.",
+      "domain": "Transaction",
+      "status": "Under Review",
+      "version": "3.3",
+      "steward": {
+        "name": "Mona Abdelrahman",
+        "dept": "Data Governance"
+      },
+      "owner": {
+        "name": "Sara Ibrahim",
+        "dept": "Compliance & AML"
+      },
+      "critical_data_element": false,
+      "classification": "Internal",
+      "tags": [],
+      "linked_kpis": [
+        {
+          "id": "KPI-010",
+          "name": "Digital Channel Adoption"
+        },
+        {
+          "id": "KPI-015",
+          "name": "Transaction Volume by Channel"
+        }
+      ],
+      "linked_physical_columns": [
+        {
+          "id": "T24_ORACLE/T24_CORE/TRANSACTION/CHANNEL",
+          "layer": "SOURCE",
+          "name": "T24_CORE.TRANSACTION.CHANNEL"
+        },
+        {
+          "id": "ORA_DWH/DWH/FCT_TRANSACTION/CHANNEL",
+          "layer": "DWH",
+          "name": "DWH.FCT_TRANSACTION.CHANNEL"
+        },
+        {
+          "id": "ORA_DWH/MART/MART_TXN_SUMMARY/CHANNEL",
+          "layer": "MART",
+          "name": "MART.MART_TXN_SUMMARY.CHANNEL"
+        }
+      ],
+      "linked_systems": [
+        "Enterprise Data Warehouse",
+        "Temenos T24 Core Banking"
+      ],
+      "avg_dq_score": 97.43,
+      "policy": "Data Management Policy v1.4",
+      "created": "2024-08-17",
+      "last_updated": "2025-03-15"
+    },
+    {
+      "id": "GT-0029",
+      "type": "GlossaryTerm",
+      "name": "City",
+      "definition": "City where the branch is located.",
+      "domain": "Organization",
+      "status": "Published",
+      "version": "1.0",
+      "steward": {
+        "name": "Mona Abdelrahman",
+        "dept": "Data Governance"
+      },
+      "owner": {
+        "name": "Sara Ibrahim",
+        "dept": "Compliance & AML"
+      },
+      "critical_data_element": false,
+      "classification": "Public",
+      "tags": [],
+      "linked_kpis": [],
+      "linked_physical_columns": [
+        {
+          "id": "T24_ORACLE/T24_CORE/BRANCH/CITY",
+          "layer": "SOURCE",
+          "name": "T24_CORE.BRANCH.CITY"
+        },
+        {
+          "id": "HIVE_LAKE/stg/STG_BRANCH/CITY",
+          "layer": "STAGING",
+          "name": "stg.STG_BRANCH.CITY"
+        },
+        {
+          "id": "ORA_DWH/DWH/DIM_BRANCH/CITY",
+          "layer": "DWH",
+          "name": "DWH.DIM_BRANCH.CITY"
+        }
+      ],
+      "linked_systems": [
+        "Cloudera Data Lake (Staging)",
+        "Enterprise Data Warehouse",
+        "Temenos T24 Core Banking"
+      ],
+      "avg_dq_score": 88.81,
+      "policy": "Data Management Policy v1.4",
+      "created": "2023-07-30",
+      "last_updated": "2025-12-06"
+    },
+    {
+      "id": "GT-0030",
+      "type": "GlossaryTerm",
+      "name": "Collateral Coverage Ratio",
+      "definition": "Collateral value divided by outstanding balance of the loan.",
+      "domain": "Risk",
+      "status": "Published",
+      "version": "1.0",
+      "steward": {
+        "name": "Khaled Mansour",
+        "dept": "Risk Management"
+      },
+      "owner": {
+        "name": "Tarek Samir",
+        "dept": "IT - Core Banking"
+      },
+      "critical_data_element": false,
+      "classification": "Confidential",
+      "tags": [
+        "Financial"
+      ],
+      "linked_kpis": [
+        {
+          "id": "KPI-018",
+          "name": "Collateral Coverage Ratio"
+        }
+      ],
+      "linked_physical_columns": [
+        {
+          "id": "ORA_DWH/MART/MART_CREDIT_RISK/COLLATERAL_COVERAGE",
+          "layer": "MART",
+          "name": "MART.MART_CREDIT_RISK.COLLATERAL_COVERAGE"
+        }
+      ],
+      "linked_systems": [
+        "Enterprise Data Warehouse"
+      ],
+      "avg_dq_score": 100.0,
+      "policy": "Data Classification Policy v2.1",
+      "created": "2021-12-31",
+      "last_updated": "2025-09-15"
+    },
+    {
+      "id": "GT-0031",
+      "type": "GlossaryTerm",
+      "name": "Collateral Value",
+      "definition": "Current market value of collateral pledged against the loan.",
+      "domain": "Risk",
+      "status": "Published",
+      "version": "3.1",
+      "steward": {
+        "name": "Dina Farouk",
+        "dept": "Corporate Banking"
+      },
+      "owner": {
+        "name": "Ahmed Hassan",
+        "dept": "Retail Banking"
+      },
+      "critical_data_element": false,
+      "classification": "Confidential",
+      "tags": [
+        "Financial"
+      ],
+      "linked_kpis": [
+        {
+          "id": "KPI-018",
+          "name": "Collateral Coverage Ratio"
+        }
+      ],
+      "linked_physical_columns": [
+        {
+          "id": "FLEX_ORACLE/FCUBS/LOAN/COLLATERAL_VALUE",
+          "layer": "SOURCE",
+          "name": "FCUBS.LOAN.COLLATERAL_VALUE"
+        },
+        {
+          "id": "HIVE_LAKE/stg/STG_LOAN/COLLATERAL_VALUE",
+          "layer": "STAGING",
+          "name": "stg.STG_LOAN.COLLATERAL_VALUE"
+        },
+        {
+          "id": "ORA_DWH/DWH/FCT_LOAN/COLLATERAL_VALUE",
+          "layer": "DWH",
+          "name": "DWH.FCT_LOAN.COLLATERAL_VALUE"
+        }
+      ],
+      "linked_systems": [
+        "Cloudera Data Lake (Staging)",
+        "Enterprise Data Warehouse",
+        "Oracle FLEXCUBE Loans"
+      ],
+      "avg_dq_score": 94.81,
+      "policy": "Data Classification Policy v2.1",
+      "created": "2022-06-14",
+      "last_updated": "2026-02-22"
+    },
+    {
+      "id": "GT-0032",
+      "type": "GlossaryTerm",
+      "name": "Cost Center",
+      "definition": "Organizational unit to which costs and revenues are allocated.",
+      "domain": "Finance",
+      "status": "Published",
+      "version": "3.3",
+      "steward": {
+        "name": "Tarek Samir",
+        "dept": "IT - Core Banking"
+      },
+      "owner": {
+        "name": "Tarek Samir",
+        "dept": "IT - Core Banking"
+      },
+      "critical_data_element": false,
+      "classification": "Internal",
+      "tags": [],
+      "linked_kpis": [],
+      "linked_physical_columns": [
+        {
+          "id": "EBS_ORACLE/GL/GL_BALANCE/COST_CENTER",
+          "layer": "SOURCE",
+          "name": "GL.GL_BALANCE.COST_CENTER"
+        },
+        {
+          "id": "HIVE_LAKE/stg/STG_GL_BALANCE/COST_CENTER",
+          "layer": "STAGING",
+          "name": "stg.STG_GL_BALANCE.COST_CENTER"
+        },
+        {
+          "id": "ORA_DWH/DWH/FCT_GL_BALANCE/COST_CENTER",
+          "layer": "DWH",
+          "name": "DWH.FCT_GL_BALANCE.COST_CENTER"
+        }
+      ],
+      "linked_systems": [
+        "Cloudera Data Lake (Staging)",
+        "Enterprise Data Warehouse",
+        "Oracle EBS General Ledger"
+      ],
+      "avg_dq_score": 91.75,
+      "policy": "Data Management Policy v1.4",
+      "created": "2023-06-06",
+      "last_updated": "2025-11-20"
+    },
+    {
+      "id": "GT-0033",
+      "type": "GlossaryTerm",
+      "name": "Counterparty Account",
+      "definition": "Account of the other party in a transfer or payment.",
+      "domain": "Transaction",
+      "status": "Published",
+      "version": "3.0",
+      "steward": {
+        "name": "Heba Mostafa",
+        "dept": "Cards & Payments"
+      },
+      "owner": {
+        "name": "Sara Ibrahim",
+        "dept": "Compliance & AML"
+      },
+      "critical_data_element": false,
+      "classification": "Confidential",
+      "tags": [
+        "Financial"
+      ],
+      "linked_kpis": [],
+      "linked_physical_columns": [
+        {
+          "id": "T24_ORACLE/T24_CORE/TRANSACTION/COUNTERPARTY_ACCT",
+          "layer": "SOURCE",
+          "name": "T24_CORE.TRANSACTION.COUNTERPARTY_ACCT"
+        },
+        {
+          "id": "ORA_DWH/DWH/FCT_TRANSACTION/COUNTERPARTY_ACCT",
+          "layer": "DWH",
+          "name": "DWH.FCT_TRANSACTION.COUNTERPARTY_ACCT"
+        }
+      ],
+      "linked_systems": [
+        "Enterprise Data Warehouse",
+        "Temenos T24 Core Banking"
+      ],
+      "avg_dq_score": 93.88,
+      "policy": "Data Classification Policy v2.1",
+      "created": "2024-01-01",
+      "last_updated": "2025-01-07"
+    },
+    {
+      "id": "GT-0034",
+      "type": "GlossaryTerm",
+      "name": "Credit Amount",
+      "definition": "Total credit movement in the period for a GL account.",
+      "domain": "Finance",
+      "status": "Published",
+      "version": "3.0",
+      "steward": {
+        "name": "Sara Ibrahim",
+        "dept": "Compliance & AML"
+      },
+      "owner": {
+        "name": "Yasser Gamal",
+        "dept": "Operations"
+      },
+      "critical_data_element": false,
+      "classification": "Confidential",
+      "tags": [
+        "Financial"
+      ],
+      "linked_kpis": [
+        {
+          "id": "KPI-002",
+          "name": "Net Interest Margin"
+        },
+        {
+          "id": "KPI-017",
+          "name": "Cost-to-Income Ratio"
+        }
+      ],
+      "linked_physical_columns": [
+        {
+          "id": "EBS_ORACLE/GL/GL_BALANCE/CREDIT",
+          "layer": "SOURCE",
+          "name": "GL.GL_BALANCE.CREDIT"
+        },
+        {
+          "id": "ORA_DWH/DWH/FCT_GL_BALANCE/CREDIT",
+          "layer": "DWH",
+          "name": "DWH.FCT_GL_BALANCE.CREDIT"
+        }
+      ],
+      "linked_systems": [
+        "Enterprise Data Warehouse",
+        "Oracle EBS General Ledger"
+      ],
+      "avg_dq_score": 97.14,
+      "policy": "Data Classification Policy v2.1",
+      "created": "2024-04-14",
+      "last_updated": "2025-02-16"
+    },
+    {
+      "id": "GT-0035",
+      "type": "GlossaryTerm",
+      "name": "Credit Limit",
+      "definition": "Maximum amount the cardholder is allowed to borrow on the card.",
+      "domain": "Cards",
+      "status": "Published",
+      "version": "1.2",
+      "steward": {
+        "name": "Tarek Samir",
+        "dept": "IT - Core Banking"
+      },
+      "owner": {
+        "name": "Tarek Samir",
+        "dept": "IT - Core Banking"
+      },
+      "critical_data_element": false,
+      "classification": "Confidential",
+      "tags": [
+        "Financial"
+      ],
+      "linked_kpis": [
+        {
+          "id": "KPI-009",
+          "name": "Card Utilization Rate"
+        }
+      ],
+      "linked_physical_columns": [
+        {
+          "id": "WAY4_ORACLE/WAY4/CARD/CREDIT_LIMIT",
+          "layer": "SOURCE",
+          "name": "WAY4.CARD.CREDIT_LIMIT"
+        },
+        {
+          "id": "HIVE_LAKE/stg/STG_CARD/CREDIT_LIMIT",
+          "layer": "STAGING",
+          "name": "stg.STG_CARD.CREDIT_LIMIT"
+        },
+        {
+          "id": "ORA_DWH/DWH/DIM_CARD/CREDIT_LIMIT",
+          "layer": "DWH",
+          "name": "DWH.DIM_CARD.CREDIT_LIMIT"
+        }
+      ],
+      "linked_systems": [
+        "Cloudera Data Lake (Staging)",
+        "Enterprise Data Warehouse",
+        "OpenWay Way4 Cards"
+      ],
+      "avg_dq_score": 95.54,
+      "policy": "Data Classification Policy v2.1",
+      "created": "2023-10-27",
+      "last_updated": "2025-04-19"
+    },
+    {
+      "id": "GT-0036",
+      "type": "GlossaryTerm",
+      "name": "Currency Code",
+      "definition": "ISO 4217 code of the currency of an amount or account.",
+      "domain": "Finance",
+      "status": "Published",
+      "version": "3.2",
+      "steward": {
+        "name": "Tarek Samir",
+        "dept": "IT - Core Banking"
+      },
+      "owner": {
+        "name": "Tarek Samir",
+        "dept": "IT - Core Banking"
+      },
+      "critical_data_element": false,
+      "classification": "Public",
+      "tags": [],
+      "linked_kpis": [],
+      "linked_physical_columns": [
+        {
+          "id": "T24_ORACLE/T24_CORE/ACCOUNT/CURRENCY",
+          "layer": "SOURCE",
+          "name": "T24_CORE.ACCOUNT.CURRENCY"
+        },
+        {
+          "id": "HIVE_LAKE/stg/STG_ACCOUNT/CURRENCY",
+          "layer": "STAGING",
+          "name": "stg.STG_ACCOUNT.CURRENCY"
+        },
+        {
+          "id": "ORA_DWH/DWH/DIM_ACCOUNT/CURRENCY",
+          "layer": "DWH",
+          "name": "DWH.DIM_ACCOUNT.CURRENCY"
+        },
+        {
+          "id": "T24_ORACLE/T24_CORE/TRANSACTION/CURRENCY",
+          "layer": "SOURCE",
+          "name": "T24_CORE.TRANSACTION.CURRENCY"
+        },
+        {
+          "id": "HIVE_LAKE/stg/STG_TRANSACTION/CURRENCY",
+          "layer": "STAGING",
+          "name": "stg.STG_TRANSACTION.CURRENCY"
+        },
+        {
+          "id": "ORA_DWH/DWH/FCT_TRANSACTION/CURRENCY",
+          "layer": "DWH",
+          "name": "DWH.FCT_TRANSACTION.CURRENCY"
+        },
+        {
+          "id": "ORA_DWH/MART/MART_TXN_SUMMARY/CURRENCY",
+          "layer": "MART",
+          "name": "MART.MART_TXN_SUMMARY.CURRENCY"
+        }
+      ],
+      "linked_systems": [
+        "Cloudera Data Lake (Staging)",
+        "Enterprise Data Warehouse",
+        "Temenos T24 Core Banking"
+      ],
+      "avg_dq_score": 96.47,
+      "policy": "Data Management Policy v1.4",
+      "created": "2024-05-27",
+      "last_updated": "2025-03-30"
+    },
+    {
+      "id": "GT-0037",
+      "type": "GlossaryTerm",
+      "name": "Customer Age",
+      "definition": "Age of the customer in completed years, derived from Date of Birth.",
+      "domain": "Customer",
+      "status": "Published",
+      "version": "2.3",
+      "steward": {
+        "name": "Mahmoud Nabil",
+        "dept": "Treasury"
+      },
+      "owner": {
+        "name": "Yasser Gamal",
+        "dept": "Operations"
+      },
+      "critical_data_element": false,
+      "classification": "Confidential",
+      "tags": [
+        "PII"
+      ],
+      "linked_kpis": [],
+      "linked_physical_columns": [
+        {
+          "id": "ORA_DWH/MART/MART_CUSTOMER_360/AGE",
+          "layer": "MART",
+          "name": "MART.MART_CUSTOMER_360.AGE"
+        }
+      ],
+      "linked_systems": [
+        "Enterprise Data Warehouse"
+      ],
+      "avg_dq_score": 98.53,
+      "policy": "Data Classification Policy v2.1",
+      "created": "2023-03-21",
+      "last_updated": "2025-02-01"
+    },
+    {
+      "id": "GT-0038",
+      "type": "GlossaryTerm",
+      "name": "Customer Identifier",
+      "definition": "Unique identifier assigned to a customer across all bank systems.",
+      "domain": "Customer",
+      "status": "Published",
+      "version": "3.1",
+      "steward": {
+        "name": "Mona Abdelrahman",
+        "dept": "Data Governance"
+      },
+      "owner": {
+        "name": "Sara Ibrahim",
+        "dept": "Compliance & AML"
+      },
+      "critical_data_element": true,
+      "classification": "Internal",
+      "tags": [],
+      "linked_kpis": [
+        {
+          "id": "KPI-005",
+          "name": "Active Customers"
+        },
+        {
+          "id": "KPI-006",
+          "name": "New Customers Onboarded"
+        }
+      ],
+      "linked_physical_columns": [
+        {
+          "id": "T24_ORACLE/T24_CORE/CUSTOMER/CUST_ID",
+          "layer": "SOURCE",
+          "name": "T24_CORE.CUSTOMER.CUST_ID"
+        },
+        {
+          "id": "HIVE_LAKE/stg/STG_CUSTOMER/CUST_ID",
+          "layer": "STAGING",
+          "name": "stg.STG_CUSTOMER.CUST_ID"
+        },
+        {
+          "id": "ORA_DWH/DWH/DIM_CUSTOMER/CUST_ID",
+          "layer": "DWH",
+          "name": "DWH.DIM_CUSTOMER.CUST_ID"
+        },
+        {
+          "id": "T24_ORACLE/T24_CORE/ACCOUNT/CUST_ID",
+          "layer": "SOURCE",
+          "name": "T24_CORE.ACCOUNT.CUST_ID"
+        },
+        {
+          "id": "HIVE_LAKE/stg/STG_ACCOUNT/CUST_ID",
+          "layer": "STAGING",
+          "name": "stg.STG_ACCOUNT.CUST_ID"
+        },
+        {
+          "id": "ORA_DWH/DWH/DIM_ACCOUNT/CUST_ID",
+          "layer": "DWH",
+          "name": "DWH.DIM_ACCOUNT.CUST_ID"
+        },
+        {
+          "id": "FLEX_ORACLE/FCUBS/LOAN/CUST_ID",
+          "layer": "SOURCE",
+          "name": "FCUBS.LOAN.CUST_ID"
+        },
+        {
+          "id": "HIVE_LAKE/stg/STG_LOAN/CUST_ID",
+          "layer": "STAGING",
+          "name": "stg.STG_LOAN.CUST_ID"
+        },
+        {
+          "id": "ORA_DWH/DWH/FCT_LOAN/CUST_ID",
+          "layer": "DWH",
+          "name": "DWH.FCT_LOAN.CUST_ID"
+        },
+        {
+          "id": "WAY4_ORACLE/WAY4/CARD/CUST_ID",
+          "layer": "SOURCE",
+          "name": "WAY4.CARD.CUST_ID"
+        },
+        {
+          "id": "HIVE_LAKE/stg/STG_CARD/CUST_ID",
+          "layer": "STAGING",
+          "name": "stg.STG_CARD.CUST_ID"
+        },
+        {
+          "id": "ORA_DWH/DWH/DIM_CARD/CUST_ID",
+          "layer": "DWH",
+          "name": "DWH.DIM_CARD.CUST_ID"
+        },
+        {
+          "id": "ACTIMIZE_MSSQL/AML/KYC_PROFILE/CUST_ID",
+          "layer": "SOURCE",
+          "name": "AML.KYC_PROFILE.CUST_ID"
+        },
+        {
+          "id": "ORA_DWH/DWH/DIM_KYC/CUST_ID",
+          "layer": "DWH",
+          "name": "DWH.DIM_KYC.CUST_ID"
+        },
+        {
+          "id": "ACTIMIZE_MSSQL/AML/AML_ALERT/CUST_ID",
+          "layer": "SOURCE",
+          "name": "AML.AML_ALERT.CUST_ID"
+        },
+        {
+          "id": "ORA_DWH/DWH/FCT_AML_ALERT/CUST_ID",
+          "layer": "DWH",
+          "name": "DWH.FCT_AML_ALERT.CUST_ID"
+        },
+        {
+          "id": "ORA_DWH/MART/MART_CUSTOMER_360/CUST_ID",
+          "layer": "MART",
+          "name": "MART.MART_CUSTOMER_360.CUST_ID"
+        },
+        {
+          "id": "ORA_DWH/MART/MART_CREDIT_RISK/CUST_ID",
+          "layer": "MART",
+          "name": "MART.MART_CREDIT_RISK.CUST_ID"
+        },
+        {
+          "id": "ORA_DWH/MART/MART_AML_MONITORING/CUST_ID",
+          "layer": "MART",
+          "name": "MART.MART_AML_MONITORING.CUST_ID"
+        }
+      ],
+      "linked_systems": [
+        "Cloudera Data Lake (Staging)",
+        "Enterprise Data Warehouse",
+        "NICE Actimize AML/KYC",
+        "OpenWay Way4 Cards",
+        "Oracle FLEXCUBE Loans",
+        "Temenos T24 Core Banking"
+      ],
+      "avg_dq_score": 93.32,
+      "policy": "Data Management Policy v1.4",
+      "created": "2021-10-07",
+      "last_updated": "2026-02-05"
+    },
+    {
+      "id": "GT-0039",
+      "type": "GlossaryTerm",
+      "name": "Customer Name",
+      "definition": "Full legal name of the customer as in the national ID or commercial register.",
+      "domain": "Customer",
+      "status": "Under Review",
+      "version": "3.2",
+      "steward": {
+        "name": "Nour El-Din Adel",
+        "dept": "IT - Data & BI"
+      },
+      "owner": {
+        "name": "Yasser Gamal",
+        "dept": "Operations"
+      },
+      "critical_data_element": false,
+      "classification": "Confidential",
+      "tags": [
+        "PII"
+      ],
+      "linked_kpis": [],
+      "linked_physical_columns": [
+        {
+          "id": "T24_ORACLE/T24_CORE/CUSTOMER/CUST_NAME",
+          "layer": "SOURCE",
+          "name": "T24_CORE.CUSTOMER.CUST_NAME"
+        },
+        {
+          "id": "HIVE_LAKE/stg/STG_CUSTOMER/CUST_NAME",
+          "layer": "STAGING",
+          "name": "stg.STG_CUSTOMER.CUST_NAME"
+        },
+        {
+          "id": "ORA_DWH/DWH/DIM_CUSTOMER/CUST_NAME",
+          "layer": "DWH",
+          "name": "DWH.DIM_CUSTOMER.CUST_NAME"
+        },
+        {
+          "id": "ORA_DWH/MART/MART_CUSTOMER_360/CUST_NAME",
+          "layer": "MART",
+          "name": "MART.MART_CUSTOMER_360.CUST_NAME"
+        }
+      ],
+      "linked_systems": [
+        "Cloudera Data Lake (Staging)",
+        "Enterprise Data Warehouse",
+        "Temenos T24 Core Banking"
+      ],
+      "avg_dq_score": 95.78,
+      "policy": "Data Classification Policy v2.1",
+      "created": "2024-07-22",
+      "last_updated": "2025-05-28"
+    },
+    {
+      "id": "GT-0040",
+      "type": "GlossaryTerm",
+      "name": "Customer Onboarding Date",
+      "definition": "Date the customer relationship was established.",
+      "domain": "Customer",
+      "status": "Published",
+      "version": "3.2",
+      "steward": {
+        "name": "Nour El-Din Adel",
+        "dept": "IT - Data & BI"
+      },
+      "owner": {
+        "name": "Yasser Gamal",
+        "dept": "Operations"
+      },
+      "critical_data_element": false,
+      "classification": "Internal",
+      "tags": [],
+      "linked_kpis": [
+        {
+          "id": "KPI-006",
+          "name": "New Customers Onboarded"
+        }
+      ],
+      "linked_physical_columns": [
+        {
+          "id": "T24_ORACLE/T24_CORE/CUSTOMER/OPEN_DATE",
+          "layer": "SOURCE",
+          "name": "T24_CORE.CUSTOMER.OPEN_DATE"
+        },
+        {
+          "id": "HIVE_LAKE/stg/STG_CUSTOMER/OPEN_DATE",
+          "layer": "STAGING",
+          "name": "stg.STG_CUSTOMER.OPEN_DATE"
+        },
+        {
+          "id": "ORA_DWH/DWH/DIM_CUSTOMER/OPEN_DATE",
+          "layer": "DWH",
+          "name": "DWH.DIM_CUSTOMER.OPEN_DATE"
+        }
+      ],
+      "linked_systems": [
+        "Cloudera Data Lake (Staging)",
+        "Enterprise Data Warehouse",
+        "Temenos T24 Core Banking"
+      ],
+      "avg_dq_score": 87.35,
+      "policy": "Data Management Policy v1.4",
+      "created": "2021-01-23",
+      "last_updated": "2026-07-21"
+    },
+    {
+      "id": "GT-0041",
+      "type": "GlossaryTerm",
+      "name": "Customer Risk Rating",
+      "definition": "AML/CFT risk rating of the customer: Low, Medium or High.",
+      "domain": "Compliance & AML",
+      "status": "Under Review",
+      "version": "1.0",
+      "steward": {
+        "name": "Omar Fathy",
+        "dept": "Finance"
+      },
+      "owner": {
+        "name": "Ahmed Hassan",
+        "dept": "Retail Banking"
+      },
+      "critical_data_element": true,
+      "classification": "Restricted",
+      "tags": [
+        "AML-Sensitive"
+      ],
+      "linked_kpis": [
+        {
+          "id": "KPI-014",
+          "name": "High-Risk Customer Ratio"
+        }
+      ],
+      "linked_physical_columns": [
+        {
+          "id": "T24_ORACLE/T24_CORE/CUSTOMER/RISK_RATING",
+          "layer": "SOURCE",
+          "name": "T24_CORE.CUSTOMER.RISK_RATING"
+        },
+        {
+          "id": "HIVE_LAKE/stg/STG_CUSTOMER/RISK_RATING",
+          "layer": "STAGING",
+          "name": "stg.STG_CUSTOMER.RISK_RATING"
+        },
+        {
+          "id": "ORA_DWH/DWH/DIM_CUSTOMER/RISK_RATING",
+          "layer": "DWH",
+          "name": "DWH.DIM_CUSTOMER.RISK_RATING"
+        },
+        {
+          "id": "ORA_DWH/MART/MART_CUSTOMER_360/RISK_RATING",
+          "layer": "MART",
+          "name": "MART.MART_CUSTOMER_360.RISK_RATING"
+        }
+      ],
+      "linked_systems": [
+        "Cloudera Data Lake (Staging)",
+        "Enterprise Data Warehouse",
+        "Temenos T24 Core Banking"
+      ],
+      "avg_dq_score": 96.19,
+      "policy": "Data Classification Policy v2.1",
+      "created": "2021-03-27",
+      "last_updated": "2025-01-06"
+    },
+    {
+      "id": "GT-0042",
+      "type": "GlossaryTerm",
+      "name": "Customer Segment",
+      "definition": "Commercial segment of the customer: Mass, Affluent, Private, SME or Corporate.",
+      "domain": "Customer",
+      "status": "Published",
+      "version": "2.4",
+      "steward": {
+        "name": "Yasser Gamal",
+        "dept": "Operations"
+      },
+      "owner": {
+        "name": "Sara Ibrahim",
+        "dept": "Compliance & AML"
+      },
+      "critical_data_element": false,
+      "classification": "Internal",
+      "tags": [],
+      "linked_kpis": [],
+      "linked_physical_columns": [
+        {
+          "id": "T24_ORACLE/T24_CORE/CUSTOMER/SEGMENT_CODE",
+          "layer": "SOURCE",
+          "name": "T24_CORE.CUSTOMER.SEGMENT_CODE"
+        },
+        {
+          "id": "HIVE_LAKE/stg/STG_CUSTOMER/SEGMENT_CODE",
+          "layer": "STAGING",
+          "name": "stg.STG_CUSTOMER.SEGMENT_CODE"
+        },
+        {
+          "id": "ORA_DWH/DWH/DIM_CUSTOMER/SEGMENT_CODE",
+          "layer": "DWH",
+          "name": "DWH.DIM_CUSTOMER.SEGMENT_CODE"
+        },
+        {
+          "id": "ORA_DWH/MART/MART_CUSTOMER_360/SEGMENT_CODE",
+          "layer": "MART",
+          "name": "MART.MART_CUSTOMER_360.SEGMENT_CODE"
+        }
+      ],
+      "linked_systems": [
+        "Cloudera Data Lake (Staging)",
+        "Enterprise Data Warehouse",
+        "Temenos T24 Core Banking"
+      ],
+      "avg_dq_score": 92.7,
+      "policy": "Data Management Policy v1.4",
+      "created": "2024-01-27",
+      "last_updated": "2025-03-29"
+    },
+    {
+      "id": "GT-0043",
+      "type": "GlossaryTerm",
+      "name": "Date of Birth",
+      "definition": "Date on which the individual customer was born.",
+      "domain": "Customer",
+      "status": "Published",
+      "version": "3.2",
+      "steward": {
+        "name": "Ahmed Hassan",
+        "dept": "Retail Banking"
+      },
+      "owner": {
+        "name": "Ahmed Hassan",
+        "dept": "Retail Banking"
+      },
+      "critical_data_element": false,
+      "classification": "Confidential",
+      "tags": [
+        "PII"
+      ],
+      "linked_kpis": [],
+      "linked_physical_columns": [
+        {
+          "id": "T24_ORACLE/T24_CORE/CUSTOMER/DOB",
+          "layer": "SOURCE",
+          "name": "T24_CORE.CUSTOMER.DOB"
+        },
+        {
+          "id": "HIVE_LAKE/stg/STG_CUSTOMER/DOB",
+          "layer": "STAGING",
+          "name": "stg.STG_CUSTOMER.DOB"
+        },
+        {
+          "id": "ORA_DWH/DWH/DIM_CUSTOMER/DOB",
+          "layer": "DWH",
+          "name": "DWH.DIM_CUSTOMER.DOB"
+        }
+      ],
+      "linked_systems": [
+        "Cloudera Data Lake (Staging)",
+        "Enterprise Data Warehouse",
+        "Temenos T24 Core Banking"
+      ],
+      "avg_dq_score": 96.13,
+      "policy": "Data Classification Policy v2.1",
+      "created": "2022-03-10",
+      "last_updated": "2026-02-27"
+    },
+    {
+      "id": "GT-0044",
+      "type": "GlossaryTerm",
+      "name": "Days Past Due",
+      "definition": "Number of days a loan payment is overdue.",
+      "domain": "Lending",
+      "status": "Draft",
+      "version": "3.1",
+      "steward": {
+        "name": "Nour El-Din Adel",
+        "dept": "IT - Data & BI"
+      },
+      "owner": {
+        "name": "Yasser Gamal",
+        "dept": "Operations"
+      },
+      "critical_data_element": false,
+      "classification": "Confidential",
+      "tags": [
+        "Financial"
+      ],
+      "linked_kpis": [
+        {
+          "id": "KPI-003",
+          "name": "NPL Ratio"
+        }
+      ],
+      "linked_physical_columns": [
+        {
+          "id": "FLEX_ORACLE/FCUBS/LOAN/DPD",
+          "layer": "SOURCE",
+          "name": "FCUBS.LOAN.DPD"
+        },
+        {
+          "id": "HIVE_LAKE/stg/STG_LOAN/DPD",
+          "layer": "STAGING",
+          "name": "stg.STG_LOAN.DPD"
+        },
+        {
+          "id": "ORA_DWH/DWH/FCT_LOAN/DPD",
+          "layer": "DWH",
+          "name": "DWH.FCT_LOAN.DPD"
+        },
+        {
+          "id": "ORA_DWH/MART/MART_CREDIT_RISK/DPD",
+          "layer": "MART",
+          "name": "MART.MART_CREDIT_RISK.DPD"
+        }
+      ],
+      "linked_systems": [
+        "Cloudera Data Lake (Staging)",
+        "Enterprise Data Warehouse",
+        "Oracle FLEXCUBE Loans"
+      ],
+      "avg_dq_score": 95.1,
+      "policy": "Data Classification Policy v2.1",
+      "created": "2021-11-26",
+      "last_updated": "2025-07-08"
+    },
+    {
+      "id": "GT-0045",
+      "type": "GlossaryTerm",
+      "name": "Debit Amount",
+      "definition": "Total debit movement in the period for a GL account.",
+      "domain": "Finance",
+      "status": "Published",
+      "version": "2.1",
+      "steward": {
+        "name": "Dina Farouk",
+        "dept": "Corporate Banking"
+      },
+      "owner": {
+        "name": "Ahmed Hassan",
+        "dept": "Retail Banking"
+      },
+      "critical_data_element": false,
+      "classification": "Confidential",
+      "tags": [
+        "Financial"
+      ],
+      "linked_kpis": [
+        {
+          "id": "KPI-002",
+          "name": "Net Interest Margin"
+        },
+        {
+          "id": "KPI-017",
+          "name": "Cost-to-Income Ratio"
+        }
+      ],
+      "linked_physical_columns": [
+        {
+          "id": "EBS_ORACLE/GL/GL_BALANCE/DEBIT",
+          "layer": "SOURCE",
+          "name": "GL.GL_BALANCE.DEBIT"
+        },
+        {
+          "id": "HIVE_LAKE/stg/STG_GL_BALANCE/DEBIT",
+          "layer": "STAGING",
+          "name": "stg.STG_GL_BALANCE.DEBIT"
+        },
+        {
+          "id": "ORA_DWH/DWH/FCT_GL_BALANCE/DEBIT",
+          "layer": "DWH",
+          "name": "DWH.FCT_GL_BALANCE.DEBIT"
+        }
+      ],
+      "linked_systems": [
+        "Cloudera Data Lake (Staging)",
+        "Enterprise Data Warehouse",
+        "Oracle EBS General Ledger"
+      ],
+      "avg_dq_score": 95.11,
+      "policy": "Data Classification Policy v2.1",
+      "created": "2021-08-23",
+      "last_updated": "2025-07-05"
+    },
+    {
+      "id": "GT-0046",
+      "type": "GlossaryTerm",
+      "name": "Disbursement Date",
+      "definition": "Date funds were released to the borrower.",
+      "domain": "Lending",
+      "status": "Published",
+      "version": "3.0",
+      "steward": {
+        "name": "Sara Ibrahim",
+        "dept": "Compliance & AML"
+      },
+      "owner": {
+        "name": "Yasser Gamal",
+        "dept": "Operations"
+      },
+      "critical_data_element": false,
+      "classification": "Internal",
+      "tags": [],
+      "linked_kpis": [],
+      "linked_physical_columns": [
+        {
+          "id": "FLEX_ORACLE/FCUBS/LOAN/DISBURSE_DATE",
+          "layer": "SOURCE",
+          "name": "FCUBS.LOAN.DISBURSE_DATE"
+        },
+        {
+          "id": "HIVE_LAKE/stg/STG_LOAN/DISBURSE_DATE",
+          "layer": "STAGING",
+          "name": "stg.STG_LOAN.DISBURSE_DATE"
+        },
+        {
+          "id": "ORA_DWH/DWH/FCT_LOAN/DISBURSE_DATE",
+          "layer": "DWH",
+          "name": "DWH.FCT_LOAN.DISBURSE_DATE"
+        }
+      ],
+      "linked_systems": [
+        "Cloudera Data Lake (Staging)",
+        "Enterprise Data Warehouse",
+        "Oracle FLEXCUBE Loans"
+      ],
+      "avg_dq_score": 94.89,
+      "policy": "Data Management Policy v1.4",
+      "created": "2024-01-30",
+      "last_updated": "2026-04-18"
+    },
+    {
+      "id": "GT-0047",
+      "type": "GlossaryTerm",
+      "name": "Email Address",
+      "definition": "Primary email address registered for the customer.",
+      "domain": "Customer",
+      "status": "Published",
+      "version": "1.2",
+      "steward": {
+        "name": "Tarek Samir",
+        "dept": "IT - Core Banking"
+      },
+      "owner": {
+        "name": "Tarek Samir",
+        "dept": "IT - Core Banking"
+      },
+      "critical_data_element": false,
+      "classification": "Confidential",
+      "tags": [
+        "PII"
+      ],
+      "linked_kpis": [],
+      "linked_physical_columns": [
+        {
+          "id": "T24_ORACLE/T24_CORE/CUSTOMER/EMAIL",
+          "layer": "SOURCE",
+          "name": "T24_CORE.CUSTOMER.EMAIL"
+        },
+        {
+          "id": "ORA_DWH/DWH/DIM_CUSTOMER/EMAIL",
+          "layer": "DWH",
+          "name": "DWH.DIM_CUSTOMER.EMAIL"
+        }
+      ],
+      "linked_systems": [
+        "Enterprise Data Warehouse",
+        "Temenos T24 Core Banking"
+      ],
+      "avg_dq_score": 96.27,
+      "policy": "Data Classification Policy v2.1",
+      "created": "2021-05-18",
+      "last_updated": "2025-09-14"
+    },
+    {
+      "id": "GT-0048",
+      "type": "GlossaryTerm",
+      "name": "Expected Credit Loss",
+      "definition": "IFRS 9 expected credit loss = PD x LGD x EAD.",
+      "domain": "Risk",
+      "status": "Published",
+      "version": "3.4",
+      "steward": {
+        "name": "Tarek Samir",
+        "dept": "IT - Core Banking"
+      },
+      "owner": {
+        "name": "Tarek Samir",
+        "dept": "IT - Core Banking"
+      },
+      "critical_data_element": true,
+      "classification": "Restricted",
+      "tags": [
+        "Risk-Model"
+      ],
+      "linked_kpis": [
+        {
+          "id": "KPI-004",
+          "name": "ECL Coverage Ratio"
+        }
+      ],
+      "linked_physical_columns": [
+        {
+          "id": "ORA_DWH/MART/MART_CREDIT_RISK/ECL_AMOUNT",
+          "layer": "MART",
+          "name": "MART.MART_CREDIT_RISK.ECL_AMOUNT"
+        }
+      ],
+      "linked_systems": [
+        "Enterprise Data Warehouse"
+      ],
+      "avg_dq_score": 91.58,
+      "policy": "Data Classification Policy v2.1",
+      "created": "2023-09-25",
+      "last_updated": "2025-12-05"
+    },
+    {
+      "id": "GT-0049",
+      "type": "GlossaryTerm",
+      "name": "Exposure at Default",
+      "definition": "Expected exposure to the bank at the time of default.",
+      "domain": "Risk",
+      "status": "Published",
+      "version": "3.1",
+      "steward": {
+        "name": "Yasser Gamal",
+        "dept": "Operations"
+      },
+      "owner": {
+        "name": "Sara Ibrahim",
+        "dept": "Compliance & AML"
+      },
+      "critical_data_element": true,
+      "classification": "Restricted",
+      "tags": [
+        "Risk-Model"
+      ],
+      "linked_kpis": [],
+      "linked_physical_columns": [
+        {
+          "id": "FLEX_ORACLE/FCUBS/LOAN/EAD",
+          "layer": "SOURCE",
+          "name": "FCUBS.LOAN.EAD"
+        },
+        {
+          "id": "ORA_DWH/DWH/FCT_LOAN/EAD",
+          "layer": "DWH",
+          "name": "DWH.FCT_LOAN.EAD"
+        }
+      ],
+      "linked_systems": [
+        "Enterprise Data Warehouse",
+        "Oracle FLEXCUBE Loans"
+      ],
+      "avg_dq_score": 96.32,
+      "policy": "Data Classification Policy v2.1",
+      "created": "2021-07-24",
+      "last_updated": "2025-10-19"
+    },
+    {
+      "id": "GT-0050",
+      "type": "GlossaryTerm",
+      "name": "GL Account Code",
+      "definition": "Chart-of-accounts code of a general ledger account.",
+      "domain": "Finance",
+      "status": "Published",
+      "version": "1.2",
+      "steward": {
+        "name": "Mahmoud Nabil",
+        "dept": "Treasury"
+      },
+      "owner": {
+        "name": "Yasser Gamal",
+        "dept": "Operations"
+      },
+      "critical_data_element": false,
+      "classification": "Internal",
+      "tags": [],
+      "linked_kpis": [],
+      "linked_physical_columns": [
+        {
+          "id": "EBS_ORACLE/GL/GL_BALANCE/GL_ACCOUNT",
+          "layer": "SOURCE",
+          "name": "GL.GL_BALANCE.GL_ACCOUNT"
+        },
+        {
+          "id": "HIVE_LAKE/stg/STG_GL_BALANCE/GL_ACCOUNT",
+          "layer": "STAGING",
+          "name": "stg.STG_GL_BALANCE.GL_ACCOUNT"
+        },
+        {
+          "id": "ORA_DWH/DWH/FCT_GL_BALANCE/GL_ACCOUNT",
+          "layer": "DWH",
+          "name": "DWH.FCT_GL_BALANCE.GL_ACCOUNT"
+        }
+      ],
+      "linked_systems": [
+        "Cloudera Data Lake (Staging)",
+        "Enterprise Data Warehouse",
+        "Oracle EBS General Ledger"
+      ],
+      "avg_dq_score": 90.57,
+      "policy": "Data Management Policy v1.4",
+      "created": "2023-09-23",
+      "last_updated": "2026-04-07"
+    },
+    {
+      "id": "GT-0051",
+      "type": "GlossaryTerm",
+      "name": "GL Closing Balance",
+      "definition": "Closing balance of the GL account for the period.",
+      "domain": "Finance",
+      "status": "Published",
+      "version": "3.2",
+      "steward": {
+        "name": "Ahmed Hassan",
+        "dept": "Retail Banking"
+      },
+      "owner": {
+        "name": "Ahmed Hassan",
+        "dept": "Retail Banking"
+      },
+      "critical_data_element": false,
+      "classification": "Confidential",
+      "tags": [
+        "Financial"
+      ],
+      "linked_kpis": [],
+      "linked_physical_columns": [
+        {
+          "id": "EBS_ORACLE/GL/GL_BALANCE/CLOSING_BAL",
+          "layer": "SOURCE",
+          "name": "GL.GL_BALANCE.CLOSING_BAL"
+        },
+        {
+          "id": "HIVE_LAKE/stg/STG_GL_BALANCE/CLOSING_BAL",
+          "layer": "STAGING",
+          "name": "stg.STG_GL_BALANCE.CLOSING_BAL"
+        },
+        {
+          "id": "ORA_DWH/DWH/FCT_GL_BALANCE/CLOSING_BAL",
+          "layer": "DWH",
+          "name": "DWH.FCT_GL_BALANCE.CLOSING_BAL"
+        }
+      ],
+      "linked_systems": [
+        "Cloudera Data Lake (Staging)",
+        "Enterprise Data Warehouse",
+        "Oracle EBS General Ledger"
+      ],
+      "avg_dq_score": 95.9,
+      "policy": "Data Classification Policy v2.1",
+      "created": "2024-04-11",
+      "last_updated": "2025-06-06"
+    },
+    {
+      "id": "GT-0052",
+      "type": "GlossaryTerm",
+      "name": "Gender",
+      "definition": "Gender of the individual customer (M/F).",
+      "domain": "Customer",
+      "status": "Published",
+      "version": "2.2",
+      "steward": {
+        "name": "Yasser Gamal",
+        "dept": "Operations"
+      },
+      "owner": {
+        "name": "Sara Ibrahim",
+        "dept": "Compliance & AML"
+      },
+      "critical_data_element": false,
+      "classification": "Internal",
+      "tags": [],
+      "linked_kpis": [],
+      "linked_physical_columns": [
+        {
+          "id": "T24_ORACLE/T24_CORE/CUSTOMER/GENDER",
+          "layer": "SOURCE",
+          "name": "T24_CORE.CUSTOMER.GENDER"
+        },
+        {
+          "id": "ORA_DWH/DWH/DIM_CUSTOMER/GENDER",
+          "layer": "DWH",
+          "name": "DWH.DIM_CUSTOMER.GENDER"
+        }
+      ],
+      "linked_systems": [
+        "Enterprise Data Warehouse",
+        "Temenos T24 Core Banking"
+      ],
+      "avg_dq_score": 93.44,
+      "policy": "Data Management Policy v1.4",
+      "created": "2023-05-28",
+      "last_updated": "2025-06-22"
+    },
+    {
+      "id": "GT-0053",
+      "type": "GlossaryTerm",
+      "name": "IBAN",
+      "definition": "International Bank Account Number of the account.",
+      "domain": "Account",
+      "status": "Published",
+      "version": "1.1",
+      "steward": {
+        "name": "Tarek Samir",
+        "dept": "IT - Core Banking"
+      },
+      "owner": {
+        "name": "Tarek Samir",
+        "dept": "IT - Core Banking"
+      },
+      "critical_data_element": false,
+      "classification": "Confidential",
+      "tags": [
+        "Financial"
+      ],
+      "linked_kpis": [],
+      "linked_physical_columns": [
+        {
+          "id": "T24_ORACLE/T24_CORE/ACCOUNT/IBAN",
+          "layer": "SOURCE",
+          "name": "T24_CORE.ACCOUNT.IBAN"
+        },
+        {
+          "id": "HIVE_LAKE/stg/STG_ACCOUNT/IBAN",
+          "layer": "STAGING",
+          "name": "stg.STG_ACCOUNT.IBAN"
+        },
+        {
+          "id": "ORA_DWH/DWH/DIM_ACCOUNT/IBAN",
+          "layer": "DWH",
+          "name": "DWH.DIM_ACCOUNT.IBAN"
+        }
+      ],
+      "linked_systems": [
+        "Cloudera Data Lake (Staging)",
+        "Enterprise Data Warehouse",
+        "Temenos T24 Core Banking"
+      ],
+      "avg_dq_score": 95.32,
+      "policy": "Data Classification Policy v2.1",
+      "created": "2024-08-05",
+      "last_updated": "2026-03-23"
+    },
+    {
+      "id": "GT-0054",
+      "type": "GlossaryTerm",
+      "name": "IFRS9 Stage",
+      "definition": "IFRS 9 impairment stage of the loan: 1 (performing), 2 (under-performing), 3 (credit-impaired).",
+      "domain": "Risk",
+      "status": "Published",
+      "version": "2.1",
+      "steward": {
+        "name": "Yasser Gamal",
+        "dept": "Operations"
+      },
+      "owner": {
+        "name": "Sara Ibrahim",
+        "dept": "Compliance & AML"
+      },
+      "critical_data_element": false,
+      "classification": "Confidential",
+      "tags": [
+        "Financial"
+      ],
+      "linked_kpis": [],
+      "linked_physical_columns": [
+        {
+          "id": "FLEX_ORACLE/FCUBS/LOAN/IFRS9_STAGE",
+          "layer": "SOURCE",
+          "name": "FCUBS.LOAN.IFRS9_STAGE"
+        },
+        {
+          "id": "HIVE_LAKE/stg/STG_LOAN/IFRS9_STAGE",
+          "layer": "STAGING",
+          "name": "stg.STG_LOAN.IFRS9_STAGE"
+        },
+        {
+          "id": "ORA_DWH/DWH/FCT_LOAN/IFRS9_STAGE",
+          "layer": "DWH",
+          "name": "DWH.FCT_LOAN.IFRS9_STAGE"
+        },
+        {
+          "id": "ORA_DWH/MART/MART_CREDIT_RISK/IFRS9_STAGE",
+          "layer": "MART",
+          "name": "MART.MART_CREDIT_RISK.IFRS9_STAGE"
+        }
+      ],
+      "linked_systems": [
+        "Cloudera Data Lake (Staging)",
+        "Enterprise Data Warehouse",
+        "Oracle FLEXCUBE Loans"
+      ],
+      "avg_dq_score": 90.25,
+      "policy": "Data Classification Policy v2.1",
+      "created": "2022-11-11",
+      "last_updated": "2026-05-07"
+    },
+    {
+      "id": "GT-0055",
+      "type": "GlossaryTerm",
+      "name": "Interest Rate",
+      "definition": "Annual nominal interest rate applied to an account or loan.",
+      "domain": "Finance",
+      "status": "Published",
+      "version": "2.2",
+      "steward": {
+        "name": "Khaled Mansour",
+        "dept": "Risk Management"
+      },
+      "owner": {
+        "name": "Tarek Samir",
+        "dept": "IT - Core Banking"
+      },
+      "critical_data_element": false,
+      "classification": "Internal",
+      "tags": [],
+      "linked_kpis": [
+        {
+          "id": "KPI-002",
+          "name": "Net Interest Margin"
+        }
+      ],
+      "linked_physical_columns": [
+        {
+          "id": "T24_ORACLE/T24_CORE/ACCOUNT/INTEREST_RATE",
+          "layer": "SOURCE",
+          "name": "T24_CORE.ACCOUNT.INTEREST_RATE"
+        },
+        {
+          "id": "ORA_DWH/DWH/DIM_ACCOUNT/INTEREST_RATE",
+          "layer": "DWH",
+          "name": "DWH.DIM_ACCOUNT.INTEREST_RATE"
+        },
+        {
+          "id": "FLEX_ORACLE/FCUBS/LOAN/INTEREST_RATE",
+          "layer": "SOURCE",
+          "name": "FCUBS.LOAN.INTEREST_RATE"
+        },
+        {
+          "id": "HIVE_LAKE/stg/STG_LOAN/INTEREST_RATE",
+          "layer": "STAGING",
+          "name": "stg.STG_LOAN.INTEREST_RATE"
+        },
+        {
+          "id": "ORA_DWH/DWH/FCT_LOAN/INTEREST_RATE",
+          "layer": "DWH",
+          "name": "DWH.FCT_LOAN.INTEREST_RATE"
+        }
+      ],
+      "linked_systems": [
+        "Cloudera Data Lake (Staging)",
+        "Enterprise Data Warehouse",
+        "Oracle FLEXCUBE Loans",
+        "Temenos T24 Core Banking"
+      ],
+      "avg_dq_score": 94.53,
+      "policy": "Data Management Policy v1.4",
+      "created": "2023-09-25",
+      "last_updated": "2026-07-19"
+    },
+    {
+      "id": "GT-0056",
+      "type": "GlossaryTerm",
+      "name": "KYC Last Review Date",
+      "definition": "Date of the last periodic KYC review.",
+      "domain": "Compliance & AML",
+      "status": "Published",
+      "version": "3.4",
+      "steward": {
+        "name": "Mahmoud Nabil",
+        "dept": "Treasury"
+      },
+      "owner": {
+        "name": "Yasser Gamal",
+        "dept": "Operations"
+      },
+      "critical_data_element": false,
+      "classification": "Confidential",
+      "tags": [
+        "AML-Sensitive"
+      ],
+      "linked_kpis": [],
+      "linked_physical_columns": [
+        {
+          "id": "ACTIMIZE_MSSQL/AML/KYC_PROFILE/LAST_REVIEW_DATE",
+          "layer": "SOURCE",
+          "name": "AML.KYC_PROFILE.LAST_REVIEW_DATE"
+        },
+        {
+          "id": "HIVE_LAKE/stg/STG_KYC_PROFILE/LAST_REVIEW_DATE",
+          "layer": "STAGING",
+          "name": "stg.STG_KYC_PROFILE.LAST_REVIEW_DATE"
+        },
+        {
+          "id": "ORA_DWH/DWH/DIM_KYC/LAST_REVIEW_DATE",
+          "layer": "DWH",
+          "name": "DWH.DIM_KYC.LAST_REVIEW_DATE"
+        }
+      ],
+      "linked_systems": [
+        "Cloudera Data Lake (Staging)",
+        "Enterprise Data Warehouse",
+        "NICE Actimize AML/KYC"
+      ],
+      "avg_dq_score": 97.13,
+      "policy": "Data Classification Policy v2.1",
+      "created": "2021-06-17",
+      "last_updated": "2025-10-15"
+    },
+    {
+      "id": "GT-0057",
+      "type": "GlossaryTerm",
+      "name": "KYC Next Review Date",
+      "definition": "Date the next periodic KYC review is due, based on risk rating.",
+      "domain": "Compliance & AML",
+      "status": "Under Review",
+      "version": "1.4",
+      "steward": {
+        "name": "Rania Saleh",
+        "dept": "Data Governance"
+      },
+      "owner": {
+        "name": "Tarek Samir",
+        "dept": "IT - Core Banking"
+      },
+      "critical_data_element": false,
+      "classification": "Confidential",
+      "tags": [
+        "AML-Sensitive"
+      ],
+      "linked_kpis": [
+        {
+          "id": "KPI-013",
+          "name": "KYC Review Compliance"
+        }
+      ],
+      "linked_physical_columns": [
+        {
+          "id": "ACTIMIZE_MSSQL/AML/KYC_PROFILE/NEXT_REVIEW_DATE",
+          "layer": "SOURCE",
+          "name": "AML.KYC_PROFILE.NEXT_REVIEW_DATE"
+        },
+        {
+          "id": "HIVE_LAKE/stg/STG_KYC_PROFILE/NEXT_REVIEW_DATE",
+          "layer": "STAGING",
+          "name": "stg.STG_KYC_PROFILE.NEXT_REVIEW_DATE"
+        },
+        {
+          "id": "ORA_DWH/DWH/DIM_KYC/NEXT_REVIEW_DATE",
+          "layer": "DWH",
+          "name": "DWH.DIM_KYC.NEXT_REVIEW_DATE"
+        },
+        {
+          "id": "ORA_DWH/MART/MART_AML_MONITORING/NEXT_REVIEW_DATE",
+          "layer": "MART",
+          "name": "MART.MART_AML_MONITORING.NEXT_REVIEW_DATE"
+        }
+      ],
+      "linked_systems": [
+        "Cloudera Data Lake (Staging)",
+        "Enterprise Data Warehouse",
+        "NICE Actimize AML/KYC"
+      ],
+      "avg_dq_score": 94.88,
+      "policy": "Data Classification Policy v2.1",
+      "created": "2022-02-07",
+      "last_updated": "2025-09-27"
+    },
+    {
+      "id": "GT-0058",
+      "type": "GlossaryTerm",
+      "name": "KYC Profile Identifier",
+      "definition": "Unique identifier of the KYC profile record.",
+      "domain": "Compliance & AML",
+      "status": "Published",
+      "version": "3.0",
+      "steward": {
+        "name": "Sara Ibrahim",
+        "dept": "Compliance & AML"
+      },
+      "owner": {
+        "name": "Yasser Gamal",
+        "dept": "Operations"
+      },
+      "critical_data_element": false,
+      "classification": "Internal",
+      "tags": [],
+      "linked_kpis": [],
+      "linked_physical_columns": [
+        {
+          "id": "ACTIMIZE_MSSQL/AML/KYC_PROFILE/KYC_ID",
+          "layer": "SOURCE",
+          "name": "AML.KYC_PROFILE.KYC_ID"
+        },
+        {
+          "id": "ORA_DWH/DWH/DIM_KYC/KYC_ID",
+          "layer": "DWH",
+          "name": "DWH.DIM_KYC.KYC_ID"
+        }
+      ],
+      "linked_systems": [
+        "Enterprise Data Warehouse",
+        "NICE Actimize AML/KYC"
+      ],
+      "avg_dq_score": 93.32,
+      "policy": "Data Management Policy v1.4",
+      "created": "2021-06-04",
+      "last_updated": "2025-01-20"
+    },
+    {
+      "id": "GT-0059",
+      "type": "GlossaryTerm",
+      "name": "KYC Status",
+      "definition": "Current state of the customer's Know-Your-Customer file: Complete, Incomplete or Expired.",
+      "domain": "Compliance & AML",
+      "status": "Under Review",
+      "version": "3.0",
+      "steward": {
+        "name": "Nour El-Din Adel",
+        "dept": "IT - Data & BI"
+      },
+      "owner": {
+        "name": "Yasser Gamal",
+        "dept": "Operations"
+      },
+      "critical_data_element": false,
+      "classification": "Confidential",
+      "tags": [
+        "AML-Sensitive"
+      ],
+      "linked_kpis": [
+        {
+          "id": "KPI-013",
+          "name": "KYC Review Compliance"
+        }
+      ],
+      "linked_physical_columns": [
+        {
+          "id": "T24_ORACLE/T24_CORE/CUSTOMER/KYC_STATUS",
+          "layer": "SOURCE",
+          "name": "T24_CORE.CUSTOMER.KYC_STATUS"
+        },
+        {
+          "id": "HIVE_LAKE/stg/STG_CUSTOMER/KYC_STATUS",
+          "layer": "STAGING",
+          "name": "stg.STG_CUSTOMER.KYC_STATUS"
+        },
+        {
+          "id": "ORA_DWH/DWH/DIM_CUSTOMER/KYC_STATUS",
+          "layer": "DWH",
+          "name": "DWH.DIM_CUSTOMER.KYC_STATUS"
+        },
+        {
+          "id": "ORA_DWH/MART/MART_CUSTOMER_360/KYC_STATUS",
+          "layer": "MART",
+          "name": "MART.MART_CUSTOMER_360.KYC_STATUS"
+        }
+      ],
+      "linked_systems": [
+        "Cloudera Data Lake (Staging)",
+        "Enterprise Data Warehouse",
+        "Temenos T24 Core Banking"
+      ],
+      "avg_dq_score": 96.7,
+      "policy": "Data Classification Policy v2.1",
+      "created": "2024-04-06",
+      "last_updated": "2026-08-16"
+    },
+    {
+      "id": "GT-0060",
+      "type": "GlossaryTerm",
+      "name": "Last Transaction Date",
+      "definition": "Date of the latest customer-initiated transaction on the account.",
+      "domain": "Account",
+      "status": "Published",
+      "version": "3.1",
+      "steward": {
+        "name": "Omar Fathy",
+        "dept": "Finance"
+      },
+      "owner": {
+        "name": "Ahmed Hassan",
+        "dept": "Retail Banking"
+      },
+      "critical_data_element": false,
+      "classification": "Internal",
+      "tags": [],
+      "linked_kpis": [
+        {
+          "id": "KPI-005",
+          "name": "Active Customers"
+        }
+      ],
+      "linked_physical_columns": [
+        {
+          "id": "T24_ORACLE/T24_CORE/ACCOUNT/LAST_TXN_DATE",
+          "layer": "SOURCE",
+          "name": "T24_CORE.ACCOUNT.LAST_TXN_DATE"
+        },
+        {
+          "id": "HIVE_LAKE/stg/STG_ACCOUNT/LAST_TXN_DATE",
+          "layer": "STAGING",
+          "name": "stg.STG_ACCOUNT.LAST_TXN_DATE"
+        },
+        {
+          "id": "ORA_DWH/DWH/DIM_ACCOUNT/LAST_TXN_DATE",
+          "layer": "DWH",
+          "name": "DWH.DIM_ACCOUNT.LAST_TXN_DATE"
+        }
+      ],
+      "linked_systems": [
+        "Cloudera Data Lake (Staging)",
+        "Enterprise Data Warehouse",
+        "Temenos T24 Core Banking"
+      ],
+      "avg_dq_score": 93.48,
+      "policy": "Data Management Policy v1.4",
+      "created": "2021-03-17",
+      "last_updated": "2026-07-19"
+    },
+    {
+      "id": "GT-0061",
+      "type": "GlossaryTerm",
+      "name": "Loan Identifier",
+      "definition": "Unique identifier of a loan facility.",
+      "domain": "Lending",
+      "status": "Published",
+      "version": "3.3",
+      "steward": {
+        "name": "Mona Abdelrahman",
+        "dept": "Data Governance"
+      },
+      "owner": {
+        "name": "Sara Ibrahim",
+        "dept": "Compliance & AML"
+      },
+      "critical_data_element": false,
+      "classification": "Internal",
+      "tags": [],
+      "linked_kpis": [],
+      "linked_physical_columns": [
+        {
+          "id": "FLEX_ORACLE/FCUBS/LOAN/LOAN_ID",
+          "layer": "SOURCE",
+          "name": "FCUBS.LOAN.LOAN_ID"
+        },
+        {
+          "id": "HIVE_LAKE/stg/STG_LOAN/LOAN_ID",
+          "layer": "STAGING",
+          "name": "stg.STG_LOAN.LOAN_ID"
+        },
+        {
+          "id": "ORA_DWH/DWH/FCT_LOAN/LOAN_ID",
+          "layer": "DWH",
+          "name": "DWH.FCT_LOAN.LOAN_ID"
+        },
+        {
+          "id": "ORA_DWH/MART/MART_CREDIT_RISK/LOAN_ID",
+          "layer": "MART",
+          "name": "MART.MART_CREDIT_RISK.LOAN_ID"
+        }
+      ],
+      "linked_systems": [
+        "Cloudera Data Lake (Staging)",
+        "Enterprise Data Warehouse",
+        "Oracle FLEXCUBE Loans"
+      ],
+      "avg_dq_score": 95.91,
+      "policy": "Data Management Policy v1.4",
+      "created": "2024-09-01",
+      "last_updated": "2025-06-02"
+    },
+    {
+      "id": "GT-0062",
+      "type": "GlossaryTerm",
+      "name": "Loan Tenor",
+      "definition": "Contractual loan duration in months.",
+      "domain": "Lending",
+      "status": "Published",
+      "version": "1.4",
+      "steward": {
+        "name": "Rania Saleh",
+        "dept": "Data Governance"
+      },
+      "owner": {
+        "name": "Tarek Samir",
+        "dept": "IT - Core Banking"
+      },
+      "critical_data_element": false,
+      "classification": "Internal",
+      "tags": [],
+      "linked_kpis": [],
+      "linked_physical_columns": [
+        {
+          "id": "FLEX_ORACLE/FCUBS/LOAN/TENOR_MONTHS",
+          "layer": "SOURCE",
+          "name": "FCUBS.LOAN.TENOR_MONTHS"
+        },
+        {
+          "id": "HIVE_LAKE/stg/STG_LOAN/TENOR_MONTHS",
+          "layer": "STAGING",
+          "name": "stg.STG_LOAN.TENOR_MONTHS"
+        },
+        {
+          "id": "ORA_DWH/DWH/FCT_LOAN/TENOR_MONTHS",
+          "layer": "DWH",
+          "name": "DWH.FCT_LOAN.TENOR_MONTHS"
+        }
+      ],
+      "linked_systems": [
+        "Cloudera Data Lake (Staging)",
+        "Enterprise Data Warehouse",
+        "Oracle FLEXCUBE Loans"
+      ],
+      "avg_dq_score": 87.64,
+      "policy": "Data Management Policy v1.4",
+      "created": "2022-08-19",
+      "last_updated": "2025-05-18"
+    },
+    {
+      "id": "GT-0063",
+      "type": "GlossaryTerm",
+      "name": "Loss Given Default",
+      "definition": "Share of exposure expected to be lost if the borrower defaults.",
+      "domain": "Risk",
+      "status": "Published",
+      "version": "3.0",
+      "steward": {
+        "name": "Sara Ibrahim",
+        "dept": "Compliance & AML"
+      },
+      "owner": {
+        "name": "Yasser Gamal",
+        "dept": "Operations"
+      },
+      "critical_data_element": true,
+      "classification": "Restricted",
+      "tags": [
+        "Risk-Model"
+      ],
+      "linked_kpis": [],
+      "linked_physical_columns": [
+        {
+          "id": "FLEX_ORACLE/FCUBS/LOAN/LGD",
+          "layer": "SOURCE",
+          "name": "FCUBS.LOAN.LGD"
+        },
+        {
+          "id": "HIVE_LAKE/stg/STG_LOAN/LGD",
+          "layer": "STAGING",
+          "name": "stg.STG_LOAN.LGD"
+        },
+        {
+          "id": "ORA_DWH/DWH/FCT_LOAN/LGD",
+          "layer": "DWH",
+          "name": "DWH.FCT_LOAN.LGD"
+        }
+      ],
+      "linked_systems": [
+        "Cloudera Data Lake (Staging)",
+        "Enterprise Data Warehouse",
+        "Oracle FLEXCUBE Loans"
+      ],
+      "avg_dq_score": 95.13,
+      "policy": "Data Classification Policy v2.1",
+      "created": "2023-03-24",
+      "last_updated": "2026-01-08"
+    },
+    {
+      "id": "GT-0064",
+      "type": "GlossaryTerm",
+      "name": "Mobile Number",
+      "definition": "Primary mobile phone number registered for the customer.",
+      "domain": "Customer",
+      "status": "Published",
+      "version": "3.1",
+      "steward": {
+        "name": "Mona Abdelrahman",
+        "dept": "Data Governance"
+      },
+      "owner": {
+        "name": "Sara Ibrahim",
+        "dept": "Compliance & AML"
+      },
+      "critical_data_element": false,
+      "classification": "Confidential",
+      "tags": [
+        "PII"
+      ],
+      "linked_kpis": [],
+      "linked_physical_columns": [
+        {
+          "id": "T24_ORACLE/T24_CORE/CUSTOMER/MOBILE_NO",
+          "layer": "SOURCE",
+          "name": "T24_CORE.CUSTOMER.MOBILE_NO"
+        },
+        {
+          "id": "ORA_DWH/DWH/DIM_CUSTOMER/MOBILE_NO",
+          "layer": "DWH",
+          "name": "DWH.DIM_CUSTOMER.MOBILE_NO"
+        }
+      ],
+      "linked_systems": [
+        "Enterprise Data Warehouse",
+        "Temenos T24 Core Banking"
+      ],
+      "avg_dq_score": 90.38,
+      "policy": "Data Classification Policy v2.1",
+      "created": "2024-06-11",
+      "last_updated": "2025-06-19"
+    },
+    {
+      "id": "GT-0065",
+      "type": "GlossaryTerm",
+      "name": "NPL Flag",
+      "definition": "Indicator that the loan is non-performing (Days Past Due above 90).",
+      "domain": "Risk",
+      "status": "Under Review",
+      "version": "1.3",
+      "steward": {
+        "name": "Dina Farouk",
+        "dept": "Corporate Banking"
+      },
+      "owner": {
+        "name": "Ahmed Hassan",
+        "dept": "Retail Banking"
+      },
+      "critical_data_element": false,
+      "classification": "Confidential",
+      "tags": [
+        "Financial"
+      ],
+      "linked_kpis": [
+        {
+          "id": "KPI-003",
+          "name": "NPL Ratio"
+        }
+      ],
+      "linked_physical_columns": [
+        {
+          "id": "ORA_DWH/MART/MART_CREDIT_RISK/NPL_FLAG",
+          "layer": "MART",
+          "name": "MART.MART_CREDIT_RISK.NPL_FLAG"
+        }
+      ],
+      "linked_systems": [
+        "Enterprise Data Warehouse"
+      ],
+      "avg_dq_score": 94.27,
+      "policy": "Data Classification Policy v2.1",
+      "created": "2021-11-23",
+      "last_updated": "2025-07-03"
+    },
+    {
+      "id": "GT-0066",
+      "type": "GlossaryTerm",
+      "name": "National ID Number",
+      "definition": "14-digit Egyptian national identification number of an individual customer.",
+      "domain": "Customer",
+      "status": "Published",
+      "version": "3.1",
+      "steward": {
+        "name": "Ahmed Hassan",
+        "dept": "Retail Banking"
+      },
+      "owner": {
+        "name": "Ahmed Hassan",
+        "dept": "Retail Banking"
+      },
+      "critical_data_element": true,
+      "classification": "Restricted",
+      "tags": [
+        "PII"
+      ],
+      "linked_kpis": [],
+      "linked_physical_columns": [
+        {
+          "id": "T24_ORACLE/T24_CORE/CUSTOMER/NATIONAL_ID",
+          "layer": "SOURCE",
+          "name": "T24_CORE.CUSTOMER.NATIONAL_ID"
+        },
+        {
+          "id": "HIVE_LAKE/stg/STG_CUSTOMER/NATIONAL_ID",
+          "layer": "STAGING",
+          "name": "stg.STG_CUSTOMER.NATIONAL_ID"
+        },
+        {
+          "id": "ORA_DWH/DWH/DIM_CUSTOMER/NATIONAL_ID",
+          "layer": "DWH",
+          "name": "DWH.DIM_CUSTOMER.NATIONAL_ID"
+        }
+      ],
+      "linked_systems": [
+        "Cloudera Data Lake (Staging)",
+        "Enterprise Data Warehouse",
+        "Temenos T24 Core Banking"
+      ],
+      "avg_dq_score": 93.05,
+      "policy": "Data Classification Policy v2.1",
+      "created": "2023-09-18",
+      "last_updated": "2026-01-03"
+    },
+    {
+      "id": "GT-0067",
+      "type": "GlossaryTerm",
+      "name": "Nationality",
+      "definition": "Nationality of the customer (ISO 3166 alpha-3).",
+      "domain": "Customer",
+      "status": "Published",
+      "version": "2.1",
+      "steward": {
+        "name": "Ahmed Hassan",
+        "dept": "Retail Banking"
+      },
+      "owner": {
+        "name": "Ahmed Hassan",
+        "dept": "Retail Banking"
+      },
+      "critical_data_element": false,
+      "classification": "Confidential",
+      "tags": [
+        "PII"
+      ],
+      "linked_kpis": [],
+      "linked_physical_columns": [
+        {
+          "id": "T24_ORACLE/T24_CORE/CUSTOMER/NATIONALITY",
+          "layer": "SOURCE",
+          "name": "T24_CORE.CUSTOMER.NATIONALITY"
+        },
+        {
+          "id": "HIVE_LAKE/stg/STG_CUSTOMER/NATIONALITY",
+          "layer": "STAGING",
+          "name": "stg.STG_CUSTOMER.NATIONALITY"
+        },
+        {
+          "id": "ORA_DWH/DWH/DIM_CUSTOMER/NATIONALITY",
+          "layer": "DWH",
+          "name": "DWH.DIM_CUSTOMER.NATIONALITY"
+        }
+      ],
+      "linked_systems": [
+        "Cloudera Data Lake (Staging)",
+        "Enterprise Data Warehouse",
+        "Temenos T24 Core Banking"
+      ],
+      "avg_dq_score": 94.93,
+      "policy": "Data Classification Policy v2.1",
+      "created": "2021-05-09",
+      "last_updated": "2025-09-28"
+    },
+    {
+      "id": "GT-0068",
+      "type": "GlossaryTerm",
+      "name": "Occupation",
+      "definition": "Declared occupation or profession of the individual customer.",
+      "domain": "Customer",
+      "status": "Published",
+      "version": "1.1",
+      "steward": {
+        "name": "Mona Abdelrahman",
+        "dept": "Data Governance"
+      },
+      "owner": {
+        "name": "Sara Ibrahim",
+        "dept": "Compliance & AML"
+      },
+      "critical_data_element": false,
+      "classification": "Confidential",
+      "tags": [
+        "PII"
+      ],
+      "linked_kpis": [],
+      "linked_physical_columns": [
+        {
+          "id": "T24_ORACLE/T24_CORE/CUSTOMER/OCCUPATION",
+          "layer": "SOURCE",
+          "name": "T24_CORE.CUSTOMER.OCCUPATION"
+        },
+        {
+          "id": "HIVE_LAKE/stg/STG_CUSTOMER/OCCUPATION",
+          "layer": "STAGING",
+          "name": "stg.STG_CUSTOMER.OCCUPATION"
+        },
+        {
+          "id": "ORA_DWH/DWH/DIM_CUSTOMER/OCCUPATION",
+          "layer": "DWH",
+          "name": "DWH.DIM_CUSTOMER.OCCUPATION"
+        }
+      ],
+      "linked_systems": [
+        "Cloudera Data Lake (Staging)",
+        "Enterprise Data Warehouse",
+        "Temenos T24 Core Banking"
+      ],
+      "avg_dq_score": 92.54,
+      "policy": "Data Classification Policy v2.1",
+      "created": "2023-11-27",
+      "last_updated": "2026-01-05"
+    },
+    {
+      "id": "GT-0069",
+      "type": "GlossaryTerm",
+      "name": "Outstanding Balance",
+      "definition": "Remaining principal plus accrued interest owed on the loan.",
+      "domain": "Lending",
+      "status": "Published",
+      "version": "2.0",
+      "steward": {
+        "name": "Tarek Samir",
+        "dept": "IT - Core Banking"
+      },
+      "owner": {
+        "name": "Tarek Samir",
+        "dept": "IT - Core Banking"
+      },
+      "critical_data_element": true,
+      "classification": "Confidential",
+      "tags": [
+        "Financial"
+      ],
+      "linked_kpis": [
+        {
+          "id": "KPI-003",
+          "name": "NPL Ratio"
+        },
+        {
+          "id": "KPI-004",
+          "name": "ECL Coverage Ratio"
+        }
+      ],
+      "linked_physical_columns": [
+        {
+          "id": "FLEX_ORACLE/FCUBS/LOAN/OUTSTANDING_AMT",
+          "layer": "SOURCE",
+          "name": "FCUBS.LOAN.OUTSTANDING_AMT"
+        },
+        {
+          "id": "HIVE_LAKE/stg/STG_LOAN/OUTSTANDING_AMT",
+          "layer": "STAGING",
+          "name": "stg.STG_LOAN.OUTSTANDING_AMT"
+        },
+        {
+          "id": "ORA_DWH/DWH/FCT_LOAN/OUTSTANDING_AMT",
+          "layer": "DWH",
+          "name": "DWH.FCT_LOAN.OUTSTANDING_AMT"
+        },
+        {
+          "id": "ORA_DWH/MART/MART_CREDIT_RISK/OUTSTANDING_AMT",
+          "layer": "MART",
+          "name": "MART.MART_CREDIT_RISK.OUTSTANDING_AMT"
+        }
+      ],
+      "linked_systems": [
+        "Cloudera Data Lake (Staging)",
+        "Enterprise Data Warehouse",
+        "Oracle FLEXCUBE Loans"
+      ],
+      "avg_dq_score": 90.21,
+      "policy": "Data Classification Policy v2.1",
+      "created": "2021-03-23",
+      "last_updated": "2025-11-28"
+    },
+    {
+      "id": "GT-0070",
+      "type": "GlossaryTerm",
+      "name": "PEP Flag",
+      "definition": "Indicator that the customer is a Politically Exposed Person.",
+      "domain": "Compliance & AML",
+      "status": "Published",
+      "version": "3.2",
+      "steward": {
+        "name": "Sara Ibrahim",
+        "dept": "Compliance & AML"
+      },
+      "owner": {
+        "name": "Yasser Gamal",
+        "dept": "Operations"
+      },
+      "critical_data_element": true,
+      "classification": "Restricted",
+      "tags": [
+        "AML-Sensitive"
+      ],
+      "linked_kpis": [
+        {
+          "id": "KPI-019",
+          "name": "PEP Customers Count"
+        }
+      ],
+      "linked_physical_columns": [
+        {
+          "id": "ACTIMIZE_MSSQL/AML/KYC_PROFILE/PEP_FLAG",
+          "layer": "SOURCE",
+          "name": "AML.KYC_PROFILE.PEP_FLAG"
+        },
+        {
+          "id": "ORA_DWH/DWH/DIM_KYC/PEP_FLAG",
+          "layer": "DWH",
+          "name": "DWH.DIM_KYC.PEP_FLAG"
+        },
+        {
+          "id": "ORA_DWH/MART/MART_AML_MONITORING/PEP_FLAG",
+          "layer": "MART",
+          "name": "MART.MART_AML_MONITORING.PEP_FLAG"
+        }
+      ],
+      "linked_systems": [
+        "Enterprise Data Warehouse",
+        "NICE Actimize AML/KYC"
+      ],
+      "avg_dq_score": 92.55,
+      "policy": "Data Classification Policy v2.1",
+      "created": "2022-06-24",
+      "last_updated": "2026-08-16"
+    },
+    {
+      "id": "GT-0071",
+      "type": "GlossaryTerm",
+      "name": "Primary Account Number",
+      "definition": "Card number (PAN) printed on a payment card; subject to PCI-DSS.",
+      "domain": "Cards",
+      "status": "Published",
+      "version": "1.3",
+      "steward": {
+        "name": "Khaled Mansour",
+        "dept": "Risk Management"
+      },
+      "owner": {
+        "name": "Tarek Samir",
+        "dept": "IT - Core Banking"
+      },
+      "critical_data_element": true,
+      "classification": "Restricted",
+      "tags": [
+        "PCI"
+      ],
+      "linked_kpis": [],
+      "linked_physical_columns": [
+        {
+          "id": "WAY4_ORACLE/WAY4/CARD/PAN",
+          "layer": "SOURCE",
+          "name": "WAY4.CARD.PAN"
+        },
+        {
+          "id": "ORA_DWH/DWH/DIM_CARD/PAN",
+          "layer": "DWH",
+          "name": "DWH.DIM_CARD.PAN"
+        }
+      ],
+      "linked_systems": [
+        "Enterprise Data Warehouse",
+        "OpenWay Way4 Cards"
+      ],
+      "avg_dq_score": 94.11,
+      "policy": "Data Classification Policy v2.1",
+      "created": "2024-08-31",
+      "last_updated": "2026-01-23"
+    },
+    {
+      "id": "GT-0072",
+      "type": "GlossaryTerm",
+      "name": "Principal Amount",
+      "definition": "Original approved and disbursed amount of the loan.",
+      "domain": "Lending",
+      "status": "Published",
+      "version": "3.0",
+      "steward": {
+        "name": "Tarek Samir",
+        "dept": "IT - Core Banking"
+      },
+      "owner": {
+        "name": "Tarek Samir",
+        "dept": "IT - Core Banking"
+      },
+      "critical_data_element": false,
+      "classification": "Confidential",
+      "tags": [
+        "Financial"
+      ],
+      "linked_kpis": [],
+      "linked_physical_columns": [
+        {
+          "id": "FLEX_ORACLE/FCUBS/LOAN/PRINCIPAL_AMT",
+          "layer": "SOURCE",
+          "name": "FCUBS.LOAN.PRINCIPAL_AMT"
+        },
+        {
+          "id": "HIVE_LAKE/stg/STG_LOAN/PRINCIPAL_AMT",
+          "layer": "STAGING",
+          "name": "stg.STG_LOAN.PRINCIPAL_AMT"
+        },
+        {
+          "id": "ORA_DWH/DWH/FCT_LOAN/PRINCIPAL_AMT",
+          "layer": "DWH",
+          "name": "DWH.FCT_LOAN.PRINCIPAL_AMT"
+        }
+      ],
+      "linked_systems": [
+        "Cloudera Data Lake (Staging)",
+        "Enterprise Data Warehouse",
+        "Oracle FLEXCUBE Loans"
+      ],
+      "avg_dq_score": 94.9,
+      "policy": "Data Classification Policy v2.1",
+      "created": "2023-11-25",
+      "last_updated": "2025-09-15"
+    },
+    {
+      "id": "GT-0073",
+      "type": "GlossaryTerm",
+      "name": "Probability of Default",
+      "definition": "Estimated probability that the borrower defaults within 12 months.",
+      "domain": "Risk",
+      "status": "Published",
+      "version": "1.4",
+      "steward": {
+        "name": "Sara Ibrahim",
+        "dept": "Compliance & AML"
+      },
+      "owner": {
+        "name": "Yasser Gamal",
+        "dept": "Operations"
+      },
+      "critical_data_element": true,
+      "classification": "Restricted",
+      "tags": [
+        "Risk-Model"
+      ],
+      "linked_kpis": [],
+      "linked_physical_columns": [
+        {
+          "id": "FLEX_ORACLE/FCUBS/LOAN/PD",
+          "layer": "SOURCE",
+          "name": "FCUBS.LOAN.PD"
+        },
+        {
+          "id": "HIVE_LAKE/stg/STG_LOAN/PD",
+          "layer": "STAGING",
+          "name": "stg.STG_LOAN.PD"
+        },
+        {
+          "id": "ORA_DWH/DWH/FCT_LOAN/PD",
+          "layer": "DWH",
+          "name": "DWH.FCT_LOAN.PD"
+        }
+      ],
+      "linked_systems": [
+        "Cloudera Data Lake (Staging)",
+        "Enterprise Data Warehouse",
+        "Oracle FLEXCUBE Loans"
+      ],
+      "avg_dq_score": 95.33,
+      "policy": "Data Classification Policy v2.1",
+      "created": "2023-04-12",
+      "last_updated": "2025-12-28"
+    },
+    {
+      "id": "GT-0074",
+      "type": "GlossaryTerm",
+      "name": "Product Code",
+      "definition": "Code of the banking product (loan, card or deposit product).",
+      "domain": "Product",
+      "status": "Under Review",
+      "version": "2.3",
+      "steward": {
+        "name": "Dina Farouk",
+        "dept": "Corporate Banking"
+      },
+      "owner": {
+        "name": "Ahmed Hassan",
+        "dept": "Retail Banking"
+      },
+      "critical_data_element": false,
+      "classification": "Internal",
+      "tags": [],
+      "linked_kpis": [],
+      "linked_physical_columns": [
+        {
+          "id": "FLEX_ORACLE/FCUBS/LOAN/PRODUCT_CODE",
+          "layer": "SOURCE",
+          "name": "FCUBS.LOAN.PRODUCT_CODE"
+        },
+        {
+          "id": "HIVE_LAKE/stg/STG_LOAN/PRODUCT_CODE",
+          "layer": "STAGING",
+          "name": "stg.STG_LOAN.PRODUCT_CODE"
+        },
+        {
+          "id": "ORA_DWH/DWH/FCT_LOAN/PRODUCT_CODE",
+          "layer": "DWH",
+          "name": "DWH.FCT_LOAN.PRODUCT_CODE"
+        }
+      ],
+      "linked_systems": [
+        "Cloudera Data Lake (Staging)",
+        "Enterprise Data Warehouse",
+        "Oracle FLEXCUBE Loans"
+      ],
+      "avg_dq_score": 94.61,
+      "policy": "Data Management Policy v1.4",
+      "created": "2023-09-15",
+      "last_updated": "2026-09-11"
+    },
+    {
+      "id": "GT-0075",
+      "type": "GlossaryTerm",
+      "name": "Region",
+      "definition": "Geographic region the branch belongs to (Cairo, Delta, Upper Egypt, Canal...).",
+      "domain": "Organization",
+      "status": "Published",
+      "version": "1.3",
+      "steward": {
+        "name": "Ahmed Hassan",
+        "dept": "Retail Banking"
+      },
+      "owner": {
+        "name": "Ahmed Hassan",
+        "dept": "Retail Banking"
+      },
+      "critical_data_element": false,
+      "classification": "Public",
+      "tags": [],
+      "linked_kpis": [],
+      "linked_physical_columns": [
+        {
+          "id": "T24_ORACLE/T24_CORE/BRANCH/REGION",
+          "layer": "SOURCE",
+          "name": "T24_CORE.BRANCH.REGION"
+        },
+        {
+          "id": "ORA_DWH/DWH/DIM_BRANCH/REGION",
+          "layer": "DWH",
+          "name": "DWH.DIM_BRANCH.REGION"
+        },
+        {
+          "id": "ORA_DWH/MART/MART_BRANCH_PERFORMANCE/REGION",
+          "layer": "MART",
+          "name": "MART.MART_BRANCH_PERFORMANCE.REGION"
+        }
+      ],
+      "linked_systems": [
+        "Enterprise Data Warehouse",
+        "Temenos T24 Core Banking"
+      ],
+      "avg_dq_score": 95.64,
+      "policy": "Data Management Policy v1.4",
+      "created": "2021-12-06",
+      "last_updated": "2025-08-24"
+    },
+    {
+      "id": "GT-0076",
+      "type": "GlossaryTerm",
+      "name": "Reporting Period",
+      "definition": "Financial period (YYYYMM) of a ledger balance.",
+      "domain": "Finance",
+      "status": "Published",
+      "version": "3.2",
+      "steward": {
+        "name": "Mona Abdelrahman",
+        "dept": "Data Governance"
+      },
+      "owner": {
+        "name": "Sara Ibrahim",
+        "dept": "Compliance & AML"
+      },
+      "critical_data_element": false,
+      "classification": "Internal",
+      "tags": [],
+      "linked_kpis": [],
+      "linked_physical_columns": [
+        {
+          "id": "EBS_ORACLE/GL/GL_BALANCE/PERIOD",
+          "layer": "SOURCE",
+          "name": "GL.GL_BALANCE.PERIOD"
+        },
+        {
+          "id": "HIVE_LAKE/stg/STG_GL_BALANCE/PERIOD",
+          "layer": "STAGING",
+          "name": "stg.STG_GL_BALANCE.PERIOD"
+        },
+        {
+          "id": "ORA_DWH/DWH/FCT_GL_BALANCE/PERIOD",
+          "layer": "DWH",
+          "name": "DWH.FCT_GL_BALANCE.PERIOD"
+        }
+      ],
+      "linked_systems": [
+        "Cloudera Data Lake (Staging)",
+        "Enterprise Data Warehouse",
+        "Oracle EBS General Ledger"
+      ],
+      "avg_dq_score": 97.07,
+      "policy": "Data Management Policy v1.4",
+      "created": "2022-03-10",
+      "last_updated": "2025-06-03"
+    },
+    {
+      "id": "GT-0077",
+      "type": "GlossaryTerm",
+      "name": "Sanction Screening Result",
+      "definition": "Outcome of screening the customer against sanctions lists: Clear, Potential Match, Confirmed.",
+      "domain": "Compliance & AML",
+      "status": "Published",
+      "version": "2.4",
+      "steward": {
+        "name": "Ahmed Hassan",
+        "dept": "Retail Banking"
+      },
+      "owner": {
+        "name": "Ahmed Hassan",
+        "dept": "Retail Banking"
+      },
+      "critical_data_element": true,
+      "classification": "Restricted",
+      "tags": [
+        "AML-Sensitive"
+      ],
+      "linked_kpis": [],
+      "linked_physical_columns": [
+        {
+          "id": "ACTIMIZE_MSSQL/AML/KYC_PROFILE/SANCTION_HIT",
+          "layer": "SOURCE",
+          "name": "AML.KYC_PROFILE.SANCTION_HIT"
+        },
+        {
+          "id": "HIVE_LAKE/stg/STG_KYC_PROFILE/SANCTION_HIT",
+          "layer": "STAGING",
+          "name": "stg.STG_KYC_PROFILE.SANCTION_HIT"
+        },
+        {
+          "id": "ORA_DWH/DWH/DIM_KYC/SANCTION_HIT",
+          "layer": "DWH",
+          "name": "DWH.DIM_KYC.SANCTION_HIT"
+        }
+      ],
+      "linked_systems": [
+        "Cloudera Data Lake (Staging)",
+        "Enterprise Data Warehouse",
+        "NICE Actimize AML/KYC"
+      ],
+      "avg_dq_score": 93.07,
+      "policy": "Data Classification Policy v2.1",
+      "created": "2021-08-31",
+      "last_updated": "2025-08-24"
+    },
+    {
+      "id": "GT-0078",
+      "type": "GlossaryTerm",
+      "name": "Source of Funds",
+      "definition": "Declared origin of the customer's funds.",
+      "domain": "Compliance & AML",
+      "status": "Published",
+      "version": "2.0",
+      "steward": {
+        "name": "Rania Saleh",
+        "dept": "Data Governance"
+      },
+      "owner": {
+        "name": "Tarek Samir",
+        "dept": "IT - Core Banking"
+      },
+      "critical_data_element": false,
+      "classification": "Confidential",
+      "tags": [
+        "AML-Sensitive"
+      ],
+      "linked_kpis": [],
+      "linked_physical_columns": [
+        {
+          "id": "ACTIMIZE_MSSQL/AML/KYC_PROFILE/SOURCE_OF_FUNDS",
+          "layer": "SOURCE",
+          "name": "AML.KYC_PROFILE.SOURCE_OF_FUNDS"
+        },
+        {
+          "id": "HIVE_LAKE/stg/STG_KYC_PROFILE/SOURCE_OF_FUNDS",
+          "layer": "STAGING",
+          "name": "stg.STG_KYC_PROFILE.SOURCE_OF_FUNDS"
+        },
+        {
+          "id": "ORA_DWH/DWH/DIM_KYC/SOURCE_OF_FUNDS",
+          "layer": "DWH",
+          "name": "DWH.DIM_KYC.SOURCE_OF_FUNDS"
+        }
+      ],
+      "linked_systems": [
+        "Cloudera Data Lake (Staging)",
+        "Enterprise Data Warehouse",
+        "NICE Actimize AML/KYC"
+      ],
+      "avg_dq_score": 91.81,
+      "policy": "Data Classification Policy v2.1",
+      "created": "2023-09-14",
+      "last_updated": "2026-05-06"
+    },
+    {
+      "id": "GT-0079",
+      "type": "GlossaryTerm",
+      "name": "Total Customer Balance",
+      "definition": "Sum of balances of all accounts owned by a customer.",
+      "domain": "Customer",
+      "status": "Published",
+      "version": "3.1",
+      "steward": {
+        "name": "Dina Farouk",
+        "dept": "Corporate Banking"
+      },
+      "owner": {
+        "name": "Ahmed Hassan",
+        "dept": "Retail Banking"
+      },
+      "critical_data_element": false,
+      "classification": "Confidential",
+      "tags": [
+        "Financial"
+      ],
+      "linked_kpis": [
+        {
+          "id": "KPI-007",
+          "name": "Average Balance per Customer"
+        },
+        {
+          "id": "KPI-008",
+          "name": "Loan-to-Deposit Ratio"
+        }
+      ],
+      "linked_physical_columns": [
+        {
+          "id": "ORA_DWH/MART/MART_CUSTOMER_360/TOTAL_BALANCE",
+          "layer": "MART",
+          "name": "MART.MART_CUSTOMER_360.TOTAL_BALANCE"
+        }
+      ],
+      "linked_systems": [
+        "Enterprise Data Warehouse"
+      ],
+      "avg_dq_score": 96.63,
+      "policy": "Data Classification Policy v2.1",
+      "created": "2024-08-18",
+      "last_updated": "2026-02-25"
+    },
+    {
+      "id": "GT-0080",
+      "type": "GlossaryTerm",
+      "name": "Total Loan Outstanding",
+      "definition": "Sum of outstanding balances of all customer loans.",
+      "domain": "Lending",
+      "status": "Published",
+      "version": "1.1",
+      "steward": {
+        "name": "Tarek Samir",
+        "dept": "IT - Core Banking"
+      },
+      "owner": {
+        "name": "Tarek Samir",
+        "dept": "IT - Core Banking"
+      },
+      "critical_data_element": false,
+      "classification": "Confidential",
+      "tags": [
+        "Financial"
+      ],
+      "linked_kpis": [
+        {
+          "id": "KPI-008",
+          "name": "Loan-to-Deposit Ratio"
+        }
+      ],
+      "linked_physical_columns": [
+        {
+          "id": "ORA_DWH/MART/MART_CUSTOMER_360/TOTAL_LOAN_OUTSTANDING",
+          "layer": "MART",
+          "name": "MART.MART_CUSTOMER_360.TOTAL_LOAN_OUTSTANDING"
+        }
+      ],
+      "linked_systems": [
+        "Enterprise Data Warehouse"
+      ],
+      "avg_dq_score": 90.63,
+      "policy": "Data Classification Policy v2.1",
+      "created": "2024-03-20",
+      "last_updated": "2026-08-30"
+    },
+    {
+      "id": "GT-0081",
+      "type": "GlossaryTerm",
+      "name": "Transaction Amount",
+      "definition": "Amount of the transaction in transaction currency.",
+      "domain": "Transaction",
+      "status": "Published",
+      "version": "3.4",
+      "steward": {
+        "name": "Tarek Samir",
+        "dept": "IT - Core Banking"
+      },
+      "owner": {
+        "name": "Tarek Samir",
+        "dept": "IT - Core Banking"
+      },
+      "critical_data_element": false,
+      "classification": "Confidential",
+      "tags": [
+        "Financial"
+      ],
+      "linked_kpis": [],
+      "linked_physical_columns": [
+        {
+          "id": "T24_ORACLE/T24_CORE/TRANSACTION/TXN_AMT",
+          "layer": "SOURCE",
+          "name": "T24_CORE.TRANSACTION.TXN_AMT"
+        },
+        {
+          "id": "HIVE_LAKE/stg/STG_TRANSACTION/TXN_AMT",
+          "layer": "STAGING",
+          "name": "stg.STG_TRANSACTION.TXN_AMT"
+        },
+        {
+          "id": "ORA_DWH/DWH/FCT_TRANSACTION/TXN_AMT",
+          "layer": "DWH",
+          "name": "DWH.FCT_TRANSACTION.TXN_AMT"
+        }
+      ],
+      "linked_systems": [
+        "Cloudera Data Lake (Staging)",
+        "Enterprise Data Warehouse",
+        "Temenos T24 Core Banking"
+      ],
+      "avg_dq_score": 95.47,
+      "policy": "Data Classification Policy v2.1",
+      "created": "2021-03-22",
+      "last_updated": "2026-08-10"
+    },
+    {
+      "id": "GT-0082",
+      "type": "GlossaryTerm",
+      "name": "Transaction Count",
+      "definition": "Number of transactions in the period.",
+      "domain": "Transaction",
+      "status": "Published",
+      "version": "1.2",
+      "steward": {
+        "name": "Nour El-Din Adel",
+        "dept": "IT - Data & BI"
+      },
+      "owner": {
+        "name": "Yasser Gamal",
+        "dept": "Operations"
+      },
+      "critical_data_element": false,
+      "classification": "Internal",
+      "tags": [],
+      "linked_kpis": [
+        {
+          "id": "KPI-010",
+          "name": "Digital Channel Adoption"
+        },
+        {
+          "id": "KPI-020",
+          "name": "Branch Transaction Throughput"
+        }
+      ],
+      "linked_physical_columns": [
+        {
+          "id": "ORA_DWH/MART/MART_BRANCH_PERFORMANCE/TXN_COUNT",
+          "layer": "MART",
+          "name": "MART.MART_BRANCH_PERFORMANCE.TXN_COUNT"
+        },
+        {
+          "id": "ORA_DWH/MART/MART_TXN_SUMMARY/TXN_COUNT",
+          "layer": "MART",
+          "name": "MART.MART_TXN_SUMMARY.TXN_COUNT"
+        }
+      ],
+      "linked_systems": [
+        "Enterprise Data Warehouse"
+      ],
+      "avg_dq_score": 93.53,
+      "policy": "Data Management Policy v1.4",
+      "created": "2022-01-04",
+      "last_updated": "2026-06-14"
+    },
+    {
+      "id": "GT-0083",
+      "type": "GlossaryTerm",
+      "name": "Transaction Date",
+      "definition": "Value date on which the transaction was posted.",
+      "domain": "Transaction",
+      "status": "Draft",
+      "version": "3.4",
+      "steward": {
+        "name": "Ahmed Hassan",
+        "dept": "Retail Banking"
+      },
+      "owner": {
+        "name": "Ahmed Hassan",
+        "dept": "Retail Banking"
+      },
+      "critical_data_element": false,
+      "classification": "Internal",
+      "tags": [],
+      "linked_kpis": [],
+      "linked_physical_columns": [
+        {
+          "id": "T24_ORACLE/T24_CORE/TRANSACTION/TXN_DATE",
+          "layer": "SOURCE",
+          "name": "T24_CORE.TRANSACTION.TXN_DATE"
+        },
+        {
+          "id": "ORA_DWH/DWH/FCT_TRANSACTION/TXN_DATE",
+          "layer": "DWH",
+          "name": "DWH.FCT_TRANSACTION.TXN_DATE"
+        },
+        {
+          "id": "ORA_DWH/MART/MART_TXN_SUMMARY/TXN_DATE",
+          "layer": "MART",
+          "name": "MART.MART_TXN_SUMMARY.TXN_DATE"
+        }
+      ],
+      "linked_systems": [
+        "Enterprise Data Warehouse",
+        "Temenos T24 Core Banking"
+      ],
+      "avg_dq_score": 98.41,
+      "policy": "Data Management Policy v1.4",
+      "created": "2024-07-29",
+      "last_updated": "2025-01-20"
+    },
+    {
+      "id": "GT-0084",
+      "type": "GlossaryTerm",
+      "name": "Transaction Identifier",
+      "definition": "Unique reference of a posted financial transaction.",
+      "domain": "Transaction",
+      "status": "Under Review",
+      "version": "3.2",
+      "steward": {
+        "name": "Yasser Gamal",
+        "dept": "Operations"
+      },
+      "owner": {
+        "name": "Sara Ibrahim",
+        "dept": "Compliance & AML"
+      },
+      "critical_data_element": false,
+      "classification": "Internal",
+      "tags": [],
+      "linked_kpis": [],
+      "linked_physical_columns": [
+        {
+          "id": "T24_ORACLE/T24_CORE/TRANSACTION/TXN_ID",
+          "layer": "SOURCE",
+          "name": "T24_CORE.TRANSACTION.TXN_ID"
+        },
+        {
+          "id": "HIVE_LAKE/stg/STG_TRANSACTION/TXN_ID",
+          "layer": "STAGING",
+          "name": "stg.STG_TRANSACTION.TXN_ID"
+        },
+        {
+          "id": "ORA_DWH/DWH/FCT_TRANSACTION/TXN_ID",
+          "layer": "DWH",
+          "name": "DWH.FCT_TRANSACTION.TXN_ID"
+        },
+        {
+          "id": "ACTIMIZE_MSSQL/AML/AML_ALERT/TXN_ID",
+          "layer": "SOURCE",
+          "name": "AML.AML_ALERT.TXN_ID"
+        },
+        {
+          "id": "HIVE_LAKE/stg/STG_AML_ALERT/TXN_ID",
+          "layer": "STAGING",
+          "name": "stg.STG_AML_ALERT.TXN_ID"
+        },
+        {
+          "id": "ORA_DWH/DWH/FCT_AML_ALERT/TXN_ID",
+          "layer": "DWH",
+          "name": "DWH.FCT_AML_ALERT.TXN_ID"
+        }
+      ],
+      "linked_systems": [
+        "Cloudera Data Lake (Staging)",
+        "Enterprise Data Warehouse",
+        "NICE Actimize AML/KYC",
+        "Temenos T24 Core Banking"
+      ],
+      "avg_dq_score": 93.21,
+      "policy": "Data Management Policy v1.4",
+      "created": "2021-06-25",
+      "last_updated": "2025-08-10"
+    },
+    {
+      "id": "GT-0085",
+      "type": "GlossaryTerm",
+      "name": "Transaction Narration",
+      "definition": "Free-text description of the transaction.",
+      "domain": "Transaction",
+      "status": "Published",
+      "version": "2.3",
+      "steward": {
+        "name": "Dina Farouk",
+        "dept": "Corporate Banking"
+      },
+      "owner": {
+        "name": "Ahmed Hassan",
+        "dept": "Retail Banking"
+      },
+      "critical_data_element": false,
+      "classification": "Confidential",
+      "tags": [
+        "Financial"
+      ],
+      "linked_kpis": [],
+      "linked_physical_columns": [
+        {
+          "id": "T24_ORACLE/T24_CORE/TRANSACTION/NARRATION",
+          "layer": "SOURCE",
+          "name": "T24_CORE.TRANSACTION.NARRATION"
+        },
+        {
+          "id": "HIVE_LAKE/stg/STG_TRANSACTION/NARRATION",
+          "layer": "STAGING",
+          "name": "stg.STG_TRANSACTION.NARRATION"
+        },
+        {
+          "id": "ORA_DWH/DWH/FCT_TRANSACTION/NARRATION",
+          "layer": "DWH",
+          "name": "DWH.FCT_TRANSACTION.NARRATION"
+        }
+      ],
+      "linked_systems": [
+        "Cloudera Data Lake (Staging)",
+        "Enterprise Data Warehouse",
+        "Temenos T24 Core Banking"
+      ],
+      "avg_dq_score": 97.63,
+      "policy": "Data Classification Policy v2.1",
+      "created": "2021-12-16",
+      "last_updated": "2025-08-13"
+    },
+    {
+      "id": "GT-0086",
+      "type": "GlossaryTerm",
+      "name": "Transaction Type",
+      "definition": "Type of transaction: Deposit, Withdrawal, Transfer, Payment, Fee.",
+      "domain": "Transaction",
+      "status": "Under Review",
+      "version": "3.1",
+      "steward": {
+        "name": "Ahmed Hassan",
+        "dept": "Retail Banking"
+      },
+      "owner": {
+        "name": "Ahmed Hassan",
+        "dept": "Retail Banking"
+      },
+      "critical_data_element": false,
+      "classification": "Internal",
+      "tags": [],
+      "linked_kpis": [],
+      "linked_physical_columns": [
+        {
+          "id": "T24_ORACLE/T24_CORE/TRANSACTION/TXN_TYPE",
+          "layer": "SOURCE",
+          "name": "T24_CORE.TRANSACTION.TXN_TYPE"
+        },
+        {
+          "id": "ORA_DWH/DWH/FCT_TRANSACTION/TXN_TYPE",
+          "layer": "DWH",
+          "name": "DWH.FCT_TRANSACTION.TXN_TYPE"
+        }
+      ],
+      "linked_systems": [
+        "Enterprise Data Warehouse",
+        "Temenos T24 Core Banking"
+      ],
+      "avg_dq_score": 88.06,
+      "policy": "Data Management Policy v1.4",
+      "created": "2024-04-08",
+      "last_updated": "2025-07-06"
+    },
+    {
+      "id": "GT-0087",
+      "type": "GlossaryTerm",
+      "name": "Transaction Volume",
+      "definition": "Total value of transactions in the period.",
+      "domain": "Transaction",
+      "status": "Published",
+      "version": "3.2",
+      "steward": {
+        "name": "Rania Saleh",
+        "dept": "Data Governance"
+      },
+      "owner": {
+        "name": "Tarek Samir",
+        "dept": "IT - Core Banking"
+      },
+      "critical_data_element": false,
+      "classification": "Confidential",
+      "tags": [
+        "Financial"
+      ],
+      "linked_kpis": [
+        {
+          "id": "KPI-015",
+          "name": "Transaction Volume by Channel"
+        }
+      ],
+      "linked_physical_columns": [
+        {
+          "id": "ORA_DWH/MART/MART_TXN_SUMMARY/TXN_VOLUME",
+          "layer": "MART",
+          "name": "MART.MART_TXN_SUMMARY.TXN_VOLUME"
+        }
+      ],
+      "linked_systems": [
+        "Enterprise Data Warehouse"
+      ],
+      "avg_dq_score": 74.43,
+      "policy": "Data Classification Policy v2.1",
+      "created": "2021-12-10",
+      "last_updated": "2025-12-17"
+    }
+  ]
+}

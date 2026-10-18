@@ -1,0 +1,2588 @@
+{
+  "totalCount": 287,
+  "items": [
+    {
+      "source": "T24_ORACLE/T24_CORE/CUSTOMER/CUST_ID",
+      "target": "HIVE_LAKE/stg/STG_CUSTOMER/CUST_ID",
+      "association": "core.DataSetDataFlow",
+      "transformation": "Direct copy (NiFi ingest)",
+      "etl_job": "nifi_ingest_customer",
+      "from_layer": "SOURCE",
+      "to_layer": "STAGING"
+    },
+    {
+      "source": "HIVE_LAKE/stg/STG_CUSTOMER/CUST_ID",
+      "target": "ORA_DWH/DWH/DIM_CUSTOMER/CUST_ID",
+      "association": "core.DataSetDataFlow",
+      "transformation": "NVL(CUST_ID, 0)",
+      "etl_job": "m_DIM_CUSTOMER_LOAD",
+      "from_layer": "STAGING",
+      "to_layer": "DWH"
+    },
+    {
+      "source": "T24_ORACLE/T24_CORE/CUSTOMER/CUST_NAME",
+      "target": "HIVE_LAKE/stg/STG_CUSTOMER/CUST_NAME",
+      "association": "core.DataSetDataFlow",
+      "transformation": "Direct copy (NiFi ingest)",
+      "etl_job": "nifi_ingest_customer",
+      "from_layer": "SOURCE",
+      "to_layer": "STAGING"
+    },
+    {
+      "source": "HIVE_LAKE/stg/STG_CUSTOMER/CUST_NAME",
+      "target": "ORA_DWH/DWH/DIM_CUSTOMER/CUST_NAME",
+      "association": "core.DataSetDataFlow",
+      "transformation": "direct",
+      "etl_job": "m_DIM_CUSTOMER_LOAD",
+      "from_layer": "STAGING",
+      "to_layer": "DWH"
+    },
+    {
+      "source": "T24_ORACLE/T24_CORE/CUSTOMER/NATIONAL_ID",
+      "target": "HIVE_LAKE/stg/STG_CUSTOMER/NATIONAL_ID",
+      "association": "core.DataSetDataFlow",
+      "transformation": "Direct copy (NiFi ingest)",
+      "etl_job": "nifi_ingest_customer",
+      "from_layer": "SOURCE",
+      "to_layer": "STAGING"
+    },
+    {
+      "source": "HIVE_LAKE/stg/STG_CUSTOMER/NATIONAL_ID",
+      "target": "ORA_DWH/DWH/DIM_CUSTOMER/NATIONAL_ID",
+      "association": "core.DataSetDataFlow",
+      "transformation": "direct",
+      "etl_job": "m_DIM_CUSTOMER_LOAD",
+      "from_layer": "STAGING",
+      "to_layer": "DWH"
+    },
+    {
+      "source": "T24_ORACLE/T24_CORE/CUSTOMER/DOB",
+      "target": "HIVE_LAKE/stg/STG_CUSTOMER/DOB",
+      "association": "core.DataSetDataFlow",
+      "transformation": "Direct copy (NiFi ingest)",
+      "etl_job": "nifi_ingest_customer",
+      "from_layer": "SOURCE",
+      "to_layer": "STAGING"
+    },
+    {
+      "source": "HIVE_LAKE/stg/STG_CUSTOMER/DOB",
+      "target": "ORA_DWH/DWH/DIM_CUSTOMER/DOB",
+      "association": "core.DataSetDataFlow",
+      "transformation": "TO_DATE(DOB, 'YYYY-MM-DD')",
+      "etl_job": "m_DIM_CUSTOMER_LOAD",
+      "from_layer": "STAGING",
+      "to_layer": "DWH"
+    },
+    {
+      "source": "T24_ORACLE/T24_CORE/CUSTOMER/GENDER",
+      "target": "HIVE_LAKE/stg/STG_CUSTOMER/GENDER",
+      "association": "core.DataSetDataFlow",
+      "transformation": "Direct copy (NiFi ingest)",
+      "etl_job": "nifi_ingest_customer",
+      "from_layer": "SOURCE",
+      "to_layer": "STAGING"
+    },
+    {
+      "source": "HIVE_LAKE/stg/STG_CUSTOMER/GENDER",
+      "target": "ORA_DWH/DWH/DIM_CUSTOMER/GENDER",
+      "association": "core.DataSetDataFlow",
+      "transformation": "TRIM(GENDER)",
+      "etl_job": "m_DIM_CUSTOMER_LOAD",
+      "from_layer": "STAGING",
+      "to_layer": "DWH"
+    },
+    {
+      "source": "T24_ORACLE/T24_CORE/CUSTOMER/MOBILE_NO",
+      "target": "HIVE_LAKE/stg/STG_CUSTOMER/MOBILE_NO",
+      "association": "core.DataSetDataFlow",
+      "transformation": "Direct copy (NiFi ingest)",
+      "etl_job": "nifi_ingest_customer",
+      "from_layer": "SOURCE",
+      "to_layer": "STAGING"
+    },
+    {
+      "source": "HIVE_LAKE/stg/STG_CUSTOMER/MOBILE_NO",
+      "target": "ORA_DWH/DWH/DIM_CUSTOMER/MOBILE_NO",
+      "association": "core.DataSetDataFlow",
+      "transformation": "direct",
+      "etl_job": "m_DIM_CUSTOMER_LOAD",
+      "from_layer": "STAGING",
+      "to_layer": "DWH"
+    },
+    {
+      "source": "T24_ORACLE/T24_CORE/CUSTOMER/EMAIL",
+      "target": "HIVE_LAKE/stg/STG_CUSTOMER/EMAIL",
+      "association": "core.DataSetDataFlow",
+      "transformation": "Direct copy (NiFi ingest)",
+      "etl_job": "nifi_ingest_customer",
+      "from_layer": "SOURCE",
+      "to_layer": "STAGING"
+    },
+    {
+      "source": "HIVE_LAKE/stg/STG_CUSTOMER/EMAIL",
+      "target": "ORA_DWH/DWH/DIM_CUSTOMER/EMAIL",
+      "association": "core.DataSetDataFlow",
+      "transformation": "TRIM(EMAIL)",
+      "etl_job": "m_DIM_CUSTOMER_LOAD",
+      "from_layer": "STAGING",
+      "to_layer": "DWH"
+    },
+    {
+      "source": "T24_ORACLE/T24_CORE/CUSTOMER/SEGMENT_CODE",
+      "target": "HIVE_LAKE/stg/STG_CUSTOMER/SEGMENT_CODE",
+      "association": "core.DataSetDataFlow",
+      "transformation": "Direct copy (NiFi ingest)",
+      "etl_job": "nifi_ingest_customer",
+      "from_layer": "SOURCE",
+      "to_layer": "STAGING"
+    },
+    {
+      "source": "HIVE_LAKE/stg/STG_CUSTOMER/SEGMENT_CODE",
+      "target": "ORA_DWH/DWH/DIM_CUSTOMER/SEGMENT_CODE",
+      "association": "core.DataSetDataFlow",
+      "transformation": "direct",
+      "etl_job": "m_DIM_CUSTOMER_LOAD",
+      "from_layer": "STAGING",
+      "to_layer": "DWH"
+    },
+    {
+      "source": "T24_ORACLE/T24_CORE/CUSTOMER/KYC_STATUS",
+      "target": "HIVE_LAKE/stg/STG_CUSTOMER/KYC_STATUS",
+      "association": "core.DataSetDataFlow",
+      "transformation": "Direct copy (NiFi ingest)",
+      "etl_job": "nifi_ingest_customer",
+      "from_layer": "SOURCE",
+      "to_layer": "STAGING"
+    },
+    {
+      "source": "HIVE_LAKE/stg/STG_CUSTOMER/KYC_STATUS",
+      "target": "ORA_DWH/DWH/DIM_CUSTOMER/KYC_STATUS",
+      "association": "core.DataSetDataFlow",
+      "transformation": "TRIM(KYC_STATUS)",
+      "etl_job": "m_DIM_CUSTOMER_LOAD",
+      "from_layer": "STAGING",
+      "to_layer": "DWH"
+    },
+    {
+      "source": "T24_ORACLE/T24_CORE/CUSTOMER/RISK_RATING",
+      "target": "HIVE_LAKE/stg/STG_CUSTOMER/RISK_RATING",
+      "association": "core.DataSetDataFlow",
+      "transformation": "Direct copy (NiFi ingest)",
+      "etl_job": "nifi_ingest_customer",
+      "from_layer": "SOURCE",
+      "to_layer": "STAGING"
+    },
+    {
+      "source": "HIVE_LAKE/stg/STG_CUSTOMER/RISK_RATING",
+      "target": "ORA_DWH/DWH/DIM_CUSTOMER/RISK_RATING",
+      "association": "core.DataSetDataFlow",
+      "transformation": "UPPER(TRIM(RISK_RATING))",
+      "etl_job": "m_DIM_CUSTOMER_LOAD",
+      "from_layer": "STAGING",
+      "to_layer": "DWH"
+    },
+    {
+      "source": "T24_ORACLE/T24_CORE/CUSTOMER/OPEN_DATE",
+      "target": "HIVE_LAKE/stg/STG_CUSTOMER/OPEN_DATE",
+      "association": "core.DataSetDataFlow",
+      "transformation": "Direct copy (NiFi ingest)",
+      "etl_job": "nifi_ingest_customer",
+      "from_layer": "SOURCE",
+      "to_layer": "STAGING"
+    },
+    {
+      "source": "HIVE_LAKE/stg/STG_CUSTOMER/OPEN_DATE",
+      "target": "ORA_DWH/DWH/DIM_CUSTOMER/OPEN_DATE",
+      "association": "core.DataSetDataFlow",
+      "transformation": "TO_DATE(OPEN_DATE, 'YYYY-MM-DD')",
+      "etl_job": "m_DIM_CUSTOMER_LOAD",
+      "from_layer": "STAGING",
+      "to_layer": "DWH"
+    },
+    {
+      "source": "T24_ORACLE/T24_CORE/CUSTOMER/BRANCH_CODE",
+      "target": "HIVE_LAKE/stg/STG_CUSTOMER/BRANCH_CODE",
+      "association": "core.DataSetDataFlow",
+      "transformation": "Direct copy (NiFi ingest)",
+      "etl_job": "nifi_ingest_customer",
+      "from_layer": "SOURCE",
+      "to_layer": "STAGING"
+    },
+    {
+      "source": "HIVE_LAKE/stg/STG_CUSTOMER/BRANCH_CODE",
+      "target": "ORA_DWH/DWH/DIM_CUSTOMER/BRANCH_CODE",
+      "association": "core.DataSetDataFlow",
+      "transformation": "direct",
+      "etl_job": "m_DIM_CUSTOMER_LOAD",
+      "from_layer": "STAGING",
+      "to_layer": "DWH"
+    },
+    {
+      "source": "T24_ORACLE/T24_CORE/CUSTOMER/NATIONALITY",
+      "target": "HIVE_LAKE/stg/STG_CUSTOMER/NATIONALITY",
+      "association": "core.DataSetDataFlow",
+      "transformation": "Direct copy (NiFi ingest)",
+      "etl_job": "nifi_ingest_customer",
+      "from_layer": "SOURCE",
+      "to_layer": "STAGING"
+    },
+    {
+      "source": "HIVE_LAKE/stg/STG_CUSTOMER/NATIONALITY",
+      "target": "ORA_DWH/DWH/DIM_CUSTOMER/NATIONALITY",
+      "association": "core.DataSetDataFlow",
+      "transformation": "direct",
+      "etl_job": "m_DIM_CUSTOMER_LOAD",
+      "from_layer": "STAGING",
+      "to_layer": "DWH"
+    },
+    {
+      "source": "T24_ORACLE/T24_CORE/CUSTOMER/OCCUPATION",
+      "target": "HIVE_LAKE/stg/STG_CUSTOMER/OCCUPATION",
+      "association": "core.DataSetDataFlow",
+      "transformation": "Direct copy (NiFi ingest)",
+      "etl_job": "nifi_ingest_customer",
+      "from_layer": "SOURCE",
+      "to_layer": "STAGING"
+    },
+    {
+      "source": "HIVE_LAKE/stg/STG_CUSTOMER/OCCUPATION",
+      "target": "ORA_DWH/DWH/DIM_CUSTOMER/OCCUPATION",
+      "association": "core.DataSetDataFlow",
+      "transformation": "direct",
+      "etl_job": "m_DIM_CUSTOMER_LOAD",
+      "from_layer": "STAGING",
+      "to_layer": "DWH"
+    },
+    {
+      "source": "T24_ORACLE/T24_CORE/ACCOUNT/ACCT_NO",
+      "target": "HIVE_LAKE/stg/STG_ACCOUNT/ACCT_NO",
+      "association": "core.DataSetDataFlow",
+      "transformation": "Direct copy (NiFi ingest)",
+      "etl_job": "nifi_ingest_account",
+      "from_layer": "SOURCE",
+      "to_layer": "STAGING"
+    },
+    {
+      "source": "HIVE_LAKE/stg/STG_ACCOUNT/ACCT_NO",
+      "target": "ORA_DWH/DWH/DIM_ACCOUNT/ACCT_NO",
+      "association": "core.DataSetDataFlow",
+      "transformation": "TRIM(ACCT_NO)",
+      "etl_job": "m_DIM_ACCOUNT_LOAD",
+      "from_layer": "STAGING",
+      "to_layer": "DWH"
+    },
+    {
+      "source": "T24_ORACLE/T24_CORE/ACCOUNT/CUST_ID",
+      "target": "HIVE_LAKE/stg/STG_ACCOUNT/CUST_ID",
+      "association": "core.DataSetDataFlow",
+      "transformation": "Direct copy (NiFi ingest)",
+      "etl_job": "nifi_ingest_account",
+      "from_layer": "SOURCE",
+      "to_layer": "STAGING"
+    },
+    {
+      "source": "HIVE_LAKE/stg/STG_ACCOUNT/CUST_ID",
+      "target": "ORA_DWH/DWH/DIM_ACCOUNT/CUST_ID",
+      "association": "core.DataSetDataFlow",
+      "transformation": "direct",
+      "etl_job": "m_DIM_ACCOUNT_LOAD",
+      "from_layer": "STAGING",
+      "to_layer": "DWH"
+    },
+    {
+      "source": "T24_ORACLE/T24_CORE/ACCOUNT/ACCT_TYPE",
+      "target": "HIVE_LAKE/stg/STG_ACCOUNT/ACCT_TYPE",
+      "association": "core.DataSetDataFlow",
+      "transformation": "Direct copy (NiFi ingest)",
+      "etl_job": "nifi_ingest_account",
+      "from_layer": "SOURCE",
+      "to_layer": "STAGING"
+    },
+    {
+      "source": "HIVE_LAKE/stg/STG_ACCOUNT/ACCT_TYPE",
+      "target": "ORA_DWH/DWH/DIM_ACCOUNT/ACCT_TYPE",
+      "association": "core.DataSetDataFlow",
+      "transformation": "direct",
+      "etl_job": "m_DIM_ACCOUNT_LOAD",
+      "from_layer": "STAGING",
+      "to_layer": "DWH"
+    },
+    {
+      "source": "T24_ORACLE/T24_CORE/ACCOUNT/CURRENCY",
+      "target": "HIVE_LAKE/stg/STG_ACCOUNT/CURRENCY",
+      "association": "core.DataSetDataFlow",
+      "transformation": "Direct copy (NiFi ingest)",
+      "etl_job": "nifi_ingest_account",
+      "from_layer": "SOURCE",
+      "to_layer": "STAGING"
+    },
+    {
+      "source": "HIVE_LAKE/stg/STG_ACCOUNT/CURRENCY",
+      "target": "ORA_DWH/DWH/DIM_ACCOUNT/CURRENCY",
+      "association": "core.DataSetDataFlow",
+      "transformation": "UPPER(TRIM(CURRENCY))",
+      "etl_job": "m_DIM_ACCOUNT_LOAD",
+      "from_layer": "STAGING",
+      "to_layer": "DWH"
+    },
+    {
+      "source": "T24_ORACLE/T24_CORE/ACCOUNT/BALANCE",
+      "target": "HIVE_LAKE/stg/STG_ACCOUNT/BALANCE",
+      "association": "core.DataSetDataFlow",
+      "transformation": "Direct copy (NiFi ingest)",
+      "etl_job": "nifi_ingest_account",
+      "from_layer": "SOURCE",
+      "to_layer": "STAGING"
+    },
+    {
+      "source": "HIVE_LAKE/stg/STG_ACCOUNT/BALANCE",
+      "target": "ORA_DWH/DWH/DIM_ACCOUNT/BALANCE",
+      "association": "core.DataSetDataFlow",
+      "transformation": "NVL(BALANCE, 0)",
+      "etl_job": "m_DIM_ACCOUNT_LOAD",
+      "from_layer": "STAGING",
+      "to_layer": "DWH"
+    },
+    {
+      "source": "T24_ORACLE/T24_CORE/ACCOUNT/AVAILABLE_BAL",
+      "target": "HIVE_LAKE/stg/STG_ACCOUNT/AVAILABLE_BAL",
+      "association": "core.DataSetDataFlow",
+      "transformation": "Direct copy (NiFi ingest)",
+      "etl_job": "nifi_ingest_account",
+      "from_layer": "SOURCE",
+      "to_layer": "STAGING"
+    },
+    {
+      "source": "HIVE_LAKE/stg/STG_ACCOUNT/AVAILABLE_BAL",
+      "target": "ORA_DWH/DWH/DIM_ACCOUNT/AVAILABLE_BAL",
+      "association": "core.DataSetDataFlow",
+      "transformation": "direct",
+      "etl_job": "m_DIM_ACCOUNT_LOAD",
+      "from_layer": "STAGING",
+      "to_layer": "DWH"
+    },
+    {
+      "source": "T24_ORACLE/T24_CORE/ACCOUNT/OPEN_DATE",
+      "target": "HIVE_LAKE/stg/STG_ACCOUNT/OPEN_DATE",
+      "association": "core.DataSetDataFlow",
+      "transformation": "Direct copy (NiFi ingest)",
+      "etl_job": "nifi_ingest_account",
+      "from_layer": "SOURCE",
+      "to_layer": "STAGING"
+    },
+    {
+      "source": "HIVE_LAKE/stg/STG_ACCOUNT/OPEN_DATE",
+      "target": "ORA_DWH/DWH/DIM_ACCOUNT/OPEN_DATE",
+      "association": "core.DataSetDataFlow",
+      "transformation": "TO_DATE(OPEN_DATE, 'YYYY-MM-DD')",
+      "etl_job": "m_DIM_ACCOUNT_LOAD",
+      "from_layer": "STAGING",
+      "to_layer": "DWH"
+    },
+    {
+      "source": "T24_ORACLE/T24_CORE/ACCOUNT/STATUS",
+      "target": "HIVE_LAKE/stg/STG_ACCOUNT/STATUS",
+      "association": "core.DataSetDataFlow",
+      "transformation": "Direct copy (NiFi ingest)",
+      "etl_job": "nifi_ingest_account",
+      "from_layer": "SOURCE",
+      "to_layer": "STAGING"
+    },
+    {
+      "source": "HIVE_LAKE/stg/STG_ACCOUNT/STATUS",
+      "target": "ORA_DWH/DWH/DIM_ACCOUNT/STATUS",
+      "association": "core.DataSetDataFlow",
+      "transformation": "UPPER(TRIM(STATUS))",
+      "etl_job": "m_DIM_ACCOUNT_LOAD",
+      "from_layer": "STAGING",
+      "to_layer": "DWH"
+    },
+    {
+      "source": "T24_ORACLE/T24_CORE/ACCOUNT/BRANCH_CODE",
+      "target": "HIVE_LAKE/stg/STG_ACCOUNT/BRANCH_CODE",
+      "association": "core.DataSetDataFlow",
+      "transformation": "Direct copy (NiFi ingest)",
+      "etl_job": "nifi_ingest_account",
+      "from_layer": "SOURCE",
+      "to_layer": "STAGING"
+    },
+    {
+      "source": "HIVE_LAKE/stg/STG_ACCOUNT/BRANCH_CODE",
+      "target": "ORA_DWH/DWH/DIM_ACCOUNT/BRANCH_CODE",
+      "association": "core.DataSetDataFlow",
+      "transformation": "direct",
+      "etl_job": "m_DIM_ACCOUNT_LOAD",
+      "from_layer": "STAGING",
+      "to_layer": "DWH"
+    },
+    {
+      "source": "T24_ORACLE/T24_CORE/ACCOUNT/IBAN",
+      "target": "HIVE_LAKE/stg/STG_ACCOUNT/IBAN",
+      "association": "core.DataSetDataFlow",
+      "transformation": "Direct copy (NiFi ingest)",
+      "etl_job": "nifi_ingest_account",
+      "from_layer": "SOURCE",
+      "to_layer": "STAGING"
+    },
+    {
+      "source": "HIVE_LAKE/stg/STG_ACCOUNT/IBAN",
+      "target": "ORA_DWH/DWH/DIM_ACCOUNT/IBAN",
+      "association": "core.DataSetDataFlow",
+      "transformation": "direct",
+      "etl_job": "m_DIM_ACCOUNT_LOAD",
+      "from_layer": "STAGING",
+      "to_layer": "DWH"
+    },
+    {
+      "source": "T24_ORACLE/T24_CORE/ACCOUNT/INTEREST_RATE",
+      "target": "HIVE_LAKE/stg/STG_ACCOUNT/INTEREST_RATE",
+      "association": "core.DataSetDataFlow",
+      "transformation": "Direct copy (NiFi ingest)",
+      "etl_job": "nifi_ingest_account",
+      "from_layer": "SOURCE",
+      "to_layer": "STAGING"
+    },
+    {
+      "source": "HIVE_LAKE/stg/STG_ACCOUNT/INTEREST_RATE",
+      "target": "ORA_DWH/DWH/DIM_ACCOUNT/INTEREST_RATE",
+      "association": "core.DataSetDataFlow",
+      "transformation": "direct",
+      "etl_job": "m_DIM_ACCOUNT_LOAD",
+      "from_layer": "STAGING",
+      "to_layer": "DWH"
+    },
+    {
+      "source": "T24_ORACLE/T24_CORE/ACCOUNT/LAST_TXN_DATE",
+      "target": "HIVE_LAKE/stg/STG_ACCOUNT/LAST_TXN_DATE",
+      "association": "core.DataSetDataFlow",
+      "transformation": "Direct copy (NiFi ingest)",
+      "etl_job": "nifi_ingest_account",
+      "from_layer": "SOURCE",
+      "to_layer": "STAGING"
+    },
+    {
+      "source": "HIVE_LAKE/stg/STG_ACCOUNT/LAST_TXN_DATE",
+      "target": "ORA_DWH/DWH/DIM_ACCOUNT/LAST_TXN_DATE",
+      "association": "core.DataSetDataFlow",
+      "transformation": "TO_DATE(LAST_TXN_DATE, 'YYYY-MM-DD')",
+      "etl_job": "m_DIM_ACCOUNT_LOAD",
+      "from_layer": "STAGING",
+      "to_layer": "DWH"
+    },
+    {
+      "source": "T24_ORACLE/T24_CORE/TRANSACTION/TXN_ID",
+      "target": "HIVE_LAKE/stg/STG_TRANSACTION/TXN_ID",
+      "association": "core.DataSetDataFlow",
+      "transformation": "Direct copy (NiFi ingest)",
+      "etl_job": "nifi_ingest_transaction",
+      "from_layer": "SOURCE",
+      "to_layer": "STAGING"
+    },
+    {
+      "source": "HIVE_LAKE/stg/STG_TRANSACTION/TXN_ID",
+      "target": "ORA_DWH/DWH/FCT_TRANSACTION/TXN_ID",
+      "association": "core.DataSetDataFlow",
+      "transformation": "NVL(TXN_ID, 0)",
+      "etl_job": "m_FCT_TRANSACTION_LOAD",
+      "from_layer": "STAGING",
+      "to_layer": "DWH"
+    },
+    {
+      "source": "T24_ORACLE/T24_CORE/TRANSACTION/ACCT_NO",
+      "target": "HIVE_LAKE/stg/STG_TRANSACTION/ACCT_NO",
+      "association": "core.DataSetDataFlow",
+      "transformation": "Direct copy (NiFi ingest)",
+      "etl_job": "nifi_ingest_transaction",
+      "from_layer": "SOURCE",
+      "to_layer": "STAGING"
+    },
+    {
+      "source": "HIVE_LAKE/stg/STG_TRANSACTION/ACCT_NO",
+      "target": "ORA_DWH/DWH/FCT_TRANSACTION/ACCT_NO",
+      "association": "core.DataSetDataFlow",
+      "transformation": "direct",
+      "etl_job": "m_FCT_TRANSACTION_LOAD",
+      "from_layer": "STAGING",
+      "to_layer": "DWH"
+    },
+    {
+      "source": "T24_ORACLE/T24_CORE/TRANSACTION/TXN_DATE",
+      "target": "HIVE_LAKE/stg/STG_TRANSACTION/TXN_DATE",
+      "association": "core.DataSetDataFlow",
+      "transformation": "Direct copy (NiFi ingest)",
+      "etl_job": "nifi_ingest_transaction",
+      "from_layer": "SOURCE",
+      "to_layer": "STAGING"
+    },
+    {
+      "source": "HIVE_LAKE/stg/STG_TRANSACTION/TXN_DATE",
+      "target": "ORA_DWH/DWH/FCT_TRANSACTION/TXN_DATE",
+      "association": "core.DataSetDataFlow",
+      "transformation": "TO_DATE(TXN_DATE, 'YYYY-MM-DD')",
+      "etl_job": "m_FCT_TRANSACTION_LOAD",
+      "from_layer": "STAGING",
+      "to_layer": "DWH"
+    },
+    {
+      "source": "T24_ORACLE/T24_CORE/TRANSACTION/TXN_AMT",
+      "target": "HIVE_LAKE/stg/STG_TRANSACTION/TXN_AMT",
+      "association": "core.DataSetDataFlow",
+      "transformation": "Direct copy (NiFi ingest)",
+      "etl_job": "nifi_ingest_transaction",
+      "from_layer": "SOURCE",
+      "to_layer": "STAGING"
+    },
+    {
+      "source": "HIVE_LAKE/stg/STG_TRANSACTION/TXN_AMT",
+      "target": "ORA_DWH/DWH/FCT_TRANSACTION/TXN_AMT",
+      "association": "core.DataSetDataFlow",
+      "transformation": "direct",
+      "etl_job": "m_FCT_TRANSACTION_LOAD",
+      "from_layer": "STAGING",
+      "to_layer": "DWH"
+    },
+    {
+      "source": "T24_ORACLE/T24_CORE/TRANSACTION/TXN_TYPE",
+      "target": "HIVE_LAKE/stg/STG_TRANSACTION/TXN_TYPE",
+      "association": "core.DataSetDataFlow",
+      "transformation": "Direct copy (NiFi ingest)",
+      "etl_job": "nifi_ingest_transaction",
+      "from_layer": "SOURCE",
+      "to_layer": "STAGING"
+    },
+    {
+      "source": "HIVE_LAKE/stg/STG_TRANSACTION/TXN_TYPE",
+      "target": "ORA_DWH/DWH/FCT_TRANSACTION/TXN_TYPE",
+      "association": "core.DataSetDataFlow",
+      "transformation": "direct",
+      "etl_job": "m_FCT_TRANSACTION_LOAD",
+      "from_layer": "STAGING",
+      "to_layer": "DWH"
+    },
+    {
+      "source": "T24_ORACLE/T24_CORE/TRANSACTION/CHANNEL",
+      "target": "HIVE_LAKE/stg/STG_TRANSACTION/CHANNEL",
+      "association": "core.DataSetDataFlow",
+      "transformation": "Direct copy (NiFi ingest)",
+      "etl_job": "nifi_ingest_transaction",
+      "from_layer": "SOURCE",
+      "to_layer": "STAGING"
+    },
+    {
+      "source": "HIVE_LAKE/stg/STG_TRANSACTION/CHANNEL",
+      "target": "ORA_DWH/DWH/FCT_TRANSACTION/CHANNEL",
+      "association": "core.DataSetDataFlow",
+      "transformation": "UPPER(TRIM(CHANNEL))",
+      "etl_job": "m_FCT_TRANSACTION_LOAD",
+      "from_layer": "STAGING",
+      "to_layer": "DWH"
+    },
+    {
+      "source": "T24_ORACLE/T24_CORE/TRANSACTION/CURRENCY",
+      "target": "HIVE_LAKE/stg/STG_TRANSACTION/CURRENCY",
+      "association": "core.DataSetDataFlow",
+      "transformation": "Direct copy (NiFi ingest)",
+      "etl_job": "nifi_ingest_transaction",
+      "from_layer": "SOURCE",
+      "to_layer": "STAGING"
+    },
+    {
+      "source": "HIVE_LAKE/stg/STG_TRANSACTION/CURRENCY",
+      "target": "ORA_DWH/DWH/FCT_TRANSACTION/CURRENCY",
+      "association": "core.DataSetDataFlow",
+      "transformation": "direct",
+      "etl_job": "m_FCT_TRANSACTION_LOAD",
+      "from_layer": "STAGING",
+      "to_layer": "DWH"
+    },
+    {
+      "source": "T24_ORACLE/T24_CORE/TRANSACTION/COUNTERPARTY_ACCT",
+      "target": "HIVE_LAKE/stg/STG_TRANSACTION/COUNTERPARTY_ACCT",
+      "association": "core.DataSetDataFlow",
+      "transformation": "Direct copy (NiFi ingest)",
+      "etl_job": "nifi_ingest_transaction",
+      "from_layer": "SOURCE",
+      "to_layer": "STAGING"
+    },
+    {
+      "source": "HIVE_LAKE/stg/STG_TRANSACTION/COUNTERPARTY_ACCT",
+      "target": "ORA_DWH/DWH/FCT_TRANSACTION/COUNTERPARTY_ACCT",
+      "association": "core.DataSetDataFlow",
+      "transformation": "direct",
+      "etl_job": "m_FCT_TRANSACTION_LOAD",
+      "from_layer": "STAGING",
+      "to_layer": "DWH"
+    },
+    {
+      "source": "T24_ORACLE/T24_CORE/TRANSACTION/NARRATION",
+      "target": "HIVE_LAKE/stg/STG_TRANSACTION/NARRATION",
+      "association": "core.DataSetDataFlow",
+      "transformation": "Direct copy (NiFi ingest)",
+      "etl_job": "nifi_ingest_transaction",
+      "from_layer": "SOURCE",
+      "to_layer": "STAGING"
+    },
+    {
+      "source": "HIVE_LAKE/stg/STG_TRANSACTION/NARRATION",
+      "target": "ORA_DWH/DWH/FCT_TRANSACTION/NARRATION",
+      "association": "core.DataSetDataFlow",
+      "transformation": "direct",
+      "etl_job": "m_FCT_TRANSACTION_LOAD",
+      "from_layer": "STAGING",
+      "to_layer": "DWH"
+    },
+    {
+      "source": "T24_ORACLE/T24_CORE/TRANSACTION/BALANCE_AFTER",
+      "target": "HIVE_LAKE/stg/STG_TRANSACTION/BALANCE_AFTER",
+      "association": "core.DataSetDataFlow",
+      "transformation": "Direct copy (NiFi ingest)",
+      "etl_job": "nifi_ingest_transaction",
+      "from_layer": "SOURCE",
+      "to_layer": "STAGING"
+    },
+    {
+      "source": "HIVE_LAKE/stg/STG_TRANSACTION/BALANCE_AFTER",
+      "target": "ORA_DWH/DWH/FCT_TRANSACTION/BALANCE_AFTER",
+      "association": "core.DataSetDataFlow",
+      "transformation": "direct",
+      "etl_job": "m_FCT_TRANSACTION_LOAD",
+      "from_layer": "STAGING",
+      "to_layer": "DWH"
+    },
+    {
+      "source": "T24_ORACLE/T24_CORE/BRANCH/BRANCH_CODE",
+      "target": "HIVE_LAKE/stg/STG_BRANCH/BRANCH_CODE",
+      "association": "core.DataSetDataFlow",
+      "transformation": "Direct copy (NiFi ingest)",
+      "etl_job": "nifi_ingest_branch",
+      "from_layer": "SOURCE",
+      "to_layer": "STAGING"
+    },
+    {
+      "source": "HIVE_LAKE/stg/STG_BRANCH/BRANCH_CODE",
+      "target": "ORA_DWH/DWH/DIM_BRANCH/BRANCH_CODE",
+      "association": "core.DataSetDataFlow",
+      "transformation": "UPPER(TRIM(BRANCH_CODE))",
+      "etl_job": "m_DIM_BRANCH_LOAD",
+      "from_layer": "STAGING",
+      "to_layer": "DWH"
+    },
+    {
+      "source": "T24_ORACLE/T24_CORE/BRANCH/BRANCH_NAME",
+      "target": "HIVE_LAKE/stg/STG_BRANCH/BRANCH_NAME",
+      "association": "core.DataSetDataFlow",
+      "transformation": "Direct copy (NiFi ingest)",
+      "etl_job": "nifi_ingest_branch",
+      "from_layer": "SOURCE",
+      "to_layer": "STAGING"
+    },
+    {
+      "source": "HIVE_LAKE/stg/STG_BRANCH/BRANCH_NAME",
+      "target": "ORA_DWH/DWH/DIM_BRANCH/BRANCH_NAME",
+      "association": "core.DataSetDataFlow",
+      "transformation": "TRIM(BRANCH_NAME)",
+      "etl_job": "m_DIM_BRANCH_LOAD",
+      "from_layer": "STAGING",
+      "to_layer": "DWH"
+    },
+    {
+      "source": "T24_ORACLE/T24_CORE/BRANCH/REGION",
+      "target": "HIVE_LAKE/stg/STG_BRANCH/REGION",
+      "association": "core.DataSetDataFlow",
+      "transformation": "Direct copy (NiFi ingest)",
+      "etl_job": "nifi_ingest_branch",
+      "from_layer": "SOURCE",
+      "to_layer": "STAGING"
+    },
+    {
+      "source": "HIVE_LAKE/stg/STG_BRANCH/REGION",
+      "target": "ORA_DWH/DWH/DIM_BRANCH/REGION",
+      "association": "core.DataSetDataFlow",
+      "transformation": "direct",
+      "etl_job": "m_DIM_BRANCH_LOAD",
+      "from_layer": "STAGING",
+      "to_layer": "DWH"
+    },
+    {
+      "source": "T24_ORACLE/T24_CORE/BRANCH/CITY",
+      "target": "HIVE_LAKE/stg/STG_BRANCH/CITY",
+      "association": "core.DataSetDataFlow",
+      "transformation": "Direct copy (NiFi ingest)",
+      "etl_job": "nifi_ingest_branch",
+      "from_layer": "SOURCE",
+      "to_layer": "STAGING"
+    },
+    {
+      "source": "HIVE_LAKE/stg/STG_BRANCH/CITY",
+      "target": "ORA_DWH/DWH/DIM_BRANCH/CITY",
+      "association": "core.DataSetDataFlow",
+      "transformation": "direct",
+      "etl_job": "m_DIM_BRANCH_LOAD",
+      "from_layer": "STAGING",
+      "to_layer": "DWH"
+    },
+    {
+      "source": "T24_ORACLE/T24_CORE/BRANCH/MANAGER_ID",
+      "target": "HIVE_LAKE/stg/STG_BRANCH/MANAGER_ID",
+      "association": "core.DataSetDataFlow",
+      "transformation": "Direct copy (NiFi ingest)",
+      "etl_job": "nifi_ingest_branch",
+      "from_layer": "SOURCE",
+      "to_layer": "STAGING"
+    },
+    {
+      "source": "HIVE_LAKE/stg/STG_BRANCH/MANAGER_ID",
+      "target": "ORA_DWH/DWH/DIM_BRANCH/MANAGER_ID",
+      "association": "core.DataSetDataFlow",
+      "transformation": "direct",
+      "etl_job": "m_DIM_BRANCH_LOAD",
+      "from_layer": "STAGING",
+      "to_layer": "DWH"
+    },
+    {
+      "source": "FLEX_ORACLE/FCUBS/LOAN/LOAN_ID",
+      "target": "HIVE_LAKE/stg/STG_LOAN/LOAN_ID",
+      "association": "core.DataSetDataFlow",
+      "transformation": "Direct copy (NiFi ingest)",
+      "etl_job": "nifi_ingest_loan",
+      "from_layer": "SOURCE",
+      "to_layer": "STAGING"
+    },
+    {
+      "source": "HIVE_LAKE/stg/STG_LOAN/LOAN_ID",
+      "target": "ORA_DWH/DWH/FCT_LOAN/LOAN_ID",
+      "association": "core.DataSetDataFlow",
+      "transformation": "TRIM(LOAN_ID)",
+      "etl_job": "m_FCT_LOAN_LOAD",
+      "from_layer": "STAGING",
+      "to_layer": "DWH"
+    },
+    {
+      "source": "FLEX_ORACLE/FCUBS/LOAN/CUST_ID",
+      "target": "HIVE_LAKE/stg/STG_LOAN/CUST_ID",
+      "association": "core.DataSetDataFlow",
+      "transformation": "Direct copy (NiFi ingest)",
+      "etl_job": "nifi_ingest_loan",
+      "from_layer": "SOURCE",
+      "to_layer": "STAGING"
+    },
+    {
+      "source": "HIVE_LAKE/stg/STG_LOAN/CUST_ID",
+      "target": "ORA_DWH/DWH/FCT_LOAN/CUST_ID",
+      "association": "core.DataSetDataFlow",
+      "transformation": "NVL(CUST_ID, 0)",
+      "etl_job": "m_FCT_LOAN_LOAD",
+      "from_layer": "STAGING",
+      "to_layer": "DWH"
+    },
+    {
+      "source": "FLEX_ORACLE/FCUBS/LOAN/PRODUCT_CODE",
+      "target": "HIVE_LAKE/stg/STG_LOAN/PRODUCT_CODE",
+      "association": "core.DataSetDataFlow",
+      "transformation": "Direct copy (NiFi ingest)",
+      "etl_job": "nifi_ingest_loan",
+      "from_layer": "SOURCE",
+      "to_layer": "STAGING"
+    },
+    {
+      "source": "HIVE_LAKE/stg/STG_LOAN/PRODUCT_CODE",
+      "target": "ORA_DWH/DWH/FCT_LOAN/PRODUCT_CODE",
+      "association": "core.DataSetDataFlow",
+      "transformation": "direct",
+      "etl_job": "m_FCT_LOAN_LOAD",
+      "from_layer": "STAGING",
+      "to_layer": "DWH"
+    },
+    {
+      "source": "FLEX_ORACLE/FCUBS/LOAN/PRINCIPAL_AMT",
+      "target": "HIVE_LAKE/stg/STG_LOAN/PRINCIPAL_AMT",
+      "association": "core.DataSetDataFlow",
+      "transformation": "Direct copy (NiFi ingest)",
+      "etl_job": "nifi_ingest_loan",
+      "from_layer": "SOURCE",
+      "to_layer": "STAGING"
+    },
+    {
+      "source": "HIVE_LAKE/stg/STG_LOAN/PRINCIPAL_AMT",
+      "target": "ORA_DWH/DWH/FCT_LOAN/PRINCIPAL_AMT",
+      "association": "core.DataSetDataFlow",
+      "transformation": "NVL(PRINCIPAL_AMT, 0)",
+      "etl_job": "m_FCT_LOAN_LOAD",
+      "from_layer": "STAGING",
+      "to_layer": "DWH"
+    },
+    {
+      "source": "FLEX_ORACLE/FCUBS/LOAN/OUTSTANDING_AMT",
+      "target": "HIVE_LAKE/stg/STG_LOAN/OUTSTANDING_AMT",
+      "association": "core.DataSetDataFlow",
+      "transformation": "Direct copy (NiFi ingest)",
+      "etl_job": "nifi_ingest_loan",
+      "from_layer": "SOURCE",
+      "to_layer": "STAGING"
+    },
+    {
+      "source": "HIVE_LAKE/stg/STG_LOAN/OUTSTANDING_AMT",
+      "target": "ORA_DWH/DWH/FCT_LOAN/OUTSTANDING_AMT",
+      "association": "core.DataSetDataFlow",
+      "transformation": "direct",
+      "etl_job": "m_FCT_LOAN_LOAD",
+      "from_layer": "STAGING",
+      "to_layer": "DWH"
+    },
+    {
+      "source": "FLEX_ORACLE/FCUBS/LOAN/INTEREST_RATE",
+      "target": "HIVE_LAKE/stg/STG_LOAN/INTEREST_RATE",
+      "association": "core.DataSetDataFlow",
+      "transformation": "Direct copy (NiFi ingest)",
+      "etl_job": "nifi_ingest_loan",
+      "from_layer": "SOURCE",
+      "to_layer": "STAGING"
+    },
+    {
+      "source": "HIVE_LAKE/stg/STG_LOAN/INTEREST_RATE",
+      "target": "ORA_DWH/DWH/FCT_LOAN/INTEREST_RATE",
+      "association": "core.DataSetDataFlow",
+      "transformation": "direct",
+      "etl_job": "m_FCT_LOAN_LOAD",
+      "from_layer": "STAGING",
+      "to_layer": "DWH"
+    },
+    {
+      "source": "FLEX_ORACLE/FCUBS/LOAN/TENOR_MONTHS",
+      "target": "HIVE_LAKE/stg/STG_LOAN/TENOR_MONTHS",
+      "association": "core.DataSetDataFlow",
+      "transformation": "Direct copy (NiFi ingest)",
+      "etl_job": "nifi_ingest_loan",
+      "from_layer": "SOURCE",
+      "to_layer": "STAGING"
+    },
+    {
+      "source": "HIVE_LAKE/stg/STG_LOAN/TENOR_MONTHS",
+      "target": "ORA_DWH/DWH/FCT_LOAN/TENOR_MONTHS",
+      "association": "core.DataSetDataFlow",
+      "transformation": "direct",
+      "etl_job": "m_FCT_LOAN_LOAD",
+      "from_layer": "STAGING",
+      "to_layer": "DWH"
+    },
+    {
+      "source": "FLEX_ORACLE/FCUBS/LOAN/DISBURSE_DATE",
+      "target": "HIVE_LAKE/stg/STG_LOAN/DISBURSE_DATE",
+      "association": "core.DataSetDataFlow",
+      "transformation": "Direct copy (NiFi ingest)",
+      "etl_job": "nifi_ingest_loan",
+      "from_layer": "SOURCE",
+      "to_layer": "STAGING"
+    },
+    {
+      "source": "HIVE_LAKE/stg/STG_LOAN/DISBURSE_DATE",
+      "target": "ORA_DWH/DWH/FCT_LOAN/DISBURSE_DATE",
+      "association": "core.DataSetDataFlow",
+      "transformation": "TO_DATE(DISBURSE_DATE, 'YYYY-MM-DD')",
+      "etl_job": "m_FCT_LOAN_LOAD",
+      "from_layer": "STAGING",
+      "to_layer": "DWH"
+    },
+    {
+      "source": "FLEX_ORACLE/FCUBS/LOAN/DPD",
+      "target": "HIVE_LAKE/stg/STG_LOAN/DPD",
+      "association": "core.DataSetDataFlow",
+      "transformation": "Direct copy (NiFi ingest)",
+      "etl_job": "nifi_ingest_loan",
+      "from_layer": "SOURCE",
+      "to_layer": "STAGING"
+    },
+    {
+      "source": "HIVE_LAKE/stg/STG_LOAN/DPD",
+      "target": "ORA_DWH/DWH/FCT_LOAN/DPD",
+      "association": "core.DataSetDataFlow",
+      "transformation": "direct",
+      "etl_job": "m_FCT_LOAN_LOAD",
+      "from_layer": "STAGING",
+      "to_layer": "DWH"
+    },
+    {
+      "source": "FLEX_ORACLE/FCUBS/LOAN/IFRS9_STAGE",
+      "target": "HIVE_LAKE/stg/STG_LOAN/IFRS9_STAGE",
+      "association": "core.DataSetDataFlow",
+      "transformation": "Direct copy (NiFi ingest)",
+      "etl_job": "nifi_ingest_loan",
+      "from_layer": "SOURCE",
+      "to_layer": "STAGING"
+    },
+    {
+      "source": "HIVE_LAKE/stg/STG_LOAN/IFRS9_STAGE",
+      "target": "ORA_DWH/DWH/FCT_LOAN/IFRS9_STAGE",
+      "association": "core.DataSetDataFlow",
+      "transformation": "NVL(IFRS9_STAGE, 0)",
+      "etl_job": "m_FCT_LOAN_LOAD",
+      "from_layer": "STAGING",
+      "to_layer": "DWH"
+    },
+    {
+      "source": "FLEX_ORACLE/FCUBS/LOAN/PD",
+      "target": "HIVE_LAKE/stg/STG_LOAN/PD",
+      "association": "core.DataSetDataFlow",
+      "transformation": "Direct copy (NiFi ingest)",
+      "etl_job": "nifi_ingest_loan",
+      "from_layer": "SOURCE",
+      "to_layer": "STAGING"
+    },
+    {
+      "source": "HIVE_LAKE/stg/STG_LOAN/PD",
+      "target": "ORA_DWH/DWH/FCT_LOAN/PD",
+      "association": "core.DataSetDataFlow",
+      "transformation": "direct",
+      "etl_job": "m_FCT_LOAN_LOAD",
+      "from_layer": "STAGING",
+      "to_layer": "DWH"
+    },
+    {
+      "source": "FLEX_ORACLE/FCUBS/LOAN/LGD",
+      "target": "HIVE_LAKE/stg/STG_LOAN/LGD",
+      "association": "core.DataSetDataFlow",
+      "transformation": "Direct copy (NiFi ingest)",
+      "etl_job": "nifi_ingest_loan",
+      "from_layer": "SOURCE",
+      "to_layer": "STAGING"
+    },
+    {
+      "source": "HIVE_LAKE/stg/STG_LOAN/LGD",
+      "target": "ORA_DWH/DWH/FCT_LOAN/LGD",
+      "association": "core.DataSetDataFlow",
+      "transformation": "direct",
+      "etl_job": "m_FCT_LOAN_LOAD",
+      "from_layer": "STAGING",
+      "to_layer": "DWH"
+    },
+    {
+      "source": "FLEX_ORACLE/FCUBS/LOAN/EAD",
+      "target": "HIVE_LAKE/stg/STG_LOAN/EAD",
+      "association": "core.DataSetDataFlow",
+      "transformation": "Direct copy (NiFi ingest)",
+      "etl_job": "nifi_ingest_loan",
+      "from_layer": "SOURCE",
+      "to_layer": "STAGING"
+    },
+    {
+      "source": "HIVE_LAKE/stg/STG_LOAN/EAD",
+      "target": "ORA_DWH/DWH/FCT_LOAN/EAD",
+      "association": "core.DataSetDataFlow",
+      "transformation": "NVL(EAD, 0)",
+      "etl_job": "m_FCT_LOAN_LOAD",
+      "from_layer": "STAGING",
+      "to_layer": "DWH"
+    },
+    {
+      "source": "FLEX_ORACLE/FCUBS/LOAN/COLLATERAL_VALUE",
+      "target": "HIVE_LAKE/stg/STG_LOAN/COLLATERAL_VALUE",
+      "association": "core.DataSetDataFlow",
+      "transformation": "Direct copy (NiFi ingest)",
+      "etl_job": "nifi_ingest_loan",
+      "from_layer": "SOURCE",
+      "to_layer": "STAGING"
+    },
+    {
+      "source": "HIVE_LAKE/stg/STG_LOAN/COLLATERAL_VALUE",
+      "target": "ORA_DWH/DWH/FCT_LOAN/COLLATERAL_VALUE",
+      "association": "core.DataSetDataFlow",
+      "transformation": "direct",
+      "etl_job": "m_FCT_LOAN_LOAD",
+      "from_layer": "STAGING",
+      "to_layer": "DWH"
+    },
+    {
+      "source": "WAY4_ORACLE/WAY4/CARD/CARD_ID",
+      "target": "HIVE_LAKE/stg/STG_CARD/CARD_ID",
+      "association": "core.DataSetDataFlow",
+      "transformation": "Direct copy (NiFi ingest)",
+      "etl_job": "nifi_ingest_card",
+      "from_layer": "SOURCE",
+      "to_layer": "STAGING"
+    },
+    {
+      "source": "HIVE_LAKE/stg/STG_CARD/CARD_ID",
+      "target": "ORA_DWH/DWH/DIM_CARD/CARD_ID",
+      "association": "core.DataSetDataFlow",
+      "transformation": "direct",
+      "etl_job": "m_DIM_CARD_LOAD",
+      "from_layer": "STAGING",
+      "to_layer": "DWH"
+    },
+    {
+      "source": "WAY4_ORACLE/WAY4/CARD/CUST_ID",
+      "target": "HIVE_LAKE/stg/STG_CARD/CUST_ID",
+      "association": "core.DataSetDataFlow",
+      "transformation": "Direct copy (NiFi ingest)",
+      "etl_job": "nifi_ingest_card",
+      "from_layer": "SOURCE",
+      "to_layer": "STAGING"
+    },
+    {
+      "source": "HIVE_LAKE/stg/STG_CARD/CUST_ID",
+      "target": "ORA_DWH/DWH/DIM_CARD/CUST_ID",
+      "association": "core.DataSetDataFlow",
+      "transformation": "direct",
+      "etl_job": "m_DIM_CARD_LOAD",
+      "from_layer": "STAGING",
+      "to_layer": "DWH"
+    },
+    {
+      "source": "WAY4_ORACLE/WAY4/CARD/PAN",
+      "target": "HIVE_LAKE/stg/STG_CARD/PAN",
+      "association": "core.DataSetDataFlow",
+      "transformation": "Direct copy (NiFi ingest)",
+      "etl_job": "nifi_ingest_card",
+      "from_layer": "SOURCE",
+      "to_layer": "STAGING"
+    },
+    {
+      "source": "HIVE_LAKE/stg/STG_CARD/PAN",
+      "target": "ORA_DWH/DWH/DIM_CARD/PAN",
+      "association": "core.DataSetDataFlow",
+      "transformation": "direct",
+      "etl_job": "m_DIM_CARD_LOAD",
+      "from_layer": "STAGING",
+      "to_layer": "DWH"
+    },
+    {
+      "source": "WAY4_ORACLE/WAY4/CARD/CARD_TYPE",
+      "target": "HIVE_LAKE/stg/STG_CARD/CARD_TYPE",
+      "association": "core.DataSetDataFlow",
+      "transformation": "Direct copy (NiFi ingest)",
+      "etl_job": "nifi_ingest_card",
+      "from_layer": "SOURCE",
+      "to_layer": "STAGING"
+    },
+    {
+      "source": "HIVE_LAKE/stg/STG_CARD/CARD_TYPE",
+      "target": "ORA_DWH/DWH/DIM_CARD/CARD_TYPE",
+      "association": "core.DataSetDataFlow",
+      "transformation": "direct",
+      "etl_job": "m_DIM_CARD_LOAD",
+      "from_layer": "STAGING",
+      "to_layer": "DWH"
+    },
+    {
+      "source": "WAY4_ORACLE/WAY4/CARD/CREDIT_LIMIT",
+      "target": "HIVE_LAKE/stg/STG_CARD/CREDIT_LIMIT",
+      "association": "core.DataSetDataFlow",
+      "transformation": "Direct copy (NiFi ingest)",
+      "etl_job": "nifi_ingest_card",
+      "from_layer": "SOURCE",
+      "to_layer": "STAGING"
+    },
+    {
+      "source": "HIVE_LAKE/stg/STG_CARD/CREDIT_LIMIT",
+      "target": "ORA_DWH/DWH/DIM_CARD/CREDIT_LIMIT",
+      "association": "core.DataSetDataFlow",
+      "transformation": "direct",
+      "etl_job": "m_DIM_CARD_LOAD",
+      "from_layer": "STAGING",
+      "to_layer": "DWH"
+    },
+    {
+      "source": "WAY4_ORACLE/WAY4/CARD/EXPIRY_DATE",
+      "target": "HIVE_LAKE/stg/STG_CARD/EXPIRY_DATE",
+      "association": "core.DataSetDataFlow",
+      "transformation": "Direct copy (NiFi ingest)",
+      "etl_job": "nifi_ingest_card",
+      "from_layer": "SOURCE",
+      "to_layer": "STAGING"
+    },
+    {
+      "source": "HIVE_LAKE/stg/STG_CARD/EXPIRY_DATE",
+      "target": "ORA_DWH/DWH/DIM_CARD/EXPIRY_DATE",
+      "association": "core.DataSetDataFlow",
+      "transformation": "TO_DATE(EXPIRY_DATE, 'YYYY-MM-DD')",
+      "etl_job": "m_DIM_CARD_LOAD",
+      "from_layer": "STAGING",
+      "to_layer": "DWH"
+    },
+    {
+      "source": "WAY4_ORACLE/WAY4/CARD/STATUS",
+      "target": "HIVE_LAKE/stg/STG_CARD/STATUS",
+      "association": "core.DataSetDataFlow",
+      "transformation": "Direct copy (NiFi ingest)",
+      "etl_job": "nifi_ingest_card",
+      "from_layer": "SOURCE",
+      "to_layer": "STAGING"
+    },
+    {
+      "source": "HIVE_LAKE/stg/STG_CARD/STATUS",
+      "target": "ORA_DWH/DWH/DIM_CARD/STATUS",
+      "association": "core.DataSetDataFlow",
+      "transformation": "direct",
+      "etl_job": "m_DIM_CARD_LOAD",
+      "from_layer": "STAGING",
+      "to_layer": "DWH"
+    },
+    {
+      "source": "WAY4_ORACLE/WAY4/CARD/ISSUE_DATE",
+      "target": "HIVE_LAKE/stg/STG_CARD/ISSUE_DATE",
+      "association": "core.DataSetDataFlow",
+      "transformation": "Direct copy (NiFi ingest)",
+      "etl_job": "nifi_ingest_card",
+      "from_layer": "SOURCE",
+      "to_layer": "STAGING"
+    },
+    {
+      "source": "HIVE_LAKE/stg/STG_CARD/ISSUE_DATE",
+      "target": "ORA_DWH/DWH/DIM_CARD/ISSUE_DATE",
+      "association": "core.DataSetDataFlow",
+      "transformation": "TO_DATE(ISSUE_DATE, 'YYYY-MM-DD')",
+      "etl_job": "m_DIM_CARD_LOAD",
+      "from_layer": "STAGING",
+      "to_layer": "DWH"
+    },
+    {
+      "source": "ACTIMIZE_MSSQL/AML/KYC_PROFILE/KYC_ID",
+      "target": "HIVE_LAKE/stg/STG_KYC_PROFILE/KYC_ID",
+      "association": "core.DataSetDataFlow",
+      "transformation": "Direct copy (NiFi ingest)",
+      "etl_job": "nifi_ingest_kyc_profile",
+      "from_layer": "SOURCE",
+      "to_layer": "STAGING"
+    },
+    {
+      "source": "HIVE_LAKE/stg/STG_KYC_PROFILE/KYC_ID",
+      "target": "ORA_DWH/DWH/DIM_KYC/KYC_ID",
+      "association": "core.DataSetDataFlow",
+      "transformation": "NVL(KYC_ID, 0)",
+      "etl_job": "m_DIM_KYC_LOAD",
+      "from_layer": "STAGING",
+      "to_layer": "DWH"
+    },
+    {
+      "source": "ACTIMIZE_MSSQL/AML/KYC_PROFILE/CUST_ID",
+      "target": "HIVE_LAKE/stg/STG_KYC_PROFILE/CUST_ID",
+      "association": "core.DataSetDataFlow",
+      "transformation": "Direct copy (NiFi ingest)",
+      "etl_job": "nifi_ingest_kyc_profile",
+      "from_layer": "SOURCE",
+      "to_layer": "STAGING"
+    },
+    {
+      "source": "HIVE_LAKE/stg/STG_KYC_PROFILE/CUST_ID",
+      "target": "ORA_DWH/DWH/DIM_KYC/CUST_ID",
+      "association": "core.DataSetDataFlow",
+      "transformation": "direct",
+      "etl_job": "m_DIM_KYC_LOAD",
+      "from_layer": "STAGING",
+      "to_layer": "DWH"
+    },
+    {
+      "source": "ACTIMIZE_MSSQL/AML/KYC_PROFILE/PEP_FLAG",
+      "target": "HIVE_LAKE/stg/STG_KYC_PROFILE/PEP_FLAG",
+      "association": "core.DataSetDataFlow",
+      "transformation": "Direct copy (NiFi ingest)",
+      "etl_job": "nifi_ingest_kyc_profile",
+      "from_layer": "SOURCE",
+      "to_layer": "STAGING"
+    },
+    {
+      "source": "HIVE_LAKE/stg/STG_KYC_PROFILE/PEP_FLAG",
+      "target": "ORA_DWH/DWH/DIM_KYC/PEP_FLAG",
+      "association": "core.DataSetDataFlow",
+      "transformation": "UPPER(TRIM(PEP_FLAG))",
+      "etl_job": "m_DIM_KYC_LOAD",
+      "from_layer": "STAGING",
+      "to_layer": "DWH"
+    },
+    {
+      "source": "ACTIMIZE_MSSQL/AML/KYC_PROFILE/SANCTION_HIT",
+      "target": "HIVE_LAKE/stg/STG_KYC_PROFILE/SANCTION_HIT",
+      "association": "core.DataSetDataFlow",
+      "transformation": "Direct copy (NiFi ingest)",
+      "etl_job": "nifi_ingest_kyc_profile",
+      "from_layer": "SOURCE",
+      "to_layer": "STAGING"
+    },
+    {
+      "source": "HIVE_LAKE/stg/STG_KYC_PROFILE/SANCTION_HIT",
+      "target": "ORA_DWH/DWH/DIM_KYC/SANCTION_HIT",
+      "association": "core.DataSetDataFlow",
+      "transformation": "TRIM(SANCTION_HIT)",
+      "etl_job": "m_DIM_KYC_LOAD",
+      "from_layer": "STAGING",
+      "to_layer": "DWH"
+    },
+    {
+      "source": "ACTIMIZE_MSSQL/AML/KYC_PROFILE/RISK_SCORE",
+      "target": "HIVE_LAKE/stg/STG_KYC_PROFILE/RISK_SCORE",
+      "association": "core.DataSetDataFlow",
+      "transformation": "Direct copy (NiFi ingest)",
+      "etl_job": "nifi_ingest_kyc_profile",
+      "from_layer": "SOURCE",
+      "to_layer": "STAGING"
+    },
+    {
+      "source": "HIVE_LAKE/stg/STG_KYC_PROFILE/RISK_SCORE",
+      "target": "ORA_DWH/DWH/DIM_KYC/RISK_SCORE",
+      "association": "core.DataSetDataFlow",
+      "transformation": "NVL(RISK_SCORE, 0)",
+      "etl_job": "m_DIM_KYC_LOAD",
+      "from_layer": "STAGING",
+      "to_layer": "DWH"
+    },
+    {
+      "source": "ACTIMIZE_MSSQL/AML/KYC_PROFILE/LAST_REVIEW_DATE",
+      "target": "HIVE_LAKE/stg/STG_KYC_PROFILE/LAST_REVIEW_DATE",
+      "association": "core.DataSetDataFlow",
+      "transformation": "Direct copy (NiFi ingest)",
+      "etl_job": "nifi_ingest_kyc_profile",
+      "from_layer": "SOURCE",
+      "to_layer": "STAGING"
+    },
+    {
+      "source": "HIVE_LAKE/stg/STG_KYC_PROFILE/LAST_REVIEW_DATE",
+      "target": "ORA_DWH/DWH/DIM_KYC/LAST_REVIEW_DATE",
+      "association": "core.DataSetDataFlow",
+      "transformation": "TO_DATE(LAST_REVIEW_DATE, 'YYYY-MM-DD')",
+      "etl_job": "m_DIM_KYC_LOAD",
+      "from_layer": "STAGING",
+      "to_layer": "DWH"
+    },
+    {
+      "source": "ACTIMIZE_MSSQL/AML/KYC_PROFILE/NEXT_REVIEW_DATE",
+      "target": "HIVE_LAKE/stg/STG_KYC_PROFILE/NEXT_REVIEW_DATE",
+      "association": "core.DataSetDataFlow",
+      "transformation": "Direct copy (NiFi ingest)",
+      "etl_job": "nifi_ingest_kyc_profile",
+      "from_layer": "SOURCE",
+      "to_layer": "STAGING"
+    },
+    {
+      "source": "HIVE_LAKE/stg/STG_KYC_PROFILE/NEXT_REVIEW_DATE",
+      "target": "ORA_DWH/DWH/DIM_KYC/NEXT_REVIEW_DATE",
+      "association": "core.DataSetDataFlow",
+      "transformation": "TO_DATE(NEXT_REVIEW_DATE, 'YYYY-MM-DD')",
+      "etl_job": "m_DIM_KYC_LOAD",
+      "from_layer": "STAGING",
+      "to_layer": "DWH"
+    },
+    {
+      "source": "ACTIMIZE_MSSQL/AML/KYC_PROFILE/SOURCE_OF_FUNDS",
+      "target": "HIVE_LAKE/stg/STG_KYC_PROFILE/SOURCE_OF_FUNDS",
+      "association": "core.DataSetDataFlow",
+      "transformation": "Direct copy (NiFi ingest)",
+      "etl_job": "nifi_ingest_kyc_profile",
+      "from_layer": "SOURCE",
+      "to_layer": "STAGING"
+    },
+    {
+      "source": "HIVE_LAKE/stg/STG_KYC_PROFILE/SOURCE_OF_FUNDS",
+      "target": "ORA_DWH/DWH/DIM_KYC/SOURCE_OF_FUNDS",
+      "association": "core.DataSetDataFlow",
+      "transformation": "TRIM(SOURCE_OF_FUNDS)",
+      "etl_job": "m_DIM_KYC_LOAD",
+      "from_layer": "STAGING",
+      "to_layer": "DWH"
+    },
+    {
+      "source": "ACTIMIZE_MSSQL/AML/AML_ALERT/ALERT_ID",
+      "target": "HIVE_LAKE/stg/STG_AML_ALERT/ALERT_ID",
+      "association": "core.DataSetDataFlow",
+      "transformation": "Direct copy (NiFi ingest)",
+      "etl_job": "nifi_ingest_aml_alert",
+      "from_layer": "SOURCE",
+      "to_layer": "STAGING"
+    },
+    {
+      "source": "HIVE_LAKE/stg/STG_AML_ALERT/ALERT_ID",
+      "target": "ORA_DWH/DWH/FCT_AML_ALERT/ALERT_ID",
+      "association": "core.DataSetDataFlow",
+      "transformation": "direct",
+      "etl_job": "m_FCT_AML_ALERT_LOAD",
+      "from_layer": "STAGING",
+      "to_layer": "DWH"
+    },
+    {
+      "source": "ACTIMIZE_MSSQL/AML/AML_ALERT/CUST_ID",
+      "target": "HIVE_LAKE/stg/STG_AML_ALERT/CUST_ID",
+      "association": "core.DataSetDataFlow",
+      "transformation": "Direct copy (NiFi ingest)",
+      "etl_job": "nifi_ingest_aml_alert",
+      "from_layer": "SOURCE",
+      "to_layer": "STAGING"
+    },
+    {
+      "source": "HIVE_LAKE/stg/STG_AML_ALERT/CUST_ID",
+      "target": "ORA_DWH/DWH/FCT_AML_ALERT/CUST_ID",
+      "association": "core.DataSetDataFlow",
+      "transformation": "NVL(CUST_ID, 0)",
+      "etl_job": "m_FCT_AML_ALERT_LOAD",
+      "from_layer": "STAGING",
+      "to_layer": "DWH"
+    },
+    {
+      "source": "ACTIMIZE_MSSQL/AML/AML_ALERT/TXN_ID",
+      "target": "HIVE_LAKE/stg/STG_AML_ALERT/TXN_ID",
+      "association": "core.DataSetDataFlow",
+      "transformation": "Direct copy (NiFi ingest)",
+      "etl_job": "nifi_ingest_aml_alert",
+      "from_layer": "SOURCE",
+      "to_layer": "STAGING"
+    },
+    {
+      "source": "HIVE_LAKE/stg/STG_AML_ALERT/TXN_ID",
+      "target": "ORA_DWH/DWH/FCT_AML_ALERT/TXN_ID",
+      "association": "core.DataSetDataFlow",
+      "transformation": "direct",
+      "etl_job": "m_FCT_AML_ALERT_LOAD",
+      "from_layer": "STAGING",
+      "to_layer": "DWH"
+    },
+    {
+      "source": "ACTIMIZE_MSSQL/AML/AML_ALERT/SCENARIO",
+      "target": "HIVE_LAKE/stg/STG_AML_ALERT/SCENARIO",
+      "association": "core.DataSetDataFlow",
+      "transformation": "Direct copy (NiFi ingest)",
+      "etl_job": "nifi_ingest_aml_alert",
+      "from_layer": "SOURCE",
+      "to_layer": "STAGING"
+    },
+    {
+      "source": "HIVE_LAKE/stg/STG_AML_ALERT/SCENARIO",
+      "target": "ORA_DWH/DWH/FCT_AML_ALERT/SCENARIO",
+      "association": "core.DataSetDataFlow",
+      "transformation": "TRIM(SCENARIO)",
+      "etl_job": "m_FCT_AML_ALERT_LOAD",
+      "from_layer": "STAGING",
+      "to_layer": "DWH"
+    },
+    {
+      "source": "ACTIMIZE_MSSQL/AML/AML_ALERT/SEVERITY",
+      "target": "HIVE_LAKE/stg/STG_AML_ALERT/SEVERITY",
+      "association": "core.DataSetDataFlow",
+      "transformation": "Direct copy (NiFi ingest)",
+      "etl_job": "nifi_ingest_aml_alert",
+      "from_layer": "SOURCE",
+      "to_layer": "STAGING"
+    },
+    {
+      "source": "HIVE_LAKE/stg/STG_AML_ALERT/SEVERITY",
+      "target": "ORA_DWH/DWH/FCT_AML_ALERT/SEVERITY",
+      "association": "core.DataSetDataFlow",
+      "transformation": "direct",
+      "etl_job": "m_FCT_AML_ALERT_LOAD",
+      "from_layer": "STAGING",
+      "to_layer": "DWH"
+    },
+    {
+      "source": "ACTIMIZE_MSSQL/AML/AML_ALERT/STATUS",
+      "target": "HIVE_LAKE/stg/STG_AML_ALERT/STATUS",
+      "association": "core.DataSetDataFlow",
+      "transformation": "Direct copy (NiFi ingest)",
+      "etl_job": "nifi_ingest_aml_alert",
+      "from_layer": "SOURCE",
+      "to_layer": "STAGING"
+    },
+    {
+      "source": "HIVE_LAKE/stg/STG_AML_ALERT/STATUS",
+      "target": "ORA_DWH/DWH/FCT_AML_ALERT/STATUS",
+      "association": "core.DataSetDataFlow",
+      "transformation": "direct",
+      "etl_job": "m_FCT_AML_ALERT_LOAD",
+      "from_layer": "STAGING",
+      "to_layer": "DWH"
+    },
+    {
+      "source": "ACTIMIZE_MSSQL/AML/AML_ALERT/CREATED_DATE",
+      "target": "HIVE_LAKE/stg/STG_AML_ALERT/CREATED_DATE",
+      "association": "core.DataSetDataFlow",
+      "transformation": "Direct copy (NiFi ingest)",
+      "etl_job": "nifi_ingest_aml_alert",
+      "from_layer": "SOURCE",
+      "to_layer": "STAGING"
+    },
+    {
+      "source": "HIVE_LAKE/stg/STG_AML_ALERT/CREATED_DATE",
+      "target": "ORA_DWH/DWH/FCT_AML_ALERT/CREATED_DATE",
+      "association": "core.DataSetDataFlow",
+      "transformation": "TO_DATE(CREATED_DATE, 'YYYY-MM-DD')",
+      "etl_job": "m_FCT_AML_ALERT_LOAD",
+      "from_layer": "STAGING",
+      "to_layer": "DWH"
+    },
+    {
+      "source": "ACTIMIZE_MSSQL/AML/AML_ALERT/CLOSED_DATE",
+      "target": "HIVE_LAKE/stg/STG_AML_ALERT/CLOSED_DATE",
+      "association": "core.DataSetDataFlow",
+      "transformation": "Direct copy (NiFi ingest)",
+      "etl_job": "nifi_ingest_aml_alert",
+      "from_layer": "SOURCE",
+      "to_layer": "STAGING"
+    },
+    {
+      "source": "HIVE_LAKE/stg/STG_AML_ALERT/CLOSED_DATE",
+      "target": "ORA_DWH/DWH/FCT_AML_ALERT/CLOSED_DATE",
+      "association": "core.DataSetDataFlow",
+      "transformation": "TO_DATE(CLOSED_DATE, 'YYYY-MM-DD')",
+      "etl_job": "m_FCT_AML_ALERT_LOAD",
+      "from_layer": "STAGING",
+      "to_layer": "DWH"
+    },
+    {
+      "source": "EBS_ORACLE/GL/GL_BALANCE/GL_ACCOUNT",
+      "target": "HIVE_LAKE/stg/STG_GL_BALANCE/GL_ACCOUNT",
+      "association": "core.DataSetDataFlow",
+      "transformation": "Direct copy (NiFi ingest)",
+      "etl_job": "nifi_ingest_gl_balance",
+      "from_layer": "SOURCE",
+      "to_layer": "STAGING"
+    },
+    {
+      "source": "HIVE_LAKE/stg/STG_GL_BALANCE/GL_ACCOUNT",
+      "target": "ORA_DWH/DWH/FCT_GL_BALANCE/GL_ACCOUNT",
+      "association": "core.DataSetDataFlow",
+      "transformation": "TRIM(GL_ACCOUNT)",
+      "etl_job": "m_FCT_GL_BALANCE_LOAD",
+      "from_layer": "STAGING",
+      "to_layer": "DWH"
+    },
+    {
+      "source": "EBS_ORACLE/GL/GL_BALANCE/COST_CENTER",
+      "target": "HIVE_LAKE/stg/STG_GL_BALANCE/COST_CENTER",
+      "association": "core.DataSetDataFlow",
+      "transformation": "Direct copy (NiFi ingest)",
+      "etl_job": "nifi_ingest_gl_balance",
+      "from_layer": "SOURCE",
+      "to_layer": "STAGING"
+    },
+    {
+      "source": "HIVE_LAKE/stg/STG_GL_BALANCE/COST_CENTER",
+      "target": "ORA_DWH/DWH/FCT_GL_BALANCE/COST_CENTER",
+      "association": "core.DataSetDataFlow",
+      "transformation": "UPPER(TRIM(COST_CENTER))",
+      "etl_job": "m_FCT_GL_BALANCE_LOAD",
+      "from_layer": "STAGING",
+      "to_layer": "DWH"
+    },
+    {
+      "source": "EBS_ORACLE/GL/GL_BALANCE/PERIOD",
+      "target": "HIVE_LAKE/stg/STG_GL_BALANCE/PERIOD",
+      "association": "core.DataSetDataFlow",
+      "transformation": "Direct copy (NiFi ingest)",
+      "etl_job": "nifi_ingest_gl_balance",
+      "from_layer": "SOURCE",
+      "to_layer": "STAGING"
+    },
+    {
+      "source": "HIVE_LAKE/stg/STG_GL_BALANCE/PERIOD",
+      "target": "ORA_DWH/DWH/FCT_GL_BALANCE/PERIOD",
+      "association": "core.DataSetDataFlow",
+      "transformation": "TRIM(PERIOD)",
+      "etl_job": "m_FCT_GL_BALANCE_LOAD",
+      "from_layer": "STAGING",
+      "to_layer": "DWH"
+    },
+    {
+      "source": "EBS_ORACLE/GL/GL_BALANCE/DEBIT",
+      "target": "HIVE_LAKE/stg/STG_GL_BALANCE/DEBIT",
+      "association": "core.DataSetDataFlow",
+      "transformation": "Direct copy (NiFi ingest)",
+      "etl_job": "nifi_ingest_gl_balance",
+      "from_layer": "SOURCE",
+      "to_layer": "STAGING"
+    },
+    {
+      "source": "HIVE_LAKE/stg/STG_GL_BALANCE/DEBIT",
+      "target": "ORA_DWH/DWH/FCT_GL_BALANCE/DEBIT",
+      "association": "core.DataSetDataFlow",
+      "transformation": "direct",
+      "etl_job": "m_FCT_GL_BALANCE_LOAD",
+      "from_layer": "STAGING",
+      "to_layer": "DWH"
+    },
+    {
+      "source": "EBS_ORACLE/GL/GL_BALANCE/CREDIT",
+      "target": "HIVE_LAKE/stg/STG_GL_BALANCE/CREDIT",
+      "association": "core.DataSetDataFlow",
+      "transformation": "Direct copy (NiFi ingest)",
+      "etl_job": "nifi_ingest_gl_balance",
+      "from_layer": "SOURCE",
+      "to_layer": "STAGING"
+    },
+    {
+      "source": "HIVE_LAKE/stg/STG_GL_BALANCE/CREDIT",
+      "target": "ORA_DWH/DWH/FCT_GL_BALANCE/CREDIT",
+      "association": "core.DataSetDataFlow",
+      "transformation": "direct",
+      "etl_job": "m_FCT_GL_BALANCE_LOAD",
+      "from_layer": "STAGING",
+      "to_layer": "DWH"
+    },
+    {
+      "source": "EBS_ORACLE/GL/GL_BALANCE/CLOSING_BAL",
+      "target": "HIVE_LAKE/stg/STG_GL_BALANCE/CLOSING_BAL",
+      "association": "core.DataSetDataFlow",
+      "transformation": "Direct copy (NiFi ingest)",
+      "etl_job": "nifi_ingest_gl_balance",
+      "from_layer": "SOURCE",
+      "to_layer": "STAGING"
+    },
+    {
+      "source": "HIVE_LAKE/stg/STG_GL_BALANCE/CLOSING_BAL",
+      "target": "ORA_DWH/DWH/FCT_GL_BALANCE/CLOSING_BAL",
+      "association": "core.DataSetDataFlow",
+      "transformation": "direct",
+      "etl_job": "m_FCT_GL_BALANCE_LOAD",
+      "from_layer": "STAGING",
+      "to_layer": "DWH"
+    },
+    {
+      "source": "ORA_DWH/DWH/DIM_CUSTOMER/CUST_ID",
+      "target": "ORA_DWH/MART/MART_CUSTOMER_360/CUST_ID",
+      "association": "core.DataSetDataFlow",
+      "transformation": "direct",
+      "etl_job": "m_MART_CUSTOMER_360_LOAD",
+      "from_layer": "DWH",
+      "to_layer": "MART"
+    },
+    {
+      "source": "ORA_DWH/DWH/DIM_CUSTOMER/CUST_NAME",
+      "target": "ORA_DWH/MART/MART_CUSTOMER_360/CUST_NAME",
+      "association": "core.DataSetDataFlow",
+      "transformation": "direct",
+      "etl_job": "m_MART_CUSTOMER_360_LOAD",
+      "from_layer": "DWH",
+      "to_layer": "MART"
+    },
+    {
+      "source": "ORA_DWH/DWH/DIM_CUSTOMER/SEGMENT_CODE",
+      "target": "ORA_DWH/MART/MART_CUSTOMER_360/SEGMENT_CODE",
+      "association": "core.DataSetDataFlow",
+      "transformation": "direct",
+      "etl_job": "m_MART_CUSTOMER_360_LOAD",
+      "from_layer": "DWH",
+      "to_layer": "MART"
+    },
+    {
+      "source": "ORA_DWH/DWH/DIM_CUSTOMER/KYC_STATUS",
+      "target": "ORA_DWH/MART/MART_CUSTOMER_360/KYC_STATUS",
+      "association": "core.DataSetDataFlow",
+      "transformation": "direct",
+      "etl_job": "m_MART_CUSTOMER_360_LOAD",
+      "from_layer": "DWH",
+      "to_layer": "MART"
+    },
+    {
+      "source": "ORA_DWH/DWH/DIM_CUSTOMER/RISK_RATING",
+      "target": "ORA_DWH/MART/MART_CUSTOMER_360/RISK_RATING",
+      "association": "core.DataSetDataFlow",
+      "transformation": "direct",
+      "etl_job": "m_MART_CUSTOMER_360_LOAD",
+      "from_layer": "DWH",
+      "to_layer": "MART"
+    },
+    {
+      "source": "ORA_DWH/DWH/DIM_CUSTOMER/DOB",
+      "target": "ORA_DWH/MART/MART_CUSTOMER_360/AGE",
+      "association": "core.DataSetDataFlow",
+      "transformation": "FLOOR(MONTHS_BETWEEN(SYSDATE, DOB)/12)",
+      "etl_job": "m_MART_CUSTOMER_360_LOAD",
+      "from_layer": "DWH",
+      "to_layer": "MART"
+    },
+    {
+      "source": "ORA_DWH/DWH/DIM_ACCOUNT/BALANCE",
+      "target": "ORA_DWH/MART/MART_CUSTOMER_360/TOTAL_BALANCE",
+      "association": "core.DataSetDataFlow",
+      "transformation": "SUM(BALANCE) GROUP BY CUST_ID",
+      "etl_job": "m_MART_CUSTOMER_360_LOAD",
+      "from_layer": "DWH",
+      "to_layer": "MART"
+    },
+    {
+      "source": "ORA_DWH/DWH/DIM_ACCOUNT/CUST_ID",
+      "target": "ORA_DWH/MART/MART_CUSTOMER_360/TOTAL_BALANCE",
+      "association": "core.DataSetDataFlow",
+      "transformation": "SUM(BALANCE) GROUP BY CUST_ID",
+      "etl_job": "m_MART_CUSTOMER_360_LOAD",
+      "from_layer": "DWH",
+      "to_layer": "MART"
+    },
+    {
+      "source": "ORA_DWH/DWH/DIM_ACCOUNT/ACCT_NO",
+      "target": "ORA_DWH/MART/MART_CUSTOMER_360/ACCOUNT_COUNT",
+      "association": "core.DataSetDataFlow",
+      "transformation": "COUNT(DISTINCT ACCT_NO)",
+      "etl_job": "m_MART_CUSTOMER_360_LOAD",
+      "from_layer": "DWH",
+      "to_layer": "MART"
+    },
+    {
+      "source": "ORA_DWH/DWH/FCT_LOAN/OUTSTANDING_AMT",
+      "target": "ORA_DWH/MART/MART_CUSTOMER_360/TOTAL_LOAN_OUTSTANDING",
+      "association": "core.DataSetDataFlow",
+      "transformation": "SUM(OUTSTANDING_AMT) GROUP BY CUST_ID",
+      "etl_job": "m_MART_CUSTOMER_360_LOAD",
+      "from_layer": "DWH",
+      "to_layer": "MART"
+    },
+    {
+      "source": "ORA_DWH/DWH/DIM_CARD/CARD_ID",
+      "target": "ORA_DWH/MART/MART_CUSTOMER_360/CARD_COUNT",
+      "association": "core.DataSetDataFlow",
+      "transformation": "COUNT(CARD_ID) WHERE STATUS='ACTIVE'",
+      "etl_job": "m_MART_CUSTOMER_360_LOAD",
+      "from_layer": "DWH",
+      "to_layer": "MART"
+    },
+    {
+      "source": "ORA_DWH/DWH/DIM_BRANCH/BRANCH_NAME",
+      "target": "ORA_DWH/MART/MART_CUSTOMER_360/BRANCH_NAME",
+      "association": "core.DataSetDataFlow",
+      "transformation": "JOIN ON BRANCH_CODE",
+      "etl_job": "m_MART_CUSTOMER_360_LOAD",
+      "from_layer": "DWH",
+      "to_layer": "MART"
+    },
+    {
+      "source": "ORA_DWH/DWH/DIM_CUSTOMER/BRANCH_CODE",
+      "target": "ORA_DWH/MART/MART_CUSTOMER_360/BRANCH_NAME",
+      "association": "core.DataSetDataFlow",
+      "transformation": "JOIN ON BRANCH_CODE",
+      "etl_job": "m_MART_CUSTOMER_360_LOAD",
+      "from_layer": "DWH",
+      "to_layer": "MART"
+    },
+    {
+      "source": "ORA_DWH/DWH/FCT_LOAN/LOAN_ID",
+      "target": "ORA_DWH/MART/MART_CREDIT_RISK/LOAN_ID",
+      "association": "core.DataSetDataFlow",
+      "transformation": "direct",
+      "etl_job": "m_MART_CREDIT_RISK_LOAD",
+      "from_layer": "DWH",
+      "to_layer": "MART"
+    },
+    {
+      "source": "ORA_DWH/DWH/FCT_LOAN/CUST_ID",
+      "target": "ORA_DWH/MART/MART_CREDIT_RISK/CUST_ID",
+      "association": "core.DataSetDataFlow",
+      "transformation": "direct",
+      "etl_job": "m_MART_CREDIT_RISK_LOAD",
+      "from_layer": "DWH",
+      "to_layer": "MART"
+    },
+    {
+      "source": "ORA_DWH/DWH/FCT_LOAN/OUTSTANDING_AMT",
+      "target": "ORA_DWH/MART/MART_CREDIT_RISK/OUTSTANDING_AMT",
+      "association": "core.DataSetDataFlow",
+      "transformation": "direct",
+      "etl_job": "m_MART_CREDIT_RISK_LOAD",
+      "from_layer": "DWH",
+      "to_layer": "MART"
+    },
+    {
+      "source": "ORA_DWH/DWH/FCT_LOAN/DPD",
+      "target": "ORA_DWH/MART/MART_CREDIT_RISK/DPD",
+      "association": "core.DataSetDataFlow",
+      "transformation": "direct",
+      "etl_job": "m_MART_CREDIT_RISK_LOAD",
+      "from_layer": "DWH",
+      "to_layer": "MART"
+    },
+    {
+      "source": "ORA_DWH/DWH/FCT_LOAN/IFRS9_STAGE",
+      "target": "ORA_DWH/MART/MART_CREDIT_RISK/IFRS9_STAGE",
+      "association": "core.DataSetDataFlow",
+      "transformation": "direct",
+      "etl_job": "m_MART_CREDIT_RISK_LOAD",
+      "from_layer": "DWH",
+      "to_layer": "MART"
+    },
+    {
+      "source": "ORA_DWH/DWH/FCT_LOAN/PD",
+      "target": "ORA_DWH/MART/MART_CREDIT_RISK/ECL_AMOUNT",
+      "association": "core.DataSetDataFlow",
+      "transformation": "PD * LGD * EAD",
+      "etl_job": "m_MART_CREDIT_RISK_LOAD",
+      "from_layer": "DWH",
+      "to_layer": "MART"
+    },
+    {
+      "source": "ORA_DWH/DWH/FCT_LOAN/LGD",
+      "target": "ORA_DWH/MART/MART_CREDIT_RISK/ECL_AMOUNT",
+      "association": "core.DataSetDataFlow",
+      "transformation": "PD * LGD * EAD",
+      "etl_job": "m_MART_CREDIT_RISK_LOAD",
+      "from_layer": "DWH",
+      "to_layer": "MART"
+    },
+    {
+      "source": "ORA_DWH/DWH/FCT_LOAN/EAD",
+      "target": "ORA_DWH/MART/MART_CREDIT_RISK/ECL_AMOUNT",
+      "association": "core.DataSetDataFlow",
+      "transformation": "PD * LGD * EAD",
+      "etl_job": "m_MART_CREDIT_RISK_LOAD",
+      "from_layer": "DWH",
+      "to_layer": "MART"
+    },
+    {
+      "source": "ORA_DWH/DWH/FCT_LOAN/DPD",
+      "target": "ORA_DWH/MART/MART_CREDIT_RISK/NPL_FLAG",
+      "association": "core.DataSetDataFlow",
+      "transformation": "CASE WHEN DPD > 90 THEN 1 ELSE 0 END",
+      "etl_job": "m_MART_CREDIT_RISK_LOAD",
+      "from_layer": "DWH",
+      "to_layer": "MART"
+    },
+    {
+      "source": "ORA_DWH/DWH/FCT_LOAN/COLLATERAL_VALUE",
+      "target": "ORA_DWH/MART/MART_CREDIT_RISK/COLLATERAL_COVERAGE",
+      "association": "core.DataSetDataFlow",
+      "transformation": "COLLATERAL_VALUE / NULLIF(OUTSTANDING_AMT,0)",
+      "etl_job": "m_MART_CREDIT_RISK_LOAD",
+      "from_layer": "DWH",
+      "to_layer": "MART"
+    },
+    {
+      "source": "ORA_DWH/DWH/FCT_LOAN/OUTSTANDING_AMT",
+      "target": "ORA_DWH/MART/MART_CREDIT_RISK/COLLATERAL_COVERAGE",
+      "association": "core.DataSetDataFlow",
+      "transformation": "COLLATERAL_VALUE / NULLIF(OUTSTANDING_AMT,0)",
+      "etl_job": "m_MART_CREDIT_RISK_LOAD",
+      "from_layer": "DWH",
+      "to_layer": "MART"
+    },
+    {
+      "source": "ORA_DWH/DWH/FCT_AML_ALERT/ALERT_ID",
+      "target": "ORA_DWH/MART/MART_AML_MONITORING/ALERT_ID",
+      "association": "core.DataSetDataFlow",
+      "transformation": "direct",
+      "etl_job": "m_MART_AML_MONITORING_LOAD",
+      "from_layer": "DWH",
+      "to_layer": "MART"
+    },
+    {
+      "source": "ORA_DWH/DWH/FCT_AML_ALERT/CUST_ID",
+      "target": "ORA_DWH/MART/MART_AML_MONITORING/CUST_ID",
+      "association": "core.DataSetDataFlow",
+      "transformation": "direct",
+      "etl_job": "m_MART_AML_MONITORING_LOAD",
+      "from_layer": "DWH",
+      "to_layer": "MART"
+    },
+    {
+      "source": "ORA_DWH/DWH/FCT_AML_ALERT/SCENARIO",
+      "target": "ORA_DWH/MART/MART_AML_MONITORING/SCENARIO",
+      "association": "core.DataSetDataFlow",
+      "transformation": "direct",
+      "etl_job": "m_MART_AML_MONITORING_LOAD",
+      "from_layer": "DWH",
+      "to_layer": "MART"
+    },
+    {
+      "source": "ORA_DWH/DWH/FCT_AML_ALERT/SEVERITY",
+      "target": "ORA_DWH/MART/MART_AML_MONITORING/SEVERITY",
+      "association": "core.DataSetDataFlow",
+      "transformation": "direct",
+      "etl_job": "m_MART_AML_MONITORING_LOAD",
+      "from_layer": "DWH",
+      "to_layer": "MART"
+    },
+    {
+      "source": "ORA_DWH/DWH/FCT_AML_ALERT/STATUS",
+      "target": "ORA_DWH/MART/MART_AML_MONITORING/ALERT_STATUS",
+      "association": "core.DataSetDataFlow",
+      "transformation": "direct",
+      "etl_job": "m_MART_AML_MONITORING_LOAD",
+      "from_layer": "DWH",
+      "to_layer": "MART"
+    },
+    {
+      "source": "ORA_DWH/DWH/FCT_AML_ALERT/CREATED_DATE",
+      "target": "ORA_DWH/MART/MART_AML_MONITORING/ALERT_AGE_DAYS",
+      "association": "core.DataSetDataFlow",
+      "transformation": "NVL(CLOSED_DATE, SYSDATE) - CREATED_DATE",
+      "etl_job": "m_MART_AML_MONITORING_LOAD",
+      "from_layer": "DWH",
+      "to_layer": "MART"
+    },
+    {
+      "source": "ORA_DWH/DWH/FCT_AML_ALERT/CLOSED_DATE",
+      "target": "ORA_DWH/MART/MART_AML_MONITORING/ALERT_AGE_DAYS",
+      "association": "core.DataSetDataFlow",
+      "transformation": "NVL(CLOSED_DATE, SYSDATE) - CREATED_DATE",
+      "etl_job": "m_MART_AML_MONITORING_LOAD",
+      "from_layer": "DWH",
+      "to_layer": "MART"
+    },
+    {
+      "source": "ORA_DWH/DWH/DIM_KYC/PEP_FLAG",
+      "target": "ORA_DWH/MART/MART_AML_MONITORING/PEP_FLAG",
+      "association": "core.DataSetDataFlow",
+      "transformation": "JOIN ON CUST_ID",
+      "etl_job": "m_MART_AML_MONITORING_LOAD",
+      "from_layer": "DWH",
+      "to_layer": "MART"
+    },
+    {
+      "source": "ORA_DWH/DWH/DIM_KYC/RISK_SCORE",
+      "target": "ORA_DWH/MART/MART_AML_MONITORING/RISK_SCORE",
+      "association": "core.DataSetDataFlow",
+      "transformation": "JOIN ON CUST_ID",
+      "etl_job": "m_MART_AML_MONITORING_LOAD",
+      "from_layer": "DWH",
+      "to_layer": "MART"
+    },
+    {
+      "source": "ORA_DWH/DWH/DIM_KYC/NEXT_REVIEW_DATE",
+      "target": "ORA_DWH/MART/MART_AML_MONITORING/NEXT_REVIEW_DATE",
+      "association": "core.DataSetDataFlow",
+      "transformation": "JOIN ON CUST_ID",
+      "etl_job": "m_MART_AML_MONITORING_LOAD",
+      "from_layer": "DWH",
+      "to_layer": "MART"
+    },
+    {
+      "source": "ORA_DWH/DWH/DIM_BRANCH/BRANCH_CODE",
+      "target": "ORA_DWH/MART/MART_BRANCH_PERFORMANCE/BRANCH_CODE",
+      "association": "core.DataSetDataFlow",
+      "transformation": "direct",
+      "etl_job": "m_MART_BRANCH_PERFORMANCE_LOAD",
+      "from_layer": "DWH",
+      "to_layer": "MART"
+    },
+    {
+      "source": "ORA_DWH/DWH/DIM_BRANCH/BRANCH_NAME",
+      "target": "ORA_DWH/MART/MART_BRANCH_PERFORMANCE/BRANCH_NAME",
+      "association": "core.DataSetDataFlow",
+      "transformation": "direct",
+      "etl_job": "m_MART_BRANCH_PERFORMANCE_LOAD",
+      "from_layer": "DWH",
+      "to_layer": "MART"
+    },
+    {
+      "source": "ORA_DWH/DWH/DIM_BRANCH/REGION",
+      "target": "ORA_DWH/MART/MART_BRANCH_PERFORMANCE/REGION",
+      "association": "core.DataSetDataFlow",
+      "transformation": "direct",
+      "etl_job": "m_MART_BRANCH_PERFORMANCE_LOAD",
+      "from_layer": "DWH",
+      "to_layer": "MART"
+    },
+    {
+      "source": "ORA_DWH/DWH/DIM_ACCOUNT/BALANCE",
+      "target": "ORA_DWH/MART/MART_BRANCH_PERFORMANCE/DEPOSITS",
+      "association": "core.DataSetDataFlow",
+      "transformation": "SUM(BALANCE) GROUP BY BRANCH_CODE",
+      "etl_job": "m_MART_BRANCH_PERFORMANCE_LOAD",
+      "from_layer": "DWH",
+      "to_layer": "MART"
+    },
+    {
+      "source": "ORA_DWH/DWH/DIM_ACCOUNT/BRANCH_CODE",
+      "target": "ORA_DWH/MART/MART_BRANCH_PERFORMANCE/DEPOSITS",
+      "association": "core.DataSetDataFlow",
+      "transformation": "SUM(BALANCE) GROUP BY BRANCH_CODE",
+      "etl_job": "m_MART_BRANCH_PERFORMANCE_LOAD",
+      "from_layer": "DWH",
+      "to_layer": "MART"
+    },
+    {
+      "source": "ORA_DWH/DWH/FCT_TRANSACTION/TXN_ID",
+      "target": "ORA_DWH/MART/MART_BRANCH_PERFORMANCE/TXN_COUNT",
+      "association": "core.DataSetDataFlow",
+      "transformation": "COUNT(TXN_ID)",
+      "etl_job": "m_MART_BRANCH_PERFORMANCE_LOAD",
+      "from_layer": "DWH",
+      "to_layer": "MART"
+    },
+    {
+      "source": "ORA_DWH/DWH/FCT_GL_BALANCE/CREDIT",
+      "target": "ORA_DWH/MART/MART_BRANCH_PERFORMANCE/NET_INCOME",
+      "association": "core.DataSetDataFlow",
+      "transformation": "SUM(CREDIT - DEBIT) GROUP BY COST_CENTER",
+      "etl_job": "m_MART_BRANCH_PERFORMANCE_LOAD",
+      "from_layer": "DWH",
+      "to_layer": "MART"
+    },
+    {
+      "source": "ORA_DWH/DWH/FCT_GL_BALANCE/DEBIT",
+      "target": "ORA_DWH/MART/MART_BRANCH_PERFORMANCE/NET_INCOME",
+      "association": "core.DataSetDataFlow",
+      "transformation": "SUM(CREDIT - DEBIT) GROUP BY COST_CENTER",
+      "etl_job": "m_MART_BRANCH_PERFORMANCE_LOAD",
+      "from_layer": "DWH",
+      "to_layer": "MART"
+    },
+    {
+      "source": "ORA_DWH/DWH/FCT_GL_BALANCE/COST_CENTER",
+      "target": "ORA_DWH/MART/MART_BRANCH_PERFORMANCE/NET_INCOME",
+      "association": "core.DataSetDataFlow",
+      "transformation": "SUM(CREDIT - DEBIT) GROUP BY COST_CENTER",
+      "etl_job": "m_MART_BRANCH_PERFORMANCE_LOAD",
+      "from_layer": "DWH",
+      "to_layer": "MART"
+    },
+    {
+      "source": "ORA_DWH/DWH/FCT_TRANSACTION/TXN_DATE",
+      "target": "ORA_DWH/MART/MART_TXN_SUMMARY/TXN_DATE",
+      "association": "core.DataSetDataFlow",
+      "transformation": "direct",
+      "etl_job": "m_MART_TXN_SUMMARY_LOAD",
+      "from_layer": "DWH",
+      "to_layer": "MART"
+    },
+    {
+      "source": "ORA_DWH/DWH/FCT_TRANSACTION/CHANNEL",
+      "target": "ORA_DWH/MART/MART_TXN_SUMMARY/CHANNEL",
+      "association": "core.DataSetDataFlow",
+      "transformation": "direct",
+      "etl_job": "m_MART_TXN_SUMMARY_LOAD",
+      "from_layer": "DWH",
+      "to_layer": "MART"
+    },
+    {
+      "source": "ORA_DWH/DWH/FCT_TRANSACTION/CURRENCY",
+      "target": "ORA_DWH/MART/MART_TXN_SUMMARY/CURRENCY",
+      "association": "core.DataSetDataFlow",
+      "transformation": "direct",
+      "etl_job": "m_MART_TXN_SUMMARY_LOAD",
+      "from_layer": "DWH",
+      "to_layer": "MART"
+    },
+    {
+      "source": "ORA_DWH/DWH/FCT_TRANSACTION/TXN_ID",
+      "target": "ORA_DWH/MART/MART_TXN_SUMMARY/TXN_COUNT",
+      "association": "core.DataSetDataFlow",
+      "transformation": "COUNT(TXN_ID) GROUP BY TXN_DATE, CHANNEL",
+      "etl_job": "m_MART_TXN_SUMMARY_LOAD",
+      "from_layer": "DWH",
+      "to_layer": "MART"
+    },
+    {
+      "source": "ORA_DWH/DWH/FCT_TRANSACTION/TXN_AMT",
+      "target": "ORA_DWH/MART/MART_TXN_SUMMARY/TXN_VOLUME",
+      "association": "core.DataSetDataFlow",
+      "transformation": "SUM(TXN_AMT) GROUP BY TXN_DATE, CHANNEL",
+      "etl_job": "m_MART_TXN_SUMMARY_LOAD",
+      "from_layer": "DWH",
+      "to_layer": "MART"
+    },
+    {
+      "source": "ORA_DWH/MART/MART_CUSTOMER_360/TOTAL_BALANCE",
+      "target": "SAP_BO/UNIVERSE/Executive_Banking_Dashboard/TOTAL_BALANCE",
+      "association": "core.DataSetDataFlow",
+      "transformation": "Universe object -> report variable",
+      "etl_job": "universe_executive_banking_dashboard",
+      "from_layer": "MART",
+      "to_layer": "REPORT"
+    },
+    {
+      "source": "ORA_DWH/MART/MART_CUSTOMER_360/TOTAL_LOAN_OUTSTANDING",
+      "target": "SAP_BO/UNIVERSE/Executive_Banking_Dashboard/TOTAL_LOAN_OUTSTANDING",
+      "association": "core.DataSetDataFlow",
+      "transformation": "Universe object -> report variable",
+      "etl_job": "universe_executive_banking_dashboard",
+      "from_layer": "MART",
+      "to_layer": "REPORT"
+    },
+    {
+      "source": "ORA_DWH/MART/MART_CREDIT_RISK/NPL_FLAG",
+      "target": "SAP_BO/UNIVERSE/Executive_Banking_Dashboard/NPL_FLAG",
+      "association": "core.DataSetDataFlow",
+      "transformation": "Universe object -> report variable",
+      "etl_job": "universe_executive_banking_dashboard",
+      "from_layer": "MART",
+      "to_layer": "REPORT"
+    },
+    {
+      "source": "ORA_DWH/MART/MART_CREDIT_RISK/OUTSTANDING_AMT",
+      "target": "SAP_BO/UNIVERSE/Executive_Banking_Dashboard/OUTSTANDING_AMT",
+      "association": "core.DataSetDataFlow",
+      "transformation": "Universe object -> report variable",
+      "etl_job": "universe_executive_banking_dashboard",
+      "from_layer": "MART",
+      "to_layer": "REPORT"
+    },
+    {
+      "source": "ORA_DWH/MART/MART_CUSTOMER_360/CUST_ID",
+      "target": "SAP_BO/UNIVERSE/Customer_360_Report/CUST_ID",
+      "association": "core.DataSetDataFlow",
+      "transformation": "Universe object -> report variable",
+      "etl_job": "universe_customer_360_report",
+      "from_layer": "MART",
+      "to_layer": "REPORT"
+    },
+    {
+      "source": "ORA_DWH/MART/MART_CUSTOMER_360/CUST_NAME",
+      "target": "SAP_BO/UNIVERSE/Customer_360_Report/CUST_NAME",
+      "association": "core.DataSetDataFlow",
+      "transformation": "Universe object -> report variable",
+      "etl_job": "universe_customer_360_report",
+      "from_layer": "MART",
+      "to_layer": "REPORT"
+    },
+    {
+      "source": "ORA_DWH/MART/MART_CUSTOMER_360/SEGMENT_CODE",
+      "target": "SAP_BO/UNIVERSE/Customer_360_Report/SEGMENT_CODE",
+      "association": "core.DataSetDataFlow",
+      "transformation": "Universe object -> report variable",
+      "etl_job": "universe_customer_360_report",
+      "from_layer": "MART",
+      "to_layer": "REPORT"
+    },
+    {
+      "source": "ORA_DWH/MART/MART_CUSTOMER_360/TOTAL_BALANCE",
+      "target": "SAP_BO/UNIVERSE/Customer_360_Report/TOTAL_BALANCE",
+      "association": "core.DataSetDataFlow",
+      "transformation": "Universe object -> report variable",
+      "etl_job": "universe_customer_360_report",
+      "from_layer": "MART",
+      "to_layer": "REPORT"
+    },
+    {
+      "source": "ORA_DWH/MART/MART_CUSTOMER_360/ACCOUNT_COUNT",
+      "target": "SAP_BO/UNIVERSE/Customer_360_Report/ACCOUNT_COUNT",
+      "association": "core.DataSetDataFlow",
+      "transformation": "Universe object -> report variable",
+      "etl_job": "universe_customer_360_report",
+      "from_layer": "MART",
+      "to_layer": "REPORT"
+    },
+    {
+      "source": "ORA_DWH/MART/MART_CUSTOMER_360/AGE",
+      "target": "SAP_BO/UNIVERSE/Customer_360_Report/AGE",
+      "association": "core.DataSetDataFlow",
+      "transformation": "Universe object -> report variable",
+      "etl_job": "universe_customer_360_report",
+      "from_layer": "MART",
+      "to_layer": "REPORT"
+    },
+    {
+      "source": "ORA_DWH/MART/MART_CREDIT_RISK/LOAN_ID",
+      "target": "SAP_BO/UNIVERSE/NPL_and_Credit_Quality_Report/LOAN_ID",
+      "association": "core.DataSetDataFlow",
+      "transformation": "Universe object -> report variable",
+      "etl_job": "universe_npl_and_credit_quality_report",
+      "from_layer": "MART",
+      "to_layer": "REPORT"
+    },
+    {
+      "source": "ORA_DWH/MART/MART_CREDIT_RISK/DPD",
+      "target": "SAP_BO/UNIVERSE/NPL_and_Credit_Quality_Report/DPD",
+      "association": "core.DataSetDataFlow",
+      "transformation": "Universe object -> report variable",
+      "etl_job": "universe_npl_and_credit_quality_report",
+      "from_layer": "MART",
+      "to_layer": "REPORT"
+    },
+    {
+      "source": "ORA_DWH/MART/MART_CREDIT_RISK/NPL_FLAG",
+      "target": "SAP_BO/UNIVERSE/NPL_and_Credit_Quality_Report/NPL_FLAG",
+      "association": "core.DataSetDataFlow",
+      "transformation": "Universe object -> report variable",
+      "etl_job": "universe_npl_and_credit_quality_report",
+      "from_layer": "MART",
+      "to_layer": "REPORT"
+    },
+    {
+      "source": "ORA_DWH/MART/MART_CREDIT_RISK/COLLATERAL_COVERAGE",
+      "target": "SAP_BO/UNIVERSE/NPL_and_Credit_Quality_Report/COLLATERAL_COVERAGE",
+      "association": "core.DataSetDataFlow",
+      "transformation": "Universe object -> report variable",
+      "etl_job": "universe_npl_and_credit_quality_report",
+      "from_layer": "MART",
+      "to_layer": "REPORT"
+    },
+    {
+      "source": "ORA_DWH/MART/MART_CREDIT_RISK/OUTSTANDING_AMT",
+      "target": "SAP_BO/UNIVERSE/NPL_and_Credit_Quality_Report/OUTSTANDING_AMT",
+      "association": "core.DataSetDataFlow",
+      "transformation": "Universe object -> report variable",
+      "etl_job": "universe_npl_and_credit_quality_report",
+      "from_layer": "MART",
+      "to_layer": "REPORT"
+    },
+    {
+      "source": "ORA_DWH/MART/MART_CREDIT_RISK/IFRS9_STAGE",
+      "target": "SAP_BO/UNIVERSE/IFRS9_ECL_Report/IFRS9_STAGE",
+      "association": "core.DataSetDataFlow",
+      "transformation": "Universe object -> report variable",
+      "etl_job": "universe_ifrs9_ecl_report",
+      "from_layer": "MART",
+      "to_layer": "REPORT"
+    },
+    {
+      "source": "ORA_DWH/MART/MART_CREDIT_RISK/ECL_AMOUNT",
+      "target": "SAP_BO/UNIVERSE/IFRS9_ECL_Report/ECL_AMOUNT",
+      "association": "core.DataSetDataFlow",
+      "transformation": "Universe object -> report variable",
+      "etl_job": "universe_ifrs9_ecl_report",
+      "from_layer": "MART",
+      "to_layer": "REPORT"
+    },
+    {
+      "source": "ORA_DWH/MART/MART_CREDIT_RISK/OUTSTANDING_AMT",
+      "target": "SAP_BO/UNIVERSE/IFRS9_ECL_Report/OUTSTANDING_AMT",
+      "association": "core.DataSetDataFlow",
+      "transformation": "Universe object -> report variable",
+      "etl_job": "universe_ifrs9_ecl_report",
+      "from_layer": "MART",
+      "to_layer": "REPORT"
+    },
+    {
+      "source": "ORA_DWH/MART/MART_CREDIT_RISK/CUST_ID",
+      "target": "SAP_BO/UNIVERSE/IFRS9_ECL_Report/CUST_ID",
+      "association": "core.DataSetDataFlow",
+      "transformation": "Universe object -> report variable",
+      "etl_job": "universe_ifrs9_ecl_report",
+      "from_layer": "MART",
+      "to_layer": "REPORT"
+    },
+    {
+      "source": "ORA_DWH/MART/MART_AML_MONITORING/ALERT_ID",
+      "target": "SAP_BO/UNIVERSE/AML_Alerts_Aging_Report/ALERT_ID",
+      "association": "core.DataSetDataFlow",
+      "transformation": "Universe object -> report variable",
+      "etl_job": "universe_aml_alerts_aging_report",
+      "from_layer": "MART",
+      "to_layer": "REPORT"
+    },
+    {
+      "source": "ORA_DWH/MART/MART_AML_MONITORING/SCENARIO",
+      "target": "SAP_BO/UNIVERSE/AML_Alerts_Aging_Report/SCENARIO",
+      "association": "core.DataSetDataFlow",
+      "transformation": "Universe object -> report variable",
+      "etl_job": "universe_aml_alerts_aging_report",
+      "from_layer": "MART",
+      "to_layer": "REPORT"
+    },
+    {
+      "source": "ORA_DWH/MART/MART_AML_MONITORING/SEVERITY",
+      "target": "SAP_BO/UNIVERSE/AML_Alerts_Aging_Report/SEVERITY",
+      "association": "core.DataSetDataFlow",
+      "transformation": "Universe object -> report variable",
+      "etl_job": "universe_aml_alerts_aging_report",
+      "from_layer": "MART",
+      "to_layer": "REPORT"
+    },
+    {
+      "source": "ORA_DWH/MART/MART_AML_MONITORING/ALERT_AGE_DAYS",
+      "target": "SAP_BO/UNIVERSE/AML_Alerts_Aging_Report/ALERT_AGE_DAYS",
+      "association": "core.DataSetDataFlow",
+      "transformation": "Universe object -> report variable",
+      "etl_job": "universe_aml_alerts_aging_report",
+      "from_layer": "MART",
+      "to_layer": "REPORT"
+    },
+    {
+      "source": "ORA_DWH/MART/MART_AML_MONITORING/ALERT_STATUS",
+      "target": "SAP_BO/UNIVERSE/AML_Alerts_Aging_Report/ALERT_STATUS",
+      "association": "core.DataSetDataFlow",
+      "transformation": "Universe object -> report variable",
+      "etl_job": "universe_aml_alerts_aging_report",
+      "from_layer": "MART",
+      "to_layer": "REPORT"
+    },
+    {
+      "source": "ORA_DWH/MART/MART_AML_MONITORING/NEXT_REVIEW_DATE",
+      "target": "SAP_BO/UNIVERSE/KYC_Review_Due_Report/NEXT_REVIEW_DATE",
+      "association": "core.DataSetDataFlow",
+      "transformation": "Universe object -> report variable",
+      "etl_job": "universe_kyc_review_due_report",
+      "from_layer": "MART",
+      "to_layer": "REPORT"
+    },
+    {
+      "source": "ORA_DWH/MART/MART_CUSTOMER_360/KYC_STATUS",
+      "target": "SAP_BO/UNIVERSE/KYC_Review_Due_Report/KYC_STATUS",
+      "association": "core.DataSetDataFlow",
+      "transformation": "Universe object -> report variable",
+      "etl_job": "universe_kyc_review_due_report",
+      "from_layer": "MART",
+      "to_layer": "REPORT"
+    },
+    {
+      "source": "ORA_DWH/MART/MART_CUSTOMER_360/CUST_NAME",
+      "target": "SAP_BO/UNIVERSE/KYC_Review_Due_Report/CUST_NAME",
+      "association": "core.DataSetDataFlow",
+      "transformation": "Universe object -> report variable",
+      "etl_job": "universe_kyc_review_due_report",
+      "from_layer": "MART",
+      "to_layer": "REPORT"
+    },
+    {
+      "source": "ORA_DWH/MART/MART_CUSTOMER_360/RISK_RATING",
+      "target": "SAP_BO/UNIVERSE/KYC_Review_Due_Report/RISK_RATING",
+      "association": "core.DataSetDataFlow",
+      "transformation": "Universe object -> report variable",
+      "etl_job": "universe_kyc_review_due_report",
+      "from_layer": "MART",
+      "to_layer": "REPORT"
+    },
+    {
+      "source": "ORA_DWH/MART/MART_AML_MONITORING/PEP_FLAG",
+      "target": "SAP_BO/UNIVERSE/High_Risk_and_PEP_Customers_Report/PEP_FLAG",
+      "association": "core.DataSetDataFlow",
+      "transformation": "Universe object -> report variable",
+      "etl_job": "universe_high_risk_and_pep_customers_report",
+      "from_layer": "MART",
+      "to_layer": "REPORT"
+    },
+    {
+      "source": "ORA_DWH/MART/MART_AML_MONITORING/RISK_SCORE",
+      "target": "SAP_BO/UNIVERSE/High_Risk_and_PEP_Customers_Report/RISK_SCORE",
+      "association": "core.DataSetDataFlow",
+      "transformation": "Universe object -> report variable",
+      "etl_job": "universe_high_risk_and_pep_customers_report",
+      "from_layer": "MART",
+      "to_layer": "REPORT"
+    },
+    {
+      "source": "ORA_DWH/MART/MART_CUSTOMER_360/RISK_RATING",
+      "target": "SAP_BO/UNIVERSE/High_Risk_and_PEP_Customers_Report/RISK_RATING",
+      "association": "core.DataSetDataFlow",
+      "transformation": "Universe object -> report variable",
+      "etl_job": "universe_high_risk_and_pep_customers_report",
+      "from_layer": "MART",
+      "to_layer": "REPORT"
+    },
+    {
+      "source": "ORA_DWH/MART/MART_CUSTOMER_360/CUST_NAME",
+      "target": "SAP_BO/UNIVERSE/High_Risk_and_PEP_Customers_Report/CUST_NAME",
+      "association": "core.DataSetDataFlow",
+      "transformation": "Universe object -> report variable",
+      "etl_job": "universe_high_risk_and_pep_customers_report",
+      "from_layer": "MART",
+      "to_layer": "REPORT"
+    },
+    {
+      "source": "ORA_DWH/MART/MART_BRANCH_PERFORMANCE/BRANCH_NAME",
+      "target": "SAP_BO/UNIVERSE/Branch_Performance_Scorecard/BRANCH_NAME",
+      "association": "core.DataSetDataFlow",
+      "transformation": "Universe object -> report variable",
+      "etl_job": "universe_branch_performance_scorecard",
+      "from_layer": "MART",
+      "to_layer": "REPORT"
+    },
+    {
+      "source": "ORA_DWH/MART/MART_BRANCH_PERFORMANCE/REGION",
+      "target": "SAP_BO/UNIVERSE/Branch_Performance_Scorecard/REGION",
+      "association": "core.DataSetDataFlow",
+      "transformation": "Universe object -> report variable",
+      "etl_job": "universe_branch_performance_scorecard",
+      "from_layer": "MART",
+      "to_layer": "REPORT"
+    },
+    {
+      "source": "ORA_DWH/MART/MART_BRANCH_PERFORMANCE/DEPOSITS",
+      "target": "SAP_BO/UNIVERSE/Branch_Performance_Scorecard/DEPOSITS",
+      "association": "core.DataSetDataFlow",
+      "transformation": "Universe object -> report variable",
+      "etl_job": "universe_branch_performance_scorecard",
+      "from_layer": "MART",
+      "to_layer": "REPORT"
+    },
+    {
+      "source": "ORA_DWH/MART/MART_BRANCH_PERFORMANCE/TXN_COUNT",
+      "target": "SAP_BO/UNIVERSE/Branch_Performance_Scorecard/TXN_COUNT",
+      "association": "core.DataSetDataFlow",
+      "transformation": "Universe object -> report variable",
+      "etl_job": "universe_branch_performance_scorecard",
+      "from_layer": "MART",
+      "to_layer": "REPORT"
+    },
+    {
+      "source": "ORA_DWH/MART/MART_BRANCH_PERFORMANCE/NET_INCOME",
+      "target": "SAP_BO/UNIVERSE/Branch_Performance_Scorecard/NET_INCOME",
+      "association": "core.DataSetDataFlow",
+      "transformation": "Universe object -> report variable",
+      "etl_job": "universe_branch_performance_scorecard",
+      "from_layer": "MART",
+      "to_layer": "REPORT"
+    },
+    {
+      "source": "ORA_DWH/MART/MART_TXN_SUMMARY/CHANNEL",
+      "target": "SAP_BO/UNIVERSE/Channel_Usage_Report/CHANNEL",
+      "association": "core.DataSetDataFlow",
+      "transformation": "Universe object -> report variable",
+      "etl_job": "universe_channel_usage_report",
+      "from_layer": "MART",
+      "to_layer": "REPORT"
+    },
+    {
+      "source": "ORA_DWH/MART/MART_TXN_SUMMARY/TXN_COUNT",
+      "target": "SAP_BO/UNIVERSE/Channel_Usage_Report/TXN_COUNT",
+      "association": "core.DataSetDataFlow",
+      "transformation": "Universe object -> report variable",
+      "etl_job": "universe_channel_usage_report",
+      "from_layer": "MART",
+      "to_layer": "REPORT"
+    },
+    {
+      "source": "ORA_DWH/MART/MART_TXN_SUMMARY/TXN_VOLUME",
+      "target": "SAP_BO/UNIVERSE/Channel_Usage_Report/TXN_VOLUME",
+      "association": "core.DataSetDataFlow",
+      "transformation": "Universe object -> report variable",
+      "etl_job": "universe_channel_usage_report",
+      "from_layer": "MART",
+      "to_layer": "REPORT"
+    },
+    {
+      "source": "ORA_DWH/MART/MART_TXN_SUMMARY/TXN_DATE",
+      "target": "SAP_BO/UNIVERSE/Channel_Usage_Report/TXN_DATE",
+      "association": "core.DataSetDataFlow",
+      "transformation": "Universe object -> report variable",
+      "etl_job": "universe_channel_usage_report",
+      "from_layer": "MART",
+      "to_layer": "REPORT"
+    },
+    {
+      "source": "ORA_DWH/MART/MART_CUSTOMER_360/SEGMENT_CODE",
+      "target": "SAP_BO/UNIVERSE/Deposits_by_Segment_Report/SEGMENT_CODE",
+      "association": "core.DataSetDataFlow",
+      "transformation": "Universe object -> report variable",
+      "etl_job": "universe_deposits_by_segment_report",
+      "from_layer": "MART",
+      "to_layer": "REPORT"
+    },
+    {
+      "source": "ORA_DWH/MART/MART_CUSTOMER_360/TOTAL_BALANCE",
+      "target": "SAP_BO/UNIVERSE/Deposits_by_Segment_Report/TOTAL_BALANCE",
+      "association": "core.DataSetDataFlow",
+      "transformation": "Universe object -> report variable",
+      "etl_job": "universe_deposits_by_segment_report",
+      "from_layer": "MART",
+      "to_layer": "REPORT"
+    },
+    {
+      "source": "ORA_DWH/MART/MART_CUSTOMER_360/CUST_ID",
+      "target": "SAP_BO/UNIVERSE/Deposits_by_Segment_Report/CUST_ID",
+      "association": "core.DataSetDataFlow",
+      "transformation": "Universe object -> report variable",
+      "etl_job": "universe_deposits_by_segment_report",
+      "from_layer": "MART",
+      "to_layer": "REPORT"
+    },
+    {
+      "source": "ORA_DWH/MART/MART_CUSTOMER_360/TOTAL_LOAN_OUTSTANDING",
+      "target": "SAP_BO/UNIVERSE/Loan_to_Deposit_Ratio_Report/TOTAL_LOAN_OUTSTANDING",
+      "association": "core.DataSetDataFlow",
+      "transformation": "Universe object -> report variable",
+      "etl_job": "universe_loan_to_deposit_ratio_report",
+      "from_layer": "MART",
+      "to_layer": "REPORT"
+    },
+    {
+      "source": "ORA_DWH/MART/MART_CUSTOMER_360/TOTAL_BALANCE",
+      "target": "SAP_BO/UNIVERSE/Loan_to_Deposit_Ratio_Report/TOTAL_BALANCE",
+      "association": "core.DataSetDataFlow",
+      "transformation": "Universe object -> report variable",
+      "etl_job": "universe_loan_to_deposit_ratio_report",
+      "from_layer": "MART",
+      "to_layer": "REPORT"
+    },
+    {
+      "source": "ORA_DWH/MART/MART_BRANCH_PERFORMANCE/DEPOSITS",
+      "target": "SAP_BO/UNIVERSE/Loan_to_Deposit_Ratio_Report/DEPOSITS",
+      "association": "core.DataSetDataFlow",
+      "transformation": "Universe object -> report variable",
+      "etl_job": "universe_loan_to_deposit_ratio_report",
+      "from_layer": "MART",
+      "to_layer": "REPORT"
+    },
+    {
+      "source": "ORA_DWH/MART/MART_CUSTOMER_360/CARD_COUNT",
+      "target": "SAP_BO/UNIVERSE/Card_Portfolio_Report/CARD_COUNT",
+      "association": "core.DataSetDataFlow",
+      "transformation": "Universe object -> report variable",
+      "etl_job": "universe_card_portfolio_report",
+      "from_layer": "MART",
+      "to_layer": "REPORT"
+    },
+    {
+      "source": "ORA_DWH/MART/MART_CUSTOMER_360/CUST_ID",
+      "target": "SAP_BO/UNIVERSE/Card_Portfolio_Report/CUST_ID",
+      "association": "core.DataSetDataFlow",
+      "transformation": "Universe object -> report variable",
+      "etl_job": "universe_card_portfolio_report",
+      "from_layer": "MART",
+      "to_layer": "REPORT"
+    },
+    {
+      "source": "ORA_DWH/MART/MART_CUSTOMER_360/SEGMENT_CODE",
+      "target": "SAP_BO/UNIVERSE/Card_Portfolio_Report/SEGMENT_CODE",
+      "association": "core.DataSetDataFlow",
+      "transformation": "Universe object -> report variable",
+      "etl_job": "universe_card_portfolio_report",
+      "from_layer": "MART",
+      "to_layer": "REPORT"
+    },
+    {
+      "source": "ORA_DWH/MART/MART_BRANCH_PERFORMANCE/DEPOSITS",
+      "target": "SAP_BO/UNIVERSE/Regulatory_Liquidity_Return_(CBE)/DEPOSITS",
+      "association": "core.DataSetDataFlow",
+      "transformation": "Universe object -> report variable",
+      "etl_job": "universe_regulatory_liquidity_return_(cbe)",
+      "from_layer": "MART",
+      "to_layer": "REPORT"
+    },
+    {
+      "source": "ORA_DWH/MART/MART_CUSTOMER_360/TOTAL_LOAN_OUTSTANDING",
+      "target": "SAP_BO/UNIVERSE/Regulatory_Liquidity_Return_(CBE)/TOTAL_LOAN_OUTSTANDING",
+      "association": "core.DataSetDataFlow",
+      "transformation": "Universe object -> report variable",
+      "etl_job": "universe_regulatory_liquidity_return_(cbe)",
+      "from_layer": "MART",
+      "to_layer": "REPORT"
+    },
+    {
+      "source": "ORA_DWH/MART/MART_TXN_SUMMARY/TXN_DATE",
+      "target": "SAP_BO/UNIVERSE/Daily_Transactions_Monitoring/TXN_DATE",
+      "association": "core.DataSetDataFlow",
+      "transformation": "Universe object -> report variable",
+      "etl_job": "universe_daily_transactions_monitoring",
+      "from_layer": "MART",
+      "to_layer": "REPORT"
+    },
+    {
+      "source": "ORA_DWH/MART/MART_TXN_SUMMARY/TXN_COUNT",
+      "target": "SAP_BO/UNIVERSE/Daily_Transactions_Monitoring/TXN_COUNT",
+      "association": "core.DataSetDataFlow",
+      "transformation": "Universe object -> report variable",
+      "etl_job": "universe_daily_transactions_monitoring",
+      "from_layer": "MART",
+      "to_layer": "REPORT"
+    },
+    {
+      "source": "ORA_DWH/MART/MART_BRANCH_PERFORMANCE/TXN_COUNT",
+      "target": "SAP_BO/UNIVERSE/Daily_Transactions_Monitoring/TXN_COUNT_BRA",
+      "association": "core.DataSetDataFlow",
+      "transformation": "Universe object -> report variable",
+      "etl_job": "universe_daily_transactions_monitoring",
+      "from_layer": "MART",
+      "to_layer": "REPORT"
+    },
+    {
+      "source": "ORA_DWH/MART/MART_CUSTOMER_360/CUST_ID",
+      "target": "SAP_BO/UNIVERSE/Customer_Onboarding_Report/CUST_ID",
+      "association": "core.DataSetDataFlow",
+      "transformation": "Universe object -> report variable",
+      "etl_job": "universe_customer_onboarding_report",
+      "from_layer": "MART",
+      "to_layer": "REPORT"
+    },
+    {
+      "source": "ORA_DWH/MART/MART_CUSTOMER_360/SEGMENT_CODE",
+      "target": "SAP_BO/UNIVERSE/Customer_Onboarding_Report/SEGMENT_CODE",
+      "association": "core.DataSetDataFlow",
+      "transformation": "Universe object -> report variable",
+      "etl_job": "universe_customer_onboarding_report",
+      "from_layer": "MART",
+      "to_layer": "REPORT"
+    },
+    {
+      "source": "ORA_DWH/MART/MART_CUSTOMER_360/BRANCH_NAME",
+      "target": "SAP_BO/UNIVERSE/Customer_Onboarding_Report/BRANCH_NAME",
+      "association": "core.DataSetDataFlow",
+      "transformation": "Universe object -> report variable",
+      "etl_job": "universe_customer_onboarding_report",
+      "from_layer": "MART",
+      "to_layer": "REPORT"
+    },
+    {
+      "source": "ORA_DWH/MART/MART_CUSTOMER_360/KYC_STATUS",
+      "target": "SAP_BO/UNIVERSE/Customer_Onboarding_Report/KYC_STATUS",
+      "association": "core.DataSetDataFlow",
+      "transformation": "Universe object -> report variable",
+      "etl_job": "universe_customer_onboarding_report",
+      "from_layer": "MART",
+      "to_layer": "REPORT"
+    },
+    {
+      "source": "ORA_DWH/MART/MART_BRANCH_PERFORMANCE/NET_INCOME",
+      "target": "SAP_BO/UNIVERSE/Branch_Net_Income_Report/NET_INCOME",
+      "association": "core.DataSetDataFlow",
+      "transformation": "Universe object -> report variable",
+      "etl_job": "universe_branch_net_income_report",
+      "from_layer": "MART",
+      "to_layer": "REPORT"
+    },
+    {
+      "source": "ORA_DWH/MART/MART_BRANCH_PERFORMANCE/BRANCH_CODE",
+      "target": "SAP_BO/UNIVERSE/Branch_Net_Income_Report/BRANCH_CODE",
+      "association": "core.DataSetDataFlow",
+      "transformation": "Universe object -> report variable",
+      "etl_job": "universe_branch_net_income_report",
+      "from_layer": "MART",
+      "to_layer": "REPORT"
+    },
+    {
+      "source": "ORA_DWH/MART/MART_CREDIT_RISK/DPD",
+      "target": "SAP_BO/UNIVERSE/Early_Warning_Credit_Report/DPD",
+      "association": "core.DataSetDataFlow",
+      "transformation": "Universe object -> report variable",
+      "etl_job": "universe_early_warning_credit_report",
+      "from_layer": "MART",
+      "to_layer": "REPORT"
+    },
+    {
+      "source": "ORA_DWH/MART/MART_CREDIT_RISK/IFRS9_STAGE",
+      "target": "SAP_BO/UNIVERSE/Early_Warning_Credit_Report/IFRS9_STAGE",
+      "association": "core.DataSetDataFlow",
+      "transformation": "Universe object -> report variable",
+      "etl_job": "universe_early_warning_credit_report",
+      "from_layer": "MART",
+      "to_layer": "REPORT"
+    },
+    {
+      "source": "ORA_DWH/MART/MART_CREDIT_RISK/CUST_ID",
+      "target": "SAP_BO/UNIVERSE/Early_Warning_Credit_Report/CUST_ID",
+      "association": "core.DataSetDataFlow",
+      "transformation": "Universe object -> report variable",
+      "etl_job": "universe_early_warning_credit_report",
+      "from_layer": "MART",
+      "to_layer": "REPORT"
+    },
+    {
+      "source": "ORA_DWH/MART/MART_CUSTOMER_360/RISK_RATING",
+      "target": "SAP_BO/UNIVERSE/Early_Warning_Credit_Report/RISK_RATING",
+      "association": "core.DataSetDataFlow",
+      "transformation": "Universe object -> report variable",
+      "etl_job": "universe_early_warning_credit_report",
+      "from_layer": "MART",
+      "to_layer": "REPORT"
+    },
+    {
+      "source": "ORA_DWH/MART/MART_BRANCH_PERFORMANCE/REGION",
+      "target": "SAP_BO/UNIVERSE/Regional_Management_Pack/REGION",
+      "association": "core.DataSetDataFlow",
+      "transformation": "Universe object -> report variable",
+      "etl_job": "universe_regional_management_pack",
+      "from_layer": "MART",
+      "to_layer": "REPORT"
+    },
+    {
+      "source": "ORA_DWH/MART/MART_BRANCH_PERFORMANCE/DEPOSITS",
+      "target": "SAP_BO/UNIVERSE/Regional_Management_Pack/DEPOSITS",
+      "association": "core.DataSetDataFlow",
+      "transformation": "Universe object -> report variable",
+      "etl_job": "universe_regional_management_pack",
+      "from_layer": "MART",
+      "to_layer": "REPORT"
+    },
+    {
+      "source": "ORA_DWH/MART/MART_BRANCH_PERFORMANCE/NET_INCOME",
+      "target": "SAP_BO/UNIVERSE/Regional_Management_Pack/NET_INCOME",
+      "association": "core.DataSetDataFlow",
+      "transformation": "Universe object -> report variable",
+      "etl_job": "universe_regional_management_pack",
+      "from_layer": "MART",
+      "to_layer": "REPORT"
+    },
+    {
+      "source": "ORA_DWH/MART/MART_CUSTOMER_360/CUST_ID",
+      "target": "SAP_BO/UNIVERSE/Regional_Management_Pack/CUST_ID",
+      "association": "core.DataSetDataFlow",
+      "transformation": "Universe object -> report variable",
+      "etl_job": "universe_regional_management_pack",
+      "from_layer": "MART",
+      "to_layer": "REPORT"
+    }
+  ]
+}

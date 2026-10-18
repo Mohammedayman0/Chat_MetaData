@@ -1,0 +1,1881 @@
+{
+  "totalCount": 108,
+  "items": [
+    {
+      "target": "ORA_DWH/MART/MART_CUSTOMER_360/CUST_ID",
+      "target_name": "MART_CUSTOMER_360.CUST_ID",
+      "layer": "MART",
+      "path_count": 1,
+      "layers_in_path": 4,
+      "paths": [
+        [
+          "T24_CORE.CUSTOMER.CUST_ID [SOURCE]",
+          "stg.STG_CUSTOMER.CUST_ID [STAGING]",
+          "DWH.DIM_CUSTOMER.CUST_ID [DWH]",
+          "MART.MART_CUSTOMER_360.CUST_ID [MART]"
+        ]
+      ]
+    },
+    {
+      "target": "ORA_DWH/MART/MART_CUSTOMER_360/CUST_NAME",
+      "target_name": "MART_CUSTOMER_360.CUST_NAME",
+      "layer": "MART",
+      "path_count": 1,
+      "layers_in_path": 4,
+      "paths": [
+        [
+          "T24_CORE.CUSTOMER.CUST_NAME [SOURCE]",
+          "stg.STG_CUSTOMER.CUST_NAME [STAGING]",
+          "DWH.DIM_CUSTOMER.CUST_NAME [DWH]",
+          "MART.MART_CUSTOMER_360.CUST_NAME [MART]"
+        ]
+      ]
+    },
+    {
+      "target": "ORA_DWH/MART/MART_CUSTOMER_360/SEGMENT_CODE",
+      "target_name": "MART_CUSTOMER_360.SEGMENT_CODE",
+      "layer": "MART",
+      "path_count": 1,
+      "layers_in_path": 4,
+      "paths": [
+        [
+          "T24_CORE.CUSTOMER.SEGMENT_CODE [SOURCE]",
+          "stg.STG_CUSTOMER.SEGMENT_CODE [STAGING]",
+          "DWH.DIM_CUSTOMER.SEGMENT_CODE [DWH]",
+          "MART.MART_CUSTOMER_360.SEGMENT_CODE [MART]"
+        ]
+      ]
+    },
+    {
+      "target": "ORA_DWH/MART/MART_CUSTOMER_360/KYC_STATUS",
+      "target_name": "MART_CUSTOMER_360.KYC_STATUS",
+      "layer": "MART",
+      "path_count": 1,
+      "layers_in_path": 4,
+      "paths": [
+        [
+          "T24_CORE.CUSTOMER.KYC_STATUS [SOURCE]",
+          "stg.STG_CUSTOMER.KYC_STATUS [STAGING]",
+          "DWH.DIM_CUSTOMER.KYC_STATUS [DWH]",
+          "MART.MART_CUSTOMER_360.KYC_STATUS [MART]"
+        ]
+      ]
+    },
+    {
+      "target": "ORA_DWH/MART/MART_CUSTOMER_360/RISK_RATING",
+      "target_name": "MART_CUSTOMER_360.RISK_RATING",
+      "layer": "MART",
+      "path_count": 1,
+      "layers_in_path": 4,
+      "paths": [
+        [
+          "T24_CORE.CUSTOMER.RISK_RATING [SOURCE]",
+          "stg.STG_CUSTOMER.RISK_RATING [STAGING]",
+          "DWH.DIM_CUSTOMER.RISK_RATING [DWH]",
+          "MART.MART_CUSTOMER_360.RISK_RATING [MART]"
+        ]
+      ]
+    },
+    {
+      "target": "ORA_DWH/MART/MART_CUSTOMER_360/AGE",
+      "target_name": "MART_CUSTOMER_360.AGE",
+      "layer": "MART",
+      "path_count": 1,
+      "layers_in_path": 4,
+      "paths": [
+        [
+          "T24_CORE.CUSTOMER.DOB [SOURCE]",
+          "stg.STG_CUSTOMER.DOB [STAGING]",
+          "DWH.DIM_CUSTOMER.DOB [DWH]",
+          "MART.MART_CUSTOMER_360.AGE [MART]"
+        ]
+      ]
+    },
+    {
+      "target": "ORA_DWH/MART/MART_CUSTOMER_360/TOTAL_BALANCE",
+      "target_name": "MART_CUSTOMER_360.TOTAL_BALANCE",
+      "layer": "MART",
+      "path_count": 2,
+      "layers_in_path": 4,
+      "paths": [
+        [
+          "T24_CORE.ACCOUNT.BALANCE [SOURCE]",
+          "stg.STG_ACCOUNT.BALANCE [STAGING]",
+          "DWH.DIM_ACCOUNT.BALANCE [DWH]",
+          "MART.MART_CUSTOMER_360.TOTAL_BALANCE [MART]"
+        ],
+        [
+          "T24_CORE.ACCOUNT.CUST_ID [SOURCE]",
+          "stg.STG_ACCOUNT.CUST_ID [STAGING]",
+          "DWH.DIM_ACCOUNT.CUST_ID [DWH]",
+          "MART.MART_CUSTOMER_360.TOTAL_BALANCE [MART]"
+        ]
+      ]
+    },
+    {
+      "target": "ORA_DWH/MART/MART_CUSTOMER_360/ACCOUNT_COUNT",
+      "target_name": "MART_CUSTOMER_360.ACCOUNT_COUNT",
+      "layer": "MART",
+      "path_count": 1,
+      "layers_in_path": 4,
+      "paths": [
+        [
+          "T24_CORE.ACCOUNT.ACCT_NO [SOURCE]",
+          "stg.STG_ACCOUNT.ACCT_NO [STAGING]",
+          "DWH.DIM_ACCOUNT.ACCT_NO [DWH]",
+          "MART.MART_CUSTOMER_360.ACCOUNT_COUNT [MART]"
+        ]
+      ]
+    },
+    {
+      "target": "ORA_DWH/MART/MART_CUSTOMER_360/TOTAL_LOAN_OUTSTANDING",
+      "target_name": "MART_CUSTOMER_360.TOTAL_LOAN_OUTSTANDING",
+      "layer": "MART",
+      "path_count": 1,
+      "layers_in_path": 4,
+      "paths": [
+        [
+          "FCUBS.LOAN.OUTSTANDING_AMT [SOURCE]",
+          "stg.STG_LOAN.OUTSTANDING_AMT [STAGING]",
+          "DWH.FCT_LOAN.OUTSTANDING_AMT [DWH]",
+          "MART.MART_CUSTOMER_360.TOTAL_LOAN_OUTSTANDING [MART]"
+        ]
+      ]
+    },
+    {
+      "target": "ORA_DWH/MART/MART_CUSTOMER_360/CARD_COUNT",
+      "target_name": "MART_CUSTOMER_360.CARD_COUNT",
+      "layer": "MART",
+      "path_count": 1,
+      "layers_in_path": 4,
+      "paths": [
+        [
+          "WAY4.CARD.CARD_ID [SOURCE]",
+          "stg.STG_CARD.CARD_ID [STAGING]",
+          "DWH.DIM_CARD.CARD_ID [DWH]",
+          "MART.MART_CUSTOMER_360.CARD_COUNT [MART]"
+        ]
+      ]
+    },
+    {
+      "target": "ORA_DWH/MART/MART_CUSTOMER_360/BRANCH_NAME",
+      "target_name": "MART_CUSTOMER_360.BRANCH_NAME",
+      "layer": "MART",
+      "path_count": 2,
+      "layers_in_path": 4,
+      "paths": [
+        [
+          "T24_CORE.BRANCH.BRANCH_NAME [SOURCE]",
+          "stg.STG_BRANCH.BRANCH_NAME [STAGING]",
+          "DWH.DIM_BRANCH.BRANCH_NAME [DWH]",
+          "MART.MART_CUSTOMER_360.BRANCH_NAME [MART]"
+        ],
+        [
+          "T24_CORE.CUSTOMER.BRANCH_CODE [SOURCE]",
+          "stg.STG_CUSTOMER.BRANCH_CODE [STAGING]",
+          "DWH.DIM_CUSTOMER.BRANCH_CODE [DWH]",
+          "MART.MART_CUSTOMER_360.BRANCH_NAME [MART]"
+        ]
+      ]
+    },
+    {
+      "target": "ORA_DWH/MART/MART_CREDIT_RISK/LOAN_ID",
+      "target_name": "MART_CREDIT_RISK.LOAN_ID",
+      "layer": "MART",
+      "path_count": 1,
+      "layers_in_path": 4,
+      "paths": [
+        [
+          "FCUBS.LOAN.LOAN_ID [SOURCE]",
+          "stg.STG_LOAN.LOAN_ID [STAGING]",
+          "DWH.FCT_LOAN.LOAN_ID [DWH]",
+          "MART.MART_CREDIT_RISK.LOAN_ID [MART]"
+        ]
+      ]
+    },
+    {
+      "target": "ORA_DWH/MART/MART_CREDIT_RISK/CUST_ID",
+      "target_name": "MART_CREDIT_RISK.CUST_ID",
+      "layer": "MART",
+      "path_count": 1,
+      "layers_in_path": 4,
+      "paths": [
+        [
+          "FCUBS.LOAN.CUST_ID [SOURCE]",
+          "stg.STG_LOAN.CUST_ID [STAGING]",
+          "DWH.FCT_LOAN.CUST_ID [DWH]",
+          "MART.MART_CREDIT_RISK.CUST_ID [MART]"
+        ]
+      ]
+    },
+    {
+      "target": "ORA_DWH/MART/MART_CREDIT_RISK/OUTSTANDING_AMT",
+      "target_name": "MART_CREDIT_RISK.OUTSTANDING_AMT",
+      "layer": "MART",
+      "path_count": 1,
+      "layers_in_path": 4,
+      "paths": [
+        [
+          "FCUBS.LOAN.OUTSTANDING_AMT [SOURCE]",
+          "stg.STG_LOAN.OUTSTANDING_AMT [STAGING]",
+          "DWH.FCT_LOAN.OUTSTANDING_AMT [DWH]",
+          "MART.MART_CREDIT_RISK.OUTSTANDING_AMT [MART]"
+        ]
+      ]
+    },
+    {
+      "target": "ORA_DWH/MART/MART_CREDIT_RISK/DPD",
+      "target_name": "MART_CREDIT_RISK.DPD",
+      "layer": "MART",
+      "path_count": 1,
+      "layers_in_path": 4,
+      "paths": [
+        [
+          "FCUBS.LOAN.DPD [SOURCE]",
+          "stg.STG_LOAN.DPD [STAGING]",
+          "DWH.FCT_LOAN.DPD [DWH]",
+          "MART.MART_CREDIT_RISK.DPD [MART]"
+        ]
+      ]
+    },
+    {
+      "target": "ORA_DWH/MART/MART_CREDIT_RISK/IFRS9_STAGE",
+      "target_name": "MART_CREDIT_RISK.IFRS9_STAGE",
+      "layer": "MART",
+      "path_count": 1,
+      "layers_in_path": 4,
+      "paths": [
+        [
+          "FCUBS.LOAN.IFRS9_STAGE [SOURCE]",
+          "stg.STG_LOAN.IFRS9_STAGE [STAGING]",
+          "DWH.FCT_LOAN.IFRS9_STAGE [DWH]",
+          "MART.MART_CREDIT_RISK.IFRS9_STAGE [MART]"
+        ]
+      ]
+    },
+    {
+      "target": "ORA_DWH/MART/MART_CREDIT_RISK/ECL_AMOUNT",
+      "target_name": "MART_CREDIT_RISK.ECL_AMOUNT",
+      "layer": "MART",
+      "path_count": 3,
+      "layers_in_path": 4,
+      "paths": [
+        [
+          "FCUBS.LOAN.PD [SOURCE]",
+          "stg.STG_LOAN.PD [STAGING]",
+          "DWH.FCT_LOAN.PD [DWH]",
+          "MART.MART_CREDIT_RISK.ECL_AMOUNT [MART]"
+        ],
+        [
+          "FCUBS.LOAN.LGD [SOURCE]",
+          "stg.STG_LOAN.LGD [STAGING]",
+          "DWH.FCT_LOAN.LGD [DWH]",
+          "MART.MART_CREDIT_RISK.ECL_AMOUNT [MART]"
+        ],
+        [
+          "FCUBS.LOAN.EAD [SOURCE]",
+          "stg.STG_LOAN.EAD [STAGING]",
+          "DWH.FCT_LOAN.EAD [DWH]",
+          "MART.MART_CREDIT_RISK.ECL_AMOUNT [MART]"
+        ]
+      ]
+    },
+    {
+      "target": "ORA_DWH/MART/MART_CREDIT_RISK/NPL_FLAG",
+      "target_name": "MART_CREDIT_RISK.NPL_FLAG",
+      "layer": "MART",
+      "path_count": 1,
+      "layers_in_path": 4,
+      "paths": [
+        [
+          "FCUBS.LOAN.DPD [SOURCE]",
+          "stg.STG_LOAN.DPD [STAGING]",
+          "DWH.FCT_LOAN.DPD [DWH]",
+          "MART.MART_CREDIT_RISK.NPL_FLAG [MART]"
+        ]
+      ]
+    },
+    {
+      "target": "ORA_DWH/MART/MART_CREDIT_RISK/COLLATERAL_COVERAGE",
+      "target_name": "MART_CREDIT_RISK.COLLATERAL_COVERAGE",
+      "layer": "MART",
+      "path_count": 2,
+      "layers_in_path": 4,
+      "paths": [
+        [
+          "FCUBS.LOAN.COLLATERAL_VALUE [SOURCE]",
+          "stg.STG_LOAN.COLLATERAL_VALUE [STAGING]",
+          "DWH.FCT_LOAN.COLLATERAL_VALUE [DWH]",
+          "MART.MART_CREDIT_RISK.COLLATERAL_COVERAGE [MART]"
+        ],
+        [
+          "FCUBS.LOAN.OUTSTANDING_AMT [SOURCE]",
+          "stg.STG_LOAN.OUTSTANDING_AMT [STAGING]",
+          "DWH.FCT_LOAN.OUTSTANDING_AMT [DWH]",
+          "MART.MART_CREDIT_RISK.COLLATERAL_COVERAGE [MART]"
+        ]
+      ]
+    },
+    {
+      "target": "ORA_DWH/MART/MART_AML_MONITORING/ALERT_ID",
+      "target_name": "MART_AML_MONITORING.ALERT_ID",
+      "layer": "MART",
+      "path_count": 1,
+      "layers_in_path": 4,
+      "paths": [
+        [
+          "AML.AML_ALERT.ALERT_ID [SOURCE]",
+          "stg.STG_AML_ALERT.ALERT_ID [STAGING]",
+          "DWH.FCT_AML_ALERT.ALERT_ID [DWH]",
+          "MART.MART_AML_MONITORING.ALERT_ID [MART]"
+        ]
+      ]
+    },
+    {
+      "target": "ORA_DWH/MART/MART_AML_MONITORING/CUST_ID",
+      "target_name": "MART_AML_MONITORING.CUST_ID",
+      "layer": "MART",
+      "path_count": 1,
+      "layers_in_path": 4,
+      "paths": [
+        [
+          "AML.AML_ALERT.CUST_ID [SOURCE]",
+          "stg.STG_AML_ALERT.CUST_ID [STAGING]",
+          "DWH.FCT_AML_ALERT.CUST_ID [DWH]",
+          "MART.MART_AML_MONITORING.CUST_ID [MART]"
+        ]
+      ]
+    },
+    {
+      "target": "ORA_DWH/MART/MART_AML_MONITORING/SCENARIO",
+      "target_name": "MART_AML_MONITORING.SCENARIO",
+      "layer": "MART",
+      "path_count": 1,
+      "layers_in_path": 4,
+      "paths": [
+        [
+          "AML.AML_ALERT.SCENARIO [SOURCE]",
+          "stg.STG_AML_ALERT.SCENARIO [STAGING]",
+          "DWH.FCT_AML_ALERT.SCENARIO [DWH]",
+          "MART.MART_AML_MONITORING.SCENARIO [MART]"
+        ]
+      ]
+    },
+    {
+      "target": "ORA_DWH/MART/MART_AML_MONITORING/SEVERITY",
+      "target_name": "MART_AML_MONITORING.SEVERITY",
+      "layer": "MART",
+      "path_count": 1,
+      "layers_in_path": 4,
+      "paths": [
+        [
+          "AML.AML_ALERT.SEVERITY [SOURCE]",
+          "stg.STG_AML_ALERT.SEVERITY [STAGING]",
+          "DWH.FCT_AML_ALERT.SEVERITY [DWH]",
+          "MART.MART_AML_MONITORING.SEVERITY [MART]"
+        ]
+      ]
+    },
+    {
+      "target": "ORA_DWH/MART/MART_AML_MONITORING/ALERT_STATUS",
+      "target_name": "MART_AML_MONITORING.ALERT_STATUS",
+      "layer": "MART",
+      "path_count": 1,
+      "layers_in_path": 4,
+      "paths": [
+        [
+          "AML.AML_ALERT.STATUS [SOURCE]",
+          "stg.STG_AML_ALERT.STATUS [STAGING]",
+          "DWH.FCT_AML_ALERT.STATUS [DWH]",
+          "MART.MART_AML_MONITORING.ALERT_STATUS [MART]"
+        ]
+      ]
+    },
+    {
+      "target": "ORA_DWH/MART/MART_AML_MONITORING/ALERT_AGE_DAYS",
+      "target_name": "MART_AML_MONITORING.ALERT_AGE_DAYS",
+      "layer": "MART",
+      "path_count": 2,
+      "layers_in_path": 4,
+      "paths": [
+        [
+          "AML.AML_ALERT.CREATED_DATE [SOURCE]",
+          "stg.STG_AML_ALERT.CREATED_DATE [STAGING]",
+          "DWH.FCT_AML_ALERT.CREATED_DATE [DWH]",
+          "MART.MART_AML_MONITORING.ALERT_AGE_DAYS [MART]"
+        ],
+        [
+          "AML.AML_ALERT.CLOSED_DATE [SOURCE]",
+          "stg.STG_AML_ALERT.CLOSED_DATE [STAGING]",
+          "DWH.FCT_AML_ALERT.CLOSED_DATE [DWH]",
+          "MART.MART_AML_MONITORING.ALERT_AGE_DAYS [MART]"
+        ]
+      ]
+    },
+    {
+      "target": "ORA_DWH/MART/MART_AML_MONITORING/PEP_FLAG",
+      "target_name": "MART_AML_MONITORING.PEP_FLAG",
+      "layer": "MART",
+      "path_count": 1,
+      "layers_in_path": 4,
+      "paths": [
+        [
+          "AML.KYC_PROFILE.PEP_FLAG [SOURCE]",
+          "stg.STG_KYC_PROFILE.PEP_FLAG [STAGING]",
+          "DWH.DIM_KYC.PEP_FLAG [DWH]",
+          "MART.MART_AML_MONITORING.PEP_FLAG [MART]"
+        ]
+      ]
+    },
+    {
+      "target": "ORA_DWH/MART/MART_AML_MONITORING/RISK_SCORE",
+      "target_name": "MART_AML_MONITORING.RISK_SCORE",
+      "layer": "MART",
+      "path_count": 1,
+      "layers_in_path": 4,
+      "paths": [
+        [
+          "AML.KYC_PROFILE.RISK_SCORE [SOURCE]",
+          "stg.STG_KYC_PROFILE.RISK_SCORE [STAGING]",
+          "DWH.DIM_KYC.RISK_SCORE [DWH]",
+          "MART.MART_AML_MONITORING.RISK_SCORE [MART]"
+        ]
+      ]
+    },
+    {
+      "target": "ORA_DWH/MART/MART_AML_MONITORING/NEXT_REVIEW_DATE",
+      "target_name": "MART_AML_MONITORING.NEXT_REVIEW_DATE",
+      "layer": "MART",
+      "path_count": 1,
+      "layers_in_path": 4,
+      "paths": [
+        [
+          "AML.KYC_PROFILE.NEXT_REVIEW_DATE [SOURCE]",
+          "stg.STG_KYC_PROFILE.NEXT_REVIEW_DATE [STAGING]",
+          "DWH.DIM_KYC.NEXT_REVIEW_DATE [DWH]",
+          "MART.MART_AML_MONITORING.NEXT_REVIEW_DATE [MART]"
+        ]
+      ]
+    },
+    {
+      "target": "ORA_DWH/MART/MART_BRANCH_PERFORMANCE/BRANCH_CODE",
+      "target_name": "MART_BRANCH_PERFORMANCE.BRANCH_CODE",
+      "layer": "MART",
+      "path_count": 1,
+      "layers_in_path": 4,
+      "paths": [
+        [
+          "T24_CORE.BRANCH.BRANCH_CODE [SOURCE]",
+          "stg.STG_BRANCH.BRANCH_CODE [STAGING]",
+          "DWH.DIM_BRANCH.BRANCH_CODE [DWH]",
+          "MART.MART_BRANCH_PERFORMANCE.BRANCH_CODE [MART]"
+        ]
+      ]
+    },
+    {
+      "target": "ORA_DWH/MART/MART_BRANCH_PERFORMANCE/BRANCH_NAME",
+      "target_name": "MART_BRANCH_PERFORMANCE.BRANCH_NAME",
+      "layer": "MART",
+      "path_count": 1,
+      "layers_in_path": 4,
+      "paths": [
+        [
+          "T24_CORE.BRANCH.BRANCH_NAME [SOURCE]",
+          "stg.STG_BRANCH.BRANCH_NAME [STAGING]",
+          "DWH.DIM_BRANCH.BRANCH_NAME [DWH]",
+          "MART.MART_BRANCH_PERFORMANCE.BRANCH_NAME [MART]"
+        ]
+      ]
+    },
+    {
+      "target": "ORA_DWH/MART/MART_BRANCH_PERFORMANCE/REGION",
+      "target_name": "MART_BRANCH_PERFORMANCE.REGION",
+      "layer": "MART",
+      "path_count": 1,
+      "layers_in_path": 4,
+      "paths": [
+        [
+          "T24_CORE.BRANCH.REGION [SOURCE]",
+          "stg.STG_BRANCH.REGION [STAGING]",
+          "DWH.DIM_BRANCH.REGION [DWH]",
+          "MART.MART_BRANCH_PERFORMANCE.REGION [MART]"
+        ]
+      ]
+    },
+    {
+      "target": "ORA_DWH/MART/MART_BRANCH_PERFORMANCE/DEPOSITS",
+      "target_name": "MART_BRANCH_PERFORMANCE.DEPOSITS",
+      "layer": "MART",
+      "path_count": 2,
+      "layers_in_path": 4,
+      "paths": [
+        [
+          "T24_CORE.ACCOUNT.BALANCE [SOURCE]",
+          "stg.STG_ACCOUNT.BALANCE [STAGING]",
+          "DWH.DIM_ACCOUNT.BALANCE [DWH]",
+          "MART.MART_BRANCH_PERFORMANCE.DEPOSITS [MART]"
+        ],
+        [
+          "T24_CORE.ACCOUNT.BRANCH_CODE [SOURCE]",
+          "stg.STG_ACCOUNT.BRANCH_CODE [STAGING]",
+          "DWH.DIM_ACCOUNT.BRANCH_CODE [DWH]",
+          "MART.MART_BRANCH_PERFORMANCE.DEPOSITS [MART]"
+        ]
+      ]
+    },
+    {
+      "target": "ORA_DWH/MART/MART_BRANCH_PERFORMANCE/TXN_COUNT",
+      "target_name": "MART_BRANCH_PERFORMANCE.TXN_COUNT",
+      "layer": "MART",
+      "path_count": 1,
+      "layers_in_path": 4,
+      "paths": [
+        [
+          "T24_CORE.TRANSACTION.TXN_ID [SOURCE]",
+          "stg.STG_TRANSACTION.TXN_ID [STAGING]",
+          "DWH.FCT_TRANSACTION.TXN_ID [DWH]",
+          "MART.MART_BRANCH_PERFORMANCE.TXN_COUNT [MART]"
+        ]
+      ]
+    },
+    {
+      "target": "ORA_DWH/MART/MART_BRANCH_PERFORMANCE/NET_INCOME",
+      "target_name": "MART_BRANCH_PERFORMANCE.NET_INCOME",
+      "layer": "MART",
+      "path_count": 3,
+      "layers_in_path": 4,
+      "paths": [
+        [
+          "GL.GL_BALANCE.CREDIT [SOURCE]",
+          "stg.STG_GL_BALANCE.CREDIT [STAGING]",
+          "DWH.FCT_GL_BALANCE.CREDIT [DWH]",
+          "MART.MART_BRANCH_PERFORMANCE.NET_INCOME [MART]"
+        ],
+        [
+          "GL.GL_BALANCE.DEBIT [SOURCE]",
+          "stg.STG_GL_BALANCE.DEBIT [STAGING]",
+          "DWH.FCT_GL_BALANCE.DEBIT [DWH]",
+          "MART.MART_BRANCH_PERFORMANCE.NET_INCOME [MART]"
+        ],
+        [
+          "GL.GL_BALANCE.COST_CENTER [SOURCE]",
+          "stg.STG_GL_BALANCE.COST_CENTER [STAGING]",
+          "DWH.FCT_GL_BALANCE.COST_CENTER [DWH]",
+          "MART.MART_BRANCH_PERFORMANCE.NET_INCOME [MART]"
+        ]
+      ]
+    },
+    {
+      "target": "ORA_DWH/MART/MART_TXN_SUMMARY/TXN_DATE",
+      "target_name": "MART_TXN_SUMMARY.TXN_DATE",
+      "layer": "MART",
+      "path_count": 1,
+      "layers_in_path": 4,
+      "paths": [
+        [
+          "T24_CORE.TRANSACTION.TXN_DATE [SOURCE]",
+          "stg.STG_TRANSACTION.TXN_DATE [STAGING]",
+          "DWH.FCT_TRANSACTION.TXN_DATE [DWH]",
+          "MART.MART_TXN_SUMMARY.TXN_DATE [MART]"
+        ]
+      ]
+    },
+    {
+      "target": "ORA_DWH/MART/MART_TXN_SUMMARY/CHANNEL",
+      "target_name": "MART_TXN_SUMMARY.CHANNEL",
+      "layer": "MART",
+      "path_count": 1,
+      "layers_in_path": 4,
+      "paths": [
+        [
+          "T24_CORE.TRANSACTION.CHANNEL [SOURCE]",
+          "stg.STG_TRANSACTION.CHANNEL [STAGING]",
+          "DWH.FCT_TRANSACTION.CHANNEL [DWH]",
+          "MART.MART_TXN_SUMMARY.CHANNEL [MART]"
+        ]
+      ]
+    },
+    {
+      "target": "ORA_DWH/MART/MART_TXN_SUMMARY/CURRENCY",
+      "target_name": "MART_TXN_SUMMARY.CURRENCY",
+      "layer": "MART",
+      "path_count": 1,
+      "layers_in_path": 4,
+      "paths": [
+        [
+          "T24_CORE.TRANSACTION.CURRENCY [SOURCE]",
+          "stg.STG_TRANSACTION.CURRENCY [STAGING]",
+          "DWH.FCT_TRANSACTION.CURRENCY [DWH]",
+          "MART.MART_TXN_SUMMARY.CURRENCY [MART]"
+        ]
+      ]
+    },
+    {
+      "target": "ORA_DWH/MART/MART_TXN_SUMMARY/TXN_COUNT",
+      "target_name": "MART_TXN_SUMMARY.TXN_COUNT",
+      "layer": "MART",
+      "path_count": 1,
+      "layers_in_path": 4,
+      "paths": [
+        [
+          "T24_CORE.TRANSACTION.TXN_ID [SOURCE]",
+          "stg.STG_TRANSACTION.TXN_ID [STAGING]",
+          "DWH.FCT_TRANSACTION.TXN_ID [DWH]",
+          "MART.MART_TXN_SUMMARY.TXN_COUNT [MART]"
+        ]
+      ]
+    },
+    {
+      "target": "ORA_DWH/MART/MART_TXN_SUMMARY/TXN_VOLUME",
+      "target_name": "MART_TXN_SUMMARY.TXN_VOLUME",
+      "layer": "MART",
+      "path_count": 1,
+      "layers_in_path": 4,
+      "paths": [
+        [
+          "T24_CORE.TRANSACTION.TXN_AMT [SOURCE]",
+          "stg.STG_TRANSACTION.TXN_AMT [STAGING]",
+          "DWH.FCT_TRANSACTION.TXN_AMT [DWH]",
+          "MART.MART_TXN_SUMMARY.TXN_VOLUME [MART]"
+        ]
+      ]
+    },
+    {
+      "target": "SAP_BO/UNIVERSE/Executive_Banking_Dashboard/TOTAL_BALANCE",
+      "target_name": "Executive_Banking_Dashboard.TOTAL_BALANCE",
+      "layer": "REPORT",
+      "path_count": 2,
+      "layers_in_path": 5,
+      "paths": [
+        [
+          "T24_CORE.ACCOUNT.BALANCE [SOURCE]",
+          "stg.STG_ACCOUNT.BALANCE [STAGING]",
+          "DWH.DIM_ACCOUNT.BALANCE [DWH]",
+          "MART.MART_CUSTOMER_360.TOTAL_BALANCE [MART]",
+          "UNIVERSE.Executive_Banking_Dashboard.TOTAL_BALANCE [REPORT]"
+        ],
+        [
+          "T24_CORE.ACCOUNT.CUST_ID [SOURCE]",
+          "stg.STG_ACCOUNT.CUST_ID [STAGING]",
+          "DWH.DIM_ACCOUNT.CUST_ID [DWH]",
+          "MART.MART_CUSTOMER_360.TOTAL_BALANCE [MART]",
+          "UNIVERSE.Executive_Banking_Dashboard.TOTAL_BALANCE [REPORT]"
+        ]
+      ]
+    },
+    {
+      "target": "SAP_BO/UNIVERSE/Executive_Banking_Dashboard/TOTAL_LOAN_OUTSTANDING",
+      "target_name": "Executive_Banking_Dashboard.TOTAL_LOAN_OUTSTANDING",
+      "layer": "REPORT",
+      "path_count": 1,
+      "layers_in_path": 5,
+      "paths": [
+        [
+          "FCUBS.LOAN.OUTSTANDING_AMT [SOURCE]",
+          "stg.STG_LOAN.OUTSTANDING_AMT [STAGING]",
+          "DWH.FCT_LOAN.OUTSTANDING_AMT [DWH]",
+          "MART.MART_CUSTOMER_360.TOTAL_LOAN_OUTSTANDING [MART]",
+          "UNIVERSE.Executive_Banking_Dashboard.TOTAL_LOAN_OUTSTANDING [REPORT]"
+        ]
+      ]
+    },
+    {
+      "target": "SAP_BO/UNIVERSE/Executive_Banking_Dashboard/NPL_FLAG",
+      "target_name": "Executive_Banking_Dashboard.NPL_FLAG",
+      "layer": "REPORT",
+      "path_count": 1,
+      "layers_in_path": 5,
+      "paths": [
+        [
+          "FCUBS.LOAN.DPD [SOURCE]",
+          "stg.STG_LOAN.DPD [STAGING]",
+          "DWH.FCT_LOAN.DPD [DWH]",
+          "MART.MART_CREDIT_RISK.NPL_FLAG [MART]",
+          "UNIVERSE.Executive_Banking_Dashboard.NPL_FLAG [REPORT]"
+        ]
+      ]
+    },
+    {
+      "target": "SAP_BO/UNIVERSE/Executive_Banking_Dashboard/OUTSTANDING_AMT",
+      "target_name": "Executive_Banking_Dashboard.OUTSTANDING_AMT",
+      "layer": "REPORT",
+      "path_count": 1,
+      "layers_in_path": 5,
+      "paths": [
+        [
+          "FCUBS.LOAN.OUTSTANDING_AMT [SOURCE]",
+          "stg.STG_LOAN.OUTSTANDING_AMT [STAGING]",
+          "DWH.FCT_LOAN.OUTSTANDING_AMT [DWH]",
+          "MART.MART_CREDIT_RISK.OUTSTANDING_AMT [MART]",
+          "UNIVERSE.Executive_Banking_Dashboard.OUTSTANDING_AMT [REPORT]"
+        ]
+      ]
+    },
+    {
+      "target": "SAP_BO/UNIVERSE/Customer_360_Report/CUST_ID",
+      "target_name": "Customer_360_Report.CUST_ID",
+      "layer": "REPORT",
+      "path_count": 1,
+      "layers_in_path": 5,
+      "paths": [
+        [
+          "T24_CORE.CUSTOMER.CUST_ID [SOURCE]",
+          "stg.STG_CUSTOMER.CUST_ID [STAGING]",
+          "DWH.DIM_CUSTOMER.CUST_ID [DWH]",
+          "MART.MART_CUSTOMER_360.CUST_ID [MART]",
+          "UNIVERSE.Customer_360_Report.CUST_ID [REPORT]"
+        ]
+      ]
+    },
+    {
+      "target": "SAP_BO/UNIVERSE/Customer_360_Report/CUST_NAME",
+      "target_name": "Customer_360_Report.CUST_NAME",
+      "layer": "REPORT",
+      "path_count": 1,
+      "layers_in_path": 5,
+      "paths": [
+        [
+          "T24_CORE.CUSTOMER.CUST_NAME [SOURCE]",
+          "stg.STG_CUSTOMER.CUST_NAME [STAGING]",
+          "DWH.DIM_CUSTOMER.CUST_NAME [DWH]",
+          "MART.MART_CUSTOMER_360.CUST_NAME [MART]",
+          "UNIVERSE.Customer_360_Report.CUST_NAME [REPORT]"
+        ]
+      ]
+    },
+    {
+      "target": "SAP_BO/UNIVERSE/Customer_360_Report/SEGMENT_CODE",
+      "target_name": "Customer_360_Report.SEGMENT_CODE",
+      "layer": "REPORT",
+      "path_count": 1,
+      "layers_in_path": 5,
+      "paths": [
+        [
+          "T24_CORE.CUSTOMER.SEGMENT_CODE [SOURCE]",
+          "stg.STG_CUSTOMER.SEGMENT_CODE [STAGING]",
+          "DWH.DIM_CUSTOMER.SEGMENT_CODE [DWH]",
+          "MART.MART_CUSTOMER_360.SEGMENT_CODE [MART]",
+          "UNIVERSE.Customer_360_Report.SEGMENT_CODE [REPORT]"
+        ]
+      ]
+    },
+    {
+      "target": "SAP_BO/UNIVERSE/Customer_360_Report/TOTAL_BALANCE",
+      "target_name": "Customer_360_Report.TOTAL_BALANCE",
+      "layer": "REPORT",
+      "path_count": 2,
+      "layers_in_path": 5,
+      "paths": [
+        [
+          "T24_CORE.ACCOUNT.BALANCE [SOURCE]",
+          "stg.STG_ACCOUNT.BALANCE [STAGING]",
+          "DWH.DIM_ACCOUNT.BALANCE [DWH]",
+          "MART.MART_CUSTOMER_360.TOTAL_BALANCE [MART]",
+          "UNIVERSE.Customer_360_Report.TOTAL_BALANCE [REPORT]"
+        ],
+        [
+          "T24_CORE.ACCOUNT.CUST_ID [SOURCE]",
+          "stg.STG_ACCOUNT.CUST_ID [STAGING]",
+          "DWH.DIM_ACCOUNT.CUST_ID [DWH]",
+          "MART.MART_CUSTOMER_360.TOTAL_BALANCE [MART]",
+          "UNIVERSE.Customer_360_Report.TOTAL_BALANCE [REPORT]"
+        ]
+      ]
+    },
+    {
+      "target": "SAP_BO/UNIVERSE/Customer_360_Report/ACCOUNT_COUNT",
+      "target_name": "Customer_360_Report.ACCOUNT_COUNT",
+      "layer": "REPORT",
+      "path_count": 1,
+      "layers_in_path": 5,
+      "paths": [
+        [
+          "T24_CORE.ACCOUNT.ACCT_NO [SOURCE]",
+          "stg.STG_ACCOUNT.ACCT_NO [STAGING]",
+          "DWH.DIM_ACCOUNT.ACCT_NO [DWH]",
+          "MART.MART_CUSTOMER_360.ACCOUNT_COUNT [MART]",
+          "UNIVERSE.Customer_360_Report.ACCOUNT_COUNT [REPORT]"
+        ]
+      ]
+    },
+    {
+      "target": "SAP_BO/UNIVERSE/Customer_360_Report/AGE",
+      "target_name": "Customer_360_Report.AGE",
+      "layer": "REPORT",
+      "path_count": 1,
+      "layers_in_path": 5,
+      "paths": [
+        [
+          "T24_CORE.CUSTOMER.DOB [SOURCE]",
+          "stg.STG_CUSTOMER.DOB [STAGING]",
+          "DWH.DIM_CUSTOMER.DOB [DWH]",
+          "MART.MART_CUSTOMER_360.AGE [MART]",
+          "UNIVERSE.Customer_360_Report.AGE [REPORT]"
+        ]
+      ]
+    },
+    {
+      "target": "SAP_BO/UNIVERSE/NPL_and_Credit_Quality_Report/LOAN_ID",
+      "target_name": "NPL_and_Credit_Quality_Report.LOAN_ID",
+      "layer": "REPORT",
+      "path_count": 1,
+      "layers_in_path": 5,
+      "paths": [
+        [
+          "FCUBS.LOAN.LOAN_ID [SOURCE]",
+          "stg.STG_LOAN.LOAN_ID [STAGING]",
+          "DWH.FCT_LOAN.LOAN_ID [DWH]",
+          "MART.MART_CREDIT_RISK.LOAN_ID [MART]",
+          "UNIVERSE.NPL_and_Credit_Quality_Report.LOAN_ID [REPORT]"
+        ]
+      ]
+    },
+    {
+      "target": "SAP_BO/UNIVERSE/NPL_and_Credit_Quality_Report/DPD",
+      "target_name": "NPL_and_Credit_Quality_Report.DPD",
+      "layer": "REPORT",
+      "path_count": 1,
+      "layers_in_path": 5,
+      "paths": [
+        [
+          "FCUBS.LOAN.DPD [SOURCE]",
+          "stg.STG_LOAN.DPD [STAGING]",
+          "DWH.FCT_LOAN.DPD [DWH]",
+          "MART.MART_CREDIT_RISK.DPD [MART]",
+          "UNIVERSE.NPL_and_Credit_Quality_Report.DPD [REPORT]"
+        ]
+      ]
+    },
+    {
+      "target": "SAP_BO/UNIVERSE/NPL_and_Credit_Quality_Report/NPL_FLAG",
+      "target_name": "NPL_and_Credit_Quality_Report.NPL_FLAG",
+      "layer": "REPORT",
+      "path_count": 1,
+      "layers_in_path": 5,
+      "paths": [
+        [
+          "FCUBS.LOAN.DPD [SOURCE]",
+          "stg.STG_LOAN.DPD [STAGING]",
+          "DWH.FCT_LOAN.DPD [DWH]",
+          "MART.MART_CREDIT_RISK.NPL_FLAG [MART]",
+          "UNIVERSE.NPL_and_Credit_Quality_Report.NPL_FLAG [REPORT]"
+        ]
+      ]
+    },
+    {
+      "target": "SAP_BO/UNIVERSE/NPL_and_Credit_Quality_Report/COLLATERAL_COVERAGE",
+      "target_name": "NPL_and_Credit_Quality_Report.COLLATERAL_COVERAGE",
+      "layer": "REPORT",
+      "path_count": 2,
+      "layers_in_path": 5,
+      "paths": [
+        [
+          "FCUBS.LOAN.COLLATERAL_VALUE [SOURCE]",
+          "stg.STG_LOAN.COLLATERAL_VALUE [STAGING]",
+          "DWH.FCT_LOAN.COLLATERAL_VALUE [DWH]",
+          "MART.MART_CREDIT_RISK.COLLATERAL_COVERAGE [MART]",
+          "UNIVERSE.NPL_and_Credit_Quality_Report.COLLATERAL_COVERAGE [REPORT]"
+        ],
+        [
+          "FCUBS.LOAN.OUTSTANDING_AMT [SOURCE]",
+          "stg.STG_LOAN.OUTSTANDING_AMT [STAGING]",
+          "DWH.FCT_LOAN.OUTSTANDING_AMT [DWH]",
+          "MART.MART_CREDIT_RISK.COLLATERAL_COVERAGE [MART]",
+          "UNIVERSE.NPL_and_Credit_Quality_Report.COLLATERAL_COVERAGE [REPORT]"
+        ]
+      ]
+    },
+    {
+      "target": "SAP_BO/UNIVERSE/NPL_and_Credit_Quality_Report/OUTSTANDING_AMT",
+      "target_name": "NPL_and_Credit_Quality_Report.OUTSTANDING_AMT",
+      "layer": "REPORT",
+      "path_count": 1,
+      "layers_in_path": 5,
+      "paths": [
+        [
+          "FCUBS.LOAN.OUTSTANDING_AMT [SOURCE]",
+          "stg.STG_LOAN.OUTSTANDING_AMT [STAGING]",
+          "DWH.FCT_LOAN.OUTSTANDING_AMT [DWH]",
+          "MART.MART_CREDIT_RISK.OUTSTANDING_AMT [MART]",
+          "UNIVERSE.NPL_and_Credit_Quality_Report.OUTSTANDING_AMT [REPORT]"
+        ]
+      ]
+    },
+    {
+      "target": "SAP_BO/UNIVERSE/IFRS9_ECL_Report/IFRS9_STAGE",
+      "target_name": "IFRS9_ECL_Report.IFRS9_STAGE",
+      "layer": "REPORT",
+      "path_count": 1,
+      "layers_in_path": 5,
+      "paths": [
+        [
+          "FCUBS.LOAN.IFRS9_STAGE [SOURCE]",
+          "stg.STG_LOAN.IFRS9_STAGE [STAGING]",
+          "DWH.FCT_LOAN.IFRS9_STAGE [DWH]",
+          "MART.MART_CREDIT_RISK.IFRS9_STAGE [MART]",
+          "UNIVERSE.IFRS9_ECL_Report.IFRS9_STAGE [REPORT]"
+        ]
+      ]
+    },
+    {
+      "target": "SAP_BO/UNIVERSE/IFRS9_ECL_Report/ECL_AMOUNT",
+      "target_name": "IFRS9_ECL_Report.ECL_AMOUNT",
+      "layer": "REPORT",
+      "path_count": 3,
+      "layers_in_path": 5,
+      "paths": [
+        [
+          "FCUBS.LOAN.PD [SOURCE]",
+          "stg.STG_LOAN.PD [STAGING]",
+          "DWH.FCT_LOAN.PD [DWH]",
+          "MART.MART_CREDIT_RISK.ECL_AMOUNT [MART]",
+          "UNIVERSE.IFRS9_ECL_Report.ECL_AMOUNT [REPORT]"
+        ],
+        [
+          "FCUBS.LOAN.LGD [SOURCE]",
+          "stg.STG_LOAN.LGD [STAGING]",
+          "DWH.FCT_LOAN.LGD [DWH]",
+          "MART.MART_CREDIT_RISK.ECL_AMOUNT [MART]",
+          "UNIVERSE.IFRS9_ECL_Report.ECL_AMOUNT [REPORT]"
+        ],
+        [
+          "FCUBS.LOAN.EAD [SOURCE]",
+          "stg.STG_LOAN.EAD [STAGING]",
+          "DWH.FCT_LOAN.EAD [DWH]",
+          "MART.MART_CREDIT_RISK.ECL_AMOUNT [MART]",
+          "UNIVERSE.IFRS9_ECL_Report.ECL_AMOUNT [REPORT]"
+        ]
+      ]
+    },
+    {
+      "target": "SAP_BO/UNIVERSE/IFRS9_ECL_Report/OUTSTANDING_AMT",
+      "target_name": "IFRS9_ECL_Report.OUTSTANDING_AMT",
+      "layer": "REPORT",
+      "path_count": 1,
+      "layers_in_path": 5,
+      "paths": [
+        [
+          "FCUBS.LOAN.OUTSTANDING_AMT [SOURCE]",
+          "stg.STG_LOAN.OUTSTANDING_AMT [STAGING]",
+          "DWH.FCT_LOAN.OUTSTANDING_AMT [DWH]",
+          "MART.MART_CREDIT_RISK.OUTSTANDING_AMT [MART]",
+          "UNIVERSE.IFRS9_ECL_Report.OUTSTANDING_AMT [REPORT]"
+        ]
+      ]
+    },
+    {
+      "target": "SAP_BO/UNIVERSE/IFRS9_ECL_Report/CUST_ID",
+      "target_name": "IFRS9_ECL_Report.CUST_ID",
+      "layer": "REPORT",
+      "path_count": 1,
+      "layers_in_path": 5,
+      "paths": [
+        [
+          "FCUBS.LOAN.CUST_ID [SOURCE]",
+          "stg.STG_LOAN.CUST_ID [STAGING]",
+          "DWH.FCT_LOAN.CUST_ID [DWH]",
+          "MART.MART_CREDIT_RISK.CUST_ID [MART]",
+          "UNIVERSE.IFRS9_ECL_Report.CUST_ID [REPORT]"
+        ]
+      ]
+    },
+    {
+      "target": "SAP_BO/UNIVERSE/AML_Alerts_Aging_Report/ALERT_ID",
+      "target_name": "AML_Alerts_Aging_Report.ALERT_ID",
+      "layer": "REPORT",
+      "path_count": 1,
+      "layers_in_path": 5,
+      "paths": [
+        [
+          "AML.AML_ALERT.ALERT_ID [SOURCE]",
+          "stg.STG_AML_ALERT.ALERT_ID [STAGING]",
+          "DWH.FCT_AML_ALERT.ALERT_ID [DWH]",
+          "MART.MART_AML_MONITORING.ALERT_ID [MART]",
+          "UNIVERSE.AML_Alerts_Aging_Report.ALERT_ID [REPORT]"
+        ]
+      ]
+    },
+    {
+      "target": "SAP_BO/UNIVERSE/AML_Alerts_Aging_Report/SCENARIO",
+      "target_name": "AML_Alerts_Aging_Report.SCENARIO",
+      "layer": "REPORT",
+      "path_count": 1,
+      "layers_in_path": 5,
+      "paths": [
+        [
+          "AML.AML_ALERT.SCENARIO [SOURCE]",
+          "stg.STG_AML_ALERT.SCENARIO [STAGING]",
+          "DWH.FCT_AML_ALERT.SCENARIO [DWH]",
+          "MART.MART_AML_MONITORING.SCENARIO [MART]",
+          "UNIVERSE.AML_Alerts_Aging_Report.SCENARIO [REPORT]"
+        ]
+      ]
+    },
+    {
+      "target": "SAP_BO/UNIVERSE/AML_Alerts_Aging_Report/SEVERITY",
+      "target_name": "AML_Alerts_Aging_Report.SEVERITY",
+      "layer": "REPORT",
+      "path_count": 1,
+      "layers_in_path": 5,
+      "paths": [
+        [
+          "AML.AML_ALERT.SEVERITY [SOURCE]",
+          "stg.STG_AML_ALERT.SEVERITY [STAGING]",
+          "DWH.FCT_AML_ALERT.SEVERITY [DWH]",
+          "MART.MART_AML_MONITORING.SEVERITY [MART]",
+          "UNIVERSE.AML_Alerts_Aging_Report.SEVERITY [REPORT]"
+        ]
+      ]
+    },
+    {
+      "target": "SAP_BO/UNIVERSE/AML_Alerts_Aging_Report/ALERT_AGE_DAYS",
+      "target_name": "AML_Alerts_Aging_Report.ALERT_AGE_DAYS",
+      "layer": "REPORT",
+      "path_count": 2,
+      "layers_in_path": 5,
+      "paths": [
+        [
+          "AML.AML_ALERT.CREATED_DATE [SOURCE]",
+          "stg.STG_AML_ALERT.CREATED_DATE [STAGING]",
+          "DWH.FCT_AML_ALERT.CREATED_DATE [DWH]",
+          "MART.MART_AML_MONITORING.ALERT_AGE_DAYS [MART]",
+          "UNIVERSE.AML_Alerts_Aging_Report.ALERT_AGE_DAYS [REPORT]"
+        ],
+        [
+          "AML.AML_ALERT.CLOSED_DATE [SOURCE]",
+          "stg.STG_AML_ALERT.CLOSED_DATE [STAGING]",
+          "DWH.FCT_AML_ALERT.CLOSED_DATE [DWH]",
+          "MART.MART_AML_MONITORING.ALERT_AGE_DAYS [MART]",
+          "UNIVERSE.AML_Alerts_Aging_Report.ALERT_AGE_DAYS [REPORT]"
+        ]
+      ]
+    },
+    {
+      "target": "SAP_BO/UNIVERSE/AML_Alerts_Aging_Report/ALERT_STATUS",
+      "target_name": "AML_Alerts_Aging_Report.ALERT_STATUS",
+      "layer": "REPORT",
+      "path_count": 1,
+      "layers_in_path": 5,
+      "paths": [
+        [
+          "AML.AML_ALERT.STATUS [SOURCE]",
+          "stg.STG_AML_ALERT.STATUS [STAGING]",
+          "DWH.FCT_AML_ALERT.STATUS [DWH]",
+          "MART.MART_AML_MONITORING.ALERT_STATUS [MART]",
+          "UNIVERSE.AML_Alerts_Aging_Report.ALERT_STATUS [REPORT]"
+        ]
+      ]
+    },
+    {
+      "target": "SAP_BO/UNIVERSE/KYC_Review_Due_Report/NEXT_REVIEW_DATE",
+      "target_name": "KYC_Review_Due_Report.NEXT_REVIEW_DATE",
+      "layer": "REPORT",
+      "path_count": 1,
+      "layers_in_path": 5,
+      "paths": [
+        [
+          "AML.KYC_PROFILE.NEXT_REVIEW_DATE [SOURCE]",
+          "stg.STG_KYC_PROFILE.NEXT_REVIEW_DATE [STAGING]",
+          "DWH.DIM_KYC.NEXT_REVIEW_DATE [DWH]",
+          "MART.MART_AML_MONITORING.NEXT_REVIEW_DATE [MART]",
+          "UNIVERSE.KYC_Review_Due_Report.NEXT_REVIEW_DATE [REPORT]"
+        ]
+      ]
+    },
+    {
+      "target": "SAP_BO/UNIVERSE/KYC_Review_Due_Report/KYC_STATUS",
+      "target_name": "KYC_Review_Due_Report.KYC_STATUS",
+      "layer": "REPORT",
+      "path_count": 1,
+      "layers_in_path": 5,
+      "paths": [
+        [
+          "T24_CORE.CUSTOMER.KYC_STATUS [SOURCE]",
+          "stg.STG_CUSTOMER.KYC_STATUS [STAGING]",
+          "DWH.DIM_CUSTOMER.KYC_STATUS [DWH]",
+          "MART.MART_CUSTOMER_360.KYC_STATUS [MART]",
+          "UNIVERSE.KYC_Review_Due_Report.KYC_STATUS [REPORT]"
+        ]
+      ]
+    },
+    {
+      "target": "SAP_BO/UNIVERSE/KYC_Review_Due_Report/CUST_NAME",
+      "target_name": "KYC_Review_Due_Report.CUST_NAME",
+      "layer": "REPORT",
+      "path_count": 1,
+      "layers_in_path": 5,
+      "paths": [
+        [
+          "T24_CORE.CUSTOMER.CUST_NAME [SOURCE]",
+          "stg.STG_CUSTOMER.CUST_NAME [STAGING]",
+          "DWH.DIM_CUSTOMER.CUST_NAME [DWH]",
+          "MART.MART_CUSTOMER_360.CUST_NAME [MART]",
+          "UNIVERSE.KYC_Review_Due_Report.CUST_NAME [REPORT]"
+        ]
+      ]
+    },
+    {
+      "target": "SAP_BO/UNIVERSE/KYC_Review_Due_Report/RISK_RATING",
+      "target_name": "KYC_Review_Due_Report.RISK_RATING",
+      "layer": "REPORT",
+      "path_count": 1,
+      "layers_in_path": 5,
+      "paths": [
+        [
+          "T24_CORE.CUSTOMER.RISK_RATING [SOURCE]",
+          "stg.STG_CUSTOMER.RISK_RATING [STAGING]",
+          "DWH.DIM_CUSTOMER.RISK_RATING [DWH]",
+          "MART.MART_CUSTOMER_360.RISK_RATING [MART]",
+          "UNIVERSE.KYC_Review_Due_Report.RISK_RATING [REPORT]"
+        ]
+      ]
+    },
+    {
+      "target": "SAP_BO/UNIVERSE/High_Risk_and_PEP_Customers_Report/PEP_FLAG",
+      "target_name": "High_Risk_and_PEP_Customers_Report.PEP_FLAG",
+      "layer": "REPORT",
+      "path_count": 1,
+      "layers_in_path": 5,
+      "paths": [
+        [
+          "AML.KYC_PROFILE.PEP_FLAG [SOURCE]",
+          "stg.STG_KYC_PROFILE.PEP_FLAG [STAGING]",
+          "DWH.DIM_KYC.PEP_FLAG [DWH]",
+          "MART.MART_AML_MONITORING.PEP_FLAG [MART]",
+          "UNIVERSE.High_Risk_and_PEP_Customers_Report.PEP_FLAG [REPORT]"
+        ]
+      ]
+    },
+    {
+      "target": "SAP_BO/UNIVERSE/High_Risk_and_PEP_Customers_Report/RISK_SCORE",
+      "target_name": "High_Risk_and_PEP_Customers_Report.RISK_SCORE",
+      "layer": "REPORT",
+      "path_count": 1,
+      "layers_in_path": 5,
+      "paths": [
+        [
+          "AML.KYC_PROFILE.RISK_SCORE [SOURCE]",
+          "stg.STG_KYC_PROFILE.RISK_SCORE [STAGING]",
+          "DWH.DIM_KYC.RISK_SCORE [DWH]",
+          "MART.MART_AML_MONITORING.RISK_SCORE [MART]",
+          "UNIVERSE.High_Risk_and_PEP_Customers_Report.RISK_SCORE [REPORT]"
+        ]
+      ]
+    },
+    {
+      "target": "SAP_BO/UNIVERSE/High_Risk_and_PEP_Customers_Report/RISK_RATING",
+      "target_name": "High_Risk_and_PEP_Customers_Report.RISK_RATING",
+      "layer": "REPORT",
+      "path_count": 1,
+      "layers_in_path": 5,
+      "paths": [
+        [
+          "T24_CORE.CUSTOMER.RISK_RATING [SOURCE]",
+          "stg.STG_CUSTOMER.RISK_RATING [STAGING]",
+          "DWH.DIM_CUSTOMER.RISK_RATING [DWH]",
+          "MART.MART_CUSTOMER_360.RISK_RATING [MART]",
+          "UNIVERSE.High_Risk_and_PEP_Customers_Report.RISK_RATING [REPORT]"
+        ]
+      ]
+    },
+    {
+      "target": "SAP_BO/UNIVERSE/High_Risk_and_PEP_Customers_Report/CUST_NAME",
+      "target_name": "High_Risk_and_PEP_Customers_Report.CUST_NAME",
+      "layer": "REPORT",
+      "path_count": 1,
+      "layers_in_path": 5,
+      "paths": [
+        [
+          "T24_CORE.CUSTOMER.CUST_NAME [SOURCE]",
+          "stg.STG_CUSTOMER.CUST_NAME [STAGING]",
+          "DWH.DIM_CUSTOMER.CUST_NAME [DWH]",
+          "MART.MART_CUSTOMER_360.CUST_NAME [MART]",
+          "UNIVERSE.High_Risk_and_PEP_Customers_Report.CUST_NAME [REPORT]"
+        ]
+      ]
+    },
+    {
+      "target": "SAP_BO/UNIVERSE/Branch_Performance_Scorecard/BRANCH_NAME",
+      "target_name": "Branch_Performance_Scorecard.BRANCH_NAME",
+      "layer": "REPORT",
+      "path_count": 1,
+      "layers_in_path": 5,
+      "paths": [
+        [
+          "T24_CORE.BRANCH.BRANCH_NAME [SOURCE]",
+          "stg.STG_BRANCH.BRANCH_NAME [STAGING]",
+          "DWH.DIM_BRANCH.BRANCH_NAME [DWH]",
+          "MART.MART_BRANCH_PERFORMANCE.BRANCH_NAME [MART]",
+          "UNIVERSE.Branch_Performance_Scorecard.BRANCH_NAME [REPORT]"
+        ]
+      ]
+    },
+    {
+      "target": "SAP_BO/UNIVERSE/Branch_Performance_Scorecard/REGION",
+      "target_name": "Branch_Performance_Scorecard.REGION",
+      "layer": "REPORT",
+      "path_count": 1,
+      "layers_in_path": 5,
+      "paths": [
+        [
+          "T24_CORE.BRANCH.REGION [SOURCE]",
+          "stg.STG_BRANCH.REGION [STAGING]",
+          "DWH.DIM_BRANCH.REGION [DWH]",
+          "MART.MART_BRANCH_PERFORMANCE.REGION [MART]",
+          "UNIVERSE.Branch_Performance_Scorecard.REGION [REPORT]"
+        ]
+      ]
+    },
+    {
+      "target": "SAP_BO/UNIVERSE/Branch_Performance_Scorecard/DEPOSITS",
+      "target_name": "Branch_Performance_Scorecard.DEPOSITS",
+      "layer": "REPORT",
+      "path_count": 2,
+      "layers_in_path": 5,
+      "paths": [
+        [
+          "T24_CORE.ACCOUNT.BALANCE [SOURCE]",
+          "stg.STG_ACCOUNT.BALANCE [STAGING]",
+          "DWH.DIM_ACCOUNT.BALANCE [DWH]",
+          "MART.MART_BRANCH_PERFORMANCE.DEPOSITS [MART]",
+          "UNIVERSE.Branch_Performance_Scorecard.DEPOSITS [REPORT]"
+        ],
+        [
+          "T24_CORE.ACCOUNT.BRANCH_CODE [SOURCE]",
+          "stg.STG_ACCOUNT.BRANCH_CODE [STAGING]",
+          "DWH.DIM_ACCOUNT.BRANCH_CODE [DWH]",
+          "MART.MART_BRANCH_PERFORMANCE.DEPOSITS [MART]",
+          "UNIVERSE.Branch_Performance_Scorecard.DEPOSITS [REPORT]"
+        ]
+      ]
+    },
+    {
+      "target": "SAP_BO/UNIVERSE/Branch_Performance_Scorecard/TXN_COUNT",
+      "target_name": "Branch_Performance_Scorecard.TXN_COUNT",
+      "layer": "REPORT",
+      "path_count": 1,
+      "layers_in_path": 5,
+      "paths": [
+        [
+          "T24_CORE.TRANSACTION.TXN_ID [SOURCE]",
+          "stg.STG_TRANSACTION.TXN_ID [STAGING]",
+          "DWH.FCT_TRANSACTION.TXN_ID [DWH]",
+          "MART.MART_BRANCH_PERFORMANCE.TXN_COUNT [MART]",
+          "UNIVERSE.Branch_Performance_Scorecard.TXN_COUNT [REPORT]"
+        ]
+      ]
+    },
+    {
+      "target": "SAP_BO/UNIVERSE/Branch_Performance_Scorecard/NET_INCOME",
+      "target_name": "Branch_Performance_Scorecard.NET_INCOME",
+      "layer": "REPORT",
+      "path_count": 3,
+      "layers_in_path": 5,
+      "paths": [
+        [
+          "GL.GL_BALANCE.CREDIT [SOURCE]",
+          "stg.STG_GL_BALANCE.CREDIT [STAGING]",
+          "DWH.FCT_GL_BALANCE.CREDIT [DWH]",
+          "MART.MART_BRANCH_PERFORMANCE.NET_INCOME [MART]",
+          "UNIVERSE.Branch_Performance_Scorecard.NET_INCOME [REPORT]"
+        ],
+        [
+          "GL.GL_BALANCE.DEBIT [SOURCE]",
+          "stg.STG_GL_BALANCE.DEBIT [STAGING]",
+          "DWH.FCT_GL_BALANCE.DEBIT [DWH]",
+          "MART.MART_BRANCH_PERFORMANCE.NET_INCOME [MART]",
+          "UNIVERSE.Branch_Performance_Scorecard.NET_INCOME [REPORT]"
+        ],
+        [
+          "GL.GL_BALANCE.COST_CENTER [SOURCE]",
+          "stg.STG_GL_BALANCE.COST_CENTER [STAGING]",
+          "DWH.FCT_GL_BALANCE.COST_CENTER [DWH]",
+          "MART.MART_BRANCH_PERFORMANCE.NET_INCOME [MART]",
+          "UNIVERSE.Branch_Performance_Scorecard.NET_INCOME [REPORT]"
+        ]
+      ]
+    },
+    {
+      "target": "SAP_BO/UNIVERSE/Channel_Usage_Report/CHANNEL",
+      "target_name": "Channel_Usage_Report.CHANNEL",
+      "layer": "REPORT",
+      "path_count": 1,
+      "layers_in_path": 5,
+      "paths": [
+        [
+          "T24_CORE.TRANSACTION.CHANNEL [SOURCE]",
+          "stg.STG_TRANSACTION.CHANNEL [STAGING]",
+          "DWH.FCT_TRANSACTION.CHANNEL [DWH]",
+          "MART.MART_TXN_SUMMARY.CHANNEL [MART]",
+          "UNIVERSE.Channel_Usage_Report.CHANNEL [REPORT]"
+        ]
+      ]
+    },
+    {
+      "target": "SAP_BO/UNIVERSE/Channel_Usage_Report/TXN_COUNT",
+      "target_name": "Channel_Usage_Report.TXN_COUNT",
+      "layer": "REPORT",
+      "path_count": 1,
+      "layers_in_path": 5,
+      "paths": [
+        [
+          "T24_CORE.TRANSACTION.TXN_ID [SOURCE]",
+          "stg.STG_TRANSACTION.TXN_ID [STAGING]",
+          "DWH.FCT_TRANSACTION.TXN_ID [DWH]",
+          "MART.MART_TXN_SUMMARY.TXN_COUNT [MART]",
+          "UNIVERSE.Channel_Usage_Report.TXN_COUNT [REPORT]"
+        ]
+      ]
+    },
+    {
+      "target": "SAP_BO/UNIVERSE/Channel_Usage_Report/TXN_VOLUME",
+      "target_name": "Channel_Usage_Report.TXN_VOLUME",
+      "layer": "REPORT",
+      "path_count": 1,
+      "layers_in_path": 5,
+      "paths": [
+        [
+          "T24_CORE.TRANSACTION.TXN_AMT [SOURCE]",
+          "stg.STG_TRANSACTION.TXN_AMT [STAGING]",
+          "DWH.FCT_TRANSACTION.TXN_AMT [DWH]",
+          "MART.MART_TXN_SUMMARY.TXN_VOLUME [MART]",
+          "UNIVERSE.Channel_Usage_Report.TXN_VOLUME [REPORT]"
+        ]
+      ]
+    },
+    {
+      "target": "SAP_BO/UNIVERSE/Channel_Usage_Report/TXN_DATE",
+      "target_name": "Channel_Usage_Report.TXN_DATE",
+      "layer": "REPORT",
+      "path_count": 1,
+      "layers_in_path": 5,
+      "paths": [
+        [
+          "T24_CORE.TRANSACTION.TXN_DATE [SOURCE]",
+          "stg.STG_TRANSACTION.TXN_DATE [STAGING]",
+          "DWH.FCT_TRANSACTION.TXN_DATE [DWH]",
+          "MART.MART_TXN_SUMMARY.TXN_DATE [MART]",
+          "UNIVERSE.Channel_Usage_Report.TXN_DATE [REPORT]"
+        ]
+      ]
+    },
+    {
+      "target": "SAP_BO/UNIVERSE/Deposits_by_Segment_Report/SEGMENT_CODE",
+      "target_name": "Deposits_by_Segment_Report.SEGMENT_CODE",
+      "layer": "REPORT",
+      "path_count": 1,
+      "layers_in_path": 5,
+      "paths": [
+        [
+          "T24_CORE.CUSTOMER.SEGMENT_CODE [SOURCE]",
+          "stg.STG_CUSTOMER.SEGMENT_CODE [STAGING]",
+          "DWH.DIM_CUSTOMER.SEGMENT_CODE [DWH]",
+          "MART.MART_CUSTOMER_360.SEGMENT_CODE [MART]",
+          "UNIVERSE.Deposits_by_Segment_Report.SEGMENT_CODE [REPORT]"
+        ]
+      ]
+    },
+    {
+      "target": "SAP_BO/UNIVERSE/Deposits_by_Segment_Report/TOTAL_BALANCE",
+      "target_name": "Deposits_by_Segment_Report.TOTAL_BALANCE",
+      "layer": "REPORT",
+      "path_count": 2,
+      "layers_in_path": 5,
+      "paths": [
+        [
+          "T24_CORE.ACCOUNT.BALANCE [SOURCE]",
+          "stg.STG_ACCOUNT.BALANCE [STAGING]",
+          "DWH.DIM_ACCOUNT.BALANCE [DWH]",
+          "MART.MART_CUSTOMER_360.TOTAL_BALANCE [MART]",
+          "UNIVERSE.Deposits_by_Segment_Report.TOTAL_BALANCE [REPORT]"
+        ],
+        [
+          "T24_CORE.ACCOUNT.CUST_ID [SOURCE]",
+          "stg.STG_ACCOUNT.CUST_ID [STAGING]",
+          "DWH.DIM_ACCOUNT.CUST_ID [DWH]",
+          "MART.MART_CUSTOMER_360.TOTAL_BALANCE [MART]",
+          "UNIVERSE.Deposits_by_Segment_Report.TOTAL_BALANCE [REPORT]"
+        ]
+      ]
+    },
+    {
+      "target": "SAP_BO/UNIVERSE/Deposits_by_Segment_Report/CUST_ID",
+      "target_name": "Deposits_by_Segment_Report.CUST_ID",
+      "layer": "REPORT",
+      "path_count": 1,
+      "layers_in_path": 5,
+      "paths": [
+        [
+          "T24_CORE.CUSTOMER.CUST_ID [SOURCE]",
+          "stg.STG_CUSTOMER.CUST_ID [STAGING]",
+          "DWH.DIM_CUSTOMER.CUST_ID [DWH]",
+          "MART.MART_CUSTOMER_360.CUST_ID [MART]",
+          "UNIVERSE.Deposits_by_Segment_Report.CUST_ID [REPORT]"
+        ]
+      ]
+    },
+    {
+      "target": "SAP_BO/UNIVERSE/Loan_to_Deposit_Ratio_Report/TOTAL_LOAN_OUTSTANDING",
+      "target_name": "Loan_to_Deposit_Ratio_Report.TOTAL_LOAN_OUTSTANDING",
+      "layer": "REPORT",
+      "path_count": 1,
+      "layers_in_path": 5,
+      "paths": [
+        [
+          "FCUBS.LOAN.OUTSTANDING_AMT [SOURCE]",
+          "stg.STG_LOAN.OUTSTANDING_AMT [STAGING]",
+          "DWH.FCT_LOAN.OUTSTANDING_AMT [DWH]",
+          "MART.MART_CUSTOMER_360.TOTAL_LOAN_OUTSTANDING [MART]",
+          "UNIVERSE.Loan_to_Deposit_Ratio_Report.TOTAL_LOAN_OUTSTANDING [REPORT]"
+        ]
+      ]
+    },
+    {
+      "target": "SAP_BO/UNIVERSE/Loan_to_Deposit_Ratio_Report/TOTAL_BALANCE",
+      "target_name": "Loan_to_Deposit_Ratio_Report.TOTAL_BALANCE",
+      "layer": "REPORT",
+      "path_count": 2,
+      "layers_in_path": 5,
+      "paths": [
+        [
+          "T24_CORE.ACCOUNT.BALANCE [SOURCE]",
+          "stg.STG_ACCOUNT.BALANCE [STAGING]",
+          "DWH.DIM_ACCOUNT.BALANCE [DWH]",
+          "MART.MART_CUSTOMER_360.TOTAL_BALANCE [MART]",
+          "UNIVERSE.Loan_to_Deposit_Ratio_Report.TOTAL_BALANCE [REPORT]"
+        ],
+        [
+          "T24_CORE.ACCOUNT.CUST_ID [SOURCE]",
+          "stg.STG_ACCOUNT.CUST_ID [STAGING]",
+          "DWH.DIM_ACCOUNT.CUST_ID [DWH]",
+          "MART.MART_CUSTOMER_360.TOTAL_BALANCE [MART]",
+          "UNIVERSE.Loan_to_Deposit_Ratio_Report.TOTAL_BALANCE [REPORT]"
+        ]
+      ]
+    },
+    {
+      "target": "SAP_BO/UNIVERSE/Loan_to_Deposit_Ratio_Report/DEPOSITS",
+      "target_name": "Loan_to_Deposit_Ratio_Report.DEPOSITS",
+      "layer": "REPORT",
+      "path_count": 2,
+      "layers_in_path": 5,
+      "paths": [
+        [
+          "T24_CORE.ACCOUNT.BALANCE [SOURCE]",
+          "stg.STG_ACCOUNT.BALANCE [STAGING]",
+          "DWH.DIM_ACCOUNT.BALANCE [DWH]",
+          "MART.MART_BRANCH_PERFORMANCE.DEPOSITS [MART]",
+          "UNIVERSE.Loan_to_Deposit_Ratio_Report.DEPOSITS [REPORT]"
+        ],
+        [
+          "T24_CORE.ACCOUNT.BRANCH_CODE [SOURCE]",
+          "stg.STG_ACCOUNT.BRANCH_CODE [STAGING]",
+          "DWH.DIM_ACCOUNT.BRANCH_CODE [DWH]",
+          "MART.MART_BRANCH_PERFORMANCE.DEPOSITS [MART]",
+          "UNIVERSE.Loan_to_Deposit_Ratio_Report.DEPOSITS [REPORT]"
+        ]
+      ]
+    },
+    {
+      "target": "SAP_BO/UNIVERSE/Card_Portfolio_Report/CARD_COUNT",
+      "target_name": "Card_Portfolio_Report.CARD_COUNT",
+      "layer": "REPORT",
+      "path_count": 1,
+      "layers_in_path": 5,
+      "paths": [
+        [
+          "WAY4.CARD.CARD_ID [SOURCE]",
+          "stg.STG_CARD.CARD_ID [STAGING]",
+          "DWH.DIM_CARD.CARD_ID [DWH]",
+          "MART.MART_CUSTOMER_360.CARD_COUNT [MART]",
+          "UNIVERSE.Card_Portfolio_Report.CARD_COUNT [REPORT]"
+        ]
+      ]
+    },
+    {
+      "target": "SAP_BO/UNIVERSE/Card_Portfolio_Report/CUST_ID",
+      "target_name": "Card_Portfolio_Report.CUST_ID",
+      "layer": "REPORT",
+      "path_count": 1,
+      "layers_in_path": 5,
+      "paths": [
+        [
+          "T24_CORE.CUSTOMER.CUST_ID [SOURCE]",
+          "stg.STG_CUSTOMER.CUST_ID [STAGING]",
+          "DWH.DIM_CUSTOMER.CUST_ID [DWH]",
+          "MART.MART_CUSTOMER_360.CUST_ID [MART]",
+          "UNIVERSE.Card_Portfolio_Report.CUST_ID [REPORT]"
+        ]
+      ]
+    },
+    {
+      "target": "SAP_BO/UNIVERSE/Card_Portfolio_Report/SEGMENT_CODE",
+      "target_name": "Card_Portfolio_Report.SEGMENT_CODE",
+      "layer": "REPORT",
+      "path_count": 1,
+      "layers_in_path": 5,
+      "paths": [
+        [
+          "T24_CORE.CUSTOMER.SEGMENT_CODE [SOURCE]",
+          "stg.STG_CUSTOMER.SEGMENT_CODE [STAGING]",
+          "DWH.DIM_CUSTOMER.SEGMENT_CODE [DWH]",
+          "MART.MART_CUSTOMER_360.SEGMENT_CODE [MART]",
+          "UNIVERSE.Card_Portfolio_Report.SEGMENT_CODE [REPORT]"
+        ]
+      ]
+    },
+    {
+      "target": "SAP_BO/UNIVERSE/Regulatory_Liquidity_Return_(CBE)/DEPOSITS",
+      "target_name": "Regulatory_Liquidity_Return_(CBE).DEPOSITS",
+      "layer": "REPORT",
+      "path_count": 2,
+      "layers_in_path": 5,
+      "paths": [
+        [
+          "T24_CORE.ACCOUNT.BALANCE [SOURCE]",
+          "stg.STG_ACCOUNT.BALANCE [STAGING]",
+          "DWH.DIM_ACCOUNT.BALANCE [DWH]",
+          "MART.MART_BRANCH_PERFORMANCE.DEPOSITS [MART]",
+          "UNIVERSE.Regulatory_Liquidity_Return_(CBE).DEPOSITS [REPORT]"
+        ],
+        [
+          "T24_CORE.ACCOUNT.BRANCH_CODE [SOURCE]",
+          "stg.STG_ACCOUNT.BRANCH_CODE [STAGING]",
+          "DWH.DIM_ACCOUNT.BRANCH_CODE [DWH]",
+          "MART.MART_BRANCH_PERFORMANCE.DEPOSITS [MART]",
+          "UNIVERSE.Regulatory_Liquidity_Return_(CBE).DEPOSITS [REPORT]"
+        ]
+      ]
+    },
+    {
+      "target": "SAP_BO/UNIVERSE/Regulatory_Liquidity_Return_(CBE)/TOTAL_LOAN_OUTSTANDING",
+      "target_name": "Regulatory_Liquidity_Return_(CBE).TOTAL_LOAN_OUTSTANDING",
+      "layer": "REPORT",
+      "path_count": 1,
+      "layers_in_path": 5,
+      "paths": [
+        [
+          "FCUBS.LOAN.OUTSTANDING_AMT [SOURCE]",
+          "stg.STG_LOAN.OUTSTANDING_AMT [STAGING]",
+          "DWH.FCT_LOAN.OUTSTANDING_AMT [DWH]",
+          "MART.MART_CUSTOMER_360.TOTAL_LOAN_OUTSTANDING [MART]",
+          "UNIVERSE.Regulatory_Liquidity_Return_(CBE).TOTAL_LOAN_OUTSTANDING [REPORT]"
+        ]
+      ]
+    },
+    {
+      "target": "SAP_BO/UNIVERSE/Daily_Transactions_Monitoring/TXN_DATE",
+      "target_name": "Daily_Transactions_Monitoring.TXN_DATE",
+      "layer": "REPORT",
+      "path_count": 1,
+      "layers_in_path": 5,
+      "paths": [
+        [
+          "T24_CORE.TRANSACTION.TXN_DATE [SOURCE]",
+          "stg.STG_TRANSACTION.TXN_DATE [STAGING]",
+          "DWH.FCT_TRANSACTION.TXN_DATE [DWH]",
+          "MART.MART_TXN_SUMMARY.TXN_DATE [MART]",
+          "UNIVERSE.Daily_Transactions_Monitoring.TXN_DATE [REPORT]"
+        ]
+      ]
+    },
+    {
+      "target": "SAP_BO/UNIVERSE/Daily_Transactions_Monitoring/TXN_COUNT",
+      "target_name": "Daily_Transactions_Monitoring.TXN_COUNT",
+      "layer": "REPORT",
+      "path_count": 1,
+      "layers_in_path": 5,
+      "paths": [
+        [
+          "T24_CORE.TRANSACTION.TXN_ID [SOURCE]",
+          "stg.STG_TRANSACTION.TXN_ID [STAGING]",
+          "DWH.FCT_TRANSACTION.TXN_ID [DWH]",
+          "MART.MART_TXN_SUMMARY.TXN_COUNT [MART]",
+          "UNIVERSE.Daily_Transactions_Monitoring.TXN_COUNT [REPORT]"
+        ]
+      ]
+    },
+    {
+      "target": "SAP_BO/UNIVERSE/Daily_Transactions_Monitoring/TXN_COUNT_BRA",
+      "target_name": "Daily_Transactions_Monitoring.TXN_COUNT",
+      "layer": "REPORT",
+      "path_count": 1,
+      "layers_in_path": 5,
+      "paths": [
+        [
+          "T24_CORE.TRANSACTION.TXN_ID [SOURCE]",
+          "stg.STG_TRANSACTION.TXN_ID [STAGING]",
+          "DWH.FCT_TRANSACTION.TXN_ID [DWH]",
+          "MART.MART_BRANCH_PERFORMANCE.TXN_COUNT [MART]",
+          "UNIVERSE.Daily_Transactions_Monitoring.TXN_COUNT [REPORT]"
+        ]
+      ]
+    },
+    {
+      "target": "SAP_BO/UNIVERSE/Customer_Onboarding_Report/CUST_ID",
+      "target_name": "Customer_Onboarding_Report.CUST_ID",
+      "layer": "REPORT",
+      "path_count": 1,
+      "layers_in_path": 5,
+      "paths": [
+        [
+          "T24_CORE.CUSTOMER.CUST_ID [SOURCE]",
+          "stg.STG_CUSTOMER.CUST_ID [STAGING]",
+          "DWH.DIM_CUSTOMER.CUST_ID [DWH]",
+          "MART.MART_CUSTOMER_360.CUST_ID [MART]",
+          "UNIVERSE.Customer_Onboarding_Report.CUST_ID [REPORT]"
+        ]
+      ]
+    },
+    {
+      "target": "SAP_BO/UNIVERSE/Customer_Onboarding_Report/SEGMENT_CODE",
+      "target_name": "Customer_Onboarding_Report.SEGMENT_CODE",
+      "layer": "REPORT",
+      "path_count": 1,
+      "layers_in_path": 5,
+      "paths": [
+        [
+          "T24_CORE.CUSTOMER.SEGMENT_CODE [SOURCE]",
+          "stg.STG_CUSTOMER.SEGMENT_CODE [STAGING]",
+          "DWH.DIM_CUSTOMER.SEGMENT_CODE [DWH]",
+          "MART.MART_CUSTOMER_360.SEGMENT_CODE [MART]",
+          "UNIVERSE.Customer_Onboarding_Report.SEGMENT_CODE [REPORT]"
+        ]
+      ]
+    },
+    {
+      "target": "SAP_BO/UNIVERSE/Customer_Onboarding_Report/BRANCH_NAME",
+      "target_name": "Customer_Onboarding_Report.BRANCH_NAME",
+      "layer": "REPORT",
+      "path_count": 2,
+      "layers_in_path": 5,
+      "paths": [
+        [
+          "T24_CORE.BRANCH.BRANCH_NAME [SOURCE]",
+          "stg.STG_BRANCH.BRANCH_NAME [STAGING]",
+          "DWH.DIM_BRANCH.BRANCH_NAME [DWH]",
+          "MART.MART_CUSTOMER_360.BRANCH_NAME [MART]",
+          "UNIVERSE.Customer_Onboarding_Report.BRANCH_NAME [REPORT]"
+        ],
+        [
+          "T24_CORE.CUSTOMER.BRANCH_CODE [SOURCE]",
+          "stg.STG_CUSTOMER.BRANCH_CODE [STAGING]",
+          "DWH.DIM_CUSTOMER.BRANCH_CODE [DWH]",
+          "MART.MART_CUSTOMER_360.BRANCH_NAME [MART]",
+          "UNIVERSE.Customer_Onboarding_Report.BRANCH_NAME [REPORT]"
+        ]
+      ]
+    },
+    {
+      "target": "SAP_BO/UNIVERSE/Customer_Onboarding_Report/KYC_STATUS",
+      "target_name": "Customer_Onboarding_Report.KYC_STATUS",
+      "layer": "REPORT",
+      "path_count": 1,
+      "layers_in_path": 5,
+      "paths": [
+        [
+          "T24_CORE.CUSTOMER.KYC_STATUS [SOURCE]",
+          "stg.STG_CUSTOMER.KYC_STATUS [STAGING]",
+          "DWH.DIM_CUSTOMER.KYC_STATUS [DWH]",
+          "MART.MART_CUSTOMER_360.KYC_STATUS [MART]",
+          "UNIVERSE.Customer_Onboarding_Report.KYC_STATUS [REPORT]"
+        ]
+      ]
+    },
+    {
+      "target": "SAP_BO/UNIVERSE/Branch_Net_Income_Report/NET_INCOME",
+      "target_name": "Branch_Net_Income_Report.NET_INCOME",
+      "layer": "REPORT",
+      "path_count": 3,
+      "layers_in_path": 5,
+      "paths": [
+        [
+          "GL.GL_BALANCE.CREDIT [SOURCE]",
+          "stg.STG_GL_BALANCE.CREDIT [STAGING]",
+          "DWH.FCT_GL_BALANCE.CREDIT [DWH]",
+          "MART.MART_BRANCH_PERFORMANCE.NET_INCOME [MART]",
+          "UNIVERSE.Branch_Net_Income_Report.NET_INCOME [REPORT]"
+        ],
+        [
+          "GL.GL_BALANCE.DEBIT [SOURCE]",
+          "stg.STG_GL_BALANCE.DEBIT [STAGING]",
+          "DWH.FCT_GL_BALANCE.DEBIT [DWH]",
+          "MART.MART_BRANCH_PERFORMANCE.NET_INCOME [MART]",
+          "UNIVERSE.Branch_Net_Income_Report.NET_INCOME [REPORT]"
+        ],
+        [
+          "GL.GL_BALANCE.COST_CENTER [SOURCE]",
+          "stg.STG_GL_BALANCE.COST_CENTER [STAGING]",
+          "DWH.FCT_GL_BALANCE.COST_CENTER [DWH]",
+          "MART.MART_BRANCH_PERFORMANCE.NET_INCOME [MART]",
+          "UNIVERSE.Branch_Net_Income_Report.NET_INCOME [REPORT]"
+        ]
+      ]
+    },
+    {
+      "target": "SAP_BO/UNIVERSE/Branch_Net_Income_Report/BRANCH_CODE",
+      "target_name": "Branch_Net_Income_Report.BRANCH_CODE",
+      "layer": "REPORT",
+      "path_count": 1,
+      "layers_in_path": 5,
+      "paths": [
+        [
+          "T24_CORE.BRANCH.BRANCH_CODE [SOURCE]",
+          "stg.STG_BRANCH.BRANCH_CODE [STAGING]",
+          "DWH.DIM_BRANCH.BRANCH_CODE [DWH]",
+          "MART.MART_BRANCH_PERFORMANCE.BRANCH_CODE [MART]",
+          "UNIVERSE.Branch_Net_Income_Report.BRANCH_CODE [REPORT]"
+        ]
+      ]
+    },
+    {
+      "target": "SAP_BO/UNIVERSE/Early_Warning_Credit_Report/DPD",
+      "target_name": "Early_Warning_Credit_Report.DPD",
+      "layer": "REPORT",
+      "path_count": 1,
+      "layers_in_path": 5,
+      "paths": [
+        [
+          "FCUBS.LOAN.DPD [SOURCE]",
+          "stg.STG_LOAN.DPD [STAGING]",
+          "DWH.FCT_LOAN.DPD [DWH]",
+          "MART.MART_CREDIT_RISK.DPD [MART]",
+          "UNIVERSE.Early_Warning_Credit_Report.DPD [REPORT]"
+        ]
+      ]
+    },
+    {
+      "target": "SAP_BO/UNIVERSE/Early_Warning_Credit_Report/IFRS9_STAGE",
+      "target_name": "Early_Warning_Credit_Report.IFRS9_STAGE",
+      "layer": "REPORT",
+      "path_count": 1,
+      "layers_in_path": 5,
+      "paths": [
+        [
+          "FCUBS.LOAN.IFRS9_STAGE [SOURCE]",
+          "stg.STG_LOAN.IFRS9_STAGE [STAGING]",
+          "DWH.FCT_LOAN.IFRS9_STAGE [DWH]",
+          "MART.MART_CREDIT_RISK.IFRS9_STAGE [MART]",
+          "UNIVERSE.Early_Warning_Credit_Report.IFRS9_STAGE [REPORT]"
+        ]
+      ]
+    },
+    {
+      "target": "SAP_BO/UNIVERSE/Early_Warning_Credit_Report/CUST_ID",
+      "target_name": "Early_Warning_Credit_Report.CUST_ID",
+      "layer": "REPORT",
+      "path_count": 1,
+      "layers_in_path": 5,
+      "paths": [
+        [
+          "FCUBS.LOAN.CUST_ID [SOURCE]",
+          "stg.STG_LOAN.CUST_ID [STAGING]",
+          "DWH.FCT_LOAN.CUST_ID [DWH]",
+          "MART.MART_CREDIT_RISK.CUST_ID [MART]",
+          "UNIVERSE.Early_Warning_Credit_Report.CUST_ID [REPORT]"
+        ]
+      ]
+    },
+    {
+      "target": "SAP_BO/UNIVERSE/Early_Warning_Credit_Report/RISK_RATING",
+      "target_name": "Early_Warning_Credit_Report.RISK_RATING",
+      "layer": "REPORT",
+      "path_count": 1,
+      "layers_in_path": 5,
+      "paths": [
+        [
+          "T24_CORE.CUSTOMER.RISK_RATING [SOURCE]",
+          "stg.STG_CUSTOMER.RISK_RATING [STAGING]",
+          "DWH.DIM_CUSTOMER.RISK_RATING [DWH]",
+          "MART.MART_CUSTOMER_360.RISK_RATING [MART]",
+          "UNIVERSE.Early_Warning_Credit_Report.RISK_RATING [REPORT]"
+        ]
+      ]
+    },
+    {
+      "target": "SAP_BO/UNIVERSE/Regional_Management_Pack/REGION",
+      "target_name": "Regional_Management_Pack.REGION",
+      "layer": "REPORT",
+      "path_count": 1,
+      "layers_in_path": 5,
+      "paths": [
+        [
+          "T24_CORE.BRANCH.REGION [SOURCE]",
+          "stg.STG_BRANCH.REGION [STAGING]",
+          "DWH.DIM_BRANCH.REGION [DWH]",
+          "MART.MART_BRANCH_PERFORMANCE.REGION [MART]",
+          "UNIVERSE.Regional_Management_Pack.REGION [REPORT]"
+        ]
+      ]
+    },
+    {
+      "target": "SAP_BO/UNIVERSE/Regional_Management_Pack/DEPOSITS",
+      "target_name": "Regional_Management_Pack.DEPOSITS",
+      "layer": "REPORT",
+      "path_count": 2,
+      "layers_in_path": 5,
+      "paths": [
+        [
+          "T24_CORE.ACCOUNT.BALANCE [SOURCE]",
+          "stg.STG_ACCOUNT.BALANCE [STAGING]",
+          "DWH.DIM_ACCOUNT.BALANCE [DWH]",
+          "MART.MART_BRANCH_PERFORMANCE.DEPOSITS [MART]",
+          "UNIVERSE.Regional_Management_Pack.DEPOSITS [REPORT]"
+        ],
+        [
+          "T24_CORE.ACCOUNT.BRANCH_CODE [SOURCE]",
+          "stg.STG_ACCOUNT.BRANCH_CODE [STAGING]",
+          "DWH.DIM_ACCOUNT.BRANCH_CODE [DWH]",
+          "MART.MART_BRANCH_PERFORMANCE.DEPOSITS [MART]",
+          "UNIVERSE.Regional_Management_Pack.DEPOSITS [REPORT]"
+        ]
+      ]
+    },
+    {
+      "target": "SAP_BO/UNIVERSE/Regional_Management_Pack/NET_INCOME",
+      "target_name": "Regional_Management_Pack.NET_INCOME",
+      "layer": "REPORT",
+      "path_count": 3,
+      "layers_in_path": 5,
+      "paths": [
+        [
+          "GL.GL_BALANCE.CREDIT [SOURCE]",
+          "stg.STG_GL_BALANCE.CREDIT [STAGING]",
+          "DWH.FCT_GL_BALANCE.CREDIT [DWH]",
+          "MART.MART_BRANCH_PERFORMANCE.NET_INCOME [MART]",
+          "UNIVERSE.Regional_Management_Pack.NET_INCOME [REPORT]"
+        ],
+        [
+          "GL.GL_BALANCE.DEBIT [SOURCE]",
+          "stg.STG_GL_BALANCE.DEBIT [STAGING]",
+          "DWH.FCT_GL_BALANCE.DEBIT [DWH]",
+          "MART.MART_BRANCH_PERFORMANCE.NET_INCOME [MART]",
+          "UNIVERSE.Regional_Management_Pack.NET_INCOME [REPORT]"
+        ],
+        [
+          "GL.GL_BALANCE.COST_CENTER [SOURCE]",
+          "stg.STG_GL_BALANCE.COST_CENTER [STAGING]",
+          "DWH.FCT_GL_BALANCE.COST_CENTER [DWH]",
+          "MART.MART_BRANCH_PERFORMANCE.NET_INCOME [MART]",
+          "UNIVERSE.Regional_Management_Pack.NET_INCOME [REPORT]"
+        ]
+      ]
+    },
+    {
+      "target": "SAP_BO/UNIVERSE/Regional_Management_Pack/CUST_ID",
+      "target_name": "Regional_Management_Pack.CUST_ID",
+      "layer": "REPORT",
+      "path_count": 1,
+      "layers_in_path": 5,
+      "paths": [
+        [
+          "T24_CORE.CUSTOMER.CUST_ID [SOURCE]",
+          "stg.STG_CUSTOMER.CUST_ID [STAGING]",
+          "DWH.DIM_CUSTOMER.CUST_ID [DWH]",
+          "MART.MART_CUSTOMER_360.CUST_ID [MART]",
+          "UNIVERSE.Regional_Management_Pack.CUST_ID [REPORT]"
+        ]
+      ]
+    }
+  ]
+}

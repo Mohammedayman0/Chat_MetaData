@@ -1,0 +1,4812 @@
+{
+  "taxonomy": {
+    "levels": [
+      {
+        "name": "Public",
+        "description": "No impact if disclosed"
+      },
+      {
+        "name": "Internal",
+        "description": "For internal use"
+      },
+      {
+        "name": "Confidential",
+        "description": "Disclosure causes financial/reputational damage"
+      },
+      {
+        "name": "Restricted",
+        "description": "Highest sensitivity; strict need-to-know"
+      }
+    ],
+    "tags": [
+      "PII",
+      "PCI",
+      "Financial",
+      "AML-Sensitive",
+      "Risk-Model"
+    ]
+  },
+  "totalCount": 294,
+  "items": [
+    {
+      "column_id": "T24_ORACLE/T24_CORE/CUSTOMER/CUST_ID",
+      "name": "T24_CORE.CUSTOMER.CUST_ID",
+      "layer": "SOURCE",
+      "level": "Internal",
+      "tags": [],
+      "sensitive": false,
+      "masking_rule": "None",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "EDC auto-classification"
+    },
+    {
+      "column_id": "HIVE_LAKE/stg/STG_CUSTOMER/CUST_ID",
+      "name": "stg.STG_CUSTOMER.CUST_ID",
+      "layer": "STAGING",
+      "level": "Internal",
+      "tags": [],
+      "sensitive": false,
+      "masking_rule": "None",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "Axon policy"
+    },
+    {
+      "column_id": "ORA_DWH/DWH/DIM_CUSTOMER/CUST_ID",
+      "name": "DWH.DIM_CUSTOMER.CUST_ID",
+      "layer": "DWH",
+      "level": "Internal",
+      "tags": [],
+      "sensitive": false,
+      "masking_rule": "None",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "Steward manual"
+    },
+    {
+      "column_id": "T24_ORACLE/T24_CORE/CUSTOMER/CUST_NAME",
+      "name": "T24_CORE.CUSTOMER.CUST_NAME",
+      "layer": "SOURCE",
+      "level": "Confidential",
+      "tags": [
+        "PII"
+      ],
+      "sensitive": true,
+      "masking_rule": "No masking for stewards; mask for general users",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "Steward manual"
+    },
+    {
+      "column_id": "HIVE_LAKE/stg/STG_CUSTOMER/CUST_NAME",
+      "name": "stg.STG_CUSTOMER.CUST_NAME",
+      "layer": "STAGING",
+      "level": "Confidential",
+      "tags": [
+        "PII"
+      ],
+      "sensitive": true,
+      "masking_rule": "No masking for stewards; mask for general users",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "Axon policy"
+    },
+    {
+      "column_id": "ORA_DWH/DWH/DIM_CUSTOMER/CUST_NAME",
+      "name": "DWH.DIM_CUSTOMER.CUST_NAME",
+      "layer": "DWH",
+      "level": "Confidential",
+      "tags": [
+        "PII"
+      ],
+      "sensitive": true,
+      "masking_rule": "No masking for stewards; mask for general users",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "Axon policy"
+    },
+    {
+      "column_id": "T24_ORACLE/T24_CORE/CUSTOMER/NATIONAL_ID",
+      "name": "T24_CORE.CUSTOMER.NATIONAL_ID",
+      "layer": "SOURCE",
+      "level": "Restricted",
+      "tags": [
+        "PII"
+      ],
+      "sensitive": true,
+      "masking_rule": "Mask all but last 4 digits",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "Axon policy"
+    },
+    {
+      "column_id": "HIVE_LAKE/stg/STG_CUSTOMER/NATIONAL_ID",
+      "name": "stg.STG_CUSTOMER.NATIONAL_ID",
+      "layer": "STAGING",
+      "level": "Restricted",
+      "tags": [
+        "PII"
+      ],
+      "sensitive": true,
+      "masking_rule": "Mask all but last 4 digits",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "Steward manual"
+    },
+    {
+      "column_id": "ORA_DWH/DWH/DIM_CUSTOMER/NATIONAL_ID",
+      "name": "DWH.DIM_CUSTOMER.NATIONAL_ID",
+      "layer": "DWH",
+      "level": "Restricted",
+      "tags": [
+        "PII"
+      ],
+      "sensitive": true,
+      "masking_rule": "Mask all but last 4 digits",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "Axon policy"
+    },
+    {
+      "column_id": "T24_ORACLE/T24_CORE/CUSTOMER/DOB",
+      "name": "T24_CORE.CUSTOMER.DOB",
+      "layer": "SOURCE",
+      "level": "Confidential",
+      "tags": [
+        "PII"
+      ],
+      "sensitive": true,
+      "masking_rule": "Role-based access",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "Steward manual"
+    },
+    {
+      "column_id": "HIVE_LAKE/stg/STG_CUSTOMER/DOB",
+      "name": "stg.STG_CUSTOMER.DOB",
+      "layer": "STAGING",
+      "level": "Confidential",
+      "tags": [
+        "PII"
+      ],
+      "sensitive": true,
+      "masking_rule": "Role-based access",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "Axon policy"
+    },
+    {
+      "column_id": "ORA_DWH/DWH/DIM_CUSTOMER/DOB",
+      "name": "DWH.DIM_CUSTOMER.DOB",
+      "layer": "DWH",
+      "level": "Confidential",
+      "tags": [
+        "PII"
+      ],
+      "sensitive": true,
+      "masking_rule": "Role-based access",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "Steward manual"
+    },
+    {
+      "column_id": "T24_ORACLE/T24_CORE/CUSTOMER/GENDER",
+      "name": "T24_CORE.CUSTOMER.GENDER",
+      "layer": "SOURCE",
+      "level": "Internal",
+      "tags": [],
+      "sensitive": false,
+      "masking_rule": "None",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "EDC auto-classification"
+    },
+    {
+      "column_id": "HIVE_LAKE/stg/STG_CUSTOMER/GENDER",
+      "name": "stg.STG_CUSTOMER.GENDER",
+      "layer": "STAGING",
+      "level": "Internal",
+      "tags": [],
+      "sensitive": false,
+      "masking_rule": "None",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "Steward manual"
+    },
+    {
+      "column_id": "ORA_DWH/DWH/DIM_CUSTOMER/GENDER",
+      "name": "DWH.DIM_CUSTOMER.GENDER",
+      "layer": "DWH",
+      "level": "Internal",
+      "tags": [],
+      "sensitive": false,
+      "masking_rule": "None",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "EDC auto-classification"
+    },
+    {
+      "column_id": "T24_ORACLE/T24_CORE/CUSTOMER/MOBILE_NO",
+      "name": "T24_CORE.CUSTOMER.MOBILE_NO",
+      "layer": "SOURCE",
+      "level": "Confidential",
+      "tags": [
+        "PII"
+      ],
+      "sensitive": true,
+      "masking_rule": "Mask middle digits",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "Steward manual"
+    },
+    {
+      "column_id": "HIVE_LAKE/stg/STG_CUSTOMER/MOBILE_NO",
+      "name": "stg.STG_CUSTOMER.MOBILE_NO",
+      "layer": "STAGING",
+      "level": "Confidential",
+      "tags": [
+        "PII"
+      ],
+      "sensitive": true,
+      "masking_rule": "Mask middle digits",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "EDC auto-classification"
+    },
+    {
+      "column_id": "ORA_DWH/DWH/DIM_CUSTOMER/MOBILE_NO",
+      "name": "DWH.DIM_CUSTOMER.MOBILE_NO",
+      "layer": "DWH",
+      "level": "Confidential",
+      "tags": [
+        "PII"
+      ],
+      "sensitive": true,
+      "masking_rule": "Mask middle digits",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "Axon policy"
+    },
+    {
+      "column_id": "T24_ORACLE/T24_CORE/CUSTOMER/EMAIL",
+      "name": "T24_CORE.CUSTOMER.EMAIL",
+      "layer": "SOURCE",
+      "level": "Confidential",
+      "tags": [
+        "PII"
+      ],
+      "sensitive": true,
+      "masking_rule": "Partial mask local part",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "Steward manual"
+    },
+    {
+      "column_id": "HIVE_LAKE/stg/STG_CUSTOMER/EMAIL",
+      "name": "stg.STG_CUSTOMER.EMAIL",
+      "layer": "STAGING",
+      "level": "Confidential",
+      "tags": [
+        "PII"
+      ],
+      "sensitive": true,
+      "masking_rule": "Partial mask local part",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "EDC auto-classification"
+    },
+    {
+      "column_id": "ORA_DWH/DWH/DIM_CUSTOMER/EMAIL",
+      "name": "DWH.DIM_CUSTOMER.EMAIL",
+      "layer": "DWH",
+      "level": "Confidential",
+      "tags": [
+        "PII"
+      ],
+      "sensitive": true,
+      "masking_rule": "Partial mask local part",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "EDC auto-classification"
+    },
+    {
+      "column_id": "T24_ORACLE/T24_CORE/CUSTOMER/SEGMENT_CODE",
+      "name": "T24_CORE.CUSTOMER.SEGMENT_CODE",
+      "layer": "SOURCE",
+      "level": "Internal",
+      "tags": [],
+      "sensitive": false,
+      "masking_rule": "None",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "EDC auto-classification"
+    },
+    {
+      "column_id": "HIVE_LAKE/stg/STG_CUSTOMER/SEGMENT_CODE",
+      "name": "stg.STG_CUSTOMER.SEGMENT_CODE",
+      "layer": "STAGING",
+      "level": "Internal",
+      "tags": [],
+      "sensitive": false,
+      "masking_rule": "None",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "Steward manual"
+    },
+    {
+      "column_id": "ORA_DWH/DWH/DIM_CUSTOMER/SEGMENT_CODE",
+      "name": "DWH.DIM_CUSTOMER.SEGMENT_CODE",
+      "layer": "DWH",
+      "level": "Internal",
+      "tags": [],
+      "sensitive": false,
+      "masking_rule": "None",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "Axon policy"
+    },
+    {
+      "column_id": "T24_ORACLE/T24_CORE/CUSTOMER/KYC_STATUS",
+      "name": "T24_CORE.CUSTOMER.KYC_STATUS",
+      "layer": "SOURCE",
+      "level": "Confidential",
+      "tags": [
+        "AML-Sensitive"
+      ],
+      "sensitive": true,
+      "masking_rule": "Role-based access",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework",
+        "AML Law 80/2002"
+      ],
+      "retention_years": 10,
+      "assigned_by": "Axon policy"
+    },
+    {
+      "column_id": "HIVE_LAKE/stg/STG_CUSTOMER/KYC_STATUS",
+      "name": "stg.STG_CUSTOMER.KYC_STATUS",
+      "layer": "STAGING",
+      "level": "Confidential",
+      "tags": [
+        "AML-Sensitive"
+      ],
+      "sensitive": true,
+      "masking_rule": "Role-based access",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework",
+        "AML Law 80/2002"
+      ],
+      "retention_years": 10,
+      "assigned_by": "Steward manual"
+    },
+    {
+      "column_id": "ORA_DWH/DWH/DIM_CUSTOMER/KYC_STATUS",
+      "name": "DWH.DIM_CUSTOMER.KYC_STATUS",
+      "layer": "DWH",
+      "level": "Confidential",
+      "tags": [
+        "AML-Sensitive"
+      ],
+      "sensitive": true,
+      "masking_rule": "Role-based access",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework",
+        "AML Law 80/2002"
+      ],
+      "retention_years": 10,
+      "assigned_by": "Steward manual"
+    },
+    {
+      "column_id": "T24_ORACLE/T24_CORE/CUSTOMER/RISK_RATING",
+      "name": "T24_CORE.CUSTOMER.RISK_RATING",
+      "layer": "SOURCE",
+      "level": "Restricted",
+      "tags": [
+        "AML-Sensitive"
+      ],
+      "sensitive": true,
+      "masking_rule": "Role-based access",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework",
+        "AML Law 80/2002"
+      ],
+      "retention_years": 10,
+      "assigned_by": "Steward manual"
+    },
+    {
+      "column_id": "HIVE_LAKE/stg/STG_CUSTOMER/RISK_RATING",
+      "name": "stg.STG_CUSTOMER.RISK_RATING",
+      "layer": "STAGING",
+      "level": "Restricted",
+      "tags": [
+        "AML-Sensitive"
+      ],
+      "sensitive": true,
+      "masking_rule": "Role-based access",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework",
+        "AML Law 80/2002"
+      ],
+      "retention_years": 10,
+      "assigned_by": "Steward manual"
+    },
+    {
+      "column_id": "ORA_DWH/DWH/DIM_CUSTOMER/RISK_RATING",
+      "name": "DWH.DIM_CUSTOMER.RISK_RATING",
+      "layer": "DWH",
+      "level": "Restricted",
+      "tags": [
+        "AML-Sensitive"
+      ],
+      "sensitive": true,
+      "masking_rule": "Role-based access",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework",
+        "AML Law 80/2002"
+      ],
+      "retention_years": 10,
+      "assigned_by": "Steward manual"
+    },
+    {
+      "column_id": "T24_ORACLE/T24_CORE/CUSTOMER/OPEN_DATE",
+      "name": "T24_CORE.CUSTOMER.OPEN_DATE",
+      "layer": "SOURCE",
+      "level": "Internal",
+      "tags": [],
+      "sensitive": false,
+      "masking_rule": "None",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "EDC auto-classification"
+    },
+    {
+      "column_id": "HIVE_LAKE/stg/STG_CUSTOMER/OPEN_DATE",
+      "name": "stg.STG_CUSTOMER.OPEN_DATE",
+      "layer": "STAGING",
+      "level": "Internal",
+      "tags": [],
+      "sensitive": false,
+      "masking_rule": "None",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "EDC auto-classification"
+    },
+    {
+      "column_id": "ORA_DWH/DWH/DIM_CUSTOMER/OPEN_DATE",
+      "name": "DWH.DIM_CUSTOMER.OPEN_DATE",
+      "layer": "DWH",
+      "level": "Internal",
+      "tags": [],
+      "sensitive": false,
+      "masking_rule": "None",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "Axon policy"
+    },
+    {
+      "column_id": "T24_ORACLE/T24_CORE/CUSTOMER/BRANCH_CODE",
+      "name": "T24_CORE.CUSTOMER.BRANCH_CODE",
+      "layer": "SOURCE",
+      "level": "Internal",
+      "tags": [],
+      "sensitive": false,
+      "masking_rule": "None",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "Steward manual"
+    },
+    {
+      "column_id": "HIVE_LAKE/stg/STG_CUSTOMER/BRANCH_CODE",
+      "name": "stg.STG_CUSTOMER.BRANCH_CODE",
+      "layer": "STAGING",
+      "level": "Internal",
+      "tags": [],
+      "sensitive": false,
+      "masking_rule": "None",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "EDC auto-classification"
+    },
+    {
+      "column_id": "ORA_DWH/DWH/DIM_CUSTOMER/BRANCH_CODE",
+      "name": "DWH.DIM_CUSTOMER.BRANCH_CODE",
+      "layer": "DWH",
+      "level": "Internal",
+      "tags": [],
+      "sensitive": false,
+      "masking_rule": "None",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "EDC auto-classification"
+    },
+    {
+      "column_id": "T24_ORACLE/T24_CORE/CUSTOMER/NATIONALITY",
+      "name": "T24_CORE.CUSTOMER.NATIONALITY",
+      "layer": "SOURCE",
+      "level": "Confidential",
+      "tags": [
+        "PII"
+      ],
+      "sensitive": true,
+      "masking_rule": "Role-based access",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "EDC auto-classification"
+    },
+    {
+      "column_id": "HIVE_LAKE/stg/STG_CUSTOMER/NATIONALITY",
+      "name": "stg.STG_CUSTOMER.NATIONALITY",
+      "layer": "STAGING",
+      "level": "Confidential",
+      "tags": [
+        "PII"
+      ],
+      "sensitive": true,
+      "masking_rule": "Role-based access",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "Axon policy"
+    },
+    {
+      "column_id": "ORA_DWH/DWH/DIM_CUSTOMER/NATIONALITY",
+      "name": "DWH.DIM_CUSTOMER.NATIONALITY",
+      "layer": "DWH",
+      "level": "Confidential",
+      "tags": [
+        "PII"
+      ],
+      "sensitive": true,
+      "masking_rule": "Role-based access",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "Steward manual"
+    },
+    {
+      "column_id": "T24_ORACLE/T24_CORE/CUSTOMER/OCCUPATION",
+      "name": "T24_CORE.CUSTOMER.OCCUPATION",
+      "layer": "SOURCE",
+      "level": "Confidential",
+      "tags": [
+        "PII"
+      ],
+      "sensitive": true,
+      "masking_rule": "Role-based access",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "Axon policy"
+    },
+    {
+      "column_id": "HIVE_LAKE/stg/STG_CUSTOMER/OCCUPATION",
+      "name": "stg.STG_CUSTOMER.OCCUPATION",
+      "layer": "STAGING",
+      "level": "Confidential",
+      "tags": [
+        "PII"
+      ],
+      "sensitive": true,
+      "masking_rule": "Role-based access",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "EDC auto-classification"
+    },
+    {
+      "column_id": "ORA_DWH/DWH/DIM_CUSTOMER/OCCUPATION",
+      "name": "DWH.DIM_CUSTOMER.OCCUPATION",
+      "layer": "DWH",
+      "level": "Confidential",
+      "tags": [
+        "PII"
+      ],
+      "sensitive": true,
+      "masking_rule": "Role-based access",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "EDC auto-classification"
+    },
+    {
+      "column_id": "T24_ORACLE/T24_CORE/ACCOUNT/ACCT_NO",
+      "name": "T24_CORE.ACCOUNT.ACCT_NO",
+      "layer": "SOURCE",
+      "level": "Confidential",
+      "tags": [
+        "Financial"
+      ],
+      "sensitive": true,
+      "masking_rule": "Role-based access",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "Axon policy"
+    },
+    {
+      "column_id": "HIVE_LAKE/stg/STG_ACCOUNT/ACCT_NO",
+      "name": "stg.STG_ACCOUNT.ACCT_NO",
+      "layer": "STAGING",
+      "level": "Confidential",
+      "tags": [
+        "Financial"
+      ],
+      "sensitive": true,
+      "masking_rule": "Role-based access",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "EDC auto-classification"
+    },
+    {
+      "column_id": "ORA_DWH/DWH/DIM_ACCOUNT/ACCT_NO",
+      "name": "DWH.DIM_ACCOUNT.ACCT_NO",
+      "layer": "DWH",
+      "level": "Confidential",
+      "tags": [
+        "Financial"
+      ],
+      "sensitive": true,
+      "masking_rule": "Role-based access",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "Axon policy"
+    },
+    {
+      "column_id": "T24_ORACLE/T24_CORE/ACCOUNT/CUST_ID",
+      "name": "T24_CORE.ACCOUNT.CUST_ID",
+      "layer": "SOURCE",
+      "level": "Internal",
+      "tags": [],
+      "sensitive": false,
+      "masking_rule": "None",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "EDC auto-classification"
+    },
+    {
+      "column_id": "HIVE_LAKE/stg/STG_ACCOUNT/CUST_ID",
+      "name": "stg.STG_ACCOUNT.CUST_ID",
+      "layer": "STAGING",
+      "level": "Internal",
+      "tags": [],
+      "sensitive": false,
+      "masking_rule": "None",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "Steward manual"
+    },
+    {
+      "column_id": "ORA_DWH/DWH/DIM_ACCOUNT/CUST_ID",
+      "name": "DWH.DIM_ACCOUNT.CUST_ID",
+      "layer": "DWH",
+      "level": "Internal",
+      "tags": [],
+      "sensitive": false,
+      "masking_rule": "None",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "EDC auto-classification"
+    },
+    {
+      "column_id": "T24_ORACLE/T24_CORE/ACCOUNT/ACCT_TYPE",
+      "name": "T24_CORE.ACCOUNT.ACCT_TYPE",
+      "layer": "SOURCE",
+      "level": "Internal",
+      "tags": [],
+      "sensitive": false,
+      "masking_rule": "None",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "Steward manual"
+    },
+    {
+      "column_id": "HIVE_LAKE/stg/STG_ACCOUNT/ACCT_TYPE",
+      "name": "stg.STG_ACCOUNT.ACCT_TYPE",
+      "layer": "STAGING",
+      "level": "Internal",
+      "tags": [],
+      "sensitive": false,
+      "masking_rule": "None",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "Axon policy"
+    },
+    {
+      "column_id": "ORA_DWH/DWH/DIM_ACCOUNT/ACCT_TYPE",
+      "name": "DWH.DIM_ACCOUNT.ACCT_TYPE",
+      "layer": "DWH",
+      "level": "Internal",
+      "tags": [],
+      "sensitive": false,
+      "masking_rule": "None",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "Axon policy"
+    },
+    {
+      "column_id": "T24_ORACLE/T24_CORE/ACCOUNT/CURRENCY",
+      "name": "T24_CORE.ACCOUNT.CURRENCY",
+      "layer": "SOURCE",
+      "level": "Public",
+      "tags": [],
+      "sensitive": false,
+      "masking_rule": "None",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 3,
+      "assigned_by": "Steward manual"
+    },
+    {
+      "column_id": "HIVE_LAKE/stg/STG_ACCOUNT/CURRENCY",
+      "name": "stg.STG_ACCOUNT.CURRENCY",
+      "layer": "STAGING",
+      "level": "Public",
+      "tags": [],
+      "sensitive": false,
+      "masking_rule": "None",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 3,
+      "assigned_by": "Steward manual"
+    },
+    {
+      "column_id": "ORA_DWH/DWH/DIM_ACCOUNT/CURRENCY",
+      "name": "DWH.DIM_ACCOUNT.CURRENCY",
+      "layer": "DWH",
+      "level": "Public",
+      "tags": [],
+      "sensitive": false,
+      "masking_rule": "None",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 3,
+      "assigned_by": "Steward manual"
+    },
+    {
+      "column_id": "T24_ORACLE/T24_CORE/ACCOUNT/BALANCE",
+      "name": "T24_CORE.ACCOUNT.BALANCE",
+      "layer": "SOURCE",
+      "level": "Confidential",
+      "tags": [
+        "Financial"
+      ],
+      "sensitive": true,
+      "masking_rule": "Role-based access",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "Axon policy"
+    },
+    {
+      "column_id": "HIVE_LAKE/stg/STG_ACCOUNT/BALANCE",
+      "name": "stg.STG_ACCOUNT.BALANCE",
+      "layer": "STAGING",
+      "level": "Confidential",
+      "tags": [
+        "Financial"
+      ],
+      "sensitive": true,
+      "masking_rule": "Role-based access",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "Steward manual"
+    },
+    {
+      "column_id": "ORA_DWH/DWH/DIM_ACCOUNT/BALANCE",
+      "name": "DWH.DIM_ACCOUNT.BALANCE",
+      "layer": "DWH",
+      "level": "Confidential",
+      "tags": [
+        "Financial"
+      ],
+      "sensitive": true,
+      "masking_rule": "Role-based access",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "Steward manual"
+    },
+    {
+      "column_id": "T24_ORACLE/T24_CORE/ACCOUNT/AVAILABLE_BAL",
+      "name": "T24_CORE.ACCOUNT.AVAILABLE_BAL",
+      "layer": "SOURCE",
+      "level": "Confidential",
+      "tags": [
+        "Financial"
+      ],
+      "sensitive": true,
+      "masking_rule": "Role-based access",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "EDC auto-classification"
+    },
+    {
+      "column_id": "HIVE_LAKE/stg/STG_ACCOUNT/AVAILABLE_BAL",
+      "name": "stg.STG_ACCOUNT.AVAILABLE_BAL",
+      "layer": "STAGING",
+      "level": "Confidential",
+      "tags": [
+        "Financial"
+      ],
+      "sensitive": true,
+      "masking_rule": "Role-based access",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "EDC auto-classification"
+    },
+    {
+      "column_id": "ORA_DWH/DWH/DIM_ACCOUNT/AVAILABLE_BAL",
+      "name": "DWH.DIM_ACCOUNT.AVAILABLE_BAL",
+      "layer": "DWH",
+      "level": "Confidential",
+      "tags": [
+        "Financial"
+      ],
+      "sensitive": true,
+      "masking_rule": "Role-based access",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "Steward manual"
+    },
+    {
+      "column_id": "T24_ORACLE/T24_CORE/ACCOUNT/OPEN_DATE",
+      "name": "T24_CORE.ACCOUNT.OPEN_DATE",
+      "layer": "SOURCE",
+      "level": "Internal",
+      "tags": [],
+      "sensitive": false,
+      "masking_rule": "None",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "Axon policy"
+    },
+    {
+      "column_id": "HIVE_LAKE/stg/STG_ACCOUNT/OPEN_DATE",
+      "name": "stg.STG_ACCOUNT.OPEN_DATE",
+      "layer": "STAGING",
+      "level": "Internal",
+      "tags": [],
+      "sensitive": false,
+      "masking_rule": "None",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "Axon policy"
+    },
+    {
+      "column_id": "ORA_DWH/DWH/DIM_ACCOUNT/OPEN_DATE",
+      "name": "DWH.DIM_ACCOUNT.OPEN_DATE",
+      "layer": "DWH",
+      "level": "Internal",
+      "tags": [],
+      "sensitive": false,
+      "masking_rule": "None",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "EDC auto-classification"
+    },
+    {
+      "column_id": "T24_ORACLE/T24_CORE/ACCOUNT/STATUS",
+      "name": "T24_CORE.ACCOUNT.STATUS",
+      "layer": "SOURCE",
+      "level": "Internal",
+      "tags": [],
+      "sensitive": false,
+      "masking_rule": "None",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "EDC auto-classification"
+    },
+    {
+      "column_id": "HIVE_LAKE/stg/STG_ACCOUNT/STATUS",
+      "name": "stg.STG_ACCOUNT.STATUS",
+      "layer": "STAGING",
+      "level": "Internal",
+      "tags": [],
+      "sensitive": false,
+      "masking_rule": "None",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "Steward manual"
+    },
+    {
+      "column_id": "ORA_DWH/DWH/DIM_ACCOUNT/STATUS",
+      "name": "DWH.DIM_ACCOUNT.STATUS",
+      "layer": "DWH",
+      "level": "Internal",
+      "tags": [],
+      "sensitive": false,
+      "masking_rule": "None",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "Steward manual"
+    },
+    {
+      "column_id": "T24_ORACLE/T24_CORE/ACCOUNT/BRANCH_CODE",
+      "name": "T24_CORE.ACCOUNT.BRANCH_CODE",
+      "layer": "SOURCE",
+      "level": "Internal",
+      "tags": [],
+      "sensitive": false,
+      "masking_rule": "None",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "Axon policy"
+    },
+    {
+      "column_id": "HIVE_LAKE/stg/STG_ACCOUNT/BRANCH_CODE",
+      "name": "stg.STG_ACCOUNT.BRANCH_CODE",
+      "layer": "STAGING",
+      "level": "Internal",
+      "tags": [],
+      "sensitive": false,
+      "masking_rule": "None",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "EDC auto-classification"
+    },
+    {
+      "column_id": "ORA_DWH/DWH/DIM_ACCOUNT/BRANCH_CODE",
+      "name": "DWH.DIM_ACCOUNT.BRANCH_CODE",
+      "layer": "DWH",
+      "level": "Internal",
+      "tags": [],
+      "sensitive": false,
+      "masking_rule": "None",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "EDC auto-classification"
+    },
+    {
+      "column_id": "T24_ORACLE/T24_CORE/ACCOUNT/IBAN",
+      "name": "T24_CORE.ACCOUNT.IBAN",
+      "layer": "SOURCE",
+      "level": "Confidential",
+      "tags": [
+        "Financial"
+      ],
+      "sensitive": true,
+      "masking_rule": "Role-based access",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "Steward manual"
+    },
+    {
+      "column_id": "HIVE_LAKE/stg/STG_ACCOUNT/IBAN",
+      "name": "stg.STG_ACCOUNT.IBAN",
+      "layer": "STAGING",
+      "level": "Confidential",
+      "tags": [
+        "Financial"
+      ],
+      "sensitive": true,
+      "masking_rule": "Role-based access",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "Steward manual"
+    },
+    {
+      "column_id": "ORA_DWH/DWH/DIM_ACCOUNT/IBAN",
+      "name": "DWH.DIM_ACCOUNT.IBAN",
+      "layer": "DWH",
+      "level": "Confidential",
+      "tags": [
+        "Financial"
+      ],
+      "sensitive": true,
+      "masking_rule": "Role-based access",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "Steward manual"
+    },
+    {
+      "column_id": "T24_ORACLE/T24_CORE/ACCOUNT/INTEREST_RATE",
+      "name": "T24_CORE.ACCOUNT.INTEREST_RATE",
+      "layer": "SOURCE",
+      "level": "Internal",
+      "tags": [],
+      "sensitive": false,
+      "masking_rule": "None",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "Steward manual"
+    },
+    {
+      "column_id": "HIVE_LAKE/stg/STG_ACCOUNT/INTEREST_RATE",
+      "name": "stg.STG_ACCOUNT.INTEREST_RATE",
+      "layer": "STAGING",
+      "level": "Internal",
+      "tags": [],
+      "sensitive": false,
+      "masking_rule": "None",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "EDC auto-classification"
+    },
+    {
+      "column_id": "ORA_DWH/DWH/DIM_ACCOUNT/INTEREST_RATE",
+      "name": "DWH.DIM_ACCOUNT.INTEREST_RATE",
+      "layer": "DWH",
+      "level": "Internal",
+      "tags": [],
+      "sensitive": false,
+      "masking_rule": "None",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "Steward manual"
+    },
+    {
+      "column_id": "T24_ORACLE/T24_CORE/ACCOUNT/LAST_TXN_DATE",
+      "name": "T24_CORE.ACCOUNT.LAST_TXN_DATE",
+      "layer": "SOURCE",
+      "level": "Internal",
+      "tags": [],
+      "sensitive": false,
+      "masking_rule": "None",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "EDC auto-classification"
+    },
+    {
+      "column_id": "HIVE_LAKE/stg/STG_ACCOUNT/LAST_TXN_DATE",
+      "name": "stg.STG_ACCOUNT.LAST_TXN_DATE",
+      "layer": "STAGING",
+      "level": "Internal",
+      "tags": [],
+      "sensitive": false,
+      "masking_rule": "None",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "Steward manual"
+    },
+    {
+      "column_id": "ORA_DWH/DWH/DIM_ACCOUNT/LAST_TXN_DATE",
+      "name": "DWH.DIM_ACCOUNT.LAST_TXN_DATE",
+      "layer": "DWH",
+      "level": "Internal",
+      "tags": [],
+      "sensitive": false,
+      "masking_rule": "None",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "EDC auto-classification"
+    },
+    {
+      "column_id": "T24_ORACLE/T24_CORE/TRANSACTION/TXN_ID",
+      "name": "T24_CORE.TRANSACTION.TXN_ID",
+      "layer": "SOURCE",
+      "level": "Internal",
+      "tags": [],
+      "sensitive": false,
+      "masking_rule": "None",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "Axon policy"
+    },
+    {
+      "column_id": "HIVE_LAKE/stg/STG_TRANSACTION/TXN_ID",
+      "name": "stg.STG_TRANSACTION.TXN_ID",
+      "layer": "STAGING",
+      "level": "Internal",
+      "tags": [],
+      "sensitive": false,
+      "masking_rule": "None",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "EDC auto-classification"
+    },
+    {
+      "column_id": "ORA_DWH/DWH/FCT_TRANSACTION/TXN_ID",
+      "name": "DWH.FCT_TRANSACTION.TXN_ID",
+      "layer": "DWH",
+      "level": "Internal",
+      "tags": [],
+      "sensitive": false,
+      "masking_rule": "None",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "Steward manual"
+    },
+    {
+      "column_id": "T24_ORACLE/T24_CORE/TRANSACTION/ACCT_NO",
+      "name": "T24_CORE.TRANSACTION.ACCT_NO",
+      "layer": "SOURCE",
+      "level": "Confidential",
+      "tags": [
+        "Financial"
+      ],
+      "sensitive": true,
+      "masking_rule": "Role-based access",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "EDC auto-classification"
+    },
+    {
+      "column_id": "HIVE_LAKE/stg/STG_TRANSACTION/ACCT_NO",
+      "name": "stg.STG_TRANSACTION.ACCT_NO",
+      "layer": "STAGING",
+      "level": "Confidential",
+      "tags": [
+        "Financial"
+      ],
+      "sensitive": true,
+      "masking_rule": "Role-based access",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "EDC auto-classification"
+    },
+    {
+      "column_id": "ORA_DWH/DWH/FCT_TRANSACTION/ACCT_NO",
+      "name": "DWH.FCT_TRANSACTION.ACCT_NO",
+      "layer": "DWH",
+      "level": "Confidential",
+      "tags": [
+        "Financial"
+      ],
+      "sensitive": true,
+      "masking_rule": "Role-based access",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "EDC auto-classification"
+    },
+    {
+      "column_id": "T24_ORACLE/T24_CORE/TRANSACTION/TXN_DATE",
+      "name": "T24_CORE.TRANSACTION.TXN_DATE",
+      "layer": "SOURCE",
+      "level": "Internal",
+      "tags": [],
+      "sensitive": false,
+      "masking_rule": "None",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "Axon policy"
+    },
+    {
+      "column_id": "HIVE_LAKE/stg/STG_TRANSACTION/TXN_DATE",
+      "name": "stg.STG_TRANSACTION.TXN_DATE",
+      "layer": "STAGING",
+      "level": "Internal",
+      "tags": [],
+      "sensitive": false,
+      "masking_rule": "None",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "Axon policy"
+    },
+    {
+      "column_id": "ORA_DWH/DWH/FCT_TRANSACTION/TXN_DATE",
+      "name": "DWH.FCT_TRANSACTION.TXN_DATE",
+      "layer": "DWH",
+      "level": "Internal",
+      "tags": [],
+      "sensitive": false,
+      "masking_rule": "None",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "Axon policy"
+    },
+    {
+      "column_id": "T24_ORACLE/T24_CORE/TRANSACTION/TXN_AMT",
+      "name": "T24_CORE.TRANSACTION.TXN_AMT",
+      "layer": "SOURCE",
+      "level": "Confidential",
+      "tags": [
+        "Financial"
+      ],
+      "sensitive": true,
+      "masking_rule": "Role-based access",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "Steward manual"
+    },
+    {
+      "column_id": "HIVE_LAKE/stg/STG_TRANSACTION/TXN_AMT",
+      "name": "stg.STG_TRANSACTION.TXN_AMT",
+      "layer": "STAGING",
+      "level": "Confidential",
+      "tags": [
+        "Financial"
+      ],
+      "sensitive": true,
+      "masking_rule": "Role-based access",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "Axon policy"
+    },
+    {
+      "column_id": "ORA_DWH/DWH/FCT_TRANSACTION/TXN_AMT",
+      "name": "DWH.FCT_TRANSACTION.TXN_AMT",
+      "layer": "DWH",
+      "level": "Confidential",
+      "tags": [
+        "Financial"
+      ],
+      "sensitive": true,
+      "masking_rule": "Role-based access",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "Axon policy"
+    },
+    {
+      "column_id": "T24_ORACLE/T24_CORE/TRANSACTION/TXN_TYPE",
+      "name": "T24_CORE.TRANSACTION.TXN_TYPE",
+      "layer": "SOURCE",
+      "level": "Internal",
+      "tags": [],
+      "sensitive": false,
+      "masking_rule": "None",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "Steward manual"
+    },
+    {
+      "column_id": "HIVE_LAKE/stg/STG_TRANSACTION/TXN_TYPE",
+      "name": "stg.STG_TRANSACTION.TXN_TYPE",
+      "layer": "STAGING",
+      "level": "Internal",
+      "tags": [],
+      "sensitive": false,
+      "masking_rule": "None",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "EDC auto-classification"
+    },
+    {
+      "column_id": "ORA_DWH/DWH/FCT_TRANSACTION/TXN_TYPE",
+      "name": "DWH.FCT_TRANSACTION.TXN_TYPE",
+      "layer": "DWH",
+      "level": "Internal",
+      "tags": [],
+      "sensitive": false,
+      "masking_rule": "None",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "Steward manual"
+    },
+    {
+      "column_id": "T24_ORACLE/T24_CORE/TRANSACTION/CHANNEL",
+      "name": "T24_CORE.TRANSACTION.CHANNEL",
+      "layer": "SOURCE",
+      "level": "Internal",
+      "tags": [],
+      "sensitive": false,
+      "masking_rule": "None",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "EDC auto-classification"
+    },
+    {
+      "column_id": "HIVE_LAKE/stg/STG_TRANSACTION/CHANNEL",
+      "name": "stg.STG_TRANSACTION.CHANNEL",
+      "layer": "STAGING",
+      "level": "Internal",
+      "tags": [],
+      "sensitive": false,
+      "masking_rule": "None",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "Steward manual"
+    },
+    {
+      "column_id": "ORA_DWH/DWH/FCT_TRANSACTION/CHANNEL",
+      "name": "DWH.FCT_TRANSACTION.CHANNEL",
+      "layer": "DWH",
+      "level": "Internal",
+      "tags": [],
+      "sensitive": false,
+      "masking_rule": "None",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "Steward manual"
+    },
+    {
+      "column_id": "T24_ORACLE/T24_CORE/TRANSACTION/CURRENCY",
+      "name": "T24_CORE.TRANSACTION.CURRENCY",
+      "layer": "SOURCE",
+      "level": "Public",
+      "tags": [],
+      "sensitive": false,
+      "masking_rule": "None",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 3,
+      "assigned_by": "EDC auto-classification"
+    },
+    {
+      "column_id": "HIVE_LAKE/stg/STG_TRANSACTION/CURRENCY",
+      "name": "stg.STG_TRANSACTION.CURRENCY",
+      "layer": "STAGING",
+      "level": "Public",
+      "tags": [],
+      "sensitive": false,
+      "masking_rule": "None",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 3,
+      "assigned_by": "EDC auto-classification"
+    },
+    {
+      "column_id": "ORA_DWH/DWH/FCT_TRANSACTION/CURRENCY",
+      "name": "DWH.FCT_TRANSACTION.CURRENCY",
+      "layer": "DWH",
+      "level": "Public",
+      "tags": [],
+      "sensitive": false,
+      "masking_rule": "None",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 3,
+      "assigned_by": "Steward manual"
+    },
+    {
+      "column_id": "T24_ORACLE/T24_CORE/TRANSACTION/COUNTERPARTY_ACCT",
+      "name": "T24_CORE.TRANSACTION.COUNTERPARTY_ACCT",
+      "layer": "SOURCE",
+      "level": "Confidential",
+      "tags": [
+        "Financial"
+      ],
+      "sensitive": true,
+      "masking_rule": "Role-based access",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "Axon policy"
+    },
+    {
+      "column_id": "HIVE_LAKE/stg/STG_TRANSACTION/COUNTERPARTY_ACCT",
+      "name": "stg.STG_TRANSACTION.COUNTERPARTY_ACCT",
+      "layer": "STAGING",
+      "level": "Confidential",
+      "tags": [
+        "Financial"
+      ],
+      "sensitive": true,
+      "masking_rule": "Role-based access",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "Steward manual"
+    },
+    {
+      "column_id": "ORA_DWH/DWH/FCT_TRANSACTION/COUNTERPARTY_ACCT",
+      "name": "DWH.FCT_TRANSACTION.COUNTERPARTY_ACCT",
+      "layer": "DWH",
+      "level": "Confidential",
+      "tags": [
+        "Financial"
+      ],
+      "sensitive": true,
+      "masking_rule": "Role-based access",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "Steward manual"
+    },
+    {
+      "column_id": "T24_ORACLE/T24_CORE/TRANSACTION/NARRATION",
+      "name": "T24_CORE.TRANSACTION.NARRATION",
+      "layer": "SOURCE",
+      "level": "Confidential",
+      "tags": [
+        "Financial"
+      ],
+      "sensitive": true,
+      "masking_rule": "Role-based access",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "Steward manual"
+    },
+    {
+      "column_id": "HIVE_LAKE/stg/STG_TRANSACTION/NARRATION",
+      "name": "stg.STG_TRANSACTION.NARRATION",
+      "layer": "STAGING",
+      "level": "Confidential",
+      "tags": [
+        "Financial"
+      ],
+      "sensitive": true,
+      "masking_rule": "Role-based access",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "Axon policy"
+    },
+    {
+      "column_id": "ORA_DWH/DWH/FCT_TRANSACTION/NARRATION",
+      "name": "DWH.FCT_TRANSACTION.NARRATION",
+      "layer": "DWH",
+      "level": "Confidential",
+      "tags": [
+        "Financial"
+      ],
+      "sensitive": true,
+      "masking_rule": "Role-based access",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "Axon policy"
+    },
+    {
+      "column_id": "T24_ORACLE/T24_CORE/TRANSACTION/BALANCE_AFTER",
+      "name": "T24_CORE.TRANSACTION.BALANCE_AFTER",
+      "layer": "SOURCE",
+      "level": "Confidential",
+      "tags": [
+        "Financial"
+      ],
+      "sensitive": true,
+      "masking_rule": "Role-based access",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "Axon policy"
+    },
+    {
+      "column_id": "HIVE_LAKE/stg/STG_TRANSACTION/BALANCE_AFTER",
+      "name": "stg.STG_TRANSACTION.BALANCE_AFTER",
+      "layer": "STAGING",
+      "level": "Confidential",
+      "tags": [
+        "Financial"
+      ],
+      "sensitive": true,
+      "masking_rule": "Role-based access",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "EDC auto-classification"
+    },
+    {
+      "column_id": "ORA_DWH/DWH/FCT_TRANSACTION/BALANCE_AFTER",
+      "name": "DWH.FCT_TRANSACTION.BALANCE_AFTER",
+      "layer": "DWH",
+      "level": "Confidential",
+      "tags": [
+        "Financial"
+      ],
+      "sensitive": true,
+      "masking_rule": "Role-based access",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "Steward manual"
+    },
+    {
+      "column_id": "T24_ORACLE/T24_CORE/BRANCH/BRANCH_CODE",
+      "name": "T24_CORE.BRANCH.BRANCH_CODE",
+      "layer": "SOURCE",
+      "level": "Internal",
+      "tags": [],
+      "sensitive": false,
+      "masking_rule": "None",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "EDC auto-classification"
+    },
+    {
+      "column_id": "HIVE_LAKE/stg/STG_BRANCH/BRANCH_CODE",
+      "name": "stg.STG_BRANCH.BRANCH_CODE",
+      "layer": "STAGING",
+      "level": "Internal",
+      "tags": [],
+      "sensitive": false,
+      "masking_rule": "None",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "Axon policy"
+    },
+    {
+      "column_id": "ORA_DWH/DWH/DIM_BRANCH/BRANCH_CODE",
+      "name": "DWH.DIM_BRANCH.BRANCH_CODE",
+      "layer": "DWH",
+      "level": "Internal",
+      "tags": [],
+      "sensitive": false,
+      "masking_rule": "None",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "Axon policy"
+    },
+    {
+      "column_id": "T24_ORACLE/T24_CORE/BRANCH/BRANCH_NAME",
+      "name": "T24_CORE.BRANCH.BRANCH_NAME",
+      "layer": "SOURCE",
+      "level": "Public",
+      "tags": [],
+      "sensitive": false,
+      "masking_rule": "None",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 3,
+      "assigned_by": "Steward manual"
+    },
+    {
+      "column_id": "HIVE_LAKE/stg/STG_BRANCH/BRANCH_NAME",
+      "name": "stg.STG_BRANCH.BRANCH_NAME",
+      "layer": "STAGING",
+      "level": "Public",
+      "tags": [],
+      "sensitive": false,
+      "masking_rule": "None",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 3,
+      "assigned_by": "EDC auto-classification"
+    },
+    {
+      "column_id": "ORA_DWH/DWH/DIM_BRANCH/BRANCH_NAME",
+      "name": "DWH.DIM_BRANCH.BRANCH_NAME",
+      "layer": "DWH",
+      "level": "Public",
+      "tags": [],
+      "sensitive": false,
+      "masking_rule": "None",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 3,
+      "assigned_by": "Axon policy"
+    },
+    {
+      "column_id": "T24_ORACLE/T24_CORE/BRANCH/REGION",
+      "name": "T24_CORE.BRANCH.REGION",
+      "layer": "SOURCE",
+      "level": "Public",
+      "tags": [],
+      "sensitive": false,
+      "masking_rule": "None",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 3,
+      "assigned_by": "EDC auto-classification"
+    },
+    {
+      "column_id": "HIVE_LAKE/stg/STG_BRANCH/REGION",
+      "name": "stg.STG_BRANCH.REGION",
+      "layer": "STAGING",
+      "level": "Public",
+      "tags": [],
+      "sensitive": false,
+      "masking_rule": "None",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 3,
+      "assigned_by": "Axon policy"
+    },
+    {
+      "column_id": "ORA_DWH/DWH/DIM_BRANCH/REGION",
+      "name": "DWH.DIM_BRANCH.REGION",
+      "layer": "DWH",
+      "level": "Public",
+      "tags": [],
+      "sensitive": false,
+      "masking_rule": "None",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 3,
+      "assigned_by": "Steward manual"
+    },
+    {
+      "column_id": "T24_ORACLE/T24_CORE/BRANCH/CITY",
+      "name": "T24_CORE.BRANCH.CITY",
+      "layer": "SOURCE",
+      "level": "Public",
+      "tags": [],
+      "sensitive": false,
+      "masking_rule": "None",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 3,
+      "assigned_by": "EDC auto-classification"
+    },
+    {
+      "column_id": "HIVE_LAKE/stg/STG_BRANCH/CITY",
+      "name": "stg.STG_BRANCH.CITY",
+      "layer": "STAGING",
+      "level": "Public",
+      "tags": [],
+      "sensitive": false,
+      "masking_rule": "None",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 3,
+      "assigned_by": "Steward manual"
+    },
+    {
+      "column_id": "ORA_DWH/DWH/DIM_BRANCH/CITY",
+      "name": "DWH.DIM_BRANCH.CITY",
+      "layer": "DWH",
+      "level": "Public",
+      "tags": [],
+      "sensitive": false,
+      "masking_rule": "None",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 3,
+      "assigned_by": "EDC auto-classification"
+    },
+    {
+      "column_id": "T24_ORACLE/T24_CORE/BRANCH/MANAGER_ID",
+      "name": "T24_CORE.BRANCH.MANAGER_ID",
+      "layer": "SOURCE",
+      "level": "Internal",
+      "tags": [],
+      "sensitive": false,
+      "masking_rule": "None",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "Steward manual"
+    },
+    {
+      "column_id": "HIVE_LAKE/stg/STG_BRANCH/MANAGER_ID",
+      "name": "stg.STG_BRANCH.MANAGER_ID",
+      "layer": "STAGING",
+      "level": "Internal",
+      "tags": [],
+      "sensitive": false,
+      "masking_rule": "None",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "Axon policy"
+    },
+    {
+      "column_id": "ORA_DWH/DWH/DIM_BRANCH/MANAGER_ID",
+      "name": "DWH.DIM_BRANCH.MANAGER_ID",
+      "layer": "DWH",
+      "level": "Internal",
+      "tags": [],
+      "sensitive": false,
+      "masking_rule": "None",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "Axon policy"
+    },
+    {
+      "column_id": "FLEX_ORACLE/FCUBS/LOAN/LOAN_ID",
+      "name": "FCUBS.LOAN.LOAN_ID",
+      "layer": "SOURCE",
+      "level": "Internal",
+      "tags": [],
+      "sensitive": false,
+      "masking_rule": "None",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "EDC auto-classification"
+    },
+    {
+      "column_id": "HIVE_LAKE/stg/STG_LOAN/LOAN_ID",
+      "name": "stg.STG_LOAN.LOAN_ID",
+      "layer": "STAGING",
+      "level": "Internal",
+      "tags": [],
+      "sensitive": false,
+      "masking_rule": "None",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "Steward manual"
+    },
+    {
+      "column_id": "ORA_DWH/DWH/FCT_LOAN/LOAN_ID",
+      "name": "DWH.FCT_LOAN.LOAN_ID",
+      "layer": "DWH",
+      "level": "Internal",
+      "tags": [],
+      "sensitive": false,
+      "masking_rule": "None",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "Axon policy"
+    },
+    {
+      "column_id": "FLEX_ORACLE/FCUBS/LOAN/CUST_ID",
+      "name": "FCUBS.LOAN.CUST_ID",
+      "layer": "SOURCE",
+      "level": "Internal",
+      "tags": [],
+      "sensitive": false,
+      "masking_rule": "None",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "Steward manual"
+    },
+    {
+      "column_id": "HIVE_LAKE/stg/STG_LOAN/CUST_ID",
+      "name": "stg.STG_LOAN.CUST_ID",
+      "layer": "STAGING",
+      "level": "Internal",
+      "tags": [],
+      "sensitive": false,
+      "masking_rule": "None",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "Steward manual"
+    },
+    {
+      "column_id": "ORA_DWH/DWH/FCT_LOAN/CUST_ID",
+      "name": "DWH.FCT_LOAN.CUST_ID",
+      "layer": "DWH",
+      "level": "Internal",
+      "tags": [],
+      "sensitive": false,
+      "masking_rule": "None",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "Axon policy"
+    },
+    {
+      "column_id": "FLEX_ORACLE/FCUBS/LOAN/PRODUCT_CODE",
+      "name": "FCUBS.LOAN.PRODUCT_CODE",
+      "layer": "SOURCE",
+      "level": "Internal",
+      "tags": [],
+      "sensitive": false,
+      "masking_rule": "None",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "Steward manual"
+    },
+    {
+      "column_id": "HIVE_LAKE/stg/STG_LOAN/PRODUCT_CODE",
+      "name": "stg.STG_LOAN.PRODUCT_CODE",
+      "layer": "STAGING",
+      "level": "Internal",
+      "tags": [],
+      "sensitive": false,
+      "masking_rule": "None",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "Axon policy"
+    },
+    {
+      "column_id": "ORA_DWH/DWH/FCT_LOAN/PRODUCT_CODE",
+      "name": "DWH.FCT_LOAN.PRODUCT_CODE",
+      "layer": "DWH",
+      "level": "Internal",
+      "tags": [],
+      "sensitive": false,
+      "masking_rule": "None",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "Axon policy"
+    },
+    {
+      "column_id": "FLEX_ORACLE/FCUBS/LOAN/PRINCIPAL_AMT",
+      "name": "FCUBS.LOAN.PRINCIPAL_AMT",
+      "layer": "SOURCE",
+      "level": "Confidential",
+      "tags": [
+        "Financial"
+      ],
+      "sensitive": true,
+      "masking_rule": "Role-based access",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "Steward manual"
+    },
+    {
+      "column_id": "HIVE_LAKE/stg/STG_LOAN/PRINCIPAL_AMT",
+      "name": "stg.STG_LOAN.PRINCIPAL_AMT",
+      "layer": "STAGING",
+      "level": "Confidential",
+      "tags": [
+        "Financial"
+      ],
+      "sensitive": true,
+      "masking_rule": "Role-based access",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "Axon policy"
+    },
+    {
+      "column_id": "ORA_DWH/DWH/FCT_LOAN/PRINCIPAL_AMT",
+      "name": "DWH.FCT_LOAN.PRINCIPAL_AMT",
+      "layer": "DWH",
+      "level": "Confidential",
+      "tags": [
+        "Financial"
+      ],
+      "sensitive": true,
+      "masking_rule": "Role-based access",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "EDC auto-classification"
+    },
+    {
+      "column_id": "FLEX_ORACLE/FCUBS/LOAN/OUTSTANDING_AMT",
+      "name": "FCUBS.LOAN.OUTSTANDING_AMT",
+      "layer": "SOURCE",
+      "level": "Confidential",
+      "tags": [
+        "Financial"
+      ],
+      "sensitive": true,
+      "masking_rule": "Role-based access",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "Axon policy"
+    },
+    {
+      "column_id": "HIVE_LAKE/stg/STG_LOAN/OUTSTANDING_AMT",
+      "name": "stg.STG_LOAN.OUTSTANDING_AMT",
+      "layer": "STAGING",
+      "level": "Confidential",
+      "tags": [
+        "Financial"
+      ],
+      "sensitive": true,
+      "masking_rule": "Role-based access",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "Axon policy"
+    },
+    {
+      "column_id": "ORA_DWH/DWH/FCT_LOAN/OUTSTANDING_AMT",
+      "name": "DWH.FCT_LOAN.OUTSTANDING_AMT",
+      "layer": "DWH",
+      "level": "Confidential",
+      "tags": [
+        "Financial"
+      ],
+      "sensitive": true,
+      "masking_rule": "Role-based access",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "Steward manual"
+    },
+    {
+      "column_id": "FLEX_ORACLE/FCUBS/LOAN/INTEREST_RATE",
+      "name": "FCUBS.LOAN.INTEREST_RATE",
+      "layer": "SOURCE",
+      "level": "Internal",
+      "tags": [],
+      "sensitive": false,
+      "masking_rule": "None",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "Axon policy"
+    },
+    {
+      "column_id": "HIVE_LAKE/stg/STG_LOAN/INTEREST_RATE",
+      "name": "stg.STG_LOAN.INTEREST_RATE",
+      "layer": "STAGING",
+      "level": "Internal",
+      "tags": [],
+      "sensitive": false,
+      "masking_rule": "None",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "Steward manual"
+    },
+    {
+      "column_id": "ORA_DWH/DWH/FCT_LOAN/INTEREST_RATE",
+      "name": "DWH.FCT_LOAN.INTEREST_RATE",
+      "layer": "DWH",
+      "level": "Internal",
+      "tags": [],
+      "sensitive": false,
+      "masking_rule": "None",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "EDC auto-classification"
+    },
+    {
+      "column_id": "FLEX_ORACLE/FCUBS/LOAN/TENOR_MONTHS",
+      "name": "FCUBS.LOAN.TENOR_MONTHS",
+      "layer": "SOURCE",
+      "level": "Internal",
+      "tags": [],
+      "sensitive": false,
+      "masking_rule": "None",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "Axon policy"
+    },
+    {
+      "column_id": "HIVE_LAKE/stg/STG_LOAN/TENOR_MONTHS",
+      "name": "stg.STG_LOAN.TENOR_MONTHS",
+      "layer": "STAGING",
+      "level": "Internal",
+      "tags": [],
+      "sensitive": false,
+      "masking_rule": "None",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "EDC auto-classification"
+    },
+    {
+      "column_id": "ORA_DWH/DWH/FCT_LOAN/TENOR_MONTHS",
+      "name": "DWH.FCT_LOAN.TENOR_MONTHS",
+      "layer": "DWH",
+      "level": "Internal",
+      "tags": [],
+      "sensitive": false,
+      "masking_rule": "None",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "Axon policy"
+    },
+    {
+      "column_id": "FLEX_ORACLE/FCUBS/LOAN/DISBURSE_DATE",
+      "name": "FCUBS.LOAN.DISBURSE_DATE",
+      "layer": "SOURCE",
+      "level": "Internal",
+      "tags": [],
+      "sensitive": false,
+      "masking_rule": "None",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "EDC auto-classification"
+    },
+    {
+      "column_id": "HIVE_LAKE/stg/STG_LOAN/DISBURSE_DATE",
+      "name": "stg.STG_LOAN.DISBURSE_DATE",
+      "layer": "STAGING",
+      "level": "Internal",
+      "tags": [],
+      "sensitive": false,
+      "masking_rule": "None",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "Axon policy"
+    },
+    {
+      "column_id": "ORA_DWH/DWH/FCT_LOAN/DISBURSE_DATE",
+      "name": "DWH.FCT_LOAN.DISBURSE_DATE",
+      "layer": "DWH",
+      "level": "Internal",
+      "tags": [],
+      "sensitive": false,
+      "masking_rule": "None",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "Steward manual"
+    },
+    {
+      "column_id": "FLEX_ORACLE/FCUBS/LOAN/DPD",
+      "name": "FCUBS.LOAN.DPD",
+      "layer": "SOURCE",
+      "level": "Confidential",
+      "tags": [
+        "Financial"
+      ],
+      "sensitive": true,
+      "masking_rule": "Role-based access",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "EDC auto-classification"
+    },
+    {
+      "column_id": "HIVE_LAKE/stg/STG_LOAN/DPD",
+      "name": "stg.STG_LOAN.DPD",
+      "layer": "STAGING",
+      "level": "Confidential",
+      "tags": [
+        "Financial"
+      ],
+      "sensitive": true,
+      "masking_rule": "Role-based access",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "Steward manual"
+    },
+    {
+      "column_id": "ORA_DWH/DWH/FCT_LOAN/DPD",
+      "name": "DWH.FCT_LOAN.DPD",
+      "layer": "DWH",
+      "level": "Confidential",
+      "tags": [
+        "Financial"
+      ],
+      "sensitive": true,
+      "masking_rule": "Role-based access",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "Steward manual"
+    },
+    {
+      "column_id": "FLEX_ORACLE/FCUBS/LOAN/IFRS9_STAGE",
+      "name": "FCUBS.LOAN.IFRS9_STAGE",
+      "layer": "SOURCE",
+      "level": "Confidential",
+      "tags": [
+        "Financial"
+      ],
+      "sensitive": true,
+      "masking_rule": "Role-based access",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "EDC auto-classification"
+    },
+    {
+      "column_id": "HIVE_LAKE/stg/STG_LOAN/IFRS9_STAGE",
+      "name": "stg.STG_LOAN.IFRS9_STAGE",
+      "layer": "STAGING",
+      "level": "Confidential",
+      "tags": [
+        "Financial"
+      ],
+      "sensitive": true,
+      "masking_rule": "Role-based access",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "Axon policy"
+    },
+    {
+      "column_id": "ORA_DWH/DWH/FCT_LOAN/IFRS9_STAGE",
+      "name": "DWH.FCT_LOAN.IFRS9_STAGE",
+      "layer": "DWH",
+      "level": "Confidential",
+      "tags": [
+        "Financial"
+      ],
+      "sensitive": true,
+      "masking_rule": "Role-based access",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "Axon policy"
+    },
+    {
+      "column_id": "FLEX_ORACLE/FCUBS/LOAN/PD",
+      "name": "FCUBS.LOAN.PD",
+      "layer": "SOURCE",
+      "level": "Restricted",
+      "tags": [
+        "Risk-Model"
+      ],
+      "sensitive": true,
+      "masking_rule": "Role-based access",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "Axon policy"
+    },
+    {
+      "column_id": "HIVE_LAKE/stg/STG_LOAN/PD",
+      "name": "stg.STG_LOAN.PD",
+      "layer": "STAGING",
+      "level": "Restricted",
+      "tags": [
+        "Risk-Model"
+      ],
+      "sensitive": true,
+      "masking_rule": "Role-based access",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "Steward manual"
+    },
+    {
+      "column_id": "ORA_DWH/DWH/FCT_LOAN/PD",
+      "name": "DWH.FCT_LOAN.PD",
+      "layer": "DWH",
+      "level": "Restricted",
+      "tags": [
+        "Risk-Model"
+      ],
+      "sensitive": true,
+      "masking_rule": "Role-based access",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "Steward manual"
+    },
+    {
+      "column_id": "FLEX_ORACLE/FCUBS/LOAN/LGD",
+      "name": "FCUBS.LOAN.LGD",
+      "layer": "SOURCE",
+      "level": "Restricted",
+      "tags": [
+        "Risk-Model"
+      ],
+      "sensitive": true,
+      "masking_rule": "Role-based access",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "EDC auto-classification"
+    },
+    {
+      "column_id": "HIVE_LAKE/stg/STG_LOAN/LGD",
+      "name": "stg.STG_LOAN.LGD",
+      "layer": "STAGING",
+      "level": "Restricted",
+      "tags": [
+        "Risk-Model"
+      ],
+      "sensitive": true,
+      "masking_rule": "Role-based access",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "Steward manual"
+    },
+    {
+      "column_id": "ORA_DWH/DWH/FCT_LOAN/LGD",
+      "name": "DWH.FCT_LOAN.LGD",
+      "layer": "DWH",
+      "level": "Restricted",
+      "tags": [
+        "Risk-Model"
+      ],
+      "sensitive": true,
+      "masking_rule": "Role-based access",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "Axon policy"
+    },
+    {
+      "column_id": "FLEX_ORACLE/FCUBS/LOAN/EAD",
+      "name": "FCUBS.LOAN.EAD",
+      "layer": "SOURCE",
+      "level": "Restricted",
+      "tags": [
+        "Risk-Model"
+      ],
+      "sensitive": true,
+      "masking_rule": "Role-based access",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "EDC auto-classification"
+    },
+    {
+      "column_id": "HIVE_LAKE/stg/STG_LOAN/EAD",
+      "name": "stg.STG_LOAN.EAD",
+      "layer": "STAGING",
+      "level": "Restricted",
+      "tags": [
+        "Risk-Model"
+      ],
+      "sensitive": true,
+      "masking_rule": "Role-based access",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "Axon policy"
+    },
+    {
+      "column_id": "ORA_DWH/DWH/FCT_LOAN/EAD",
+      "name": "DWH.FCT_LOAN.EAD",
+      "layer": "DWH",
+      "level": "Restricted",
+      "tags": [
+        "Risk-Model"
+      ],
+      "sensitive": true,
+      "masking_rule": "Role-based access",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "EDC auto-classification"
+    },
+    {
+      "column_id": "FLEX_ORACLE/FCUBS/LOAN/COLLATERAL_VALUE",
+      "name": "FCUBS.LOAN.COLLATERAL_VALUE",
+      "layer": "SOURCE",
+      "level": "Confidential",
+      "tags": [
+        "Financial"
+      ],
+      "sensitive": true,
+      "masking_rule": "Role-based access",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "Axon policy"
+    },
+    {
+      "column_id": "HIVE_LAKE/stg/STG_LOAN/COLLATERAL_VALUE",
+      "name": "stg.STG_LOAN.COLLATERAL_VALUE",
+      "layer": "STAGING",
+      "level": "Confidential",
+      "tags": [
+        "Financial"
+      ],
+      "sensitive": true,
+      "masking_rule": "Role-based access",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "Steward manual"
+    },
+    {
+      "column_id": "ORA_DWH/DWH/FCT_LOAN/COLLATERAL_VALUE",
+      "name": "DWH.FCT_LOAN.COLLATERAL_VALUE",
+      "layer": "DWH",
+      "level": "Confidential",
+      "tags": [
+        "Financial"
+      ],
+      "sensitive": true,
+      "masking_rule": "Role-based access",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "Steward manual"
+    },
+    {
+      "column_id": "WAY4_ORACLE/WAY4/CARD/CARD_ID",
+      "name": "WAY4.CARD.CARD_ID",
+      "layer": "SOURCE",
+      "level": "Internal",
+      "tags": [],
+      "sensitive": false,
+      "masking_rule": "None",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "Axon policy"
+    },
+    {
+      "column_id": "HIVE_LAKE/stg/STG_CARD/CARD_ID",
+      "name": "stg.STG_CARD.CARD_ID",
+      "layer": "STAGING",
+      "level": "Internal",
+      "tags": [],
+      "sensitive": false,
+      "masking_rule": "None",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "EDC auto-classification"
+    },
+    {
+      "column_id": "ORA_DWH/DWH/DIM_CARD/CARD_ID",
+      "name": "DWH.DIM_CARD.CARD_ID",
+      "layer": "DWH",
+      "level": "Internal",
+      "tags": [],
+      "sensitive": false,
+      "masking_rule": "None",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "Steward manual"
+    },
+    {
+      "column_id": "WAY4_ORACLE/WAY4/CARD/CUST_ID",
+      "name": "WAY4.CARD.CUST_ID",
+      "layer": "SOURCE",
+      "level": "Internal",
+      "tags": [],
+      "sensitive": false,
+      "masking_rule": "None",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "EDC auto-classification"
+    },
+    {
+      "column_id": "HIVE_LAKE/stg/STG_CARD/CUST_ID",
+      "name": "stg.STG_CARD.CUST_ID",
+      "layer": "STAGING",
+      "level": "Internal",
+      "tags": [],
+      "sensitive": false,
+      "masking_rule": "None",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "Axon policy"
+    },
+    {
+      "column_id": "ORA_DWH/DWH/DIM_CARD/CUST_ID",
+      "name": "DWH.DIM_CARD.CUST_ID",
+      "layer": "DWH",
+      "level": "Internal",
+      "tags": [],
+      "sensitive": false,
+      "masking_rule": "None",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "Axon policy"
+    },
+    {
+      "column_id": "WAY4_ORACLE/WAY4/CARD/PAN",
+      "name": "WAY4.CARD.PAN",
+      "layer": "SOURCE",
+      "level": "Restricted",
+      "tags": [
+        "PCI"
+      ],
+      "sensitive": true,
+      "masking_rule": "Tokenize / mask all but last 4",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework",
+        "PCI-DSS 4.0"
+      ],
+      "retention_years": 7,
+      "assigned_by": "Axon policy"
+    },
+    {
+      "column_id": "HIVE_LAKE/stg/STG_CARD/PAN",
+      "name": "stg.STG_CARD.PAN",
+      "layer": "STAGING",
+      "level": "Restricted",
+      "tags": [
+        "PCI"
+      ],
+      "sensitive": true,
+      "masking_rule": "Tokenize / mask all but last 4",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework",
+        "PCI-DSS 4.0"
+      ],
+      "retention_years": 7,
+      "assigned_by": "EDC auto-classification"
+    },
+    {
+      "column_id": "ORA_DWH/DWH/DIM_CARD/PAN",
+      "name": "DWH.DIM_CARD.PAN",
+      "layer": "DWH",
+      "level": "Restricted",
+      "tags": [
+        "PCI"
+      ],
+      "sensitive": true,
+      "masking_rule": "Tokenize / mask all but last 4",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework",
+        "PCI-DSS 4.0"
+      ],
+      "retention_years": 7,
+      "assigned_by": "Steward manual"
+    },
+    {
+      "column_id": "WAY4_ORACLE/WAY4/CARD/CARD_TYPE",
+      "name": "WAY4.CARD.CARD_TYPE",
+      "layer": "SOURCE",
+      "level": "Internal",
+      "tags": [],
+      "sensitive": false,
+      "masking_rule": "None",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "Axon policy"
+    },
+    {
+      "column_id": "HIVE_LAKE/stg/STG_CARD/CARD_TYPE",
+      "name": "stg.STG_CARD.CARD_TYPE",
+      "layer": "STAGING",
+      "level": "Internal",
+      "tags": [],
+      "sensitive": false,
+      "masking_rule": "None",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "EDC auto-classification"
+    },
+    {
+      "column_id": "ORA_DWH/DWH/DIM_CARD/CARD_TYPE",
+      "name": "DWH.DIM_CARD.CARD_TYPE",
+      "layer": "DWH",
+      "level": "Internal",
+      "tags": [],
+      "sensitive": false,
+      "masking_rule": "None",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "Steward manual"
+    },
+    {
+      "column_id": "WAY4_ORACLE/WAY4/CARD/CREDIT_LIMIT",
+      "name": "WAY4.CARD.CREDIT_LIMIT",
+      "layer": "SOURCE",
+      "level": "Confidential",
+      "tags": [
+        "Financial"
+      ],
+      "sensitive": true,
+      "masking_rule": "Role-based access",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "Steward manual"
+    },
+    {
+      "column_id": "HIVE_LAKE/stg/STG_CARD/CREDIT_LIMIT",
+      "name": "stg.STG_CARD.CREDIT_LIMIT",
+      "layer": "STAGING",
+      "level": "Confidential",
+      "tags": [
+        "Financial"
+      ],
+      "sensitive": true,
+      "masking_rule": "Role-based access",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "EDC auto-classification"
+    },
+    {
+      "column_id": "ORA_DWH/DWH/DIM_CARD/CREDIT_LIMIT",
+      "name": "DWH.DIM_CARD.CREDIT_LIMIT",
+      "layer": "DWH",
+      "level": "Confidential",
+      "tags": [
+        "Financial"
+      ],
+      "sensitive": true,
+      "masking_rule": "Role-based access",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "Axon policy"
+    },
+    {
+      "column_id": "WAY4_ORACLE/WAY4/CARD/EXPIRY_DATE",
+      "name": "WAY4.CARD.EXPIRY_DATE",
+      "layer": "SOURCE",
+      "level": "Restricted",
+      "tags": [
+        "PCI"
+      ],
+      "sensitive": true,
+      "masking_rule": "Role-based access",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework",
+        "PCI-DSS 4.0"
+      ],
+      "retention_years": 7,
+      "assigned_by": "Steward manual"
+    },
+    {
+      "column_id": "HIVE_LAKE/stg/STG_CARD/EXPIRY_DATE",
+      "name": "stg.STG_CARD.EXPIRY_DATE",
+      "layer": "STAGING",
+      "level": "Restricted",
+      "tags": [
+        "PCI"
+      ],
+      "sensitive": true,
+      "masking_rule": "Role-based access",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework",
+        "PCI-DSS 4.0"
+      ],
+      "retention_years": 7,
+      "assigned_by": "EDC auto-classification"
+    },
+    {
+      "column_id": "ORA_DWH/DWH/DIM_CARD/EXPIRY_DATE",
+      "name": "DWH.DIM_CARD.EXPIRY_DATE",
+      "layer": "DWH",
+      "level": "Restricted",
+      "tags": [
+        "PCI"
+      ],
+      "sensitive": true,
+      "masking_rule": "Role-based access",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework",
+        "PCI-DSS 4.0"
+      ],
+      "retention_years": 7,
+      "assigned_by": "EDC auto-classification"
+    },
+    {
+      "column_id": "WAY4_ORACLE/WAY4/CARD/STATUS",
+      "name": "WAY4.CARD.STATUS",
+      "layer": "SOURCE",
+      "level": "Internal",
+      "tags": [],
+      "sensitive": false,
+      "masking_rule": "None",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "Steward manual"
+    },
+    {
+      "column_id": "HIVE_LAKE/stg/STG_CARD/STATUS",
+      "name": "stg.STG_CARD.STATUS",
+      "layer": "STAGING",
+      "level": "Internal",
+      "tags": [],
+      "sensitive": false,
+      "masking_rule": "None",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "EDC auto-classification"
+    },
+    {
+      "column_id": "ORA_DWH/DWH/DIM_CARD/STATUS",
+      "name": "DWH.DIM_CARD.STATUS",
+      "layer": "DWH",
+      "level": "Internal",
+      "tags": [],
+      "sensitive": false,
+      "masking_rule": "None",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "Axon policy"
+    },
+    {
+      "column_id": "WAY4_ORACLE/WAY4/CARD/ISSUE_DATE",
+      "name": "WAY4.CARD.ISSUE_DATE",
+      "layer": "SOURCE",
+      "level": "Internal",
+      "tags": [],
+      "sensitive": false,
+      "masking_rule": "None",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "EDC auto-classification"
+    },
+    {
+      "column_id": "HIVE_LAKE/stg/STG_CARD/ISSUE_DATE",
+      "name": "stg.STG_CARD.ISSUE_DATE",
+      "layer": "STAGING",
+      "level": "Internal",
+      "tags": [],
+      "sensitive": false,
+      "masking_rule": "None",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "EDC auto-classification"
+    },
+    {
+      "column_id": "ORA_DWH/DWH/DIM_CARD/ISSUE_DATE",
+      "name": "DWH.DIM_CARD.ISSUE_DATE",
+      "layer": "DWH",
+      "level": "Internal",
+      "tags": [],
+      "sensitive": false,
+      "masking_rule": "None",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "EDC auto-classification"
+    },
+    {
+      "column_id": "ACTIMIZE_MSSQL/AML/KYC_PROFILE/KYC_ID",
+      "name": "AML.KYC_PROFILE.KYC_ID",
+      "layer": "SOURCE",
+      "level": "Internal",
+      "tags": [],
+      "sensitive": false,
+      "masking_rule": "None",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "EDC auto-classification"
+    },
+    {
+      "column_id": "HIVE_LAKE/stg/STG_KYC_PROFILE/KYC_ID",
+      "name": "stg.STG_KYC_PROFILE.KYC_ID",
+      "layer": "STAGING",
+      "level": "Internal",
+      "tags": [],
+      "sensitive": false,
+      "masking_rule": "None",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "Steward manual"
+    },
+    {
+      "column_id": "ORA_DWH/DWH/DIM_KYC/KYC_ID",
+      "name": "DWH.DIM_KYC.KYC_ID",
+      "layer": "DWH",
+      "level": "Internal",
+      "tags": [],
+      "sensitive": false,
+      "masking_rule": "None",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "Axon policy"
+    },
+    {
+      "column_id": "ACTIMIZE_MSSQL/AML/KYC_PROFILE/CUST_ID",
+      "name": "AML.KYC_PROFILE.CUST_ID",
+      "layer": "SOURCE",
+      "level": "Internal",
+      "tags": [],
+      "sensitive": false,
+      "masking_rule": "None",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "EDC auto-classification"
+    },
+    {
+      "column_id": "HIVE_LAKE/stg/STG_KYC_PROFILE/CUST_ID",
+      "name": "stg.STG_KYC_PROFILE.CUST_ID",
+      "layer": "STAGING",
+      "level": "Internal",
+      "tags": [],
+      "sensitive": false,
+      "masking_rule": "None",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "EDC auto-classification"
+    },
+    {
+      "column_id": "ORA_DWH/DWH/DIM_KYC/CUST_ID",
+      "name": "DWH.DIM_KYC.CUST_ID",
+      "layer": "DWH",
+      "level": "Internal",
+      "tags": [],
+      "sensitive": false,
+      "masking_rule": "None",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "EDC auto-classification"
+    },
+    {
+      "column_id": "ACTIMIZE_MSSQL/AML/KYC_PROFILE/PEP_FLAG",
+      "name": "AML.KYC_PROFILE.PEP_FLAG",
+      "layer": "SOURCE",
+      "level": "Restricted",
+      "tags": [
+        "AML-Sensitive"
+      ],
+      "sensitive": true,
+      "masking_rule": "Role-based access",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework",
+        "AML Law 80/2002"
+      ],
+      "retention_years": 10,
+      "assigned_by": "EDC auto-classification"
+    },
+    {
+      "column_id": "HIVE_LAKE/stg/STG_KYC_PROFILE/PEP_FLAG",
+      "name": "stg.STG_KYC_PROFILE.PEP_FLAG",
+      "layer": "STAGING",
+      "level": "Restricted",
+      "tags": [
+        "AML-Sensitive"
+      ],
+      "sensitive": true,
+      "masking_rule": "Role-based access",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework",
+        "AML Law 80/2002"
+      ],
+      "retention_years": 10,
+      "assigned_by": "Steward manual"
+    },
+    {
+      "column_id": "ORA_DWH/DWH/DIM_KYC/PEP_FLAG",
+      "name": "DWH.DIM_KYC.PEP_FLAG",
+      "layer": "DWH",
+      "level": "Restricted",
+      "tags": [
+        "AML-Sensitive"
+      ],
+      "sensitive": true,
+      "masking_rule": "Role-based access",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework",
+        "AML Law 80/2002"
+      ],
+      "retention_years": 10,
+      "assigned_by": "Steward manual"
+    },
+    {
+      "column_id": "ACTIMIZE_MSSQL/AML/KYC_PROFILE/SANCTION_HIT",
+      "name": "AML.KYC_PROFILE.SANCTION_HIT",
+      "layer": "SOURCE",
+      "level": "Restricted",
+      "tags": [
+        "AML-Sensitive"
+      ],
+      "sensitive": true,
+      "masking_rule": "Role-based access",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework",
+        "AML Law 80/2002"
+      ],
+      "retention_years": 10,
+      "assigned_by": "Axon policy"
+    },
+    {
+      "column_id": "HIVE_LAKE/stg/STG_KYC_PROFILE/SANCTION_HIT",
+      "name": "stg.STG_KYC_PROFILE.SANCTION_HIT",
+      "layer": "STAGING",
+      "level": "Restricted",
+      "tags": [
+        "AML-Sensitive"
+      ],
+      "sensitive": true,
+      "masking_rule": "Role-based access",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework",
+        "AML Law 80/2002"
+      ],
+      "retention_years": 10,
+      "assigned_by": "Steward manual"
+    },
+    {
+      "column_id": "ORA_DWH/DWH/DIM_KYC/SANCTION_HIT",
+      "name": "DWH.DIM_KYC.SANCTION_HIT",
+      "layer": "DWH",
+      "level": "Restricted",
+      "tags": [
+        "AML-Sensitive"
+      ],
+      "sensitive": true,
+      "masking_rule": "Role-based access",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework",
+        "AML Law 80/2002"
+      ],
+      "retention_years": 10,
+      "assigned_by": "EDC auto-classification"
+    },
+    {
+      "column_id": "ACTIMIZE_MSSQL/AML/KYC_PROFILE/RISK_SCORE",
+      "name": "AML.KYC_PROFILE.RISK_SCORE",
+      "layer": "SOURCE",
+      "level": "Restricted",
+      "tags": [
+        "AML-Sensitive"
+      ],
+      "sensitive": true,
+      "masking_rule": "Role-based access",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework",
+        "AML Law 80/2002"
+      ],
+      "retention_years": 10,
+      "assigned_by": "Steward manual"
+    },
+    {
+      "column_id": "HIVE_LAKE/stg/STG_KYC_PROFILE/RISK_SCORE",
+      "name": "stg.STG_KYC_PROFILE.RISK_SCORE",
+      "layer": "STAGING",
+      "level": "Restricted",
+      "tags": [
+        "AML-Sensitive"
+      ],
+      "sensitive": true,
+      "masking_rule": "Role-based access",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework",
+        "AML Law 80/2002"
+      ],
+      "retention_years": 10,
+      "assigned_by": "EDC auto-classification"
+    },
+    {
+      "column_id": "ORA_DWH/DWH/DIM_KYC/RISK_SCORE",
+      "name": "DWH.DIM_KYC.RISK_SCORE",
+      "layer": "DWH",
+      "level": "Restricted",
+      "tags": [
+        "AML-Sensitive"
+      ],
+      "sensitive": true,
+      "masking_rule": "Role-based access",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework",
+        "AML Law 80/2002"
+      ],
+      "retention_years": 10,
+      "assigned_by": "Axon policy"
+    },
+    {
+      "column_id": "ACTIMIZE_MSSQL/AML/KYC_PROFILE/LAST_REVIEW_DATE",
+      "name": "AML.KYC_PROFILE.LAST_REVIEW_DATE",
+      "layer": "SOURCE",
+      "level": "Confidential",
+      "tags": [
+        "AML-Sensitive"
+      ],
+      "sensitive": true,
+      "masking_rule": "Role-based access",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework",
+        "AML Law 80/2002"
+      ],
+      "retention_years": 10,
+      "assigned_by": "Axon policy"
+    },
+    {
+      "column_id": "HIVE_LAKE/stg/STG_KYC_PROFILE/LAST_REVIEW_DATE",
+      "name": "stg.STG_KYC_PROFILE.LAST_REVIEW_DATE",
+      "layer": "STAGING",
+      "level": "Confidential",
+      "tags": [
+        "AML-Sensitive"
+      ],
+      "sensitive": true,
+      "masking_rule": "Role-based access",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework",
+        "AML Law 80/2002"
+      ],
+      "retention_years": 10,
+      "assigned_by": "Steward manual"
+    },
+    {
+      "column_id": "ORA_DWH/DWH/DIM_KYC/LAST_REVIEW_DATE",
+      "name": "DWH.DIM_KYC.LAST_REVIEW_DATE",
+      "layer": "DWH",
+      "level": "Confidential",
+      "tags": [
+        "AML-Sensitive"
+      ],
+      "sensitive": true,
+      "masking_rule": "Role-based access",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework",
+        "AML Law 80/2002"
+      ],
+      "retention_years": 10,
+      "assigned_by": "Axon policy"
+    },
+    {
+      "column_id": "ACTIMIZE_MSSQL/AML/KYC_PROFILE/NEXT_REVIEW_DATE",
+      "name": "AML.KYC_PROFILE.NEXT_REVIEW_DATE",
+      "layer": "SOURCE",
+      "level": "Confidential",
+      "tags": [
+        "AML-Sensitive"
+      ],
+      "sensitive": true,
+      "masking_rule": "Role-based access",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework",
+        "AML Law 80/2002"
+      ],
+      "retention_years": 10,
+      "assigned_by": "Axon policy"
+    },
+    {
+      "column_id": "HIVE_LAKE/stg/STG_KYC_PROFILE/NEXT_REVIEW_DATE",
+      "name": "stg.STG_KYC_PROFILE.NEXT_REVIEW_DATE",
+      "layer": "STAGING",
+      "level": "Confidential",
+      "tags": [
+        "AML-Sensitive"
+      ],
+      "sensitive": true,
+      "masking_rule": "Role-based access",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework",
+        "AML Law 80/2002"
+      ],
+      "retention_years": 10,
+      "assigned_by": "Steward manual"
+    },
+    {
+      "column_id": "ORA_DWH/DWH/DIM_KYC/NEXT_REVIEW_DATE",
+      "name": "DWH.DIM_KYC.NEXT_REVIEW_DATE",
+      "layer": "DWH",
+      "level": "Confidential",
+      "tags": [
+        "AML-Sensitive"
+      ],
+      "sensitive": true,
+      "masking_rule": "Role-based access",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework",
+        "AML Law 80/2002"
+      ],
+      "retention_years": 10,
+      "assigned_by": "Axon policy"
+    },
+    {
+      "column_id": "ACTIMIZE_MSSQL/AML/KYC_PROFILE/SOURCE_OF_FUNDS",
+      "name": "AML.KYC_PROFILE.SOURCE_OF_FUNDS",
+      "layer": "SOURCE",
+      "level": "Confidential",
+      "tags": [
+        "AML-Sensitive"
+      ],
+      "sensitive": true,
+      "masking_rule": "Role-based access",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework",
+        "AML Law 80/2002"
+      ],
+      "retention_years": 10,
+      "assigned_by": "Axon policy"
+    },
+    {
+      "column_id": "HIVE_LAKE/stg/STG_KYC_PROFILE/SOURCE_OF_FUNDS",
+      "name": "stg.STG_KYC_PROFILE.SOURCE_OF_FUNDS",
+      "layer": "STAGING",
+      "level": "Confidential",
+      "tags": [
+        "AML-Sensitive"
+      ],
+      "sensitive": true,
+      "masking_rule": "Role-based access",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework",
+        "AML Law 80/2002"
+      ],
+      "retention_years": 10,
+      "assigned_by": "EDC auto-classification"
+    },
+    {
+      "column_id": "ORA_DWH/DWH/DIM_KYC/SOURCE_OF_FUNDS",
+      "name": "DWH.DIM_KYC.SOURCE_OF_FUNDS",
+      "layer": "DWH",
+      "level": "Confidential",
+      "tags": [
+        "AML-Sensitive"
+      ],
+      "sensitive": true,
+      "masking_rule": "Role-based access",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework",
+        "AML Law 80/2002"
+      ],
+      "retention_years": 10,
+      "assigned_by": "Steward manual"
+    },
+    {
+      "column_id": "ACTIMIZE_MSSQL/AML/AML_ALERT/ALERT_ID",
+      "name": "AML.AML_ALERT.ALERT_ID",
+      "layer": "SOURCE",
+      "level": "Restricted",
+      "tags": [
+        "AML-Sensitive"
+      ],
+      "sensitive": true,
+      "masking_rule": "Role-based access",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework",
+        "AML Law 80/2002"
+      ],
+      "retention_years": 10,
+      "assigned_by": "Axon policy"
+    },
+    {
+      "column_id": "HIVE_LAKE/stg/STG_AML_ALERT/ALERT_ID",
+      "name": "stg.STG_AML_ALERT.ALERT_ID",
+      "layer": "STAGING",
+      "level": "Restricted",
+      "tags": [
+        "AML-Sensitive"
+      ],
+      "sensitive": true,
+      "masking_rule": "Role-based access",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework",
+        "AML Law 80/2002"
+      ],
+      "retention_years": 10,
+      "assigned_by": "Axon policy"
+    },
+    {
+      "column_id": "ORA_DWH/DWH/FCT_AML_ALERT/ALERT_ID",
+      "name": "DWH.FCT_AML_ALERT.ALERT_ID",
+      "layer": "DWH",
+      "level": "Restricted",
+      "tags": [
+        "AML-Sensitive"
+      ],
+      "sensitive": true,
+      "masking_rule": "Role-based access",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework",
+        "AML Law 80/2002"
+      ],
+      "retention_years": 10,
+      "assigned_by": "EDC auto-classification"
+    },
+    {
+      "column_id": "ACTIMIZE_MSSQL/AML/AML_ALERT/CUST_ID",
+      "name": "AML.AML_ALERT.CUST_ID",
+      "layer": "SOURCE",
+      "level": "Internal",
+      "tags": [],
+      "sensitive": false,
+      "masking_rule": "None",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "Steward manual"
+    },
+    {
+      "column_id": "HIVE_LAKE/stg/STG_AML_ALERT/CUST_ID",
+      "name": "stg.STG_AML_ALERT.CUST_ID",
+      "layer": "STAGING",
+      "level": "Internal",
+      "tags": [],
+      "sensitive": false,
+      "masking_rule": "None",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "EDC auto-classification"
+    },
+    {
+      "column_id": "ORA_DWH/DWH/FCT_AML_ALERT/CUST_ID",
+      "name": "DWH.FCT_AML_ALERT.CUST_ID",
+      "layer": "DWH",
+      "level": "Internal",
+      "tags": [],
+      "sensitive": false,
+      "masking_rule": "None",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "EDC auto-classification"
+    },
+    {
+      "column_id": "ACTIMIZE_MSSQL/AML/AML_ALERT/TXN_ID",
+      "name": "AML.AML_ALERT.TXN_ID",
+      "layer": "SOURCE",
+      "level": "Internal",
+      "tags": [],
+      "sensitive": false,
+      "masking_rule": "None",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "Steward manual"
+    },
+    {
+      "column_id": "HIVE_LAKE/stg/STG_AML_ALERT/TXN_ID",
+      "name": "stg.STG_AML_ALERT.TXN_ID",
+      "layer": "STAGING",
+      "level": "Internal",
+      "tags": [],
+      "sensitive": false,
+      "masking_rule": "None",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "Axon policy"
+    },
+    {
+      "column_id": "ORA_DWH/DWH/FCT_AML_ALERT/TXN_ID",
+      "name": "DWH.FCT_AML_ALERT.TXN_ID",
+      "layer": "DWH",
+      "level": "Internal",
+      "tags": [],
+      "sensitive": false,
+      "masking_rule": "None",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "Axon policy"
+    },
+    {
+      "column_id": "ACTIMIZE_MSSQL/AML/AML_ALERT/SCENARIO",
+      "name": "AML.AML_ALERT.SCENARIO",
+      "layer": "SOURCE",
+      "level": "Restricted",
+      "tags": [
+        "AML-Sensitive"
+      ],
+      "sensitive": true,
+      "masking_rule": "Role-based access",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework",
+        "AML Law 80/2002"
+      ],
+      "retention_years": 10,
+      "assigned_by": "Steward manual"
+    },
+    {
+      "column_id": "HIVE_LAKE/stg/STG_AML_ALERT/SCENARIO",
+      "name": "stg.STG_AML_ALERT.SCENARIO",
+      "layer": "STAGING",
+      "level": "Restricted",
+      "tags": [
+        "AML-Sensitive"
+      ],
+      "sensitive": true,
+      "masking_rule": "Role-based access",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework",
+        "AML Law 80/2002"
+      ],
+      "retention_years": 10,
+      "assigned_by": "EDC auto-classification"
+    },
+    {
+      "column_id": "ORA_DWH/DWH/FCT_AML_ALERT/SCENARIO",
+      "name": "DWH.FCT_AML_ALERT.SCENARIO",
+      "layer": "DWH",
+      "level": "Restricted",
+      "tags": [
+        "AML-Sensitive"
+      ],
+      "sensitive": true,
+      "masking_rule": "Role-based access",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework",
+        "AML Law 80/2002"
+      ],
+      "retention_years": 10,
+      "assigned_by": "Steward manual"
+    },
+    {
+      "column_id": "ACTIMIZE_MSSQL/AML/AML_ALERT/SEVERITY",
+      "name": "AML.AML_ALERT.SEVERITY",
+      "layer": "SOURCE",
+      "level": "Restricted",
+      "tags": [
+        "AML-Sensitive"
+      ],
+      "sensitive": true,
+      "masking_rule": "Role-based access",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework",
+        "AML Law 80/2002"
+      ],
+      "retention_years": 10,
+      "assigned_by": "Axon policy"
+    },
+    {
+      "column_id": "HIVE_LAKE/stg/STG_AML_ALERT/SEVERITY",
+      "name": "stg.STG_AML_ALERT.SEVERITY",
+      "layer": "STAGING",
+      "level": "Restricted",
+      "tags": [
+        "AML-Sensitive"
+      ],
+      "sensitive": true,
+      "masking_rule": "Role-based access",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework",
+        "AML Law 80/2002"
+      ],
+      "retention_years": 10,
+      "assigned_by": "Axon policy"
+    },
+    {
+      "column_id": "ORA_DWH/DWH/FCT_AML_ALERT/SEVERITY",
+      "name": "DWH.FCT_AML_ALERT.SEVERITY",
+      "layer": "DWH",
+      "level": "Restricted",
+      "tags": [
+        "AML-Sensitive"
+      ],
+      "sensitive": true,
+      "masking_rule": "Role-based access",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework",
+        "AML Law 80/2002"
+      ],
+      "retention_years": 10,
+      "assigned_by": "Steward manual"
+    },
+    {
+      "column_id": "ACTIMIZE_MSSQL/AML/AML_ALERT/STATUS",
+      "name": "AML.AML_ALERT.STATUS",
+      "layer": "SOURCE",
+      "level": "Restricted",
+      "tags": [
+        "AML-Sensitive"
+      ],
+      "sensitive": true,
+      "masking_rule": "Role-based access",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework",
+        "AML Law 80/2002"
+      ],
+      "retention_years": 10,
+      "assigned_by": "EDC auto-classification"
+    },
+    {
+      "column_id": "HIVE_LAKE/stg/STG_AML_ALERT/STATUS",
+      "name": "stg.STG_AML_ALERT.STATUS",
+      "layer": "STAGING",
+      "level": "Restricted",
+      "tags": [
+        "AML-Sensitive"
+      ],
+      "sensitive": true,
+      "masking_rule": "Role-based access",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework",
+        "AML Law 80/2002"
+      ],
+      "retention_years": 10,
+      "assigned_by": "Axon policy"
+    },
+    {
+      "column_id": "ORA_DWH/DWH/FCT_AML_ALERT/STATUS",
+      "name": "DWH.FCT_AML_ALERT.STATUS",
+      "layer": "DWH",
+      "level": "Restricted",
+      "tags": [
+        "AML-Sensitive"
+      ],
+      "sensitive": true,
+      "masking_rule": "Role-based access",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework",
+        "AML Law 80/2002"
+      ],
+      "retention_years": 10,
+      "assigned_by": "EDC auto-classification"
+    },
+    {
+      "column_id": "ACTIMIZE_MSSQL/AML/AML_ALERT/CREATED_DATE",
+      "name": "AML.AML_ALERT.CREATED_DATE",
+      "layer": "SOURCE",
+      "level": "Restricted",
+      "tags": [
+        "AML-Sensitive"
+      ],
+      "sensitive": true,
+      "masking_rule": "Role-based access",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework",
+        "AML Law 80/2002"
+      ],
+      "retention_years": 10,
+      "assigned_by": "Steward manual"
+    },
+    {
+      "column_id": "HIVE_LAKE/stg/STG_AML_ALERT/CREATED_DATE",
+      "name": "stg.STG_AML_ALERT.CREATED_DATE",
+      "layer": "STAGING",
+      "level": "Restricted",
+      "tags": [
+        "AML-Sensitive"
+      ],
+      "sensitive": true,
+      "masking_rule": "Role-based access",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework",
+        "AML Law 80/2002"
+      ],
+      "retention_years": 10,
+      "assigned_by": "Steward manual"
+    },
+    {
+      "column_id": "ORA_DWH/DWH/FCT_AML_ALERT/CREATED_DATE",
+      "name": "DWH.FCT_AML_ALERT.CREATED_DATE",
+      "layer": "DWH",
+      "level": "Restricted",
+      "tags": [
+        "AML-Sensitive"
+      ],
+      "sensitive": true,
+      "masking_rule": "Role-based access",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework",
+        "AML Law 80/2002"
+      ],
+      "retention_years": 10,
+      "assigned_by": "Axon policy"
+    },
+    {
+      "column_id": "ACTIMIZE_MSSQL/AML/AML_ALERT/CLOSED_DATE",
+      "name": "AML.AML_ALERT.CLOSED_DATE",
+      "layer": "SOURCE",
+      "level": "Restricted",
+      "tags": [
+        "AML-Sensitive"
+      ],
+      "sensitive": true,
+      "masking_rule": "Role-based access",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework",
+        "AML Law 80/2002"
+      ],
+      "retention_years": 10,
+      "assigned_by": "Axon policy"
+    },
+    {
+      "column_id": "HIVE_LAKE/stg/STG_AML_ALERT/CLOSED_DATE",
+      "name": "stg.STG_AML_ALERT.CLOSED_DATE",
+      "layer": "STAGING",
+      "level": "Restricted",
+      "tags": [
+        "AML-Sensitive"
+      ],
+      "sensitive": true,
+      "masking_rule": "Role-based access",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework",
+        "AML Law 80/2002"
+      ],
+      "retention_years": 10,
+      "assigned_by": "Steward manual"
+    },
+    {
+      "column_id": "ORA_DWH/DWH/FCT_AML_ALERT/CLOSED_DATE",
+      "name": "DWH.FCT_AML_ALERT.CLOSED_DATE",
+      "layer": "DWH",
+      "level": "Restricted",
+      "tags": [
+        "AML-Sensitive"
+      ],
+      "sensitive": true,
+      "masking_rule": "Role-based access",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework",
+        "AML Law 80/2002"
+      ],
+      "retention_years": 10,
+      "assigned_by": "EDC auto-classification"
+    },
+    {
+      "column_id": "EBS_ORACLE/GL/GL_BALANCE/GL_ACCOUNT",
+      "name": "GL.GL_BALANCE.GL_ACCOUNT",
+      "layer": "SOURCE",
+      "level": "Internal",
+      "tags": [],
+      "sensitive": false,
+      "masking_rule": "None",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "EDC auto-classification"
+    },
+    {
+      "column_id": "HIVE_LAKE/stg/STG_GL_BALANCE/GL_ACCOUNT",
+      "name": "stg.STG_GL_BALANCE.GL_ACCOUNT",
+      "layer": "STAGING",
+      "level": "Internal",
+      "tags": [],
+      "sensitive": false,
+      "masking_rule": "None",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "Steward manual"
+    },
+    {
+      "column_id": "ORA_DWH/DWH/FCT_GL_BALANCE/GL_ACCOUNT",
+      "name": "DWH.FCT_GL_BALANCE.GL_ACCOUNT",
+      "layer": "DWH",
+      "level": "Internal",
+      "tags": [],
+      "sensitive": false,
+      "masking_rule": "None",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "EDC auto-classification"
+    },
+    {
+      "column_id": "EBS_ORACLE/GL/GL_BALANCE/COST_CENTER",
+      "name": "GL.GL_BALANCE.COST_CENTER",
+      "layer": "SOURCE",
+      "level": "Internal",
+      "tags": [],
+      "sensitive": false,
+      "masking_rule": "None",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "Axon policy"
+    },
+    {
+      "column_id": "HIVE_LAKE/stg/STG_GL_BALANCE/COST_CENTER",
+      "name": "stg.STG_GL_BALANCE.COST_CENTER",
+      "layer": "STAGING",
+      "level": "Internal",
+      "tags": [],
+      "sensitive": false,
+      "masking_rule": "None",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "Steward manual"
+    },
+    {
+      "column_id": "ORA_DWH/DWH/FCT_GL_BALANCE/COST_CENTER",
+      "name": "DWH.FCT_GL_BALANCE.COST_CENTER",
+      "layer": "DWH",
+      "level": "Internal",
+      "tags": [],
+      "sensitive": false,
+      "masking_rule": "None",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "EDC auto-classification"
+    },
+    {
+      "column_id": "EBS_ORACLE/GL/GL_BALANCE/PERIOD",
+      "name": "GL.GL_BALANCE.PERIOD",
+      "layer": "SOURCE",
+      "level": "Internal",
+      "tags": [],
+      "sensitive": false,
+      "masking_rule": "None",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "Axon policy"
+    },
+    {
+      "column_id": "HIVE_LAKE/stg/STG_GL_BALANCE/PERIOD",
+      "name": "stg.STG_GL_BALANCE.PERIOD",
+      "layer": "STAGING",
+      "level": "Internal",
+      "tags": [],
+      "sensitive": false,
+      "masking_rule": "None",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "Axon policy"
+    },
+    {
+      "column_id": "ORA_DWH/DWH/FCT_GL_BALANCE/PERIOD",
+      "name": "DWH.FCT_GL_BALANCE.PERIOD",
+      "layer": "DWH",
+      "level": "Internal",
+      "tags": [],
+      "sensitive": false,
+      "masking_rule": "None",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "Steward manual"
+    },
+    {
+      "column_id": "EBS_ORACLE/GL/GL_BALANCE/DEBIT",
+      "name": "GL.GL_BALANCE.DEBIT",
+      "layer": "SOURCE",
+      "level": "Confidential",
+      "tags": [
+        "Financial"
+      ],
+      "sensitive": true,
+      "masking_rule": "Role-based access",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "Axon policy"
+    },
+    {
+      "column_id": "HIVE_LAKE/stg/STG_GL_BALANCE/DEBIT",
+      "name": "stg.STG_GL_BALANCE.DEBIT",
+      "layer": "STAGING",
+      "level": "Confidential",
+      "tags": [
+        "Financial"
+      ],
+      "sensitive": true,
+      "masking_rule": "Role-based access",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "EDC auto-classification"
+    },
+    {
+      "column_id": "ORA_DWH/DWH/FCT_GL_BALANCE/DEBIT",
+      "name": "DWH.FCT_GL_BALANCE.DEBIT",
+      "layer": "DWH",
+      "level": "Confidential",
+      "tags": [
+        "Financial"
+      ],
+      "sensitive": true,
+      "masking_rule": "Role-based access",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "Steward manual"
+    },
+    {
+      "column_id": "EBS_ORACLE/GL/GL_BALANCE/CREDIT",
+      "name": "GL.GL_BALANCE.CREDIT",
+      "layer": "SOURCE",
+      "level": "Confidential",
+      "tags": [
+        "Financial"
+      ],
+      "sensitive": true,
+      "masking_rule": "Role-based access",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "Axon policy"
+    },
+    {
+      "column_id": "HIVE_LAKE/stg/STG_GL_BALANCE/CREDIT",
+      "name": "stg.STG_GL_BALANCE.CREDIT",
+      "layer": "STAGING",
+      "level": "Confidential",
+      "tags": [
+        "Financial"
+      ],
+      "sensitive": true,
+      "masking_rule": "Role-based access",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "EDC auto-classification"
+    },
+    {
+      "column_id": "ORA_DWH/DWH/FCT_GL_BALANCE/CREDIT",
+      "name": "DWH.FCT_GL_BALANCE.CREDIT",
+      "layer": "DWH",
+      "level": "Confidential",
+      "tags": [
+        "Financial"
+      ],
+      "sensitive": true,
+      "masking_rule": "Role-based access",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "Axon policy"
+    },
+    {
+      "column_id": "EBS_ORACLE/GL/GL_BALANCE/CLOSING_BAL",
+      "name": "GL.GL_BALANCE.CLOSING_BAL",
+      "layer": "SOURCE",
+      "level": "Confidential",
+      "tags": [
+        "Financial"
+      ],
+      "sensitive": true,
+      "masking_rule": "Role-based access",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "Axon policy"
+    },
+    {
+      "column_id": "HIVE_LAKE/stg/STG_GL_BALANCE/CLOSING_BAL",
+      "name": "stg.STG_GL_BALANCE.CLOSING_BAL",
+      "layer": "STAGING",
+      "level": "Confidential",
+      "tags": [
+        "Financial"
+      ],
+      "sensitive": true,
+      "masking_rule": "Role-based access",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "Steward manual"
+    },
+    {
+      "column_id": "ORA_DWH/DWH/FCT_GL_BALANCE/CLOSING_BAL",
+      "name": "DWH.FCT_GL_BALANCE.CLOSING_BAL",
+      "layer": "DWH",
+      "level": "Confidential",
+      "tags": [
+        "Financial"
+      ],
+      "sensitive": true,
+      "masking_rule": "Role-based access",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "Axon policy"
+    },
+    {
+      "column_id": "ORA_DWH/MART/MART_CUSTOMER_360/CUST_ID",
+      "name": "MART.MART_CUSTOMER_360.CUST_ID",
+      "layer": "MART",
+      "level": "Internal",
+      "tags": [],
+      "sensitive": false,
+      "masking_rule": "None",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "Axon policy"
+    },
+    {
+      "column_id": "ORA_DWH/MART/MART_CUSTOMER_360/CUST_NAME",
+      "name": "MART.MART_CUSTOMER_360.CUST_NAME",
+      "layer": "MART",
+      "level": "Confidential",
+      "tags": [
+        "PII"
+      ],
+      "sensitive": true,
+      "masking_rule": "No masking for stewards; mask for general users",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "EDC auto-classification"
+    },
+    {
+      "column_id": "ORA_DWH/MART/MART_CUSTOMER_360/SEGMENT_CODE",
+      "name": "MART.MART_CUSTOMER_360.SEGMENT_CODE",
+      "layer": "MART",
+      "level": "Internal",
+      "tags": [],
+      "sensitive": false,
+      "masking_rule": "None",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "Axon policy"
+    },
+    {
+      "column_id": "ORA_DWH/MART/MART_CUSTOMER_360/KYC_STATUS",
+      "name": "MART.MART_CUSTOMER_360.KYC_STATUS",
+      "layer": "MART",
+      "level": "Confidential",
+      "tags": [
+        "AML-Sensitive"
+      ],
+      "sensitive": true,
+      "masking_rule": "Role-based access",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework",
+        "AML Law 80/2002"
+      ],
+      "retention_years": 10,
+      "assigned_by": "Axon policy"
+    },
+    {
+      "column_id": "ORA_DWH/MART/MART_CUSTOMER_360/RISK_RATING",
+      "name": "MART.MART_CUSTOMER_360.RISK_RATING",
+      "layer": "MART",
+      "level": "Restricted",
+      "tags": [
+        "AML-Sensitive"
+      ],
+      "sensitive": true,
+      "masking_rule": "Role-based access",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework",
+        "AML Law 80/2002"
+      ],
+      "retention_years": 10,
+      "assigned_by": "EDC auto-classification"
+    },
+    {
+      "column_id": "ORA_DWH/MART/MART_CUSTOMER_360/AGE",
+      "name": "MART.MART_CUSTOMER_360.AGE",
+      "layer": "MART",
+      "level": "Confidential",
+      "tags": [
+        "PII"
+      ],
+      "sensitive": true,
+      "masking_rule": "Role-based access",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "Axon policy"
+    },
+    {
+      "column_id": "ORA_DWH/MART/MART_CUSTOMER_360/TOTAL_BALANCE",
+      "name": "MART.MART_CUSTOMER_360.TOTAL_BALANCE",
+      "layer": "MART",
+      "level": "Confidential",
+      "tags": [
+        "Financial"
+      ],
+      "sensitive": true,
+      "masking_rule": "Role-based access",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "Steward manual"
+    },
+    {
+      "column_id": "ORA_DWH/MART/MART_CUSTOMER_360/ACCOUNT_COUNT",
+      "name": "MART.MART_CUSTOMER_360.ACCOUNT_COUNT",
+      "layer": "MART",
+      "level": "Confidential",
+      "tags": [
+        "Financial"
+      ],
+      "sensitive": true,
+      "masking_rule": "Role-based access",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "Axon policy"
+    },
+    {
+      "column_id": "ORA_DWH/MART/MART_CUSTOMER_360/TOTAL_LOAN_OUTSTANDING",
+      "name": "MART.MART_CUSTOMER_360.TOTAL_LOAN_OUTSTANDING",
+      "layer": "MART",
+      "level": "Confidential",
+      "tags": [
+        "Financial"
+      ],
+      "sensitive": true,
+      "masking_rule": "Role-based access",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "Axon policy"
+    },
+    {
+      "column_id": "ORA_DWH/MART/MART_CUSTOMER_360/CARD_COUNT",
+      "name": "MART.MART_CUSTOMER_360.CARD_COUNT",
+      "layer": "MART",
+      "level": "Internal",
+      "tags": [],
+      "sensitive": false,
+      "masking_rule": "None",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "Axon policy"
+    },
+    {
+      "column_id": "ORA_DWH/MART/MART_CUSTOMER_360/BRANCH_NAME",
+      "name": "MART.MART_CUSTOMER_360.BRANCH_NAME",
+      "layer": "MART",
+      "level": "Internal",
+      "tags": [],
+      "sensitive": false,
+      "masking_rule": "None",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "Axon policy"
+    },
+    {
+      "column_id": "ORA_DWH/MART/MART_CREDIT_RISK/LOAN_ID",
+      "name": "MART.MART_CREDIT_RISK.LOAN_ID",
+      "layer": "MART",
+      "level": "Internal",
+      "tags": [],
+      "sensitive": false,
+      "masking_rule": "None",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "Axon policy"
+    },
+    {
+      "column_id": "ORA_DWH/MART/MART_CREDIT_RISK/CUST_ID",
+      "name": "MART.MART_CREDIT_RISK.CUST_ID",
+      "layer": "MART",
+      "level": "Internal",
+      "tags": [],
+      "sensitive": false,
+      "masking_rule": "None",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "EDC auto-classification"
+    },
+    {
+      "column_id": "ORA_DWH/MART/MART_CREDIT_RISK/OUTSTANDING_AMT",
+      "name": "MART.MART_CREDIT_RISK.OUTSTANDING_AMT",
+      "layer": "MART",
+      "level": "Confidential",
+      "tags": [
+        "Financial"
+      ],
+      "sensitive": true,
+      "masking_rule": "Role-based access",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "Steward manual"
+    },
+    {
+      "column_id": "ORA_DWH/MART/MART_CREDIT_RISK/DPD",
+      "name": "MART.MART_CREDIT_RISK.DPD",
+      "layer": "MART",
+      "level": "Confidential",
+      "tags": [
+        "Financial"
+      ],
+      "sensitive": true,
+      "masking_rule": "Role-based access",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "EDC auto-classification"
+    },
+    {
+      "column_id": "ORA_DWH/MART/MART_CREDIT_RISK/IFRS9_STAGE",
+      "name": "MART.MART_CREDIT_RISK.IFRS9_STAGE",
+      "layer": "MART",
+      "level": "Confidential",
+      "tags": [
+        "Financial"
+      ],
+      "sensitive": true,
+      "masking_rule": "Role-based access",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "Steward manual"
+    },
+    {
+      "column_id": "ORA_DWH/MART/MART_CREDIT_RISK/ECL_AMOUNT",
+      "name": "MART.MART_CREDIT_RISK.ECL_AMOUNT",
+      "layer": "MART",
+      "level": "Restricted",
+      "tags": [
+        "Risk-Model"
+      ],
+      "sensitive": true,
+      "masking_rule": "Role-based access",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "Steward manual"
+    },
+    {
+      "column_id": "ORA_DWH/MART/MART_CREDIT_RISK/NPL_FLAG",
+      "name": "MART.MART_CREDIT_RISK.NPL_FLAG",
+      "layer": "MART",
+      "level": "Confidential",
+      "tags": [
+        "Financial"
+      ],
+      "sensitive": true,
+      "masking_rule": "Role-based access",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "EDC auto-classification"
+    },
+    {
+      "column_id": "ORA_DWH/MART/MART_CREDIT_RISK/COLLATERAL_COVERAGE",
+      "name": "MART.MART_CREDIT_RISK.COLLATERAL_COVERAGE",
+      "layer": "MART",
+      "level": "Confidential",
+      "tags": [
+        "Financial"
+      ],
+      "sensitive": true,
+      "masking_rule": "Role-based access",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "EDC auto-classification"
+    },
+    {
+      "column_id": "ORA_DWH/MART/MART_AML_MONITORING/ALERT_ID",
+      "name": "MART.MART_AML_MONITORING.ALERT_ID",
+      "layer": "MART",
+      "level": "Restricted",
+      "tags": [
+        "AML-Sensitive"
+      ],
+      "sensitive": true,
+      "masking_rule": "Role-based access",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework",
+        "AML Law 80/2002"
+      ],
+      "retention_years": 10,
+      "assigned_by": "Steward manual"
+    },
+    {
+      "column_id": "ORA_DWH/MART/MART_AML_MONITORING/CUST_ID",
+      "name": "MART.MART_AML_MONITORING.CUST_ID",
+      "layer": "MART",
+      "level": "Internal",
+      "tags": [],
+      "sensitive": false,
+      "masking_rule": "None",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "Axon policy"
+    },
+    {
+      "column_id": "ORA_DWH/MART/MART_AML_MONITORING/SCENARIO",
+      "name": "MART.MART_AML_MONITORING.SCENARIO",
+      "layer": "MART",
+      "level": "Restricted",
+      "tags": [
+        "AML-Sensitive"
+      ],
+      "sensitive": true,
+      "masking_rule": "Role-based access",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework",
+        "AML Law 80/2002"
+      ],
+      "retention_years": 10,
+      "assigned_by": "EDC auto-classification"
+    },
+    {
+      "column_id": "ORA_DWH/MART/MART_AML_MONITORING/SEVERITY",
+      "name": "MART.MART_AML_MONITORING.SEVERITY",
+      "layer": "MART",
+      "level": "Restricted",
+      "tags": [
+        "AML-Sensitive"
+      ],
+      "sensitive": true,
+      "masking_rule": "Role-based access",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework",
+        "AML Law 80/2002"
+      ],
+      "retention_years": 10,
+      "assigned_by": "Steward manual"
+    },
+    {
+      "column_id": "ORA_DWH/MART/MART_AML_MONITORING/ALERT_STATUS",
+      "name": "MART.MART_AML_MONITORING.ALERT_STATUS",
+      "layer": "MART",
+      "level": "Restricted",
+      "tags": [
+        "AML-Sensitive"
+      ],
+      "sensitive": true,
+      "masking_rule": "Role-based access",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework",
+        "AML Law 80/2002"
+      ],
+      "retention_years": 10,
+      "assigned_by": "Axon policy"
+    },
+    {
+      "column_id": "ORA_DWH/MART/MART_AML_MONITORING/ALERT_AGE_DAYS",
+      "name": "MART.MART_AML_MONITORING.ALERT_AGE_DAYS",
+      "layer": "MART",
+      "level": "Restricted",
+      "tags": [
+        "AML-Sensitive"
+      ],
+      "sensitive": true,
+      "masking_rule": "Role-based access",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework",
+        "AML Law 80/2002"
+      ],
+      "retention_years": 10,
+      "assigned_by": "Axon policy"
+    },
+    {
+      "column_id": "ORA_DWH/MART/MART_AML_MONITORING/PEP_FLAG",
+      "name": "MART.MART_AML_MONITORING.PEP_FLAG",
+      "layer": "MART",
+      "level": "Restricted",
+      "tags": [
+        "AML-Sensitive"
+      ],
+      "sensitive": true,
+      "masking_rule": "Role-based access",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework",
+        "AML Law 80/2002"
+      ],
+      "retention_years": 10,
+      "assigned_by": "EDC auto-classification"
+    },
+    {
+      "column_id": "ORA_DWH/MART/MART_AML_MONITORING/RISK_SCORE",
+      "name": "MART.MART_AML_MONITORING.RISK_SCORE",
+      "layer": "MART",
+      "level": "Restricted",
+      "tags": [
+        "AML-Sensitive"
+      ],
+      "sensitive": true,
+      "masking_rule": "Role-based access",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework",
+        "AML Law 80/2002"
+      ],
+      "retention_years": 10,
+      "assigned_by": "EDC auto-classification"
+    },
+    {
+      "column_id": "ORA_DWH/MART/MART_AML_MONITORING/NEXT_REVIEW_DATE",
+      "name": "MART.MART_AML_MONITORING.NEXT_REVIEW_DATE",
+      "layer": "MART",
+      "level": "Confidential",
+      "tags": [
+        "AML-Sensitive"
+      ],
+      "sensitive": true,
+      "masking_rule": "Role-based access",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework",
+        "AML Law 80/2002"
+      ],
+      "retention_years": 10,
+      "assigned_by": "Steward manual"
+    },
+    {
+      "column_id": "ORA_DWH/MART/MART_BRANCH_PERFORMANCE/BRANCH_CODE",
+      "name": "MART.MART_BRANCH_PERFORMANCE.BRANCH_CODE",
+      "layer": "MART",
+      "level": "Internal",
+      "tags": [],
+      "sensitive": false,
+      "masking_rule": "None",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "EDC auto-classification"
+    },
+    {
+      "column_id": "ORA_DWH/MART/MART_BRANCH_PERFORMANCE/BRANCH_NAME",
+      "name": "MART.MART_BRANCH_PERFORMANCE.BRANCH_NAME",
+      "layer": "MART",
+      "level": "Public",
+      "tags": [],
+      "sensitive": false,
+      "masking_rule": "None",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 3,
+      "assigned_by": "Axon policy"
+    },
+    {
+      "column_id": "ORA_DWH/MART/MART_BRANCH_PERFORMANCE/REGION",
+      "name": "MART.MART_BRANCH_PERFORMANCE.REGION",
+      "layer": "MART",
+      "level": "Public",
+      "tags": [],
+      "sensitive": false,
+      "masking_rule": "None",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 3,
+      "assigned_by": "EDC auto-classification"
+    },
+    {
+      "column_id": "ORA_DWH/MART/MART_BRANCH_PERFORMANCE/DEPOSITS",
+      "name": "MART.MART_BRANCH_PERFORMANCE.DEPOSITS",
+      "layer": "MART",
+      "level": "Confidential",
+      "tags": [
+        "Financial"
+      ],
+      "sensitive": true,
+      "masking_rule": "Role-based access",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "EDC auto-classification"
+    },
+    {
+      "column_id": "ORA_DWH/MART/MART_BRANCH_PERFORMANCE/TXN_COUNT",
+      "name": "MART.MART_BRANCH_PERFORMANCE.TXN_COUNT",
+      "layer": "MART",
+      "level": "Internal",
+      "tags": [],
+      "sensitive": false,
+      "masking_rule": "None",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "Axon policy"
+    },
+    {
+      "column_id": "ORA_DWH/MART/MART_BRANCH_PERFORMANCE/NET_INCOME",
+      "name": "MART.MART_BRANCH_PERFORMANCE.NET_INCOME",
+      "layer": "MART",
+      "level": "Confidential",
+      "tags": [
+        "Financial"
+      ],
+      "sensitive": true,
+      "masking_rule": "Role-based access",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "Axon policy"
+    },
+    {
+      "column_id": "ORA_DWH/MART/MART_TXN_SUMMARY/TXN_DATE",
+      "name": "MART.MART_TXN_SUMMARY.TXN_DATE",
+      "layer": "MART",
+      "level": "Internal",
+      "tags": [],
+      "sensitive": false,
+      "masking_rule": "None",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "EDC auto-classification"
+    },
+    {
+      "column_id": "ORA_DWH/MART/MART_TXN_SUMMARY/CHANNEL",
+      "name": "MART.MART_TXN_SUMMARY.CHANNEL",
+      "layer": "MART",
+      "level": "Internal",
+      "tags": [],
+      "sensitive": false,
+      "masking_rule": "None",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "Steward manual"
+    },
+    {
+      "column_id": "ORA_DWH/MART/MART_TXN_SUMMARY/CURRENCY",
+      "name": "MART.MART_TXN_SUMMARY.CURRENCY",
+      "layer": "MART",
+      "level": "Public",
+      "tags": [],
+      "sensitive": false,
+      "masking_rule": "None",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 3,
+      "assigned_by": "Steward manual"
+    },
+    {
+      "column_id": "ORA_DWH/MART/MART_TXN_SUMMARY/TXN_COUNT",
+      "name": "MART.MART_TXN_SUMMARY.TXN_COUNT",
+      "layer": "MART",
+      "level": "Internal",
+      "tags": [],
+      "sensitive": false,
+      "masking_rule": "None",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "Steward manual"
+    },
+    {
+      "column_id": "ORA_DWH/MART/MART_TXN_SUMMARY/TXN_VOLUME",
+      "name": "MART.MART_TXN_SUMMARY.TXN_VOLUME",
+      "layer": "MART",
+      "level": "Confidential",
+      "tags": [
+        "Financial"
+      ],
+      "sensitive": true,
+      "masking_rule": "Role-based access",
+      "regulation": [
+        "PDPL-151/2020",
+        "CBE Cyber Security Framework"
+      ],
+      "retention_years": 7,
+      "assigned_by": "Steward manual"
+    }
+  ]
+}
